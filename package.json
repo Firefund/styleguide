@@ -1,0 +1,23 @@
+{
+  "name": "firefund-styleguide",
+  "version": "0.1.0",
+  "description": "Firefund live styleguide",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "guide": "ecstatic kalei/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firefund/styleguide.git"
+  },
+  "author": "dotnetCarpenter <jon.ronnenberg@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Firefund/styleguide/issues"
+  },
+  "homepage": "https://github.com/Firefund/styleguide#readme",
+  "devDependencies": {
+    "ecstatic": "^1.4.0"
+  }
+}
