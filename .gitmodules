@@ -1,4 +1,4 @@
 [submodule "kalei"]
-	path = kaleistyleguide
+	path = kalei
 	url = https://github.com/Firefund/kaleistyleguide.git
-	branch = gh-pages
+	branch = master
