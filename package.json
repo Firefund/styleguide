@@ -1,6 +1,6 @@
 {
   "name": "firefund-styleguide",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha",
   "description": "Firefund live styleguide",
   "private": true,
   "scripts": {
@@ -22,6 +22,6 @@
     "ecstatic": "^1.4.0"
   },
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "^0.2.2"
+    "@dotnetcarpenter/firefund-cli": "^0.3.3"
   }
 }
