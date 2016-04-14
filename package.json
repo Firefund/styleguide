@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Firefund/styleguide#readme",
   "devDependencies": {
     "ecstatic": "^1.4.0"
+  },
+  "dependencies": {
+    "@dotnetcarpenter/firefund-cli": "^0.2.2"
   }
 }
