@@ -1,0 +1,55 @@
+/*
+### base
+This is the base for all our styles. In here we define:
+1. variables like color
+2. font sizes
+3. box-sizing *NOTE:* box-sizing http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+4. site wide classes
+*/
+
+/* Variables */
+:root {
+  /*--animation-parameters: 1.3s ease-in-out 3s;*/
+}
+@custom-media --viewport-mobile (max-width: 640px);
+
+
+html {
+  box-sizing: border-box;
+  /* Change 1 rem to mean 10px in a standard browser */
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 1vw;
+  /* OLD  font-size: .625vw;*/ /* 16/10 */
+  }
+}
+@media screen and (--viewport-mobile) {
+  html {
+    font-size: 1.625vw; /* 16/10 */
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-black);
+}
+
+/* =fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic);
+
+* {
+  font-family: "Roboto";
+
+}
+
+/* =span */
+span {
+  color: var(--color-red);
+}

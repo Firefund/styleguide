@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preguide": "cp --update --recursive styles/* kalei/css/",
     "guide": "ecstatic kalei/",
     "submodules": "git submodule update --remote --merge"
   },

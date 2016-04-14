@@ -1,0 +1,17 @@
+/*
+### f-hero
+
+Hero. Has a full width background image with text content on top.
+Image inserted as html img tag and via js set as css background-image. The
+image is initial hidden but is reveal in a translateY/opacity movement, when
+the js has run.
+
+```
+BLOCK f-hero
+	ELEMENT f-hero__heading
+	ELEMENT f-hero__text
+```
+*/
+.f-hero {
+	
+}
