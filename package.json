@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "guide": "ecstatic kalei/",
-    "submodules": "git submodule foreach git pull origin master"
+    "submodules": "git submodule update --remote --merge"
   },
   "repository": {
     "type": "git",
