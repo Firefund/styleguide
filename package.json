@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preguide": "cp --update --recursive styles/* kalei/css/",
-    "guide": "ecstatic kalei/",
+    "#preguide": "cp --update --recursive styles/* kalei/css/",
+    "preguide":"css styles/base.css -d kalei/css",
+    "guide": "server kalei/ kalei/css/",
     "submodules": "git submodule update --remote --merge"
   },
   "repository": {
@@ -19,10 +20,7 @@
     "url": "https://github.com/Firefund/styleguide/issues"
   },
   "homepage": "https://github.com/Firefund/styleguide#readme",
-  "devDependencies": {
-    "ecstatic": "^1.4.0"
-  },
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "^0.3.3"
+    "@dotnetcarpenter/firefund-cli": "^0.3"
   }
 }
