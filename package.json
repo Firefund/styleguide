@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "#preguide": "cp --update --recursive styles/* kalei/css/",
-    "preguide":"css styles/base.css styles/blocks/f-hero.css -d kalei/css",
+    "preguide":"css --dir kalei/css styles/base.css",
     "guide": "server kalei/ kalei/css/",
     "submodules": "git submodule update --remote --merge"
   },
