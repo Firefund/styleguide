@@ -1,6 +1,8 @@
 # Firefund live style guide
 - this is very alpha, in fact it's more like a test 
 
+Kanban tool: [![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.png?label=ready&title=Ready)](https://waffle.io/Firefund/styleguide)
+
 ## Initial CSS classes
 
 17. Hero. Has a full width background image with text content on top.
