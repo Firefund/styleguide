@@ -1,5 +1,5 @@
 COMPILED_DIR := kalei/css/blocks
-COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-accordian.css) 
+COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css) 
 
 $(COMPILED_DIR)/%.css: styles/blocks/%.css
 	npm run postcss -- --output $@ $<

@@ -1,10 +1,12 @@
 /*
+## f-branding
 ```
 <div class="f-branding">
 	<h1>Fire<span>fund</span></h1>
 </div>
 ```
 */
+
 .f-branding {	
 	color: var(--color-white, white);
 	text-transform: uppercase;	
