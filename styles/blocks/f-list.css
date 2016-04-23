@@ -3,44 +3,49 @@ A bullet list or number list. (About Who-01, Project-01)
 BLOCK f-list
 
 ```
-<ul class="f-list">
-	<li><span>The unordered one!</span></li>
+<ul class="f-list" style="color: white">
+	<li>The unordered one!</li>
 </ul>
 
-<ol class="f-list">
-	<li><span>The ordered one!</span></li>
+<ol class="f-list" style="color: white">
+	<li>The ordered one!</li>
 </ol> 
 
 
 ```
 */
-
+/*
 .f-list {
 	list-style-type: circle;
-	color: var(--color-red);
-	background-color: yellow;
+	font-style: roboto;
+	font-size: ...
+	
+}*/
 
-}
+
 
 .f-list li {
-	color: var(--color-red);
+/*	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1)); 
+*/	list-style: none;
 }
 
-.f-list ul {
-	color: var(--color-red);
+.f-list li:before {
+	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1));
+	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
+	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+	padding-right: .25rem; /* give the bullet some padding from the text Make sure to use em*/
+	position: relative;
+	top: .1rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
 }
 
-.f-list ol li {
-	color: var(--color-red);
-}
 
-.f-list ul li {
-	color: var(--color-red);
-}
 
-.f-list span {
-	color: var(--color-grey-dark);
-}
+
+/*.f-list span {
+	color: var(--color-grey-dark, hsla(0, 0%, 20%, 1));
+}*/
+
+
 
 
 /*
