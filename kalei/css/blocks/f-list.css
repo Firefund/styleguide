@@ -15,39 +15,51 @@ BLOCK f-list
 ```
 */
 
+/*
+### Variables
+You can't see them here - look in `styles/variables.css`
+*/
+
+/* Variables */
+
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
+
+}
+
 .f-list {
 	list-style-type: circle;
-	color: var(--color-red);
+	color: hsla(1, 73.7%, 38.8%, 1);
 	background-color: yellow;
 
 }
 
 .f-list li {
-	color: var(--color-red);
+	color: hsla(1, 73.7%, 38.8%, 1);
 }
 
 .f-list ul {
-	color: var(--color-red);
+	color: hsla(1, 73.7%, 38.8%, 1);
 }
 
 .f-list ol li {
-	color: var(--color-red);
+	color: hsla(1, 73.7%, 38.8%, 1);
 }
 
 .f-list ul li {
-	color: var(--color-red);
+	color: hsla(1, 73.7%, 38.8%, 1);
 }
 
 .f-list span {
-	color: var(--color-grey-dark);
+	color: hsla(0, 0%, 20%, 1);
 }
+
 
 /*
 From old FIREFUND*/
 
 /**
  */
-
+ 
 /*.f-list {
   margin: .96rem 0 0;
   padding-left: 1.3rem;
@@ -66,6 +78,5 @@ From old FIREFUND*/
 }*/
 
 /* exeption(s) */
-
 /*figure + .list {}*/
 

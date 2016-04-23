@@ -11,6 +11,7 @@ BLOCK f-hero
 	ELEMENT f-hero__text
 ```
 */
+@import "../variables";
 
 .f-hero {
 	width:2rem;
