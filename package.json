@@ -10,7 +10,8 @@
     "guide": "server kalei/ kalei/css/",
     "submodule": "npm run submodules",
     "submodules": "git submodule update --remote --merge",
-    "postcss": "postcss --use postcss-cssnext --use lost"
+    "postcss": "postcss --use postcss-cssnext --use lost",
+    "make": "make -j"
   },
   "repository": {
     "type": "git",
