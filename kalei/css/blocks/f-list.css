@@ -3,27 +3,19 @@ A bullet list or number list. (About Who-01, Project-01)
 BLOCK f-list
 
 ```
-<ul class="f-list" style="color: white">
-	<li>The unordered one!</li>
+<ul class="f-list">
+	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+	<li>The unordered second! And this one is shorty! </li>
+	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
 </ul>
 
-<ol class="f-list" style="color: white">
+<ol class="f-list">
 	<li>The ordered one!</li>
-</ol> 
-
-
+	<li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+	<li>The ordered one!</li>
+</ol>
 ```
 */
-/*
-
-@import "../variables";
-
-.f-list {
-	list-style-type: circle;
-	font-style: roboto;
-	font-size: ...
-	
-}*/
 
 /*
 ### Variables
@@ -33,57 +25,53 @@ You can't see them here - look in `styleguide/styles/_variables.css`
 :root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
 }
 
-.f-list li {
-/*	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1)); 
-*/	list-style: none;
+.f-list {
+	display: table;
+	margin: 9.6px 0 0;
+	margin: 0.6rem 0 0;
+	padding: 0;
+	
+	color: hsla(0, 0%, 20%, 1);
+	font-size: 22.4px;
+	font-size: 1.4rem;
+	line-height: 28.8px;
+	line-height: 1.8rem;
+	font-weight: lighter;
+	list-style: none;
+
+	counter-reset: f-list;
 }
 
-.f-list li:before {
-	color: hsla(1, 73.7%, 38.8%, 1);
-	color: hsla(1, 73.7%, 38.8%, 1);
+.f-list li {
+	display: table-row;
+}
+
+.f-list li::before {
+	display: table-cell;
+	position: relative;
 	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
+	top: 14.4px;
+	top: 0.9rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+
+	padding-right: 20px;
+	padding-right: 1.25rem; /* give the bullet some padding from the text Make sure to use em*/
+	padding-left: 20.8px;
+	padding-left: 1.3rem;
+
+	color: hsla(1, 73.7%, 38.8%, 1);
 	font-size: 60.8px;
 	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-	padding-right: 4px;
-	padding-right: .25rem; /* give the bullet some padding from the text Make sure to use em*/
-	position: relative;
-	top: 1.6px;
-	top: .1rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
 }
 
+ol.f-list li::before {
+	top: 0px;
+	top: 0rem;
+	height: 48px;
+	height: 3rem;
 
+	font-size: 22.4px;
+	font-size: 1.4rem;
 
-
-/*.f-list span {
-	color: var(--color-grey-dark, hsla(0, 0%, 20%, 1));
-}*/
-
-
-
-
-/*
-From old FIREFUND*/
-
-/**
- */
- 
-/*.f-list {
-  margin: .96rem 0 0;
-  padding-left: 1.3rem;
-
-  font-weight: lighter;
-  font-size: 1.4rem;
+	counter-increment: f-list;
+	content: counter(f-list) ".";
 }
-.f-list--li {
-  padding-left: 0.7rem;
-
-  color: var(--color-red);
-  line-height: calc(1.12rem + 1.4rem);
-}
-.f-list--li-span {
-  color: var(--color-grey-dark);
-}*/
-
-/* exeption(s) */
-/*figure + .list {}*/
-
