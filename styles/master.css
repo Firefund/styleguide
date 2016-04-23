@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumq
 /* ### BEM blocks ### */
 @import url("blocks/f-branding.css");
 @import url("blocks/f-list.css");
-@import url("blocks/f-accordian.css");
+@import url("blocks/f-navigation.css");
 /*@import url("blocks/f-hero.css");
 @import url("blocks/f-sub-left-heading.css");
 @import url("blocks/f-video.css");
