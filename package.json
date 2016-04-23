@@ -8,7 +8,8 @@
     "#preguide": "cp --update --recursive styles/* kalei/css/",
     "preguide":"css --dir kalei/css styles/base.css",
     "guide": "server kalei/ kalei/css/",
-    "submodules": "git submodule update --remote --merge"
+    "submodules": "git submodule update --remote --merge",
+    "postcss": "postcss --use postcss-cssnext --use lost"
   },
   "repository": {
     "type": "git",

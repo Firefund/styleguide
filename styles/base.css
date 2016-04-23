@@ -13,6 +13,7 @@ This is the base for all our styles. In here we define:
   /*--animation-parameters: 1.3s ease-in-out 3s;*/
   --color-red: hsla(1, 73.7%, 38.8%, 1);
   --color-black: hsla(0, 0%, 0%, 1);
+  --color-white: hsl(0, 0%, 100%, 1)
 }
 @custom-media --viewport-mobile (max-width: 640px);
 
