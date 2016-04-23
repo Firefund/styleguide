@@ -73,10 +73,10 @@ MODIFIER f-progress_horizontal
 	ELEMENT f-progress__data-element
 ```
 
-41. Horizontal button group
+41. Vertical button group
 ```
-BLOCK f-horizontal-button-group
-		ELEMENT f-horizontal-button-group__button
+BLOCK f-vertical-button-group
+		ELEMENT f-vertical-button-group__button
 ```
 42. Right-side heading. A heading with the background reaching the right
 side of its container.
