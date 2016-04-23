@@ -1,0 +1,15 @@
+/*
+A bullet list or number list. (About Who-01, Project-01)
+BLOCK f-list
+
+```
+<ul class="f-list">YO</ul>
+YO
+```
+*/
+
+.f-list {
+	list-style-type: circle;
+	background: var(--color-red);
+
+}
