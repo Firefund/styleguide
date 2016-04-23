@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "#preguide": "cp --update --recursive styles/* kalei/css/",
-    "preguide": "css --dir kalei/css styles/base.css",
-    "guide": "server kalei/ kalei/css/",
+    "##preguide": "css --dir kalei/css styles/base.css",
+    "guide": "server kalei/ kalei/css/**/*.css",
     "submodule": "npm run submodules",
     "submodules": "git submodule update --remote --merge",
     "postcss": "postcss --use postcss-import --use postcss-cssnext --use lost",
