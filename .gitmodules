@@ -1,4 +1,0 @@
-[submodule "kalei"]
-	path = kalei
-	url = https://github.com/Firefund/kaleistyleguide.git
-	branch = master
