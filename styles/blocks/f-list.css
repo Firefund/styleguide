@@ -15,6 +15,9 @@ BLOCK f-list
 ```
 */
 /*
+
+@import "../variables";
+
 .f-list {
 	list-style-type: circle;
 	font-style: roboto;

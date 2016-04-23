@@ -1,12 +1,24 @@
 /*
+## f-branding
 ```
 <div class="f-branding">
 	<h1>Fire<span>fund</span></h1>
 </div>
 ```
 */
+
+/*
+### Variables
+You can't see them here - look in `styles/variables.css`
+*/
+
+/* Variables */
+
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/	
+}
+
 .f-branding {	
-	color: white;
+	color: hsla(0, 0%, 100%, 1);
 	text-transform: uppercase;	
 	font-size: 65.6px;	
 	font-size: 4.1rem;

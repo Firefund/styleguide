@@ -1,0 +1,39 @@
+/*
+## f-navigation
+```
+<div class="f-navigation">
+	<a href="#" class="f-navigation__link">What and how</a>
+	<a href="#" class="f-navigation__link">About</a>
+</div>
+```
+*/
+
+/*
+### Variables
+You can't see them here - look in `styles/variables.css`
+*/
+
+/* Variables */
+
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
+}
+
+.f-navigation {}
+.f-navigation__link {
+	color: hsla(0, 0%, 84.7%, 1);
+	color: hsla(0, 0%, 84.7%, 1);
+	font-size: 28.8px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 76.8px;
+	line-height: 4.8rem;
+
+	-webkit-transition: color 260ms;
+
+	transition: color 260ms;
+}
+.f-navigation__link:hover {
+	color: hsla(0, 0%, 100%, 1);
+	color: hsla(0, 0%, 100%, 1);
+}

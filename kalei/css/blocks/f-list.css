@@ -14,10 +14,18 @@ BLOCK f-list
 
 ```
 */
+/*
+
+@import "../variables";
 
 .f-list {
 	list-style-type: circle;
-}
+	font-style: roboto;
+	font-size: ...
+	
+}*/
+
+
 
 .f-list li {
 /*	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1)); 
@@ -36,16 +44,22 @@ BLOCK f-list
 	top: .1rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
 }
 
+
+
+
 /*.f-list span {
 	color: var(--color-grey-dark, hsla(0, 0%, 20%, 1));
 }*/
+
+
+
 
 /*
 From old FIREFUND*/
 
 /**
  */
-
+ 
 /*.f-list {
   margin: .96rem 0 0;
   padding-left: 1.3rem;
@@ -64,6 +78,5 @@ From old FIREFUND*/
 }*/
 
 /* exeption(s) */
-
 /*figure + .list {}*/
 
