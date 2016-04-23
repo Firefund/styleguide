@@ -7,7 +7,6 @@
 ```
 */
 
-@import "../variables";
 
 .f-branding {	
 	color: var(--color-white);

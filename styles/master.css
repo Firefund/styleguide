@@ -12,6 +12,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumq
 3. Edit `js/config.js` to point at your own `styles.css`
 */
 
+@import "variables";
+@import "grid";
+
 @import url("base.css");
 
 /* ### BEM blocks ### */
