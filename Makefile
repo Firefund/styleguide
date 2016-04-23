@@ -1,4 +1,8 @@
-all: kalei/css/blocks/f-list.css kalei/css/blocks/f-branding.css kalei/css/blocks/f-hero.css kalei/css/blocks/f-accordian.css kalei/css/base.css kalei/css/master.css
+all: kalai/css/blocks/ kalei/css/blocks/f-list.css kalei/css/blocks/f-branding.css kalei/css/blocks/f-hero.css kalei/css/blocks/f-accordian.css kalei/css/base.css kalei/css/master.css
+
+
+kalai/css/blocks/:
+	mkdir -p kalai/css/blocks/
 
 kalei/css/blocks/f-branding.css: styles/blocks/f-branding.css
 	npm run postcss -- --output $@ $<
