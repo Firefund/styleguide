@@ -16,9 +16,26 @@ You can't see them here - look in `styleguide/styles/_variables.css`
 :root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
 }
 
-.f-navigation {}
+.f-navigation {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
 .f-navigation__link {
+	margin: 0 10%;
+
 	color: hsla(0, 0%, 84.7%, 1);
+
 	color: hsla(0, 0%, 84.7%, 1);
 	font-size: 28.8px;
 	font-size: 1.8rem;
@@ -27,9 +44,9 @@ You can't see them here - look in `styleguide/styles/_variables.css`
 	line-height: 76.8px;
 	line-height: 4.8rem;
 
-	-webkit-transition: color 260ms;
+	-webkit-transition: color 260ms ease-out;
 
-	transition: color 260ms;
+	transition: color 260ms ease-out;
 }
 .f-navigation__link:hover {
 	color: hsla(0, 0%, 100%, 1);

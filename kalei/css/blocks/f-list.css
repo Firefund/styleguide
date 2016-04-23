@@ -25,7 +25,13 @@ BLOCK f-list
 	
 }*/
 
+/*
+### Variables
+You can't see them here - look in `styleguide/styles/_variables.css`
+*/
 
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
+}
 
 .f-list li {
 /*	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1)); 
@@ -33,6 +39,7 @@ BLOCK f-list
 }
 
 .f-list li:before {
+	color: hsla(1, 73.7%, 38.8%, 1);
 	color: hsla(1, 73.7%, 38.8%, 1);
 	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
 	font-size: 60.8px;
