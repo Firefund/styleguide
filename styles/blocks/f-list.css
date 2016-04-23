@@ -3,76 +3,67 @@ A bullet list or number list. (About Who-01, Project-01)
 BLOCK f-list
 
 ```
-<ul class="f-list" style="color: white">
-	<li>The unordered one!</li>
+<ul class="f-list">
+	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+	<li>The unordered second! And this one is shorty! </li>
+	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
 </ul>
 
-<ol class="f-list" style="color: white">
+<ol class="f-list">
+	<li>The ordered one!</li>
+	<li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
 	<li>The ordered one!</li>
 </ol> 
-
+ 
 
 ```
 */
-/*
+
 
 @import "../variables";
 
 .f-list {
-	list-style-type: circle;
-	font-style: roboto;
-	font-size: ...
+	display: table;
+	margin: 0.6rem 0 0;
+	padding: 0;
 	
-}*/
+	
+	color: var(--color-grey-dark);
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	font-weight: lighter;
+	list-style: none;
 
-
+	counter-reset: f-list;
+}
 
 .f-list li {
-/*	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1)); 
-*/	list-style: none;
+	display: table-row;
 }
 
-.f-list li:before {
-	color: var(--color-red, hsla(1, 73.7%, 38.8%, 1));
-	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
-	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-	padding-right: .25rem; /* give the bullet some padding from the text Make sure to use em*/
+.f-list li::before {
+	display: table-cell;
 	position: relative;
-	top: .1rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
+	top: 0.9rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+
+	padding-right: 1.25rem; /* give the bullet some padding from the text Make sure to use em*/
+	padding-left: 1.3rem;
+
+	color: var(--color-red);
+	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
 }
 
-
-
-
-/*.f-list span {
-	color: var(--color-grey-dark, hsla(0, 0%, 20%, 1));
-}*/
-
-
-
+ol.f-list li::before {
+	font-size: 1.4rem;
+	counter-increment: f-list;
+	content: counter(f-list) ".";
+	top: 0rem;
+	height: 3rem;
+}
 
 /*
-From old FIREFUND*/
-
-/**
- */
- 
-/*.f-list {
-  margin: .96rem 0 0;
-  padding-left: 1.3rem;
-
-  font-weight: lighter;
-  font-size: 1.4rem;
-}
-.f-list--li {
-  padding-left: 0.7rem;
-
-  color: var(--color-red);
-  line-height: calc(1.12rem + 1.4rem);
-}
-.f-list--li-span {
-  color: var(--color-grey-dark);
-}*/
+From old firefund:*/
 
 /* exeption(s) */
 /*figure + .list {}*/
