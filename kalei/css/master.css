@@ -1,0 +1,37 @@
+/*
+# Firefund - Style guide
+## Generates live CSS documentation for use on the firefund website
+
+We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our documentation right in your browser.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumque. Neque dolorum, nemo minima debitis libero quis ducimus reprehenderit non numquam soluta sequi blanditiis at reiciendis, aliquid dolorem corrupti!
+
+## Getting started
+
+1. Download the repository (`git clone git://github.com/thomasdavis/kaleistyleguide.git`)
+2. Serve it on a HTTP server and it should work!
+3. Edit `js/config.js` to point at your own `styles.css`
+*/
+
+@import url("base.css");
+
+/* ### BEM blocks ### */
+@import url("blocks/f-branding.css");
+@import url("blocks/f-list.css");
+@import url("blocks/f-accordian.css");
+/*@import url("blocks/f-hero.css");
+@import url("blocks/f-sub-left-heading.css");
+@import url("blocks/f-video.css");
+@import url("blocks/f-cuff.css");
+@import url("blocks/f-text.css");
+@import url("blocks/f-image.css");
+@import url("blocks/f-spacer.css");
+@import url("blocks/f-donate-button.css");
+@import url("blocks/f-progress.css");
+@import url("blocks/f-horizontal-button-group.css");
+@import url("blocks/f-sub-right-heading.css");
+@import url("blocks/f-donation-amount.css");*/
+
+/* ### demo stuff */
+/*@import url("buttons.css");*/
+@import url("fixie-demo.css");
+

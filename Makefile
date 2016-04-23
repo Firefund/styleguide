@@ -1,20 +1,19 @@
-all: kalei/css/blocks/f-list.css kalei/css/blocks/f-branding.css kalei/css/blocks/f-hero.css kalei/css/blocks/f-accordian.css kalei/css/base.css kalei/css/master.css
+COMPILED_DIR := kalei/css/blocks
+COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-accordian.css) 
 
-
-kalei/css/blocks/f-branding.css: styles/blocks/f-branding.css
+$(COMPILED_DIR)/%.css: styles/blocks/%.css
 	npm run postcss -- --output $@ $<
 
-kalei/css/blocks/f-list.css: styles/blocks/f-list.css
-	npm run postcss -- --output $@ $<
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
 
-kalei/css/blocks/f-hero.css: styles/blocks/f-hero.css
-	npm run postcss -- --output $@ $<
+$(COMPILED_CSS): | $(COMPILED_DIR)
 
-kalei/css/blocks/f-accordian.css: styles/blocks/f-accordian.css
-	npm run postcss -- --output $@ $<
+$(COMPILED_DIR):
+	mkdir $(COMPILED_DIR)
 
 kalei/css/base.css: styles/base.css
 	npm run postcss -- --output $@ $<
 
 kalei/css/master.css: styles/master.css
 	npm run postcss:no-import -- --output $@ $<
+
