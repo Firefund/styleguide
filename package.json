@@ -1,0 +1,28 @@
+{
+  "name": "firefund-styleguide",
+  "version": "1.0.0-alpha",
+  "description": "Firefund live styleguide",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "#preguide": "cp --update --recursive styles/* kalei/css/",
+    "preguide":"css --dir kalei/css styles/base.css",
+    "guide": "server kalei/ kalei/css/",
+    "submodule": "npm run submodules",
+    "submodules": "git submodule update --remote --merge",
+    "postcss": "postcss --use postcss-cssnext --use lost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firefund/styleguide.git"
+  },
+  "author": "dotnetCarpenter <jon.ronnenberg@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Firefund/styleguide/issues"
+  },
+  "homepage": "https://github.com/Firefund/styleguide#readme",
+  "dependencies": {
+    "@dotnetcarpenter/firefund-cli": "^0.5.2"
+  }
+}
