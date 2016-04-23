@@ -31,7 +31,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumq
 @import url("blocks/f-sub-right-heading.css");
 @import url("blocks/f-donation-amount.css");*/
 
-/* ### demo stuff */
-/*@import url("buttons.css");*/
+@import url("buttons.css");
 @import url("fixie-demo.css");
+@import url("jon.css");
+@import url("home.css");
 

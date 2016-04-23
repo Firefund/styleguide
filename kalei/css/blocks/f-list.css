@@ -4,11 +4,11 @@ BLOCK f-list
 
 ```
 <ul class="f-list">
-	<li>The unordered one!</li>
+	<li><span>The unordered one!</span></li>
 </ul>
 
 <ol class="f-list">
-	<li>The ordered one!</li>
+	<li><span>The ordered one!</span></li>
 </ol> 
 
 
@@ -17,6 +17,55 @@ BLOCK f-list
 
 .f-list {
 	list-style-type: circle;
-	background: var(--color-red);
+	color: var(--color-red);
+	background-color: yellow;
 
 }
+
+.f-list li {
+	color: var(--color-red);
+}
+
+.f-list ul {
+	color: var(--color-red);
+}
+
+.f-list ol li {
+	color: var(--color-red);
+}
+
+.f-list ul li {
+	color: var(--color-red);
+}
+
+.f-list span {
+	color: var(--color-grey-dark);
+}
+
+/*
+From old FIREFUND*/
+
+/**
+ */
+
+/*.f-list {
+  margin: .96rem 0 0;
+  padding-left: 1.3rem;
+
+  font-weight: lighter;
+  font-size: 1.4rem;
+}
+.f-list--li {
+  padding-left: 0.7rem;
+
+  color: var(--color-red);
+  line-height: calc(1.12rem + 1.4rem);
+}
+.f-list--li-span {
+  color: var(--color-grey-dark);
+}*/
+
+/* exeption(s) */
+
+/*figure + .list {}*/
+
