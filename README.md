@@ -5,10 +5,11 @@ Kanban tool: [![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.pn
 
 ## Getting started
 
-1. `npm i`
-2. `npm run kalei`
-3. Go to [localhost:8080](localhost:8080) in your browser (preferably two or tree different, like firefox and chrome)  
-4. Start developing css in `styles/blocks/`
+1. Download the repository (`git clone https://github.com/Firefund/styleguide.git`)
+2. `npm i`
+3. `npm run kalei`
+4. Go to [localhost:8080](localhost:8080) in your browser (preferably two or tree different, like firefox and chrome)  
+5. Start developing css in `styles/blocks/`
 
 ### Creating new BEM blocks
 
