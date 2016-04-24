@@ -23,8 +23,7 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
-@import url("block/f-one-liner.css");
-@import url("block/f-one-liner-border.css");
+@import url("blocks/f-one-liner.css");
 
 /*
 @import url("blocks/f-sub-left-heading.css");
