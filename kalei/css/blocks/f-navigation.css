@@ -9,9 +9,6 @@ Site navigation links.
 ```
 */
 
-:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
-}
-
 .f-navigation {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -40,8 +37,8 @@ Site navigation links.
 	line-height: 76.8px;
 	line-height: 4.8rem;
 
+	cursor: pointer;
 	-webkit-transition: color 260ms ease-out;
-
 	transition: color 260ms ease-out;
 }
 .f-navigation__link:hover {

@@ -25,6 +25,7 @@ Site navigation links.
 	text-decoration: none;
 	line-height: 4.8rem;
 
+	cursor: pointer;
 	transition: color 260ms ease-out;
 }
 .f-navigation__link:hover {
