@@ -83,8 +83,9 @@ A text input field, with a label, that can be one line or multiple lines.
 }
 .f-text-input__label {
 	display: block;
+	margin-left: -1px; /* align with text-field -  adjust to the border  */
 	
-	font-weight: bold;
+	line-height: 1.8;
 }
 .f-text-input__text-field {
 	display: block;
