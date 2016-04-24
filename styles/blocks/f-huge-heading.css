@@ -5,10 +5,11 @@ A huge centered heading-text element that spans 100% of its container.
 
 ```
 
-<div class="f-huge-heading">
+<h1 class="f-huge-heading">
 How does it work?
-</div>
+</h1>
 
 ```
-
 */
+
+@import "../variables";
