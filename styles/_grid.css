@@ -1,0 +1,30 @@
+
+@import "variables";
+
+@lost gutter var(--grid-padding);
+
+.grid {
+  /*lost-utility: edit;*/
+  /*lost-flex-container: column;*/
+  lost-column: 6/6;
+  lost-utility: clearfix;
+
+  
+}
+
+.grid-debug {
+	border: 1px cyan solid;
+}
+
+.column-1 { lost-column: 1/6; }
+.column-2 { lost-column: 2/6; }
+.column-3 { lost-column: 3/6; }
+.column-4 { lost-column: 4/6; }
+.column-5 { lost-column: 5/6; }
+.column-6 { lost-column: 6/6; }
+.column-offset-1 { lost-offset: -1/6; }
+.column-offset-2 { lost-offset: -2/6; }
+.column-offset-3 { lost-offset: -3/6; }
+.column-offset-4 { lost-offset: -4/6; }
+.column-offset-5 { lost-offset: -5/6; }
+.column-offset-6 { lost-offset: -6/6; }
