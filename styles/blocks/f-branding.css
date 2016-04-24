@@ -2,7 +2,9 @@
 Our logo.
 
 ```
+<div class="kalei-show-margin">
 <h2 class="f-branding">Fire<span>fund</span></h2>
+</div>
 ```
 */
 
@@ -11,6 +13,6 @@ Our logo.
 .f-branding {
 	color: var(--color-white);
 	font-size: 4.1rem;
-  font-weight: bold;
+ 	font-weight: bold;
 	text-transform: uppercase;
 }

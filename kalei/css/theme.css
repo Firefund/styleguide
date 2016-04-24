@@ -218,23 +218,38 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
   background-color: #fff;
 }
 
-body .codedemo {
+.codedemo {
   position: relative;
-  padding: 40px;
+  /*margin: 40px;*/
   font-size: 100%;
   border-radius: 3px 3px 0 0;
   border: 1px solid #ebebeb;
-  background-color: #000;
+  background-color: #000; /* black demo area */
 }
-.codedemo .kalei-background-white {
+.codedemo .kalei-background-white { /* white demo area */
   float: left;
   clear: both;
 
   height: 100%;
   width: 100%;
-  margin: 0;
+  /*margin: 20px 0;*/
 
   background-color: white;
+}
+.codedemo .kalei-show-margin {
+  float: left;
+  clear: both;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: yellow;
+}
+.codedemo .kalei-background-white.kalei-show-margin > * {
+  background-color: white; /* recreate white demo area */
+}
+.codedemo .kalei-show-margin > * {
+  background-color: black; /* recreate black demo area */
 }
 
 *:not(.codedemo) .kalei-styleguide-menu-heading h1 {

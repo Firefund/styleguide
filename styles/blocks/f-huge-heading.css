@@ -2,7 +2,7 @@
 A huge centered heading-text element that spans 100% of its container. 
 
 ```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white kalei-show-margin"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
 	<h1 class="f-huge-heading">How does it work?</h1>
