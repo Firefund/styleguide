@@ -38,38 +38,39 @@ A number list. (About Who-01, Project-01)
 
 .f-list {
 	display: table;
-	margin: 0.6rem 0 0;
+	margin: 0 0 0.6rem;
 	padding: 0;
 	
-	color: var(--color-grey-dark);
-	font-size: 1.4rem;
-	line-height: 1.8rem;
-	font-weight: lighter;
 	list-style: none;
-
 	counter-reset: f-list;
 }
 
 .f-list li {
 	display: table-row;
+	height: 3rem;
+
+	color: var(--color-grey-dark);
+	font-size: 1.4rem;
+	font-weight: lighter;
+	line-height: 1.8rem;
 }
 
 .f-list li::before {
 	display: table-cell;
 	position: relative;
 	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
-	top: 0.9rem; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+	top: 0.9rem; /* set the vertical position of the bullet if necessary. Make sure to use rem or % */
 
-	padding-right: 1.25rem; /* give the bullet some padding from the text Make sure to use em*/
+	padding-right: 1.25rem; /* give the bullet some padding from the text Make sure to use rem*/
 	padding-left: 1.3rem;
 
 	color: var(--color-red);
-	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use rem or %*/
+	line-height: 0; /* should be zero or the bullets will add vertical space to the li's */
 }
 
 ol.f-list li::before {
 	top: 0rem;
-	height: 3rem;
 
 	font-size: 1.4rem;
 
