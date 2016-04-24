@@ -1,0 +1,73 @@
+/*
+A text input field, with a label, that can be one line or multiple lines.
+
+## Input field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	
+	<div class="f-text-input">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Mutiple lines
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	
+	<div class="f-text-input f-text-input_multiline">
+		<label class="f-text-input__label">Message
+			<textarea class="f-text-input__text-field" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Disabled input field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	
+	<div class="f-text-input f-text-input_disable">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Disabled mutiple lines
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	
+	<div class="f-text-input f-text-input_multiline f-text-input_disable">
+		<label class="f-text-input__label">Message
+			<textarea class="f-text-input__text-field" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+*/
+
+.f-text-input {}
