@@ -1,1 +1,1 @@
-source: kalei/
+exclude: [node_modules, styles]
