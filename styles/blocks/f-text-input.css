@@ -43,7 +43,7 @@ A text input field, with a label, that can be one line or multiple lines.
 	
 	<div class="f-text-input f-text-input_disable">
 		<label class="f-text-input__label">Name
-			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
+			<input class="f-text-input__text-field" disabled type="text" placeholder="Name, organization, newspaper, etc.">
 		</label>
 	</div>
 
@@ -60,7 +60,7 @@ A text input field, with a label, that can be one line or multiple lines.
 	
 	<div class="f-text-input f-text-input_multiline f-text-input_disable">
 		<label class="f-text-input__label">Message
-			<textarea class="f-text-input__text-field" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+			<textarea class="f-text-input__text-field" disabled placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
 		</label>
 	</div>
 
@@ -72,4 +72,14 @@ A text input field, with a label, that can be one line or multiple lines.
 
 @import "../variables";
 
-.f-text-input {}
+.f-text-input {
+	
+}
+.f-text-input__label {
+	display: block;
+	
+	font-weight: bold;
+}
+.f-text-input_disable {
+	
+}
