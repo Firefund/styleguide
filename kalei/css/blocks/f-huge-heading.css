@@ -4,11 +4,11 @@
 A huge centered heading-text element that spans 100% of its container. 
 
 ```
-
-<h1 class="f-huge-heading">
-How does it work?
-</h1>
-
+<div class="background-white">
+	<h1 class="f-huge-heading">
+	How does it work?
+	</h1>
+</div>
 
 ```
 */
@@ -24,7 +24,33 @@ You can't see them here - look in `styleguide/styles/_variables.css`
 
 .f-huge-heading {
 	text-align: center;
-	background-color: hsla(0, 0%, 100%, 1); /*Only for testing*/
-	font-size: 99.2px;
-	font-size: 6.2rem;
+	font-size: 105.6px;
+	font-size: 6.6rem;
+	margin: 188.8px 0 188.8px 0;
+	margin: 11.8rem 0 11.8rem 0;
 }
+
+.f-huge-heading--scroll {
+	padding:2em;
+	border:1em solid #e8e8e8;
+	-webkit-perspective:600px;
+	        perspective:600px;
+}
+
+.f-huge-heading--animateme {
+	width:80%;
+	padding:10%;
+	background:#e8e8e8;
+	-webkit-transform-origin:center center center;
+	        transform-origin:center center center;
+}
+
+/*
+Leftovers from scrollme:
+.wrapper
+{
+	max-width:30em;
+	margin:2em auto;
+}*/
+
+
