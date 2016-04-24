@@ -226,31 +226,6 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
   border: 1px solid #ebebeb;
   background-color: #000; /* black demo area */
 }
-.codedemo .kalei-background-white { /* white demo area */
-  float: left;
-  clear: both;
-
-  height: 100%;
-  width: 100%;
-  /*margin: 20px 0;*/
-
-  background-color: white;
-}
-.codedemo .kalei-show-margin {
-  float: left;
-  clear: both;
-
-  height: 100%;
-  width: 100%;
-
-  background-color: yellow;
-}
-.codedemo .kalei-background-white.kalei-show-margin > * {
-  background-color: white; /* recreate white demo area */
-}
-.codedemo .kalei-show-margin > * {
-  background-color: black; /* recreate black demo area */
-}
 
 *:not(.codedemo) .kalei-styleguide-menu-heading h1 {
   margin: 20px 0;
@@ -274,20 +249,61 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
   padding: 0;
 }
 
-body .codedemo:after {
-  content: "Example";
+.codedemo::after {
   position: absolute;
+  content: "Example";
   top: -1px;
   left: -1px;
+
   padding: 3px 7px;
+  
   color: #ebebeb;
   font-size: 12px;
   font-weight: bold;
   font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
   border-radius: 3px 0 3px 0;
   background-color: #444;
-}
 
+  -webkit-transition: top .2s cubic-bezier(.29,-0.45,.67,1.4) 200ms;
+  -moz-transition: top .2s cubic-bezier(.29,-0.45,.67,1.4) 200ms;
+  transition: top .2s cubic-bezier(.29,-0.45,.67,1.4) 200ms;
+}
+.codedemo:hover::after {
+  top: -20px;
+}
+/** Jon: show debug margin**/
+/*.codedemo-margin > *:first-child {
+  -webkit-transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
+  -moz-transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
+  transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
+}*/
+.kalei-background-white { /* white demo area */
+  float: left;
+  clear: both;
+
+  height: 100%;
+  width: 100%;
+  /*margin: 20px 0;*/
+
+  background-color: white;
+}
+.kalei-show-margin {
+  float: left;
+  clear: both;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: yellow;
+}
+.kalei-show-margin > * {
+  background-color: black; /* recreate black demo area */
+}
+.kalei-show-margin.kalei-background-white > * {
+  background-color: white; /* recreate white demo area */
+}
+/** END Jon: show debug margin**/
 
 .kalei-styleguide-menu-stylesheets {
   margin-top: 20px;
