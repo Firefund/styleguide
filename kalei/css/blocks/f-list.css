@@ -1,5 +1,7 @@
 /*
-A bullet list or number list. (About Who-01, Project-01)
+## Unordered list
+
+A bullet list. (About Who-01, Project-01)
 
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -10,7 +12,17 @@ A bullet list or number list. (About Who-01, Project-01)
 		<li>The unordered second! And this one is shorty! </li>
 		<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
 	</ul>
+	<!-- this should be used on the website -->
 
+</div>
+```
+
+## Ordered list
+A number list. (About Who-01, Project-01)
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
 	<ol class="f-list">
 		<li>The ordered one!</li>
 		<li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
@@ -21,9 +33,6 @@ A bullet list or number list. (About Who-01, Project-01)
 </div>
 ```
 */
-
-:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
-}
 
 .f-list {
 	display: table;
