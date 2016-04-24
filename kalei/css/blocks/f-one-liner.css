@@ -16,7 +16,7 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 
-	<p class="f-one-liner">This is probably a link sentence.</p>
+	<h2 class="f-one-liner">This is probably a link sentence. But what if it's a fucking long sentence, huh? A crazy long one, ya know?! IDK BIATCHHH</h2>
 	<h2 class="f-one-liner">This is probably one more link sentence.</h2>
 	<h2 class="f-one-liner">This is probably another link sentence.</h2>
 
@@ -31,6 +31,11 @@ BLOCK f-one-liner
 .f-one-liner {
 	font-size: 32px;
 	font-size: 2.0rem;
+	font-weight: normal;
+	color: hsla(0, 0%, 20%, 1);
+	margin: 0 0 22.4px 57.6px;
+	margin: 0 0 1.4rem 3.6rem;
+
 }
 
 /*Modifiers:
