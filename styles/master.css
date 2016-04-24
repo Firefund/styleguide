@@ -14,7 +14,7 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 4. Go to [localhost:8080](localhost:8080) in your browser (preferably two or three different, like firefox and chrome)  
 5. Start developing css in `styles/blocks/`
 
-### Creating new BEM blocks
+## Creating new BEM blocks
 
 1. Find or create a card in [Waffle - our kanban tool](https://waffle.io/Firefund/styleguide)
 2. Create a css file in `styles/blocks/` - name it after your BEM block
