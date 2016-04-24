@@ -226,6 +226,16 @@ body .codedemo {
   border: 1px solid #ebebeb;
   background-color: #000;
 }
+.codedemo .background-white {
+  float: left;
+  clear: both;
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  background-color: white;
+}
 
 *:not(.codedemo) .kalei-styleguide-menu-heading h1 {
   margin: 20px 0;
