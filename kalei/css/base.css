@@ -35,15 +35,11 @@ body {
   background-color: hsla(0, 0%, 0%, 1);
 }
 
-/* =fonts */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic);
 
-* {
-  font-family: "Roboto";
+* { font-family: "Roboto"; }
 
-}
-
-/* =span */
 span {
   color: hsla(1, 73.7%, 38.8%, 1);
 }

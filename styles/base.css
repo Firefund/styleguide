@@ -37,15 +37,11 @@ body {
   background-color: var(--color-black);
 }
 
-/* =fonts */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic);
 
-* {
-  font-family: "Roboto";
+* { font-family: "Roboto"; }
 
-}
-
-/* =span */
 span {
   color: var(--color-red);
 }

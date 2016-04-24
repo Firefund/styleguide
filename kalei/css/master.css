@@ -2,14 +2,14 @@
 # Firefund - Style guide
 ## Generates live CSS documentation for use on the firefund website
 
-We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our documentation right in your browser.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumque. Neque dolorum, nemo minima debitis libero quis ducimus reprehenderit non numquam soluta sequi blanditiis at reiciendis, aliquid dolorem corrupti!
+We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS documentation right in your browser.
 
 ## Getting started
 
-1. Download the repository (`git clone git://github.com/thomasdavis/kaleistyleguide.git`)
-2. Serve it on a HTTP server and it should work!
-3. Edit `js/config.js` to point at your own `styles.css`
+1. Download the repository (`git clone https://github.com/Firefund/styleguide.git`)
+2. Do `npm install` to install [firefund-cli](https://github.com/Firefund/firefund-cli/)
+2. Do `npm run guide` to run a local http server with the style guide.
+3. Open your browser and type `localhost:8080` to see our style guide.
 */
 
 @import "variables";
@@ -39,8 +39,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumq
 @import url("blocks/f-sub-right-heading.css");
 @import url("blocks/f-donation-amount.css");*/
 
+/* ### Examples from kalei */
 @import url("buttons.css");
 @import url("fixie-demo.css");
-@import url("jon.css");
-@import url("home.css");
 

@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "#preguide": "cp --update --recursive styles/* kalei/css/",
     "##preguide": "css --dir kalei/css styles/base.css",
+    "preguide": "npm run make",
     "guide": "server kalei/ kalei/css/**/*.css",
     "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
     "postcss:no-import": "postcss --use postcss-cssnext --use lost",
@@ -23,7 +24,7 @@
   },
   "homepage": "https://github.com/Firefund/styleguide#readme",
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "^0.5.2",
+    "@dotnetcarpenter/firefund-cli": "^0.5.5",
     "postcss-partial-import": "^1.3.0"
   }
 }
