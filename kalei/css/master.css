@@ -23,6 +23,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, alias, cumq
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
+@import url("block/f-one-liner.css");
+@import url("block/f-one-liner-border.css");
+
 /*
 @import url("blocks/f-sub-left-heading.css");
 @import url("blocks/f-video.css");
