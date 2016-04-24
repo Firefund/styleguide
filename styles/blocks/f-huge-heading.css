@@ -9,7 +9,40 @@ A huge centered heading-text element that spans 100% of its container.
 How does it work?
 </h1>
 
+
 ```
 */
 
 @import "../variables";
+
+.f-huge-heading {
+	text-align: center;
+	background-color: var(--color-white); /*Only for testing*/
+	font-size: 6.6rem;
+	margin: 11.8rem 0 11.8rem 0;
+}
+
+
+
+.f-huge-heading--scroll {
+	padding:2em;
+	border:1em solid #e8e8e8;
+	perspective:600px;
+}
+
+.f-huge-heading--animateme {
+	width:80%;
+	padding:10%;
+	background:#e8e8e8;
+	transform-origin:center center center;
+}
+
+/*
+Leftovers from scrollme:
+.wrapper
+{
+	max-width:30em;
+	margin:2em auto;
+}*/
+
+
