@@ -1,0 +1,44 @@
+/*
+# Firefund - Style guide
+## Generates live CSS documentation for use on the firefund website
+
+We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS documentation right in your browser.
+
+## Getting started
+
+1. Download the repository (`git clone https://github.com/Firefund/styleguide.git`)
+2. Do `npm install` to install [firefund-cli](https://github.com/Firefund/firefund-cli/)
+2. Do `npm run guide` to run a local http server with the style guide.
+3. Open your browser and type `localhost:8080` to see our style guide.
+*/
+
+@import "variables";
+@import "grid";
+
+@import url("base.css");
+
+/* ### BEM blocks ### */
+@import url("blocks/f-branding.css");
+@import url("blocks/f-list.css");
+@import url("blocks/f-navigation.css");
+@import url("blocks/f-hero.css");
+@import url("blocks/f-huge-heading.css");
+@import url("blocks/f-one-liner.css");
+
+/*
+@import url("blocks/f-sub-left-heading.css");
+@import url("blocks/f-video.css");
+@import url("blocks/f-cuff.css");
+@import url("blocks/f-text.css");
+@import url("blocks/f-image.css");
+@import url("blocks/f-spacer.css");
+@import url("blocks/f-donate-button.css");
+@import url("blocks/f-progress.css");
+@import url("blocks/f-horizontal-button-group.css");
+@import url("blocks/f-sub-right-heading.css");
+@import url("blocks/f-donation-amount.css");*/
+
+/* ### Examples from kalei */
+@import url("buttons.css");
+@import url("fixie-demo.css");
+
