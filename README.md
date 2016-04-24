@@ -3,6 +3,19 @@
 
 Kanban tool: [![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.png?label=ready&title=Ready)](https://waffle.io/Firefund/styleguide)
 
+## Getting started
+
+1. `npm i`
+2. `npm run kalei`
+3. Go to [localhost:8080](localhost:8080) in your browser (preferably two or tree different, like firefox and chrome)  
+4. Start developing css in `styles/blocks/`
+
+### Creating new BEM blocks
+
+1. Create a css file in `styles/blocks/` - name it after your BEM block
+2. add the file name to the beginning of the Makefile (currently second line)
+3. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
+
 ## Initial CSS classes
 
 17. Hero. Has a full width background image with text content on top.
