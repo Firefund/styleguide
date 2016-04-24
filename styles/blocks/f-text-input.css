@@ -74,11 +74,21 @@ A text input field, with a label, that can be one line or multiple lines.
 
 .f-text-input {
 	
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+.f-text-input_multiline {
+	
+	border: 1px solid var(--color-black);
 }
 .f-text-input__label {
 	display: block;
 	
 	font-weight: bold;
+}
+.f-text-input__text-field {
+	display: block;
+	
 }
 .f-text-input_disable {
 	
