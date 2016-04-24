@@ -6,9 +6,6 @@ Our logo.
 ```
 */
 
-:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
-}
-
 .f-branding {
 	color: hsla(0, 0%, 100%, 1);
 	font-size: 65.6px;
