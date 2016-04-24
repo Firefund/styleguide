@@ -1,19 +1,24 @@
 /*
 A bullet list or number list. (About Who-01, Project-01)
-BLOCK f-list
 
 ```
-<ul class="f-list">
-	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
-	<li>The unordered second! And this one is shorty! </li>
-	<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
-</ul>
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
-<ol class="f-list">
-	<li>The ordered one!</li>
-	<li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
-	<li>The ordered one!</li>
-</ol>
+	<!-- this should be used on the website -->
+	<ul class="f-list">
+		<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+		<li>The unordered second! And this one is shorty! </li>
+		<li>The unordered one! Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+	</ul>
+
+	<ol class="f-list">
+		<li>The ordered one!</li>
+		<li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+		<li>The ordered one!</li>
+	</ol>
+	<!-- this should be used on the website -->
+
+</div>
 ```
 */
 

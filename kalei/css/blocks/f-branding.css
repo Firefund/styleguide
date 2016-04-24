@@ -1,26 +1,18 @@
 /*
-## f-branding
-```
-<div class="f-branding">
-	<h1>Fire<span>fund</span></h1>
-</div>
-```
-TODO: Make it a h2 instead of div;
+Our logo.
 
+```
+<h2 class="f-branding">Fire<span>fund</span></h2>
+```
 */
 
-/*
-### Variables
-You can't see them here - look in `styleguide/styles/_variables.css`
-*/
-
-:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/	
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
 }
 
-.f-branding {	
+.f-branding {
 	color: hsla(0, 0%, 100%, 1);
-	text-transform: uppercase;	
-	font-size: 65.6px;	
+	font-size: 65.6px;
 	font-size: 4.1rem;
-  font-weight: bold;	
+  font-weight: bold;
+	text-transform: uppercase;
 }

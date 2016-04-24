@@ -1,6 +1,4 @@
-
 /*
-
 A huge centered heading-text element that spans 100% of its container. 
 
 ```
@@ -15,13 +13,7 @@ A huge centered heading-text element that spans 100% of its container.
 ```
 */
 
-/*
-### Variables
-You can't see them here - look in `styleguide/styles/_variables.css`
-*/
-
-:root {
-	/*--animation-parameters: 1.3s ease-in-out 3s;*/
+:root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
 }
 
 .f-huge-heading {

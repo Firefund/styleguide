@@ -1,16 +1,12 @@
 /*
-## f-navigation
+Site navigation links.
+
 ```
 <div class="f-navigation">
 	<a href="#" class="f-navigation__link">What and how</a>
 	<a href="#" class="f-navigation__link">About</a>
 </div>
 ```
-*/
-
-/*
-### Variables
-You can't see them here - look in `styleguide/styles/_variables.css`
 */
 
 :root {/*--animation-parameters: 1.3s ease-in-out 3s;*/
