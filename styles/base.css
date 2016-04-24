@@ -8,7 +8,7 @@ This is the base for all our styles. In here we define:
 */
 
 /* Variables */
-@import url("variables.css");
+@import url("variables.css"); 
 
 
 html {

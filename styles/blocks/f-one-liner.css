@@ -1,0 +1,41 @@
+
+/*
+
+One line of text. Can contain link(s). If you want you can (ab)use this block as a multiple line text. 
+Just wrap it in a small grid column. Top and bottom margin can be achieved by inserting  elements.
+
+BLOCK f-one-liner
+    MODIFIER f-one-liner_center
+    MODIFIER f-one-liner_right
+    MODIFIER f-one-liner_size_medium
+    MODIFIER f-one-liner_size_big
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+
+	<h2 class="f-one-liner">This is probably a link sentence.</h2>
+	<h2 class="f-one-liner">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner">This is probably another link sentence.</h2>
+
+
+	<!-- this should be used on the website -->
+
+</div>
+
+```
+*/
+
+@import "../variables";
+
+.f-one-liner {
+	
+
+}
+
+/*Modifiers:
+*/
+
+.f-one-liner 

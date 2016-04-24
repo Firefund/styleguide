@@ -1,0 +1,24 @@
+
+/*
+
+One line of text. A kind to 11 but with different font size and a border. As seen on ORGANIZE-button. 
+
+BLOCK f-one-liner-border
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+
+	<h2 class="f-one-liner-border">Organize solidarity through crowdfunding</h2>
+
+
+	<!-- this should be used on the website -->
+
+</div>
+
+```
+*/
+
+@import "../variables";
