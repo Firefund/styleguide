@@ -1,12 +1,12 @@
 COMPILED_DIR := kalei/css/blocks
-TEST := $(call wildcard, kalei/css/blocks/, *.css)
+#TEST := $(call wildcard, kalei/css/blocks/, *.css) vpath %.css kalei/css/blocks "can not search for files that doesn't exist" 
 COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css) 
 
 all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
 .phony: clean
 
 clean:
-	rm $(COMPILED_CSS); \
+	rm -r $(COMPILED_DIR); \
 	rm kalei/css/base.css; \
 	rm kalei/css/master.css
 
