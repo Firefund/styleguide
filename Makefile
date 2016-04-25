@@ -1,10 +1,17 @@
 COMPILED_DIR := kalei/css/blocks
+TEST := $(call wildcard, kalei/css/blocks/, *.css)
 COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css) 
+
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
+.phony: clean
+
+clean:
+	rm $(COMPILED_CSS); \
+	rm kalei/css/base.css; \
+	rm kalei/css/master.css
 
 $(COMPILED_DIR)/%.css: styles/blocks/%.css
 	npm run postcss -- --output $@ $<
-
-all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
 
 $(COMPILED_CSS): | $(COMPILED_DIR)
 
@@ -16,4 +23,3 @@ kalei/css/base.css: styles/base.css
 
 kalei/css/master.css: styles/master.css
 	npm run postcss:no-import -- --output $@ $<
-
