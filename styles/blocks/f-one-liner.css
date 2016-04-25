@@ -113,7 +113,7 @@ BLOCK f-one-liner
 @import "../variables";
 
 .f-one-liner {
-	margin: 0 3.6rem 1.4rem 3.6rem;
+	margin: 0 0rem 1.4rem 0rem;
 	font-size: 1.8rem;
 	font-weight: normal;
 	line-height: 2.0rem;
