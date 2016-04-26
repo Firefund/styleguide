@@ -101,7 +101,7 @@ body {
 .kalei-comments > ul,
 .kalei-comments > ol,
 .kalei-comments > p {
-  font-size: 12px;
+  font-size: 1.4rem;
 }
 
 /*
@@ -160,7 +160,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 .kalei-comments > pre > code,
 .kalei-css-container > pre > code {
   padding: 10px;
-  font-size: 11px;
+  font-size: 1.4rem;
   white-space: pre-wrap;
 }
 
