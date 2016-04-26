@@ -26,7 +26,7 @@ A text input field, with a label, that can be one line or multiple lines.
 	
 	<div class="f-text-input f-text-input_multiline">
 		<label class="f-text-input__label">Message
-			<textarea class="f-text-input__text-field" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+			<textarea class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
 		</label>
 	</div>
 
@@ -60,7 +60,7 @@ A text input field, with a label, that can be one line or multiple lines.
 	
 	<div class="f-text-input f-text-input_multiline f-text-input_disable">
 		<label class="f-text-input__label">Message
-			<textarea class="f-text-input__text-field" disabled placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+			<textarea class="f-text-input__text-field" rows="6" disabled placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
 		</label>
 	</div>
 
@@ -77,20 +77,25 @@ A text input field, with a label, that can be one line or multiple lines.
 	font-size: 1.4rem;
 	line-height: 2rem;
 }
-.f-text-input_multiline {
-	
-	border: 1px solid var(--color-black);
-}
 .f-text-input__label {
+	position: relative;
 	display: block;
 	margin-left: -1px; /* align with text-field -  adjust to the border  */
 	
 	line-height: 1.8;
 }
+f-text-input_multiline, .f-text-input__text-field {
+	width: 100%;
+	margin-bottom: 2rem;
+
+	border: 1px solid var(--color-black);
+	border-radius: 2px;
+}
 .f-text-input__text-field {
 	display: block;
 	
 }
-.f-text-input_disable {
-	
+.f-text-input_multiline {	}
+.f-text-input_disable * {
+	cursor: not-allowed;
 }
