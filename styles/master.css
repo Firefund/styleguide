@@ -28,6 +28,7 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 @import url("base.css");
 
 /* ### BEM blocks ### */
+@import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-list.css");
 @import url("blocks/f-navigation.css");

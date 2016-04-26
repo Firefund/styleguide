@@ -1,0 +1,15 @@
+/*
+
+A heading with the background reaching the left side of its container.
+
+BLOCK f-sub-left-heading
+
+```
+<h2 style=""> 
+sfa
+</h2>
+
+```
+*/
+
+@import "../variables";
