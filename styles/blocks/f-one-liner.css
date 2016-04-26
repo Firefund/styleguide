@@ -18,7 +18,7 @@ BLOCK f-one-liner
 
 
 	<h2 class="f-one-liner f-one-liner">This is actually a pretty long sentence, that is made just to see how they work, when there's more than one line. Pretty nifty, amarigt? Yes, amarigt. Amasorite.</h2>
-	<h2 class="f-one-liner f-one-liner">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner f-one-liner">This is probably <a href="#">one more link</a> sentence.</h2>
 	<h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
 
 
@@ -38,7 +38,7 @@ BLOCK f-one-liner
 
 
 	<h2 class="f-one-liner f-one-liner_center">This is probably a link sentence. But what if it's a fucking long sentence, huh? A crazy long one, ya know?! IDK BIATtHHH</h2>
-	<h2 class="f-one-liner f-one-liner_center">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner f-one-liner_center">This is probably <a href="#">one more link</a> sentence.</h2>
 	<h2 class="f-one-liner f-one-liner_center">This is probably another link sentence.</h2>
 
 
@@ -58,7 +58,7 @@ BLOCK f-one-liner
 
 
 	<h2 class="f-one-liner f-one-liner_right">This is probably a link sentence. But what if it's a fucking long sentence, huh? A crazy long one, ya know?! IDK BIATtHHH</h2>
-	<h2 class="f-one-liner f-one-liner_right">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner f-one-liner_right">This is probably <a href="#">one more link</a> sentence.</h2>
 	<h2 class="f-one-liner f-one-liner_right">This is probably another link sentence.</h2>
 
 
@@ -78,7 +78,7 @@ BLOCK f-one-liner
 
 
 	<h2 class="f-one-liner f-one-liner_size_medium">This is probably a link sentence. But what if it's a fucking long sentence, huh? A crazy long one, ya know?! IDK BIATtHHH</h2>
-	<h2 class="f-one-liner f-one-liner_size_medium">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner f-one-liner_size_medium">This is probably <a href="#">one more link</a> sentence.</h2>
 	<h2 class="f-one-liner f-one-liner_size_medium">This is probably another link sentence.</h2>
 
 
@@ -98,7 +98,7 @@ BLOCK f-one-liner
 
 
 	<h2 class="f-one-liner f-one-liner_size_big">This is probably a link sentence. But what if it's a fucking long sentence, huh? A crazy long one, ya know?! IDK BIATtHHH</h2>
-	<h2 class="f-one-liner f-one-liner_size_big">This is probably one more link sentence.</h2>
+	<h2 class="f-one-liner f-one-liner_size_big">This is probably <a href="#">one more link</a> sentence.</h2>
 	<h2 class="f-one-liner f-one-liner_size_big">This is probably another line, now there's just also a <span>span.</span></h2>
 
 
