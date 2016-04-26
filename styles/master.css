@@ -2,14 +2,24 @@
 # Firefund - Style guide
 ## Generates live CSS documentation for use on the firefund website
 
+[![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.png?label=ready&title=Ready)](https://waffle.io/Firefund/styleguide)
+
 We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS documentation right in your browser.
 
 ## Getting started
 
 1. Download the repository (`git clone https://github.com/Firefund/styleguide.git`)
-2. Do `npm install` to install [firefund-cli](https://github.com/Firefund/firefund-cli/)
-2. Do `npm run guide` to run a local http server with the style guide.
-3. Open your browser and type `localhost:8080` to see our style guide.
+2. `npm i`
+3. `npm run kalei`
+4. Go to [localhost:8080](localhost:8080) in your browser (preferably two or three different, like firefox and chrome)  
+5. Start developing css in `styles/blocks/`
+
+## Creating new BEM blocks
+
+1. Find or create a card in [Waffle - our kanban tool](https://waffle.io/Firefund/styleguide)
+2. Create a css file in `styles/blocks/` - name it after your BEM block
+3. add the file name to the beginning of the Makefile (currently second line)
+4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
 */
 
 @import "variables";
