@@ -40,6 +40,11 @@ body {
 
 * { font-family: "Roboto"; }
 
+a {
+  color: hsla(1, 73.7%, 38.8%, 1);
+  text-decoration: none;
+}
+
 span {
   color: hsla(1, 73.7%, 38.8%, 1);
 }
