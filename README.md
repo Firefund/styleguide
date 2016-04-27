@@ -36,6 +36,7 @@ to ensure that your styles work in all browsers)
 2. Create a css file in `styles/blocks/` - name it after your BEM block
 3. add the file name to the beginning of the Makefile (currently second line)
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
+5. if you need to use any of the variables defined in `styles/_variables.css`, you need to import it with: `@import "@import "../variables";"` <- **no url**
 
 ## Initial CSS classes
 
