@@ -16,7 +16,7 @@ make -v
 
 1. Install [git](https://git-scm.com/downloads)
 2. Install [nodejs](https://nodejs.org/en/)
-2. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
+2. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac. Probably also with your linux distro.
 
 
 ## Getting started
