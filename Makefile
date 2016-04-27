@@ -1,5 +1,5 @@
 COMPILED_DIR := kalei/css/blocks
-COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css f-text-input.css) 
+COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css f-text-input.css f-cuff-text.css) 
 #TEST := $(call wildcard, kalei/css/blocks/, *.css) vpath %.css kalei/css/blocks "can not search for files that doesn't exist"  
 SOURCE_CSS := $(call vpath %.css styles/blocks/)
 
@@ -17,7 +17,7 @@ $(COMPILED_DIR)/%.css: styles/blocks/%.css
 $(COMPILED_CSS): | $(COMPILED_DIR)
 
 $(COMPILED_DIR):
-	mkdir $(COMPILED_DIR)
+	npm run mkdir -- $(COMPILED_DIR)
 
 kalei/css/base.css: styles/base.css
 	npm run postcss -- --output $@ $<
