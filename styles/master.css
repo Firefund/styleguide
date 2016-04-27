@@ -35,6 +35,7 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 @import url("blocks/f-huge-heading.css");
 @import url("blocks/f-one-liner.css");
 @import url("blocks/f-text-input.css");
+@import url("blocks/f-cuff-text.css");
 /*
 @import url("blocks/f-sub-left-heading.css");
 @import url("blocks/f-video.css");
