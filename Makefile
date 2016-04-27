@@ -17,7 +17,7 @@ $(COMPILED_DIR)/%.css: styles/blocks/%.css
 $(COMPILED_CSS): | $(COMPILED_DIR)
 
 $(COMPILED_DIR):
-	mkdir $(COMPILED_DIR)
+	npm run mkdir -- $(COMPILED_DIR)
 
 kalei/css/base.css: styles/base.css
 	npm run postcss -- --output $@ $<
