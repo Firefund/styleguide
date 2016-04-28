@@ -20,38 +20,63 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 2. Create a css file in `styles/blocks/` - name it after your BEM block
 3. add the file name to the beginning of the Makefile (currently second line)
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
-*/
 
+## Sorting the CSS in BEM blocks
+
+ FIRST: position/box-model
+	position:
+	display:
+	top/right/botom/left
+	float
+	content (kun brugt med ::before og ::after)
+
+
+SECOND: size
+	height:
+	margin:;
+	padding;
+	border
+
+THIRD: font/text
+	color
+	font-*
+	text-*
+	line-height
+
+FOURTH: background
+
+transitions/transforms/animation
+
+FIFTH: weird stuff 
+*/
 
 /* TODO: This is not run through postcss-partial-import - if we do then all the latter @imports will fuck up master
 @import "variables";*/
-
 
 @import url("base.css");
 @import url("grid.css");
 
 /* ### BEM blocks ### */
+@import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-list.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
 @import url("blocks/f-one-liner.css");
-
+@import url("blocks/f-text-input.css");
+@import url("blocks/f-cuff-text.css");
 /*
-@import url("blocks/f-sub-left-heading.css");
-@import url("blocks/f-video.css");
-@import url("blocks/f-cuff.css");
+@import url("blocks/f-video.css")
 @import url("blocks/f-text.css");
 @import url("blocks/f-image.css");
 @import url("blocks/f-spacer.css");
-@import url("blocks/f-donate-button.css");
+@import url("blocks/f-huge-button.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-horizontal-button-group.css");
 @import url("blocks/f-sub-right-heading.css");
 @import url("blocks/f-donation-amount.css");*/
 
-/* ### Examples from kalei */
+/* ##### Examples from kalei
 @import url("buttons.css");
-@import url("fixie-demo.css");
-
+@import url("fixie-demo.css");*/

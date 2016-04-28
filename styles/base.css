@@ -42,6 +42,11 @@ body {
 
 * { font-family: "Roboto"; }
 
+a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
 span {
   color: var(--color-red);
 }

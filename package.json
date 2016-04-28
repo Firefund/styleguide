@@ -12,7 +12,8 @@
     "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
     "postcss:no-import": "postcss --use postcss-cssnext --use lost",
     "make": "make -j",
-    "watch": "nodemon --watch styles --ext .css --exec npm run make"
+    "watch": "nodemon --watch styles --ext .css --exec npm run make",
+    "mkdir": "mkdir"
   },
   "repository": {
     "type": "git",
