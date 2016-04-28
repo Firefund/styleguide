@@ -1,0 +1,23 @@
+/* 
+##EXAMPLE 1
+
+```
+<div class="kalei-background-white">
+    <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
+
+<div class="f-spacer"></div>
+
+
+    <div class="f-text-input">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
+		</label>
+	</div>
+</div>
+```
+
+*/
+
+.f-spacer {
+    height: 6rem;
+}
