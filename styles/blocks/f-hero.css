@@ -23,15 +23,15 @@ the js has run and the image is loaded.
 ## With grid
 ```
 <div class="f-hero">
-	<div class="l-grid">
-		<div class="l-grid-column-6">
+	<div class="grid">
+		<div class="grid-column-6">
 			<img src="foo/bar">
 			<div class="f-hero__heading">
 				<h1><span>Project:</span></h1><br>
 				<h1>Rebuild Kobanê</h1>
 			</div>
 		</div>
-		<div class="l-grid-column-3 l-mobile-grid-column-5">
+		<div class="grid-column-3 mobile-grid-column-5">
 			<p class="f-hero__text">
 				<span>We have always dealt with oppression, but we do not only fight</span>
 				<span>against ISIS - we fight for freedom. We are the Kobanê</span>
