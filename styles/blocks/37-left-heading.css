@@ -5,11 +5,21 @@ A heading with the background reaching the left side of its container.
 BLOCK f-sub-left-heading
 
 ```
-<h2 style=""> 
-sfa
-</h2>
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	<h1 class="f-left-heading">How does it work?</h1>
+	<!-- this should be used on the website -->
+
+</div>
 
 ```
 */
 
 @import "../variables";
+
+.f-huge-heading {
+	text-align: center;
+	font-size: 6.6rem;
+	margin: 11.8rem 0 11.8rem 0
+}
