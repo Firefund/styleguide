@@ -5,9 +5,41 @@ image is initial hidden but is reveal in a translateY/opacity movement, when
 the js has run.
 
 ```
-BLOCK f-hero
-	ELEMENT f-hero__heading
-	ELEMENT f-hero__text
+<div class="f-hero">
+	<img src="foo/bar">
+	<div class="f-hero__heading">
+		<h1><span>Project:</span></h1><br>
+		<h1>Rebuild Kobanê</h1>
+	</div>
+	<p class="f-hero__text">
+		<span>We have always dealt with oppression, but we do not only fight</span>
+		<span>against ISIS - we fight for freedom. We are the Kobanê</span>
+		<span>Reconstruction Board, and this is a global call to action, to stand</span>
+		<span>with us and rebuild our city.</span>
+	</p>
+</div>
+```
+## With grid
+```
+<div class="f-hero">
+	<div class="grid">
+		<div class="grid__column-6">
+			<img src="foo/bar">
+			<div class="f-hero__heading">
+				<h1><span>Project:</span></h1><br>
+				<h1>Rebuild Kobanê</h1>
+			</div>
+		</div>
+		<div class="grid__column-2 grid__mobile-column-5">
+			<p class="f-hero__text">
+				<span>We have always dealt with oppression, but we do not only fight</span>
+				<span>against ISIS - we fight for freedom. We are the Kobanê</span>
+				<span>Reconstruction Board, and this is a global call to action, to stand</span>
+				<span>with us and rebuild our city.</span>
+			</p>
+		</div>
+	</div>
+</div>
 ```
 */
 

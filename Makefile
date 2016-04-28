@@ -3,16 +3,13 @@ COMPILED_DIR := kalei/css/blocks
 COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css) 
 SOURCE_CSS := $(call vpath %.css styles/blocks/)
 
-all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
-.phony: clean show
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css
+.phony: clean
 
 clean:
 	rm -r $(COMPILED_DIR); \
 	rm kalei/css/base.css; \
 	rm kalei/css/master.css
-
-show:
-	echo $(SOURCE_CSS)
 
 $(COMPILED_DIR)/%.css: styles/blocks/%.css
 	npm run postcss -- --output $@ $<
@@ -23,6 +20,9 @@ $(COMPILED_DIR):
 	mkdir $(COMPILED_DIR)
 
 kalei/css/base.css: styles/base.css
+	npm run postcss -- --output $@ $<
+
+kalei/css/grid.css: styles/grid.css
 	npm run postcss -- --output $@ $<
 
 kalei/css/master.css: styles/master.css

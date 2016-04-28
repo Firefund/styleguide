@@ -22,10 +22,13 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
 */
 
-@import "variables";
-@import "grid";
+
+/* TODO: This is not run through postcss-partial-import - if we do then all the latter @imports will fuck up master
+@import "variables";*/
+
 
 @import url("base.css");
+@import url("grid.css");
 
 /* ### BEM blocks ### */
 @import url("blocks/f-branding.css");
