@@ -1,0 +1,61 @@
+/*
+
+A heading with the background reaching the left side of its container.
+
+BLOCK f-sub-left-heading
+
+```
+
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+			<h1 class="f-left-heading">Testing</h1>
+<!-- this should be used on the website -->
+
+</div>
+
+
+```
+*/
+
+@import "../variables";
+
+.f-left-heading {
+    /*position/box-model
+	position:
+	display:
+	top/right/botom/left
+	float
+	content (kun brugt med ::before og ::after)
+    */
+
+    /*size
+	height:
+	margin:;
+	padding;
+	border
+    */
+
+    /*font/text
+	color
+	font-*
+	text-*
+	line-height
+    */
+
+    /* background */
+
+    /* transitions/transforms/animation*/
+
+    /* weird stuff */
+
+	padding-top: .8rem;
+	padding-right: 1.93rem;
+	padding-bottom: .8rem;
+	padding-left: 3.4rem; /*TODO: Make the 3.4rem a global variable*/
+	
+	color: var(--color-white);
+	font-size: 4.1rem;
+
+	background-color: var(--color-black);
+}
