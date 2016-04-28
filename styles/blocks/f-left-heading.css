@@ -8,9 +8,9 @@ will *leak* out.
 `BLOCK f-left-heading`
 
 
-## Container with padding
+## f-left-heading - container with padding
 ```
-<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the widows: ebsite -->
 	<div style="padding: var(--gutter-width, 3.4rem);">
 
 <!-- this should be used on the website -->
@@ -21,7 +21,7 @@ will *leak* out.
 </div>
 ```
 
-## Leaking out of container
+## f-left-heading - leaking out of container
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
@@ -32,8 +32,21 @@ will *leak* out.
 </div><!-- only here for the style guide - should not be used on the website -->
 ```
 
+## .f-left-heading_big - container with padding
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
-## .f-left-heading_big
+	<div style="padding: var(--gutter-width, 3.4rem);">
+<!-- this should be used on the website -->
+	<h1 class="f-left-heading f-left-heading_big">About us</h1>
+<!-- this should be used on the website -->
+	</div>
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
+
+
+## .f-left-heading_big - leaking out of container
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
