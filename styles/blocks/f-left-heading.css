@@ -16,7 +16,20 @@ BLOCK f-sub-left-heading
 
 
 ```
+
+
+## .f-left-heading_big
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+	<h1 class="f-left-heading_big">About us</h1>
+<!-- this should be used on the website -->
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
 */
+
 
 @import "../variables";
 
@@ -31,3 +44,17 @@ BLOCK f-sub-left-heading
 
 	background-color: var(--color-black);
 }
+
+.f-left-heading_big {
+	display: inline-flex;
+
+	margin: 0 0 2.8rem -var(--gutter-width);
+	padding: .6rem 1.93rem .6rem var(--gutter-width); 
+	
+	color: var(--color-white);
+	font-size: 6.6rem;
+	line-height: 1rem;
+
+	background-color: var(--color-black);
+}
+
