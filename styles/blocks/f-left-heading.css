@@ -21,34 +21,6 @@ BLOCK f-sub-left-heading
 @import "../variables";
 
 .f-left-heading {
-    /*position/box-model
-	position:
-	display:
-	top/right/botom/left
-	float
-	content (kun brugt med ::before og ::after)
-    */
-
-    /*size
-	height:
-	margin:;
-	padding;
-	border
-    */
-
-    /*font/text
-	color
-	font-*
-	text-*
-	line-height
-    */
-
-    /* background */
-
-    /* transitions/transforms/animation*/
-
-    /* weird stuff */
-
 	padding-top: .8rem;
 	padding-right: 1.93rem;
 	padding-bottom: .8rem;
