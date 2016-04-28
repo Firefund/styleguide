@@ -5,8 +5,7 @@ short text. small line height. top-margin.
 ```
 <div>
     <p class="f-footer-text">
-        We are activists from all over. we are everywhere. Beware!
-        We have knives and dogs. they bite and sting. love firefund staff
+        We are activists, developing tools for activists. Currently, we’re based in Copenhagen.
     </p>
 </div>
 ```
@@ -53,7 +52,7 @@ Long text. small line height. top-margin. with links and span.
  .f-footer-text {
      
      font-weight: lighter;
-     font-size: 1.6rem;
+     font-size: 1.7rem;
      color: var(--color-white);
      line-height: 1.6;
  }
