@@ -20,7 +20,37 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 2. Create a css file in `styles/blocks/` - name it after your BEM block
 3. add the file name to the beginning of the Makefile (currently second line)
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
+
+## Sorting the CSS in BEM blocks
+
+ FIRST: position/box-model
+	position:
+	display:
+	top/right/botom/left
+	float
+	content (kun brugt med ::before og ::after)
+
+
+SECOND: size
+	height:
+	margin:;
+	padding;
+	border
+
+THIRD: font/text
+	color
+	font-*
+	text-*
+	line-height
+
+FOURTH: background
+
+transitions/transforms/animation
+
+FIFTH: weird stuff 
 */
+
+
 
 @import "variables";
 @import "grid";
@@ -28,6 +58,7 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 @import url("base.css");
 
 /* ### BEM blocks ### */
+@import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-list.css");
 @import url("blocks/f-navigation.css");
