@@ -272,6 +272,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 }
 
 *:not(.codedemo) .kalei-styleguide-menu-heading h1 {
+  width: 30rem;
   margin: 2rem 0;
   padding-left: 2rem;
   color: #444;
