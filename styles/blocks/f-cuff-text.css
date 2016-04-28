@@ -60,9 +60,8 @@ Bold text with big line-height
 
 */
 .f-cuff-text {
-    margin-top: 0;
-    
-    font-size: 1.6rem;
+    margin-top: 0; 
+    font-size: 1.4rem;
     font-weight: bold;
     line-height: 2;
 }
