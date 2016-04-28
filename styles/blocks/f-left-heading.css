@@ -1,20 +1,20 @@
 /*
 
-A heading with the background reaching the left side of its container.
+A heading with the background reaching the left side of its container,
+if the container has a `--gutter-width` padding.
+If the container doesn't have a `--gutter-width` padding, then the heading
+will *leak* out.
 
-BLOCK f-sub-left-heading
+`BLOCK f-left-heading`
 
 ```
-
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
-			<h1 class="f-left-heading">Rebuild Kobanê</h1>
+	<h1 class="f-left-heading">Rebuild Kobanê</h1>
 <!-- this should be used on the website -->
 
-</div>
-
-
+</div><!-- only here for the style guide - should not be used on the website -->
 ```
 
 
