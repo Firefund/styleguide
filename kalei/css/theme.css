@@ -18,6 +18,14 @@ body {
   padding: 0;
 }
 
+.kalei {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .kalei-style-menu-container {
   position: fixed;
   width: 30rem;
@@ -36,6 +44,21 @@ body {
   margin-left: 30rem;
   padding: 2rem;
   background-color: #f6f4f4;
+}
+
+.kalei-menu-items {
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.kalei-styleguide-menu-heading {
+    position: absolute;
+    height: 7.5rem;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 /*
