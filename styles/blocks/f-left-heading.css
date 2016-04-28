@@ -9,7 +9,7 @@ BLOCK f-sub-left-heading
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
-			<h1 class="f-left-heading">Testing</h1>
+			<h1 class="f-left-heading">Rebuild Kobanê</h1>
 <!-- this should be used on the website -->
 
 </div>
@@ -21,13 +21,13 @@ BLOCK f-sub-left-heading
 @import "../variables";
 
 .f-left-heading {
-	padding-top: .8rem;
-	padding-right: 1.93rem;
-	padding-bottom: .8rem;
-	padding-left: 3.4rem; /*TODO: Make the 3.4rem a global variable*/
+	display: inline-flex;
+
+	margin: 0 0 2.8rem -var(--gutter-width);
+	padding: .8rem 1.93rem .8rem var(--gutter-width); 
 	
 	color: var(--color-white);
-	font-size: 4.1rem;
+	font-size: 3.0rem;
 
 	background-color: var(--color-black);
 }
