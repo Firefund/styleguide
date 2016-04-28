@@ -68,13 +68,11 @@ SIXTH: weird stuff
 @import url("blocks/f-text-input.css");
 @import url("blocks/f-cuff-text.css");
 /*
-@import url("blocks/f-sub-left-heading.css");
-@import url("blocks/f-video.css");
-@import url("blocks/f-cuff.css");
+@import url("blocks/f-video.css")
 @import url("blocks/f-text.css");
 @import url("blocks/f-image.css");
 @import url("blocks/f-spacer.css");
-@import url("blocks/f-donate-button.css");
+@import url("blocks/f-huge-button.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-horizontal-button-group.css");
 @import url("blocks/f-sub-right-heading.css");
@@ -83,4 +81,3 @@ SIXTH: weird stuff
 /* ##### Examples from kalei
 @import url("buttons.css");
 @import url("fixie-demo.css");*/
-
