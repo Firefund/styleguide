@@ -1,8 +1,17 @@
 node_modules
+npm-debug.log
 bower_components
 
 #VSCode
 .vscode  
 
+
 # jekyll
 _site
+
+# generated css by postcss
+kalei/css/blocks/*.css
+kalei/css/base.css
+kalei/css/master.css
+.DS_Store
+
