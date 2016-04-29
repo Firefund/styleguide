@@ -1,0 +1,82 @@
+/*
+A group of left justified buttons.
+
+`BLOCK f-button`
+`MODIFIER f-button_attention`
+
+## f-button
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+	<!-- this should be used on the website -->
+
+	<button class="f-button">encrypt</button>
+	<button class="f-button">reset</button>
+
+	<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_attention
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+	<!-- this should be used on the website -->
+
+	<button class="f-button f-button_attention">submit</button>
+
+	<!-- this should be used on the website -->
+</div>
+
+```
+
+*/
+
+@import "../variables";
+
+.f-button {
+	padding-bottom: 0.3rem;
+	margin: 0 3rem 3.2rem 0;
+	border: 2px solid var(--color-black);
+	width: 16.4rem;
+	border-radius: 0.5rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	text-align: center;
+	background-color: var(--color-white);
+}
+
+.f-button:hover {
+	box-shadow: inset 0 0 0 1.2px var(--color-black);
+}
+
+.f-button:active {
+	background: var(--color-black);
+	color: var(--color-white);
+	border: 3px solid var(--color-black);
+}
+
+.f-button_attention {
+	border: 2px solid var(--color-red);
+	background: var(--color-red);
+	color: var(--color-white);
+	opacity: 0.75;
+	transition: opacity 0.3s ease 0s;
+}
+
+.f-button_attention:hover {
+	opacity: 1;
+	box-shadow: none;
+}
+
+.f-button_attention:active {
+	background: var(--color-black);
+	color: var(--color-white);
+	border: 2px solid var(--color-black);
+
+}
+
+
+
+

@@ -73,7 +73,7 @@ SIXTH: weird stuff
 @import url("base.css");
 
 /* ### BEM blocks ### */
-@import url("blocks/f-button-row.css");
+@import url("blocks/f-button.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
