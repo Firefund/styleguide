@@ -4,10 +4,13 @@
 ```
 <div class="kalei-background-white">
     <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
-
+<!-- only here for the style guide - should not be used on the website -->
+    
+<!-- this should be used on the website -->
 <div class="f-spacer"></div>
+<!-- this should be used on the website -->
 
-
+ <!-- only here for the style guide - should not be used on the website -->
     <div class="f-text-input">
 		<label class="f-text-input__label">Name
 			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
@@ -15,7 +18,6 @@
 	</div>
 </div>
 ```
-
 */
 
 .f-spacer {

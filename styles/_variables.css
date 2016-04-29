@@ -9,5 +9,8 @@
   --color-grey-light: hsla(0, 0%, 84.7%, 1);
 
   --grid-padding: 3.6rem;
+
+  --gutter-width: 3.4rem;
 }
+
 @custom-media --viewport-mobile (max-width: 640px);
