@@ -4,6 +4,12 @@ Our logo.
 ```
 <h2 class="f-branding">Fire<span>fund</span></h2>
 ```
+
+
+
+```
+<h2 class="f-branding f-branding_small">Fire<span>fund</span></h2>
+```
 */
 
 @import "../variables";
@@ -13,4 +19,8 @@ Our logo.
 	font-size: 4.1rem;
  	font-weight: bold;
 	text-transform: uppercase;
+}
+
+.f-branding_small {
+	font-size: 2rem;
 }

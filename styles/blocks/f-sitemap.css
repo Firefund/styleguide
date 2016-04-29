@@ -1,0 +1,26 @@
+/*
+## EXAMPLE 1
+```
+<div class="f-sitemap">
+    <h2 class="f-branding f-branding_small">Fire<span>fund</span></h2>
+    <ul class="f-sitemap__links">
+        <li><a href="">about us</a></li>
+        <li><a href="">terms</a></li>
+        <li><a href="">team</a></li>
+        <li><a href="">manifesto</a></li>
+        <li><a href="">contact</a></li>
+        <li><a href="">one more</a></li>
+    </ul>
+</div>
+```
+*/
+
+@import "../variables";
+
+.f-sitemap {}
+.f-sitemap__links {
+    padding: 0;
+}
+.f-sitemap__links a {
+    color: var(--color-grey); 
+}
