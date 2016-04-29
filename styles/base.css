@@ -7,7 +7,7 @@ This is the base for all our styles. In here we define:
 4. site wide classes
 */
 
-@import "_variables.css";
+@import "variables";
 
 
 html {
