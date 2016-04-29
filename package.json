@@ -9,8 +9,8 @@
     "##preguide": "css --dir kalei/css styles/base.css",
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",
-    "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use postcss-grid",
-    "postcss:no-import": "postcss --use postcss-cssnext --use postcss-grid",
+    "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
+    "postcss:no-import": "postcss --use postcss-cssnext",
     "make": "make -j",
     "watch": "nodemon --watch styles --ext .css --exec npm run make",
     "mkdir": "mkdir"

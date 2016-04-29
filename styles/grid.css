@@ -1,20 +1,144 @@
+/*
+## The grid
 
-@import "_variables.css";
+Our grid system is lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore, rem vero, necessitatibus nesciunt, voluptatibus voluptate laboriosam esse natus porro nostrum odit aliquam ducimus neque. Voluptate rem eligendi earum mollitia.
 
+<pre>
+BLOCK f-grid												- establish a grid - default is six columns
+MODIFIER f-grid_6										- an alias for f-grid e.g <span>class="f-grid"</span> = <span>class="f-grid f-grid_6"</span>
+MODIFIER f-grid_12									- establish a 12 columns grid
+MODIFIER f-grid_24									- establish a 12 columns grid
+MODIFIER f-grid_debug								- show the outlines of your grid
+  ELEMENT f-grid__column						- establish a column - default is 1/6 width column
+  MODIFIER f-grid__column_1					- an alias for f-grid__column e.g <span>class="f-grid__column"</span> = <span>class="f-grid__column f-grid__column_1"</span>
+  MODIFIER f-grid__column_2					- modify the column width
+  MODIFIER f-grid__column_3					- modify the column width
+  MODIFIER f-grid__column_4					- modify the column width
+  MODIFIER f-grid__column_5					- modify the column width
+  MODIFIER f-grid__column_6					- modify the column width
+  MODIFIER f-grid__column_offset_1	- modify the column indentation
+  MODIFIER f-grid__column_offset_2	- modify the column indentation
+  MODIFIER f-grid__column_offset_3	- modify the column indentation
+  MODIFIER f-grid__column_offset_4	- modify the column indentation
+  MODIFIER f-grid__column_offset_5	- modify the column indentation
+</pre>
+
+
+### 6 grid with 2 elements
+```
+<div class="f-grid f-grid_debug" style="background-color:blue;">
+  <div class="f-grid__column f-grid__column_3" style="background-color:lightblue;">1</div>
+  <div class="f-grid__column f-grid__column_3" style="background-color:lightblue;">2</div>
+</div>
+```
+
+### 6 grid with 3 elements
+```
+<div class="f-grid f-grid_debug">
+  <div class="f-grid__column f-grid__column_1">1</div>
+  <div class="f-grid__column f-grid__column_2">2</div>
+  <div class="f-grid__column f-grid__column_3">3</div>
+</div>
+```
+
+### 6 grid with 2 elements
+```
+<div class="f-grid f-grid_debug">
+  <div class="f-grid__column f-grid__column_4">1</div>
+  <div class="f-grid__column f-grid__column_2">2</div>
+</div>
+```
+*/
+
+
+@import "./variables";
+
+.demo {
+  margin: 0.1rem;
+  border: 1px dotted hsla(240, 100%, 50%, .8);
+  
+  text-align: center;
+  text-transform: uppercase;
+  
+  background-color: hsla(240, 100%, 25%, .1);
+}
 
 @lost gutter 3.6rem;
 
+.f-grid {
+  lost-flex-container: row;
+}
+.f-grid__column {
+  lost-column: 1 flex;
+}
+.f-grid_6 .f-grid__column_1 {
+  lost-column: 1/6 flex;
+}
+.f-grid_6 .f-grid__column_2 {
+  lost-column: 2/6 flex;
+}
+.f-grid_6 .f-grid__column_3 {
+  lost-column: 3/6 flex;
+}
+.f-grid_6 .f-grid__column_4 {
+  lost-column: 4/6 flex;
+}
+.f-grid_6 .f-grid__column_5 {
+  lost-column: 5/6 flex;
+}
+
+.f-grid::after {
+  clear: both;
+}
+/*
+.f-grid_debug {
+  padding: 1rem;
+
+  background-color: hsla(240.1, 100%, 50%, 0.5);
+}
+.f-grid_debug .f-grid__column {
+  height: 3rem;
+
+  text-align: center;
+  font-size: 2rem;
+
+  background-color:lightblue;
+}
+
+.f-grid_column, .f-grid__column_1 {
+  grid-column: 1/6;
+}
+
+.f-grid__column_2 {
+  grid-column: 2/6;
+}
+.f-grid__column_3 {
+  grid-column: 3/6;
+}
+.f-grid__column_4 {
+  grid-column: 4/6;
+}
+.f-grid__column_5 {
+  grid-column: 5/6;
+}
+.f-grid__column_3:nth-child(1n+2) {
+  margin-right: 0;
+}
+.f-grid__column_2:nth-child(1n+2) {
+  margin-right: 0;
+}
+*/
+
+/*
+@lost gutter 3.6rem;
+
 .grid {
-  /*lost-utility: edit;*/
-  /*lost-flex-container: column;*/
   lost-column: 6/6;
   lost-utility: clearfix;
-
-  
 }
 
 .grid_debug {
-	border: 1px cyan solid;
+  border: 2px cyan solid;
 }
 
 .grid__column-1 { lost-column: 1/6 1; }
@@ -28,8 +152,10 @@
 .grid__column-offset-3 { lost-offset: -3/6; }
 .grid__column-offset-4 { lost-offset: -4/6; }
 .grid__column-offset-5 { lost-offset: -5/6; }
-.grid__column-offset-6 { lost-offset: -6/6; }
-@media screen and (max-width: 640px) { /* mobile */
+.grid__column-offset-6 { lost-offset: -6/6; }*/
+/* mobile */
+/*
+@media screen and (max-width: 640px) {
   .grid__not-mobile { display: none; }
 
   .grid__mobile-column-1 { lost-column: 1/6; }
@@ -44,4 +170,4 @@
   .grid__mobile-column-offset-4 { lost-offset: -4/6; }
   .grid__mobile-column-offset-5 { lost-offset: -5/6; }
   .grid__mobile-column-offset-6 { lost-offset: -6/6; }
-}
+}*/
