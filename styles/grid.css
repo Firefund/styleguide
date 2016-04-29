@@ -63,14 +63,21 @@ MODIFIER f-grid_debug								- show the outlines of your grid
   background-color: hsla(240, 100%, 25%, .1);
 }
 
+
+
 @lost gutter 3.6rem;
 
 .f-grid {
   lost-flex-container: row;
 }
+.f-grid::after {
+  clear: both;
+}
+
 .f-grid__column {
   lost-column: 1 flex;
 }
+
 .f-grid_6 .f-grid__column_1 {
   lost-column: 1/6 flex;
 }
@@ -87,9 +94,111 @@ MODIFIER f-grid_debug								- show the outlines of your grid
   lost-column: 5/6 flex;
 }
 
-.f-grid::after {
-  clear: both;
+.f-grid_12 .f-grid__column_1 {
+  lost-column: 1/12 flex;
 }
+.f-grid_12 .f-grid__column_2 {
+  lost-column: 2/12 flex;
+}
+.f-grid_12 .f-grid__column_3 {
+  lost-column: 3/12 flex;
+}
+.f-grid_12 .f-grid__column_4 {
+  lost-column: 4/12 flex;
+}
+.f-grid_12 .f-grid__column_5 {
+  lost-column: 5/12 flex;
+}
+.f-grid_12 .f-grid__column_6 {
+  lost-column: 6/12 flex;
+}
+.f-grid_12 .f-grid__column_7 {
+  lost-column: 7/12 flex;
+}
+.f-grid_12 .f-grid__column_8 {
+  lost-column: 8/12 flex;
+}
+.f-grid_12 .f-grid__column_9 {
+  lost-column: 9/12 flex;
+}
+.f-grid_12 .f-grid__column_10 {
+  lost-column: 10/12 flex;
+}
+.f-grid_12 .f-grid__column_11 {
+  lost-column: 11/12 flex;
+}
+
+.f-grid_24 .f-grid__column_1 {
+  lost-column: 1/24 flex;
+}
+.f-grid_24 .f-grid__column_2 {
+  lost-column: 2/24 flex;
+}
+.f-grid_24 .f-grid__column_3 {
+  lost-column: 3/24 flex;
+}
+.f-grid_24 .f-grid__column_4 {
+  lost-column: 4/24 flex;
+}
+.f-grid_24 .f-grid__column_5 {
+  lost-column: 5/24 flex;
+}
+.f-grid_24 .f-grid__column_6 {
+  lost-column: 6/24 flex;
+}
+.f-grid_24 .f-grid__column_7 {
+  lost-column: 7/24 flex;
+}
+.f-grid_24 .f-grid__column_8 {
+  lost-column: 8/24 flex;
+}
+.f-grid_24 .f-grid__column_9 {
+  lost-column: 9/24 flex;
+}
+.f-grid_24 .f-grid__column_10 {
+  lost-column: 10/24 flex;
+}
+.f-grid_24 .f-grid__column_11 {
+  lost-column: 11/24 flex;
+}
+.f-grid_24 .f-grid__column_12 {
+  lost-column: 12/24 flex;
+}
+.f-grid_24 .f-grid__column_13 {
+  lost-column: 13/24 flex;
+}
+.f-grid_24 .f-grid__column_14 {
+  lost-column: 14/24 flex;
+}
+.f-grid_24 .f-grid__column_15 {
+  lost-column: 15/24 flex;
+}
+.f-grid_24 .f-grid__column_16 {
+  lost-column: 16/24 flex;
+}
+.f-grid_24 .f-grid__column_17 {
+  lost-column: 17/24 flex;
+}
+.f-grid_24 .f-grid__column_18 {
+  lost-column: 18/24 flex;
+}
+.f-grid_24 .f-grid__column_19 {
+  lost-column: 19/24 flex;
+}
+.f-grid_24 .f-grid__column_20 {
+  lost-column: 20/24 flex;
+}
+.f-grid_24 .f-grid__column_21 {
+  lost-column: 21/24 flex;
+}
+.f-grid_24 .f-grid__column_22 {
+  lost-column: 22/24 flex;
+}
+.f-grid_24 .f-grid__column_23 {
+  lost-column: 23/24 flex;
+}
+
+
 /*
 .f-grid_debug {
   padding: 1rem;
