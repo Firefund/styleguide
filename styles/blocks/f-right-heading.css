@@ -33,4 +33,19 @@ will *leak* out.
 ```
 */
 
-GETTING STARTED
+@import "..variables.css";
+
+.f-right-heading {
+/*	text-align: right;*/
+/*
+	margin: 0 -var(--gutter-width) 2.8rem 0;
+	padding: .8rem 1.93rem .8rem var(--gutter-width); 
+	*/
+	color: var(--color-white);
+	font-size: 10.0rem;
+
+	background-color: var(--color-black);
+}
+
+
+
