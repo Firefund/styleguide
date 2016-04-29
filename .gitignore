@@ -9,9 +9,5 @@ bower_components
 # jekyll
 _site
 
-# generated css by postcss
-kalei/css/blocks/*.css
-kalei/css/base.css
-kalei/css/master.css
 .DS_Store
 
