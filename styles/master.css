@@ -72,6 +72,7 @@ SIXTH: weird stuff
 @import url("grid.css");
 
 /* ### BEM blocks ### */
+@import url("blocks/f-right-heading.css");
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-list.css");
@@ -91,7 +92,6 @@ SIXTH: weird stuff
 @import url("blocks/f-huge-button.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-horizontal-button-group.css");
-@import url("blocks/f-sub-right-heading.css");
 @import url("blocks/f-donation-amount.css");*/
 
 /* ##### Examples from kalei
