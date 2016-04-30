@@ -1,22 +1,34 @@
 
 const grid = (columns) => {
+	const startBracket = " {\r\n"
+	const endBracket = "\r\n}\r\n"
 	const css = [
-		".f-grid_",
+		".f-row_",
 		columns,
-		" .f-grid__column_",
-		,//n
-		" {\r\n",
-		"  lost-column: ",
-		,//n
+		" .f-row__cell_",
+		null,//n
+		startBracket,
+		"\tlost-cell: ",
+		null,//n
 		"/",
 		columns,
 		" flex;",
-		"\r\n}\r\n",
+		endBracket,
+		".f-row_",
+		columns,
+		" .f-row__cell_push_",
+		null,//n
+		startBracket,
+  	"\tlost-offset: -",
+		null,//n
+		"/",
+		columns,
+		";",
+		endBracket
 	]
 	const csss = []
 	for (let n = 1; n < columns; n++) {
-		css[3] = css[6] = n
-		csss.push(css.join(""))
+		csss.push(css.map(a => a == null ? n : a).join(""))
 	}
 	csss.push("\r\n")
 	return csss.join("")
@@ -25,14 +37,14 @@ const grid = (columns) => {
 console.log(`
 @lost gutter 3.6rem;
 
-.f-grid {
+.f-row {
   lost-flex-container: row;
 }
-.f-grid::after {
+.f-row::after {
   clear: both;
 }
 
-.f-grid__column {
+.f-row__cell {
   lost-column: 1 flex;
 }
 `)
