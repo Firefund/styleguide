@@ -69,8 +69,8 @@ In mobile width, every cell is staked.
 
 /* --gutter-width variable doesn't work probably due to @lost gutter not being a proper css declaration block
 @lost gutter var(--gutter-width, 3.4rem); */
-@lost gutter 3.4rem;
 
+@lost gutter 3.4rem;
 .f-row {
 	lost-flex-container: row;
 }
@@ -84,10 +84,10 @@ In mobile width, every cell is staked.
 }
 
 @media screen and (--viewport-desktop) {
-	.f-row_not-desktop, .f-row__not-desktop {
+	.f-row_not-desktop,
+	.f-row__not-desktop {
 		display: none;
 	}
-}
 	.f-row_6 .f-row__cell_1 {
 		lost-column: 1/6 flex;
 	}
@@ -322,7 +322,7 @@ In mobile width, every cell is staked.
 	.f-row_24 .f-row__cell_push_23 {
 		lost-offset: -23/24;
 	}
-
+}
 
 
 /*
@@ -330,7 +330,8 @@ In mobile width, every cell is staked.
 */
 
 @media screen and (--viewport-mobile) {
-	.f-row_not-mobile, .f-row__not-mobile {
+	.f-row_not-mobile,
+	.f-row__not-mobile {
 		display: none;
 	}
 	.f-row__cell_mobile {
