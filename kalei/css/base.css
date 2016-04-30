@@ -5,7 +5,7 @@ This is the base for all our styles. In here we define:
 2. font sizes
 3. box-sizing *NOTE:* box-sizing http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 4. site wide classes
-*/ 
+*/
 
 
 html {
@@ -16,8 +16,7 @@ html {
 
 @media screen and (max-width: 1050px) {
   html {
-    font-size: 1vw;
-  /* OLD  font-size: .625vw;*/ /* 16/10 */
+    font-size: 1vw; /* no more scaling */
   }
 }
 @media screen and (max-width: 640px) {

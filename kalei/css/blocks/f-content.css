@@ -1,0 +1,59 @@
+/*
+BLOCK f-content 
+## 1 SMALL
+```
+<div class="f-content">
+<h1>Lorem ipsum dolor sit amet,
+    consectetur adipisicing elit.
+    Mollitia commodi debitis,
+    laborum deserunt accusantium,
+    consectetur hic voluptatem
+    ea animi quasi veritatis
+    quia minus, fugiat molestiae
+    natus vel quas! Dicta, 
+    itaque.
+ </h1>
+
+</div>
+```
+
+## Eksempel 2
+```
+<div class="f-content">
+<h1 class="f-left-heading">Rebuild Kobanê</h1>
+<p class="f-cuff-text">
+    This is a cuff text Lorem ipsum 
+    dolor sit amet, consectetur adipisicing elit. <span>Debitis amet quia</span>
+    illo libero in totam, nihil, molestiae optio, officia dolores 
+    ducimus! Quam ullam labore <a href="">eum optio laudantium tempora est aspernatur</a>.
+</p>
+
+</div>
+```
+
+## Eksempel 3
+```
+<div class="f-content">
+<ol class="f-list">
+    <li>The ordered one!</li>
+    <li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+    <li>The ordered one!</li>
+</ol>
+<div class="f-text-input f-text-input_multiline">
+    <label class="f-text-input__label">Message
+        <textarea class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+    </label>
+</div>
+<h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
+</div>
+```
+
+*/
+
+.f-content {
+    padding: 0 54.4px;
+    padding: 0 3.4rem;
+
+    background-color: hsla(0, 0%, 100%, 1);    
+    border-radius: 0.3rem;
+}
