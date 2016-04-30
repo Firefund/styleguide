@@ -26,7 +26,7 @@ const grid = (columns) => {
 		" .f-row__cell_",
 		null,//n
 		startBracket,
-		"\tlost-cell: ",
+		"\tlost-column: ",
 		null,//n
 		"/",
 		columns,
