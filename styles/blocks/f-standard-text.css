@@ -57,6 +57,7 @@ standard heading and text for bigger text blogs.
  margin-top: 0rem;
  margin-bottom: 0.65rem;
  color: var(--color-grey-dark);
+ font-weight: normal;
  font-size: 2rem;   
 }
 
@@ -66,6 +67,8 @@ margin-bottom: 2.7rem;
 color: var(--color-grey-dark);
 font-weight: lighter;
 font-size: 1.4rem;
-line-height: 1.82rem;    
+/*text-rendering: optimizeLegibility;*/
+line-height: 1.82rem;  
+  
     
 }
