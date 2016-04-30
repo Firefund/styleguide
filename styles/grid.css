@@ -64,9 +64,8 @@ MODIFIER f-row_debug								- show the outlines of your grid
 ```
 */
 
-@import "./variables";
-
 /* variables doesn't work probably due to a bug
+@import "./variables";
 @lost gutter var(--grid-padding, 3.6rem); */
 @lost gutter 3.6rem;
 
