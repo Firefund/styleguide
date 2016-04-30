@@ -16,10 +16,9 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (--viewport-max) {
   html {
-    font-size: 1vw;
-  /* OLD  font-size: .625vw;*/ /* 16/10 */
+    font-size: 1vw; /* no more scaling */
   }
 }
 @media screen and (--viewport-mobile) {

@@ -57,7 +57,7 @@ const grid_mobile = (cells) => {
 	const css = [
 		".f-row_",
 		cells,
-		" .f-row__cell_mobile_",
+		" .f-row__cell-mobile_",
 		null,//n
 		startBracket,
 		"\tlost-column: ",
@@ -68,7 +68,7 @@ const grid_mobile = (cells) => {
 		endBracket,
 		".f-row_",
 		cells,
-		" .f-row__cell_mobile_push_",
+		" .f-row__cell-mobile_push_",
 		null,//n
 		startBracket,
   	"\tlost-offset: -",
@@ -103,20 +103,23 @@ console.log(`
   lost-utility: clearfix;
 }
 
+.f-row_debug {
+	border: 1px dashed cyan;
+}
+
 .f-row__cell {
   lost-column: 1 flex;
 }
 
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none; }
-
-	${grid_6}
-
-	${grid_12}
-
-	${grid_24}
 }
 
+${grid_6}
+
+${grid_12}
+
+${grid_24}
 
 /*
  ## mobile
@@ -124,7 +127,7 @@ console.log(`
 @media screen and (--viewport-mobile) {
   .f-row_not-mobile, .f-row__not-mobile { display: none; }
 	
-	.f-row__cell_mobile { lost-column: 1 flex; }
+	.f-row__cell-mobile { lost-column: 1 flex!important; }
 
 	${grid_mobile(6)}
 	

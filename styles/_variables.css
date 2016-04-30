@@ -13,3 +13,4 @@
 
 @custom-media --viewport-mobile (max-width: 640px);
 @custom-media --viewport-desktop (min-width: 640px);
+@custom-media --viewport-max (max-width: 1050px);
