@@ -54,7 +54,7 @@ MODIFIER f-grid_debug								- show the outlines of your grid
 @import "./variables";
 
 .demo {
-  margin: 0.1rem;
+  padding: 0.1rem;
   border: 1px dotted hsla(240, 100%, 50%, .8);
   
   text-align: center;
@@ -70,7 +70,7 @@ MODIFIER f-grid_debug								- show the outlines of your grid
   lost-flex-container: row;
 }
 .f-row::after {
-  clear: both;
+  lost-utility: clearfix;
 }
 
 .f-row__cell {
@@ -175,7 +175,8 @@ MODIFIER f-grid_debug								- show the outlines of your grid
 	lost-offset: -11/12;
 }
 
- .f-row_24 .f-row__cell_1 {
+/*@lost gutter 1.8rem;*/
+.f-row_24 .f-row__cell_1 {
 	lost-column: 1/24 flex;
 }
 .f-row_24 .f-row__cell_push_1 {
@@ -313,6 +314,7 @@ MODIFIER f-grid_debug								- show the outlines of your grid
 .f-row_24 .f-row__cell_push_23 {
 	lost-offset: -23/24;
 }
+
 /*
 .f-grid_debug {
   padding: 1rem;

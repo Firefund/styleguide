@@ -59,7 +59,7 @@ console.log(`
   lost-flex-container: row;
 }
 .f-row::after {
-  clear: both;
+  lost-utility: clearfix;
 }
 
 .f-row__cell {
