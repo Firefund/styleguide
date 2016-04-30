@@ -1,4 +1,22 @@
 
+/**
+ * Naive grid generator - creates rows with cells that can be pushed
+ * to different start positions.
+ * TODO: Refactor to combine classes that does the same
+ * 	E.g. These 3 declaration blocks are identical:
+ *
+ * ```css
+	.f-row_6 .f-row__cell_3 {
+		lost-cell: 3/6 flex;
+	}
+	.f-row_12 .f-row__cell_6 {
+		lost-cell: 6/12 flex;
+	}
+	.f-row_24 .f-row__cell_12 {
+		lost-cell: 12/24 flex;
+	}
+	```
+ */
 const grid = (columns) => {
 	const startBracket = " {\r\n"
 	const endBracket = "\r\n}\r\n"
