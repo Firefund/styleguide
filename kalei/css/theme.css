@@ -226,6 +226,9 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
   position: relative;
   margin: 0;
   padding: 2rem;
+
+  font-size: small;
+
   border: 1px solid #ebebeb;
   border-top: none;
   border-radius:  0 0 3px 3px;
