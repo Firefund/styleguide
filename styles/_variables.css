@@ -8,10 +8,8 @@
   --color-grey-dark: hsla(0, 0%, 20%, 1);
   --color-grey-light: hsla(0, 0%, 84.7%, 1);
 
-  --grid-padding: 3.4rem;
-
   --gutter-width: 3.4rem;
 }
 
-@custom-media --viewport-mobile (min-width: 640px);
-@custom-media --viewport-desktop (max-width: 640px);
+@custom-media --viewport-mobile (max-width: 640px);
+@custom-media --viewport-desktop (min-width: 640px);
