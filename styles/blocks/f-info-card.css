@@ -1,0 +1,73 @@
+/*
+A numbered block with heading and separator. Below the separator, is text and image. 
+As seen on "How does it work".
+
+BLOCK f-info-card
+    ELEMENT f-info-card__number
+    ELEMENT f-info-card__heading
+    ELEMENT f-info-card__separator
+    ELEMENT f-info-card__text
+    ELEMENT f-info-card__image
+
+## f-info-card
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+	<!-- this should be used on the website -->
+
+	<div class="f-info-card">
+		<p class="f-info-card f-info-card_number">1</p>
+		<h4 class="f-info-card f-info-card_heading">Crowdfunding</h4>
+		<hr class="f-info-card f-info-card_line">
+		<p class="f-info-card f-info-card_text">
+		Crowds are the basic element in both social change and crowdfunding. 
+		<p>
+		<p class="f-info-card f-info-card_text">
+		Crowdfunding is simply a way for organizers, to mobilise support for an idea and translate that support into direct funding.
+		</p>
+	</div>
+
+	<!-- this should be used on the website -->
+</div>
+
+```
+*/
+
+@import "../variables";
+
+.f-info-card {
+	border-bottom: 20px;
+}
+
+.f-info-card_number {
+	margin: 0;
+	height: 10rem;
+	color: var(--color-red);
+	font-weight: bold;
+	font-size: 8.9rem;
+}
+
+.f-info-card_heading {
+	margin: 0;
+	color: var(--color-black);
+	font-size: 3rem;
+	margin-left: 2rem;
+	line-height: 3.6rem;
+	font-weight: bold;
+}
+
+.f-info-card_line {
+	border-top-color: var(--color-grey-light);
+	border-width: 2px 0 0;
+	margin-top: 10px;
+}
+
+.f-info-card_text {
+	margin-bottom: 2.7rem;
+	font-weight: lighter;
+	font-size: 2.0rem;
+}
+
+.f-info-card_image {
+}
+
