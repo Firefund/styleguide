@@ -57,7 +57,7 @@ const grid_mobile = (cells) => {
 	const css = [
 		".f-row_",
 		cells,
-		" .f-row__cell-mobile_",
+		" .f-row__cell-mobile-",
 		null,//n
 		startBracket,
 		"\tlost-column: ",

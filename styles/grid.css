@@ -27,7 +27,7 @@ BLOCK f-row											- establish a row
 MODIFIER f-row_debug						- show the outline of your cells
 MODIFIER f-row_not-desktop			- hide the row on desktop sizes
 MODIFIER f-row_6								- modify row to be a 6 cell row
-	ELEMENT f-row__cell						- a full row width cell
+	ELEMENT f-row__cell							- a full row width cell
 	ELEMENT f-row__cell__1				- a 1/6 width cell
 	ELEMENT f-row__cell__2				- a 2/6 width cell
 	ELEMENT f-row__cell__3				- a 3/6 width cell
@@ -500,7 +500,99 @@ In mobile width, every cell is staked.
 
 
 /*
- ## mobile
+ ## Mobile
+Some of the classes are already documented but here is a recap in a
+mobile context.
+<pre>
+BLOCK f-row																	- establish a row
+MODIFIER f-row_debug												- show the outline of your cells
+MODIFIER f-row_not-mobile										- hide the row on mobile sizes
+MODIFIER f-row_6														- modify row to be a 6 cell row
+	ELEMENT f-row__cell-mobile								- a full row width cell
+	ELEMENT f-row__cell-mobile-1							- a 1/6 width cell
+	ELEMENT f-row__cell-mobile-2							- a 2/6 width cell
+	ELEMENT f-row__cell-mobile-3							- a 3/6 width cell
+	ELEMENT f-row__cell-mobile-4							- a 4/6 width cell
+	ELEMENT f-row__cell-mobile-5							- a 5/6 width cell
+	ELEMENT f-row__not-mobile									- hide the cell on mobile sizes
+	MODIFIER f-row__cell-mobile_push_1				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_2				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_3				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_4				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_5				- modify the cell indentation
+MODIFIER f-row_12														- modify row to be a 12 cell row
+	ELEMENT f-row__-mobile										- a full row width cell
+	ELEMENT f-row__cell-mobile-1							- a 1/12 width cell
+	ELEMENT f-row__cell-mobile-2							- a 2/12 width cell
+	ELEMENT f-row__cell-mobile-3							- a 3/12 width cell
+	ELEMENT f-row__cell-mobile-4							- a 4/12 width cell
+	ELEMENT f-row__cell-mobile-5							- a 5/12 width cell
+	ELEMENT f-row__cell-mobile-6							- a 6/12 width cell
+	ELEMENT f-row__cell-mobile-7							- a 7/12 width cell
+	ELEMENT f-row__cell-mobile-8							- a 8/12 width cell
+	ELEMENT f-row__cell-mobile-9							- a 9/12 width cell
+	ELEMENT f-row__cell-mobile-10							- a 10/12 width cell
+	ELEMENT f-row__cell-mobile-11							- a 11/12 width cell
+	MODIFIER f-row__cell-mobile_push_1				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_2				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_3				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_4				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_5				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_6				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_7				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_8				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_9				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_10				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_11				- modify the cell indentation
+MODIFIER f-row_24														- modify row to be a 24 cell row
+	ELEMENT f-row__cell-mobile								- a full row width cell
+	ELEMENT f-row__cell-mobile_1							- a 1/24 width cell
+	ELEMENT f-row__cell-mobile_2							- a 2/24 width cell
+	ELEMENT f-row__cell-mobile_3							- a 3/24 width cell
+	ELEMENT f-row__cell-mobile_4							- a 4/24 width cell
+	ELEMENT f-row__cell-mobile_5							- a 5/24 width cell
+	ELEMENT f-row__cell-mobile_6							- a 6/24 width cell
+	ELEMENT f-row__cell-mobile_7							- a 7/24 width cell
+	ELEMENT f-row__cell-mobile_8							- a 8/24 width cell
+	ELEMENT f-row__cell-mobile_9							- a 9/24 width cell
+	ELEMENT f-row__cell-mobile_10							- a 10/24 width cell
+	ELEMENT f-row__cell-mobile_11							- a 11/24 width cell
+	ELEMENT f-row__cell-mobile_12							- a 12/24 width cell
+	ELEMENT f-row__cell-mobile_13							- a 13/24 width cell
+	ELEMENT f-row__cell-mobile_14							- a 14/24 width cell
+	ELEMENT f-row__cell-mobile_15							- a 15/24 width cell
+	ELEMENT f-row__cell-mobile_16							- a 16/24 width cell
+	ELEMENT f-row__cell-mobile_17							- a 17/24 width cell
+	ELEMENT f-row__cell-mobile_18							- a 18/24 width cell
+	ELEMENT f-row__cell-mobile_19							- a 19/24 width cell
+	ELEMENT f-row__cell-mobile_20							- a 20/24 width cell
+	ELEMENT f-row__cell-mobile_21							- a 21/24 width cell
+	ELEMENT f-row__cell-mobile_22							- a 22/24 width cell
+	ELEMENT f-row__cell-mobile_23							- a 23/24 width cell
+	MODIFIER f-row__cell-mobile_push_1				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_2				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_3				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_4				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_5				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_6				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_7				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_8				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_9				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_10				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_11				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_12				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_13				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_14				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_15				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_16				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_17				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_18				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_19				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_20				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_21				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_22				- modify the cell indentation
+	MODIFIER f-row__cell-mobile_push_23				- modify the cell indentation
+</pre>
 */
 
 @media screen and (--viewport-mobile) {
