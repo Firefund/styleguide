@@ -4,48 +4,48 @@
 Our grid system is lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore, rem vero, necessitatibus nesciunt, voluptatibus voluptate laboriosam esse natus porro nostrum odit aliquam ducimus neque. Voluptate rem eligendi earum mollitia.
 
 <pre>
-BLOCK f-grid												- establish a grid - default is six columns
-MODIFIER f-grid_6										- an alias for f-grid e.g <span>class="f-grid"</span> = <span>class="f-grid f-grid_6"</span>
-MODIFIER f-grid_12									- establish a 12 columns grid
-MODIFIER f-grid_24									- establish a 12 columns grid
-MODIFIER f-grid_debug								- show the outlines of your grid
-  ELEMENT f-grid__column						- establish a column - default is 1/6 width column
-  MODIFIER f-grid__column_1					- an alias for f-grid__column e.g <span>class="f-grid__column"</span> = <span>class="f-grid__column f-grid__column_1"</span>
-  MODIFIER f-grid__column_2					- modify the column width
-  MODIFIER f-grid__column_3					- modify the column width
-  MODIFIER f-grid__column_4					- modify the column width
-  MODIFIER f-grid__column_5					- modify the column width
-  MODIFIER f-grid__column_6					- modify the column width
-  MODIFIER f-grid__column_offset_1	- modify the column indentation
-  MODIFIER f-grid__column_offset_2	- modify the column indentation
-  MODIFIER f-grid__column_offset_3	- modify the column indentation
-  MODIFIER f-grid__column_offset_4	- modify the column indentation
-  MODIFIER f-grid__column_offset_5	- modify the column indentation
+BLOCK f-row												- establish a grid - default is six columns
+MODIFIER f-row_6										- an alias for f-row e.g <span>class="f-row"</span> = <span>class="f-row f-row_6"</span>
+MODIFIER f-row_12									- establish a 12 columns grid
+MODIFIER f-row_24									- establish a 12 columns grid
+MODIFIER f-row_debug								- show the outlines of your grid
+  ELEMENT f-row__cell						- establish a cell - default is 1/6 width cell
+  MODIFIER f-row__cell_1					- an alias for f-row__cell e.g <span>class="f-row__cell"</span> = <span>class="f-row__cell f-row__cell_1"</span>
+  MODIFIER f-row__cell_2					- modify the cell width
+  MODIFIER f-row__cell_3					- modify the cell width
+  MODIFIER f-row__cell_4					- modify the cell width
+  MODIFIER f-row__cell_5					- modify the cell width
+  MODIFIER f-row__cell_6					- modify the cell width
+  MODIFIER f-row__cell_offset_1	- modify the cell indentation
+  MODIFIER f-row__cell_offset_2	- modify the cell indentation
+  MODIFIER f-row__cell_offset_3	- modify the cell indentation
+  MODIFIER f-row__cell_offset_4	- modify the cell indentation
+  MODIFIER f-row__cell_offset_5	- modify the cell indentation
 </pre>
 
 
 ### 6 grid with 2 elements
 ```
-<div class="f-grid f-grid_debug" style="background-color:blue;">
-  <div class="f-grid__column f-grid__column_3" style="background-color:lightblue;">1</div>
-  <div class="f-grid__column f-grid__column_3" style="background-color:lightblue;">2</div>
+<div class="f-row f-row_6 f-row_debug">
+  <div class="f-row__cell f-row__cell_3">1</div>
+  <div class="f-row__cell f-row__cell_3">2</div>
 </div>
 ```
 
 ### 6 grid with 3 elements
 ```
-<div class="f-grid f-grid_debug">
-  <div class="f-grid__column f-grid__column_1">1</div>
-  <div class="f-grid__column f-grid__column_2">2</div>
-  <div class="f-grid__column f-grid__column_3">3</div>
+<div class="f-row f-row_6 f-row_debug">
+  <div class="f-row__cell f-row__cell_1">1</div>
+  <div class="f-row__cell f-row__cell_2">2</div>
+  <div class="f-row__cell f-row__cell_3">3</div>
 </div>
 ```
 
 ### 6 grid with 2 elements
 ```
-<div class="f-grid f-grid_debug">
-  <div class="f-grid__column f-grid__column_4">1</div>
-  <div class="f-grid__column f-grid__column_2">2</div>
+<div class="f-row f-row_6 f-row_debug">
+  <div class="f-row__cell f-row__cell_4">1</div>
+  <div class="f-row__cell f-row__cell_2">2</div>
 </div>
 ```
 */
@@ -71,6 +71,9 @@ MODIFIER f-grid_debug								- show the outlines of your grid
 }
 .f-row::after {
   lost-utility: clearfix;
+}
+.f-row_debug .f-row__cell {
+	border: 1px solid cyan;
 }
 
 .f-row__cell {
