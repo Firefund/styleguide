@@ -57,7 +57,7 @@ const grid_mobile = (cells) => {
 	const css = [
 		".f-row_",
 		cells,
-		" .f-row__cell_",
+		" .f-row__cell_mobile_",
 		null,//n
 		startBracket,
 		"\tlost-column: ",
@@ -68,7 +68,7 @@ const grid_mobile = (cells) => {
 		endBracket,
 		".f-row_",
 		cells,
-		" .f-row__cell_push_",
+		" .f-row__cell_mobile_push_",
 		null,//n
 		startBracket,
   	"\tlost-offset: -",
@@ -108,7 +108,7 @@ console.log(`
 }
 
 @media screen and (--viewport-desktop) {
-	.f-row__not-desktop { display: none; }
+	.f-row_not-desktop, .f-row__not-desktop { display: none; }
 
 	${grid_6}
 
@@ -122,7 +122,9 @@ console.log(`
  ## mobile
 */
 @media screen and (--viewport-mobile) {
-  .f-row__not-mobile { display: none; }
+  .f-row_not-mobile, .f-row__not-mobile { display: none; }
+	
+	.f-row__cell_mobile { lost-column: 1 flex; }
 
 	${grid_mobile(6)}
 	
