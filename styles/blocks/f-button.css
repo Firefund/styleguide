@@ -44,7 +44,7 @@ A group of left justified buttons.
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: center;
-	background-color: var(--color-white);
+	background-color: var(--color-white);	
 }
 
 .f-button:hover {
