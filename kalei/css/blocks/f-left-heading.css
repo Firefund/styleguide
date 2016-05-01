@@ -13,7 +13,7 @@ BLOCK f-left-heading`
 ## f-left-heading - container with padding
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
-	<div style="padding: var(--gutter-width, 3.4rem);">
+	<div style="padding:3.4rem;">
 
 <!-- this should be used on the website -->
 	<h1 class="f-left-heading">Rebuild Kobanê</h1>
@@ -39,7 +39,7 @@ BLOCK f-left-heading`
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
-	<div style="padding: var(--gutter-width, 3.4rem);">
+	<div style="padding:3.4rem;">
 <!-- this should be used on the website -->
 	<h1 class="f-left-heading f-left-heading_big">About us</h1>
 <!-- this should be used on the website -->
