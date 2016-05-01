@@ -38,6 +38,41 @@ to ensure that your styles work in all browsers)
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
 5. if you need to use any of the variables defined in `styles/_variables.css`, you need to import it with: `@import "@import "../variables";"` <- **no url**
 
+
+## Clean CSS
+
+The anatomy for *clean* CSS declaration blocks is the following: 
+```
+/* Sorting the CSS in BEM blocks */
+ FIRST: position/box-model
+	position:
+	display:
+	top/right/bottom/left
+	float
+	content (only used with position: absolute/relative and ::before and/or ::after)
+
+
+SECOND: size
+	height:
+	margin:;
+	padding;
+	border
+
+THIRD: font/text
+	color
+	font-*
+	text-*
+	line-height
+
+FOURTH: background
+
+FIFTH: transitions/transforms/animation
+
+SIXTH: weird stuff
+	cursor:
+	list-style:
+```
+
 ## Initial CSS classes
 
 17. Hero. Has a full width background image with text content on top.
