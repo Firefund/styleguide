@@ -103,7 +103,7 @@ console.log(`
   lost-utility: clearfix;
 }
 
-.f-row_debug {
+.f-row_debug > * {
 	border: 1px dashed cyan;
 }
 
