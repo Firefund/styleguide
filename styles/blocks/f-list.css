@@ -52,7 +52,7 @@ A number list. (About Who-01, Project-01)
 	color: var(--color-grey-dark);
 	font-size: 1.4rem;
 	font-weight: lighter;
-	line-height: 1.8rem;
+	line-height: 1.8rem; /*TODO: Correct this line-height, Karl*/
 }
 
 .f-list li::before {
