@@ -102,6 +102,7 @@ standard heading and text for bigger text blogs.
 */
 
 @import "../variables";
+/*  the BEM block class is missing -> .f-text {} */
 
 .f-text {
 
@@ -114,6 +115,7 @@ standard heading and text for bigger text blogs.
     color: var(--color-grey-dark);
     font-weight: normal;
     font-size: 2rem;
+    font-size: 2rem;   
 }
 
 .f-text__text {
@@ -125,4 +127,6 @@ standard heading and text for bigger text blogs.
     font-size: 1.4rem;
     text-rendering: optimizeLegibility;
     line-height: 2.4rem;
+    /*text-rendering: optimizeLegibility;*/
+    line-height: 1.82rem;  
 }
