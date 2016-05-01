@@ -5,10 +5,12 @@ if the container has a `--gutter-width` padding.
 If the container doesn't have a `--gutter-width` padding, then the heading
 will *leak* out.
 
-`BLOCK f-left-heading`
+<pre>
+BLOCK f-left-heading`
+</pre>
 
 
-## Container with padding
+## f-left-heading - container with padding
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 	<div style="padding: var(--gutter-width, 3.4rem);">
@@ -21,7 +23,8 @@ will *leak* out.
 </div>
 ```
 
-## Leaking out of container
+
+## f-left-heading - leaking out of container
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
@@ -31,7 +34,33 @@ will *leak* out.
 
 </div><!-- only here for the style guide - should not be used on the website -->
 ```
+
+## .f-left-heading_big - container with padding
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+	<div style="padding: var(--gutter-width, 3.4rem);">
+<!-- this should be used on the website -->
+	<h1 class="f-left-heading f-left-heading_big">About us</h1>
+<!-- this should be used on the website -->
+	</div>
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
+
+
+## .f-left-heading_big - leaking out of container
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+	<h1 class="f-left-heading f-left-heading_big">About us</h1>
+<!-- this should be used on the website -->
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
 */
+
 
 @import "../variables";
 
@@ -46,3 +75,17 @@ will *leak* out.
 
 	background-color: var(--color-black);
 }
+
+.f-left-heading_big {
+	display: inline-flex;
+
+	margin: 0 0 2.8rem -var(--gutter-width);
+	padding: .6rem 1.93rem 1.2rem var(--gutter-width); 
+	
+	color: var(--color-white);
+	font-size: 6.6rem;
+	line-height: 0.9;
+
+	background-color: var(--color-black);
+}
+
