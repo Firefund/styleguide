@@ -1,9 +1,10 @@
 COMPILED_DIR := kalei/css/blocks
-COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css f-left-heading.css f-text-input.css f-cuff-text.css f-spacer.css f-footer-text.css f-right-heading.css f-postpay-info.css f-sitemap.css) 
+
+COMPILED_CSS := $(addprefix $(COMPILED_DIR)/,f-list.css f-branding.css f-hero.css f-navigation.css f-huge-heading.css f-one-liner.css f-left-heading.css f-text-input.css f-cuff-text.css f-spacer.css f-footer-text.css f-right-heading.css f-content.css f-donation-amount.css f-postpay-info.css) 
 #TEST := $(call wildcard, kalei/css/blocks/, *.css) vpath %.css kalei/css/blocks "can not search for files that doesn't exist"  
 SOURCE_CSS := $(call vpath %.css styles/blocks/)
 
-all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css
 .phony: clean
 
 clean:
@@ -20,6 +21,9 @@ $(COMPILED_DIR):
 	npm run mkdir -- $(COMPILED_DIR)
 
 kalei/css/base.css: styles/base.css
+	npm run postcss -- --output $@ $<
+
+kalei/css/grid.css: styles/grid.css
 	npm run postcss -- --output $@ $<
 
 kalei/css/master.css: styles/master.css

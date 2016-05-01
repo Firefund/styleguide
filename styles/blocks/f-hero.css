@@ -4,34 +4,18 @@ Image inserted as html img tag and via js set as css background-image. The
 image is initial hidden but is reveal in a translateY/opacity movement, when
 the js has run and the image is loaded.
 
-## No grid
-```
-<div class="f-hero">
-	<img src="foo/bar">
-	<div class="f-hero__heading">
-		<h1><span>Project:</span></h1><br>
-		<h1>Rebuild Kobanê</h1>
-	</div>
-	<p class="f-hero__text">
-		<span>We have always dealt with oppression, but we do not only fight</span>
-		<span>against ISIS - we fight for freedom. We are the Kobanê</span>
-		<span>Reconstruction Board, and this is a global call to action, to stand</span>
-		<span>with us and rebuild our city.</span>
-	</p>
-</div>
-```
 ## With grid
 ```
 <div class="f-hero">
-	<div class="grid">
-		<div class="grid-column-6">
-			<img src="foo/bar">
+	<div class="f-row f-row_6">
+		<div class="f-row__cell">
+			<img src="foo/bar.png">
 			<div class="f-hero__heading">
 				<h1><span>Project:</span></h1><br>
 				<h1>Rebuild Kobanê</h1>
 			</div>
 		</div>
-		<div class="grid-column-3 mobile-grid-column-5">
+		<div class="f-row__cell-2 f-row__cell-mobile-5">
 			<p class="f-hero__text">
 				<span>We have always dealt with oppression, but we do not only fight</span>
 				<span>against ISIS - we fight for freedom. We are the Kobanê</span>
@@ -54,7 +38,7 @@ the js has run and the image is loaded.
 
 	background-image: url(../../image/projecthero.png);
 	background-repeat: no-repeat;
-	background-position: center bottom; /* cut sides until media query limit */
+	background-position: center top; /* cut sides until media query limit */
 }
 
 /* `<img>` tags are hidden */
