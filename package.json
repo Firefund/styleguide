@@ -10,7 +10,7 @@
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",
     "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
-    "postcss:no-import": "postcss --use postcss-cssnext --use lost",
+    "postcss:no-import": "postcss --use postcss-cssnext",
     "make": "make -j",
     "watch": "nodemon --watch styles --ext .css --exec npm run make",
     "mkdir": "mkdir"
