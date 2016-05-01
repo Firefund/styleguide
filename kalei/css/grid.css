@@ -274,7 +274,7 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	clear: both;
 }
 
-.f-row_debug {
+.f-row_debug > * {
 	border: 1px dashed cyan;
 }
 

@@ -1,0 +1,85 @@
+/*
+A group of left justified buttons.
+
+`BLOCK f-button`
+`MODIFIER f-button_attention`
+
+## f-button
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+	<!-- this should be used on the website -->
+
+	<button class="f-button">encrypt</button>
+	<button class="f-button">reset</button>
+
+	<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_attention
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+	<!-- this should be used on the website -->
+
+	<button class="f-button f-button_attention">submit</button>
+
+	<!-- this should be used on the website -->
+</div>
+
+```
+
+*/
+
+.f-button {
+	padding-bottom: 4.8px;
+	padding-bottom: 0.3rem;
+	margin: 0 48px 51.2px 0;
+	margin: 0 3rem 3.2rem 0;
+	border: 2px solid hsla(0, 0%, 0%, 1);
+	width: 262.4px;
+	width: 16.4rem;
+	border-radius: 0.3rem;
+	font-size: 40px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	text-align: center;
+	background-color: hsla(0, 0%, 100%, 1);
+}
+
+.f-button:hover {
+	box-shadow: inset 0 0 0 1.2px hsla(0, 0%, 0%, 1);
+}
+
+.f-button:active {
+	background: hsla(0, 0%, 0%, 1);
+	color: hsla(0, 0%, 100%, 1);
+	border: 3px solid hsla(0, 0%, 0%, 1);
+}
+
+.f-button_attention {
+	border: 2px solid hsla(1, 73.7%, 38.8%, 1);
+	background: hsla(1, 73.7%, 38.8%, 1);
+	color: hsla(0, 0%, 100%, 1);
+	opacity: 0.75;
+	-webkit-transition: opacity 0.3s ease 0s;
+	transition: opacity 0.3s ease 0s;
+}
+
+.f-button_attention:hover {
+	opacity: 1;
+	box-shadow: none;
+}
+
+.f-button_attention:active {
+	background: hsla(0, 0%, 0%, 1);
+	color: hsla(0, 0%, 100%, 1);
+	border: 2px solid hsla(0, 0%, 0%, 1);
+
+}
+
+
+
+
