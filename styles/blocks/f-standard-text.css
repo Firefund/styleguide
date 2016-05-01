@@ -52,23 +52,24 @@ standard heading and text for bigger text blogs.
 */
 
 @import "../variables";
+/*  the BEM block class is missing -> .f-text {} */
 
 .f-text__heading {
- margin-top: 0rem;
- margin-bottom: 0.65rem;
- color: var(--color-grey-dark);
- font-weight: normal;
- font-size: 2rem;   
+    margin-top: 0rem;
+    margin-bottom: 0.65rem;
+
+    color: var(--color-grey-dark);
+    font-weight: normal;
+    font-size: 2rem;   
 }
 
 .f-text__text {
-margin-top: 0rem;
-margin-bottom: 2.7rem;
-color: var(--color-grey-dark);
-font-weight: lighter;
-font-size: 1.4rem;
-/*text-rendering: optimizeLegibility;*/
-line-height: 1.82rem;  
-  
-    
+    margin-top: 0rem;
+    margin-bottom: 2.7rem;
+
+    color: var(--color-grey-dark);
+    font-weight: lighter;
+    font-size: 1.4rem;
+    /*text-rendering: optimizeLegibility;*/
+    line-height: 1.82rem;  
 }
