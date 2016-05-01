@@ -27,11 +27,11 @@ BLOCK f-row											- establish a row
 MODIFIER f-row_debug						- show the outline of your cells
 MODIFIER f-row_not-desktop			- hide the row on desktop sizes
 MODIFIER f-row_6								- modify row to be a 6 cell row
-	ELEMENT f-row__cell							- a full row width cell
-	ELEMENT f-row__cell__1				- a 1/6 width cell
-	ELEMENT f-row__cell__2				- a 2/6 width cell
-	ELEMENT f-row__cell__3				- a 3/6 width cell
-	ELEMENT f-row__cell__4				- a 4/6 width cell
+	ELEMENT f-row__cell						- a full row width cell
+	ELEMENT f-row__cell-1					- a 1/6 width cell
+	ELEMENT f-row__cell-2					- a 2/6 width cell
+	ELEMENT f-row__cell-3					- a 3/6 width cell
+	ELEMENT f-row__cell-4					- a 4/6 width cell
 	ELEMENT f-row__not-desktop		- hide the cell on desktop sizes
 	MODIFIER f-row__cell_push_1		- modify the cell indentation
 	MODIFIER f-row__cell_push_2		- modify the cell indentation
@@ -40,17 +40,17 @@ MODIFIER f-row_6								- modify row to be a 6 cell row
 	MODIFIER f-row__cell_push_5		- modify the cell indentation
 MODIFIER f-row_12								- modify row to be a 12 cell row
 	ELEMENT f-row__cell						- a full row width cell
-	ELEMENT f-row__cell__1				- a 1/12 width cell
-	ELEMENT f-row__cell__2				- a 2/12 width cell
-	ELEMENT f-row__cell__3				- a 3/12 width cell
-	ELEMENT f-row__cell__4				- a 4/12 width cell
-	ELEMENT f-row__cell__5				- a 5/12 width cell
-	ELEMENT f-row__cell__6				- a 6/12 width cell
-	ELEMENT f-row__cell__7				- a 7/12 width cell
-	ELEMENT f-row__cell__8				- a 8/12 width cell
-	ELEMENT f-row__cell__9				- a 9/12 width cell
-	ELEMENT f-row__cell__10				- a 10/12 width cell
-	ELEMENT f-row__cell__11				- a 11/12 width cell
+	ELEMENT f-row__cell-1					- a 1/12 width cell
+	ELEMENT f-row__cell-2					- a 2/12 width cell
+	ELEMENT f-row__cell-3					- a 3/12 width cell
+	ELEMENT f-row__cell-4					- a 4/12 width cell
+	ELEMENT f-row__cell-5					- a 5/12 width cell
+	ELEMENT f-row__cell-6					- a 6/12 width cell
+	ELEMENT f-row__cell-7					- a 7/12 width cell
+	ELEMENT f-row__cell-8					- a 8/12 width cell
+	ELEMENT f-row__cell-9					- a 9/12 width cell
+	ELEMENT f-row__cell-10				- a 10/12 width cell
+	ELEMENT f-row__cell-11				- a 11/12 width cell
 	MODIFIER f-row__cell_push_1		- modify the cell indentation
 	MODIFIER f-row__cell_push_2		- modify the cell indentation
 	MODIFIER f-row__cell_push_3		- modify the cell indentation
@@ -64,28 +64,28 @@ MODIFIER f-row_12								- modify row to be a 12 cell row
 	MODIFIER f-row__cell_push_11	- modify the cell indentation
 MODIFIER f-row_24								- modify row to be a 24 cell row
 	ELEMENT f-row__cell						- a full row width cell
-	ELEMENT f-row__cell__1				- a 1/24 width cell
-	ELEMENT f-row__cell__2				- a 2/24 width cell
-	ELEMENT f-row__cell__3				- a 3/24 width cell
-	ELEMENT f-row__cell__4				- a 4/24 width cell
-	ELEMENT f-row__cell__5				- a 5/24 width cell
-	ELEMENT f-row__cell__6				- a 6/24 width cell
-	ELEMENT f-row__cell__7				- a 7/24 width cell
-	ELEMENT f-row__cell__8				- a 8/24 width cell
-	ELEMENT f-row__cell__9				- a 9/24 width cell
-	ELEMENT f-row__cell__10				- a 10/24 width cell
-	ELEMENT f-row__cell__11				- a 11/24 width cell
-	ELEMENT f-row__cell__12				- a 12/24 width cell
-	ELEMENT f-row__cell__13				- a 13/24 width cell
-	ELEMENT f-row__cell__14				- a 14/24 width cell
-	ELEMENT f-row__cell__15				- a 15/24 width cell
-	ELEMENT f-row__cell__16				- a 16/24 width cell
-	ELEMENT f-row__cell__17				- a 17/24 width cell
-	ELEMENT f-row__cell__18				- a 18/24 width cell
-	ELEMENT f-row__cell__19				- a 19/24 width cell
-	ELEMENT f-row__cell__20				- a 20/24 width cell
-	ELEMENT f-row__cell__21				- a 21/24 width cell
-	ELEMENT f-row__cell__22				- a 22/24 width cell
+	ELEMENT f-row__cell-1					- a 1/24 width cell
+	ELEMENT f-row__cell-2					- a 2/24 width cell
+	ELEMENT f-row__cell-3					- a 3/24 width cell
+	ELEMENT f-row__cell-4					- a 4/24 width cell
+	ELEMENT f-row__cell-5					- a 5/24 width cell
+	ELEMENT f-row__cell-6					- a 6/24 width cell
+	ELEMENT f-row__cell-7					- a 7/24 width cell
+	ELEMENT f-row__cell-8					- a 8/24 width cell
+	ELEMENT f-row__cell-9					- a 9/24 width cell
+	ELEMENT f-row__cell-10				- a 10/24 width cell
+	ELEMENT f-row__cell-11				- a 11/24 width cell
+	ELEMENT f-row__cell-12				- a 12/24 width cell
+	ELEMENT f-row__cell-13				- a 13/24 width cell
+	ELEMENT f-row__cell-14				- a 14/24 width cell
+	ELEMENT f-row__cell-15				- a 15/24 width cell
+	ELEMENT f-row__cell-16				- a 16/24 width cell
+	ELEMENT f-row__cell-17				- a 17/24 width cell
+	ELEMENT f-row__cell-18				- a 18/24 width cell
+	ELEMENT f-row__cell-19				- a 19/24 width cell
+	ELEMENT f-row__cell-20				- a 20/24 width cell
+	ELEMENT f-row__cell-21				- a 21/24 width cell
+	ELEMENT f-row__cell-22				- a 22/24 width cell
 	ELEMENT f-row__cell__23				- a 23/24 width cell
 	MODIFIER f-row__cell_push_1		- modify the cell indentation
 	MODIFIER f-row__cell_push_2		- modify the cell indentation
@@ -117,27 +117,27 @@ MODIFIER f-row_24								- modify row to be a 24 cell row
 In mobile width, every cell is staked.
 ```
 <section class="f-row f-row_6">
-  <div class="f-row__cell_3 f-row__cell-mobile">
-    <div class="demo">1</div>
-  </div>
-  <div class="f-row__cell_3 f-row_not-mobile">
-    <div class="demo">2</div>
-  </div>
+	<div class="f-row__cell-3 f-row__cell-mobile">
+		<div class="demo">1</div>
+	</div>
+	<div class="f-row__cell-3 f-row_not-mobile">
+		<div class="demo">2</div>
+	</div>
 </section>
 ```
 
 ## 6 row with 3 cells
 ```
 <section class="f-row f-row_6">
-  <div class="f-row__cell_1">
-    <div class="demo">1</div>
-  </div>
-  <div class="f-row__cell_2">
-    <div class="demo">2</div>
-  </div>
-  <div class="f-row__cell_3">
-    <div class="demo">3</div>
-  </div>
+	<div class="f-row__cell-1">
+		<div class="demo">1</div>
+	</div>
+	<div class="f-row__cell-2">
+		<div class="demo">2</div>
+	</div>
+	<div class="f-row__cell-3">
+		<div class="demo">3</div>
+	</div>
 </section>
 ```
 
@@ -145,14 +145,14 @@ In mobile width, every cell is staked.
 ```
 <section class="f-row f-row_6">
 	<div class="f-row__not-desktop f-row__cell-mobile-2">
-    <div class="demo">mobile</div>
-  </div>
-  <div class="f-row__cell_4 f-row__cell-mobile-2">
-    <div class="demo">1</div>
-  </div>
-  <div class="f-row__cell_2">
-    <div class="demo">2</div>
-  </div>
+		<div class="demo">mobile</div>
+	</div>
+	<div class="f-row__cell-4 f-row__cell-mobile-2">
+		<div class="demo">1</div>
+	</div>
+	<div class="f-row__cell-2">
+		<div class="demo">2</div>
+	</div>
 </section>
 ```
 
@@ -306,24 +306,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	}
 }
 
-.f-row_6 .f-row__cell_1 {
+.f-row_6 .f-row__cell-1 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 1/6 - (3.4rem - 3.4rem * 1/6));
 }
 
-.f-row_6 .f-row__cell_1:nth-child(1n) {
+.f-row_6 .f-row__cell-1:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_6 .f-row__cell_1:last-child {
+.f-row_6 .f-row__cell-1:last-child {
 	margin-right: 0;
 }
 
-.f-row_6 .f-row__cell_1:nth-child(6n) {
+.f-row_6 .f-row__cell-1:nth-child(6n) {
 	float: right;
 }
 
-.f-row_6 .f-row__cell_1:nth-child(6n) {
+.f-row_6 .f-row__cell-1:nth-child(6n) {
 	margin-right: 0;
 }
 
@@ -331,24 +331,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-1/6 * -1) - (3.4rem - 3.4rem * (-1/6 * -1)) + 3.4rem) !important;
 }
 
-.f-row_6 .f-row__cell_2 {
+.f-row_6 .f-row__cell-2 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 2/6 - (3.4rem - 3.4rem * 2/6));
 }
 
-.f-row_6 .f-row__cell_2:nth-child(1n) {
+.f-row_6 .f-row__cell-2:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_6 .f-row__cell_2:last-child {
+.f-row_6 .f-row__cell-2:last-child {
 	margin-right: 0;
 }
 
-.f-row_6 .f-row__cell_2:nth-child(6n) {
+.f-row_6 .f-row__cell-2:nth-child(6n) {
 	float: right;
 }
 
-.f-row_6 .f-row__cell_2:nth-child(6n) {
+.f-row_6 .f-row__cell-2:nth-child(6n) {
 	margin-right: 0;
 }
 
@@ -356,24 +356,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-2/6 * -1) - (3.4rem - 3.4rem * (-2/6 * -1)) + 3.4rem) !important;
 }
 
-.f-row_6 .f-row__cell_3 {
+.f-row_6 .f-row__cell-3 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 3/6 - (3.4rem - 3.4rem * 3/6));
 }
 
-.f-row_6 .f-row__cell_3:nth-child(1n) {
+.f-row_6 .f-row__cell-3:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_6 .f-row__cell_3:last-child {
+.f-row_6 .f-row__cell-3:last-child {
 	margin-right: 0;
 }
 
-.f-row_6 .f-row__cell_3:nth-child(6n) {
+.f-row_6 .f-row__cell-3:nth-child(6n) {
 	float: right;
 }
 
-.f-row_6 .f-row__cell_3:nth-child(6n) {
+.f-row_6 .f-row__cell-3:nth-child(6n) {
 	margin-right: 0;
 }
 
@@ -381,24 +381,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-3/6 * -1) - (3.4rem - 3.4rem * (-3/6 * -1)) + 3.4rem) !important;
 }
 
-.f-row_6 .f-row__cell_4 {
+.f-row_6 .f-row__cell-4 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 4/6 - (3.4rem - 3.4rem * 4/6));
 }
 
-.f-row_6 .f-row__cell_4:nth-child(1n) {
+.f-row_6 .f-row__cell-4:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_6 .f-row__cell_4:last-child {
+.f-row_6 .f-row__cell-4:last-child {
 	margin-right: 0;
 }
 
-.f-row_6 .f-row__cell_4:nth-child(6n) {
+.f-row_6 .f-row__cell-4:nth-child(6n) {
 	float: right;
 }
 
-.f-row_6 .f-row__cell_4:nth-child(6n) {
+.f-row_6 .f-row__cell-4:nth-child(6n) {
 	margin-right: 0;
 }
 
@@ -406,24 +406,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-4/6 * -1) - (3.4rem - 3.4rem * (-4/6 * -1)) + 3.4rem) !important;
 }
 
-.f-row_6 .f-row__cell_5 {
+.f-row_6 .f-row__cell-5 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 5/6 - (3.4rem - 3.4rem * 5/6));
 }
 
-.f-row_6 .f-row__cell_5:nth-child(1n) {
+.f-row_6 .f-row__cell-5:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_6 .f-row__cell_5:last-child {
+.f-row_6 .f-row__cell-5:last-child {
 	margin-right: 0;
 }
 
-.f-row_6 .f-row__cell_5:nth-child(6n) {
+.f-row_6 .f-row__cell-5:nth-child(6n) {
 	float: right;
 }
 
-.f-row_6 .f-row__cell_5:nth-child(6n) {
+.f-row_6 .f-row__cell-5:nth-child(6n) {
 	margin-right: 0;
 }
 
@@ -431,24 +431,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-5/6 * -1) - (3.4rem - 3.4rem * (-5/6 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_1 {
+.f-row_12 .f-row__cell-1 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 1/12 - (3.4rem - 3.4rem * 1/12));
 }
 
-.f-row_12 .f-row__cell_1:nth-child(1n) {
+.f-row_12 .f-row__cell-1:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_1:last-child {
+.f-row_12 .f-row__cell-1:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_1:nth-child(12n) {
+.f-row_12 .f-row__cell-1:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_1:nth-child(12n) {
+.f-row_12 .f-row__cell-1:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -456,24 +456,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-1/12 * -1) - (3.4rem - 3.4rem * (-1/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_2 {
+.f-row_12 .f-row__cell-2 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 2/12 - (3.4rem - 3.4rem * 2/12));
 }
 
-.f-row_12 .f-row__cell_2:nth-child(1n) {
+.f-row_12 .f-row__cell-2:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_2:last-child {
+.f-row_12 .f-row__cell-2:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_2:nth-child(12n) {
+.f-row_12 .f-row__cell-2:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_2:nth-child(12n) {
+.f-row_12 .f-row__cell-2:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -481,24 +481,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-2/12 * -1) - (3.4rem - 3.4rem * (-2/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_3 {
+.f-row_12 .f-row__cell-3 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 3/12 - (3.4rem - 3.4rem * 3/12));
 }
 
-.f-row_12 .f-row__cell_3:nth-child(1n) {
+.f-row_12 .f-row__cell-3:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_3:last-child {
+.f-row_12 .f-row__cell-3:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_3:nth-child(12n) {
+.f-row_12 .f-row__cell-3:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_3:nth-child(12n) {
+.f-row_12 .f-row__cell-3:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -506,24 +506,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-3/12 * -1) - (3.4rem - 3.4rem * (-3/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_4 {
+.f-row_12 .f-row__cell-4 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 4/12 - (3.4rem - 3.4rem * 4/12));
 }
 
-.f-row_12 .f-row__cell_4:nth-child(1n) {
+.f-row_12 .f-row__cell-4:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_4:last-child {
+.f-row_12 .f-row__cell-4:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_4:nth-child(12n) {
+.f-row_12 .f-row__cell-4:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_4:nth-child(12n) {
+.f-row_12 .f-row__cell-4:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -531,24 +531,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-4/12 * -1) - (3.4rem - 3.4rem * (-4/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_5 {
+.f-row_12 .f-row__cell-5 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 5/12 - (3.4rem - 3.4rem * 5/12));
 }
 
-.f-row_12 .f-row__cell_5:nth-child(1n) {
+.f-row_12 .f-row__cell-5:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_5:last-child {
+.f-row_12 .f-row__cell-5:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_5:nth-child(12n) {
+.f-row_12 .f-row__cell-5:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_5:nth-child(12n) {
+.f-row_12 .f-row__cell-5:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -556,24 +556,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-5/12 * -1) - (3.4rem - 3.4rem * (-5/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_6 {
+.f-row_12 .f-row__cell-6 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 6/12 - (3.4rem - 3.4rem * 6/12));
 }
 
-.f-row_12 .f-row__cell_6:nth-child(1n) {
+.f-row_12 .f-row__cell-6:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_6:last-child {
+.f-row_12 .f-row__cell-6:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_6:nth-child(12n) {
+.f-row_12 .f-row__cell-6:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_6:nth-child(12n) {
+.f-row_12 .f-row__cell-6:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -581,24 +581,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-6/12 * -1) - (3.4rem - 3.4rem * (-6/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_7 {
+.f-row_12 .f-row__cell-7 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 7/12 - (3.4rem - 3.4rem * 7/12));
 }
 
-.f-row_12 .f-row__cell_7:nth-child(1n) {
+.f-row_12 .f-row__cell-7:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_7:last-child {
+.f-row_12 .f-row__cell-7:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_7:nth-child(12n) {
+.f-row_12 .f-row__cell-7:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_7:nth-child(12n) {
+.f-row_12 .f-row__cell-7:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -606,24 +606,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-7/12 * -1) - (3.4rem - 3.4rem * (-7/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_8 {
+.f-row_12 .f-row__cell-8 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 8/12 - (3.4rem - 3.4rem * 8/12));
 }
 
-.f-row_12 .f-row__cell_8:nth-child(1n) {
+.f-row_12 .f-row__cell-8:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_8:last-child {
+.f-row_12 .f-row__cell-8:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_8:nth-child(12n) {
+.f-row_12 .f-row__cell-8:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_8:nth-child(12n) {
+.f-row_12 .f-row__cell-8:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -631,24 +631,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-8/12 * -1) - (3.4rem - 3.4rem * (-8/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_9 {
+.f-row_12 .f-row__cell-9 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 9/12 - (3.4rem - 3.4rem * 9/12));
 }
 
-.f-row_12 .f-row__cell_9:nth-child(1n) {
+.f-row_12 .f-row__cell-9:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_9:last-child {
+.f-row_12 .f-row__cell-9:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_9:nth-child(12n) {
+.f-row_12 .f-row__cell-9:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_9:nth-child(12n) {
+.f-row_12 .f-row__cell-9:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -656,24 +656,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-9/12 * -1) - (3.4rem - 3.4rem * (-9/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_10 {
+.f-row_12 .f-row__cell-10 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 10/12 - (3.4rem - 3.4rem * 10/12));
 }
 
-.f-row_12 .f-row__cell_10:nth-child(1n) {
+.f-row_12 .f-row__cell-10:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_10:last-child {
+.f-row_12 .f-row__cell-10:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_10:nth-child(12n) {
+.f-row_12 .f-row__cell-10:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_10:nth-child(12n) {
+.f-row_12 .f-row__cell-10:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -681,24 +681,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-10/12 * -1) - (3.4rem - 3.4rem * (-10/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_12 .f-row__cell_11 {
+.f-row_12 .f-row__cell-11 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 11/12 - (3.4rem - 3.4rem * 11/12));
 }
 
-.f-row_12 .f-row__cell_11:nth-child(1n) {
+.f-row_12 .f-row__cell-11:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_12 .f-row__cell_11:last-child {
+.f-row_12 .f-row__cell-11:last-child {
 	margin-right: 0;
 }
 
-.f-row_12 .f-row__cell_11:nth-child(12n) {
+.f-row_12 .f-row__cell-11:nth-child(12n) {
 	float: right;
 }
 
-.f-row_12 .f-row__cell_11:nth-child(12n) {
+.f-row_12 .f-row__cell-11:nth-child(12n) {
 	margin-right: 0;
 }
 
@@ -706,24 +706,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-11/12 * -1) - (3.4rem - 3.4rem * (-11/12 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_1 {
+.f-row_24 .f-row__cell-1 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 1/24 - (3.4rem - 3.4rem * 1/24));
 }
 
-.f-row_24 .f-row__cell_1:nth-child(1n) {
+.f-row_24 .f-row__cell-1:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_1:last-child {
+.f-row_24 .f-row__cell-1:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_1:nth-child(24n) {
+.f-row_24 .f-row__cell-1:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_1:nth-child(24n) {
+.f-row_24 .f-row__cell-1:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -731,24 +731,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-1/24 * -1) - (3.4rem - 3.4rem * (-1/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_2 {
+.f-row_24 .f-row__cell-2 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 2/24 - (3.4rem - 3.4rem * 2/24));
 }
 
-.f-row_24 .f-row__cell_2:nth-child(1n) {
+.f-row_24 .f-row__cell-2:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_2:last-child {
+.f-row_24 .f-row__cell-2:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_2:nth-child(24n) {
+.f-row_24 .f-row__cell-2:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_2:nth-child(24n) {
+.f-row_24 .f-row__cell-2:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -756,24 +756,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-2/24 * -1) - (3.4rem - 3.4rem * (-2/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_3 {
+.f-row_24 .f-row__cell-3 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 3/24 - (3.4rem - 3.4rem * 3/24));
 }
 
-.f-row_24 .f-row__cell_3:nth-child(1n) {
+.f-row_24 .f-row__cell-3:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_3:last-child {
+.f-row_24 .f-row__cell-3:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_3:nth-child(24n) {
+.f-row_24 .f-row__cell-3:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_3:nth-child(24n) {
+.f-row_24 .f-row__cell-3:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -781,24 +781,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-3/24 * -1) - (3.4rem - 3.4rem * (-3/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_4 {
+.f-row_24 .f-row__cell-4 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 4/24 - (3.4rem - 3.4rem * 4/24));
 }
 
-.f-row_24 .f-row__cell_4:nth-child(1n) {
+.f-row_24 .f-row__cell-4:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_4:last-child {
+.f-row_24 .f-row__cell-4:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_4:nth-child(24n) {
+.f-row_24 .f-row__cell-4:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_4:nth-child(24n) {
+.f-row_24 .f-row__cell-4:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -806,24 +806,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-4/24 * -1) - (3.4rem - 3.4rem * (-4/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_5 {
+.f-row_24 .f-row__cell-5 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 5/24 - (3.4rem - 3.4rem * 5/24));
 }
 
-.f-row_24 .f-row__cell_5:nth-child(1n) {
+.f-row_24 .f-row__cell-5:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_5:last-child {
+.f-row_24 .f-row__cell-5:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_5:nth-child(24n) {
+.f-row_24 .f-row__cell-5:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_5:nth-child(24n) {
+.f-row_24 .f-row__cell-5:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -831,24 +831,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-5/24 * -1) - (3.4rem - 3.4rem * (-5/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_6 {
+.f-row_24 .f-row__cell-6 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 6/24 - (3.4rem - 3.4rem * 6/24));
 }
 
-.f-row_24 .f-row__cell_6:nth-child(1n) {
+.f-row_24 .f-row__cell-6:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_6:last-child {
+.f-row_24 .f-row__cell-6:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_6:nth-child(24n) {
+.f-row_24 .f-row__cell-6:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_6:nth-child(24n) {
+.f-row_24 .f-row__cell-6:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -856,24 +856,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-6/24 * -1) - (3.4rem - 3.4rem * (-6/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_7 {
+.f-row_24 .f-row__cell-7 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 7/24 - (3.4rem - 3.4rem * 7/24));
 }
 
-.f-row_24 .f-row__cell_7:nth-child(1n) {
+.f-row_24 .f-row__cell-7:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_7:last-child {
+.f-row_24 .f-row__cell-7:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_7:nth-child(24n) {
+.f-row_24 .f-row__cell-7:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_7:nth-child(24n) {
+.f-row_24 .f-row__cell-7:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -881,24 +881,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-7/24 * -1) - (3.4rem - 3.4rem * (-7/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_8 {
+.f-row_24 .f-row__cell-8 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 8/24 - (3.4rem - 3.4rem * 8/24));
 }
 
-.f-row_24 .f-row__cell_8:nth-child(1n) {
+.f-row_24 .f-row__cell-8:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_8:last-child {
+.f-row_24 .f-row__cell-8:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_8:nth-child(24n) {
+.f-row_24 .f-row__cell-8:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_8:nth-child(24n) {
+.f-row_24 .f-row__cell-8:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -906,24 +906,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-8/24 * -1) - (3.4rem - 3.4rem * (-8/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_9 {
+.f-row_24 .f-row__cell-9 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 9/24 - (3.4rem - 3.4rem * 9/24));
 }
 
-.f-row_24 .f-row__cell_9:nth-child(1n) {
+.f-row_24 .f-row__cell-9:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_9:last-child {
+.f-row_24 .f-row__cell-9:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_9:nth-child(24n) {
+.f-row_24 .f-row__cell-9:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_9:nth-child(24n) {
+.f-row_24 .f-row__cell-9:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -931,24 +931,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-9/24 * -1) - (3.4rem - 3.4rem * (-9/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_10 {
+.f-row_24 .f-row__cell-10 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 10/24 - (3.4rem - 3.4rem * 10/24));
 }
 
-.f-row_24 .f-row__cell_10:nth-child(1n) {
+.f-row_24 .f-row__cell-10:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_10:last-child {
+.f-row_24 .f-row__cell-10:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_10:nth-child(24n) {
+.f-row_24 .f-row__cell-10:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_10:nth-child(24n) {
+.f-row_24 .f-row__cell-10:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -956,24 +956,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-10/24 * -1) - (3.4rem - 3.4rem * (-10/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_11 {
+.f-row_24 .f-row__cell-11 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 11/24 - (3.4rem - 3.4rem * 11/24));
 }
 
-.f-row_24 .f-row__cell_11:nth-child(1n) {
+.f-row_24 .f-row__cell-11:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_11:last-child {
+.f-row_24 .f-row__cell-11:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_11:nth-child(24n) {
+.f-row_24 .f-row__cell-11:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_11:nth-child(24n) {
+.f-row_24 .f-row__cell-11:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -981,24 +981,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-11/24 * -1) - (3.4rem - 3.4rem * (-11/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_12 {
+.f-row_24 .f-row__cell-12 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 12/24 - (3.4rem - 3.4rem * 12/24));
 }
 
-.f-row_24 .f-row__cell_12:nth-child(1n) {
+.f-row_24 .f-row__cell-12:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_12:last-child {
+.f-row_24 .f-row__cell-12:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_12:nth-child(24n) {
+.f-row_24 .f-row__cell-12:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_12:nth-child(24n) {
+.f-row_24 .f-row__cell-12:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1006,24 +1006,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-12/24 * -1) - (3.4rem - 3.4rem * (-12/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_13 {
+.f-row_24 .f-row__cell-13 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 13/24 - (3.4rem - 3.4rem * 13/24));
 }
 
-.f-row_24 .f-row__cell_13:nth-child(1n) {
+.f-row_24 .f-row__cell-13:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_13:last-child {
+.f-row_24 .f-row__cell-13:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_13:nth-child(24n) {
+.f-row_24 .f-row__cell-13:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_13:nth-child(24n) {
+.f-row_24 .f-row__cell-13:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1031,24 +1031,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-13/24 * -1) - (3.4rem - 3.4rem * (-13/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_14 {
+.f-row_24 .f-row__cell-14 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 14/24 - (3.4rem - 3.4rem * 14/24));
 }
 
-.f-row_24 .f-row__cell_14:nth-child(1n) {
+.f-row_24 .f-row__cell-14:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_14:last-child {
+.f-row_24 .f-row__cell-14:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_14:nth-child(24n) {
+.f-row_24 .f-row__cell-14:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_14:nth-child(24n) {
+.f-row_24 .f-row__cell-14:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1056,24 +1056,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-14/24 * -1) - (3.4rem - 3.4rem * (-14/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_15 {
+.f-row_24 .f-row__cell-15 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 15/24 - (3.4rem - 3.4rem * 15/24));
 }
 
-.f-row_24 .f-row__cell_15:nth-child(1n) {
+.f-row_24 .f-row__cell-15:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_15:last-child {
+.f-row_24 .f-row__cell-15:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_15:nth-child(24n) {
+.f-row_24 .f-row__cell-15:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_15:nth-child(24n) {
+.f-row_24 .f-row__cell-15:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1081,24 +1081,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-15/24 * -1) - (3.4rem - 3.4rem * (-15/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_16 {
+.f-row_24 .f-row__cell-16 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 16/24 - (3.4rem - 3.4rem * 16/24));
 }
 
-.f-row_24 .f-row__cell_16:nth-child(1n) {
+.f-row_24 .f-row__cell-16:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_16:last-child {
+.f-row_24 .f-row__cell-16:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_16:nth-child(24n) {
+.f-row_24 .f-row__cell-16:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_16:nth-child(24n) {
+.f-row_24 .f-row__cell-16:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1106,24 +1106,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-16/24 * -1) - (3.4rem - 3.4rem * (-16/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_17 {
+.f-row_24 .f-row__cell-17 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 17/24 - (3.4rem - 3.4rem * 17/24));
 }
 
-.f-row_24 .f-row__cell_17:nth-child(1n) {
+.f-row_24 .f-row__cell-17:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_17:last-child {
+.f-row_24 .f-row__cell-17:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_17:nth-child(24n) {
+.f-row_24 .f-row__cell-17:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_17:nth-child(24n) {
+.f-row_24 .f-row__cell-17:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1131,24 +1131,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-17/24 * -1) - (3.4rem - 3.4rem * (-17/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_18 {
+.f-row_24 .f-row__cell-18 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 18/24 - (3.4rem - 3.4rem * 18/24));
 }
 
-.f-row_24 .f-row__cell_18:nth-child(1n) {
+.f-row_24 .f-row__cell-18:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_18:last-child {
+.f-row_24 .f-row__cell-18:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_18:nth-child(24n) {
+.f-row_24 .f-row__cell-18:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_18:nth-child(24n) {
+.f-row_24 .f-row__cell-18:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1156,24 +1156,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-18/24 * -1) - (3.4rem - 3.4rem * (-18/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_19 {
+.f-row_24 .f-row__cell-19 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 19/24 - (3.4rem - 3.4rem * 19/24));
 }
 
-.f-row_24 .f-row__cell_19:nth-child(1n) {
+.f-row_24 .f-row__cell-19:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_19:last-child {
+.f-row_24 .f-row__cell-19:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_19:nth-child(24n) {
+.f-row_24 .f-row__cell-19:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_19:nth-child(24n) {
+.f-row_24 .f-row__cell-19:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1181,24 +1181,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-19/24 * -1) - (3.4rem - 3.4rem * (-19/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_20 {
+.f-row_24 .f-row__cell-20 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 20/24 - (3.4rem - 3.4rem * 20/24));
 }
 
-.f-row_24 .f-row__cell_20:nth-child(1n) {
+.f-row_24 .f-row__cell-20:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_20:last-child {
+.f-row_24 .f-row__cell-20:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_20:nth-child(24n) {
+.f-row_24 .f-row__cell-20:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_20:nth-child(24n) {
+.f-row_24 .f-row__cell-20:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1206,24 +1206,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-20/24 * -1) - (3.4rem - 3.4rem * (-20/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_21 {
+.f-row_24 .f-row__cell-21 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 21/24 - (3.4rem - 3.4rem * 21/24));
 }
 
-.f-row_24 .f-row__cell_21:nth-child(1n) {
+.f-row_24 .f-row__cell-21:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_21:last-child {
+.f-row_24 .f-row__cell-21:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_21:nth-child(24n) {
+.f-row_24 .f-row__cell-21:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_21:nth-child(24n) {
+.f-row_24 .f-row__cell-21:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1231,24 +1231,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-21/24 * -1) - (3.4rem - 3.4rem * (-21/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_22 {
+.f-row_24 .f-row__cell-22 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 22/24 - (3.4rem - 3.4rem * 22/24));
 }
 
-.f-row_24 .f-row__cell_22:nth-child(1n) {
+.f-row_24 .f-row__cell-22:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_22:last-child {
+.f-row_24 .f-row__cell-22:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_22:nth-child(24n) {
+.f-row_24 .f-row__cell-22:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_22:nth-child(24n) {
+.f-row_24 .f-row__cell-22:nth-child(24n) {
 	margin-right: 0;
 }
 
@@ -1256,24 +1256,24 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	margin-left: calc(99.99% * (-22/24 * -1) - (3.4rem - 3.4rem * (-22/24 * -1)) + 3.4rem) !important;
 }
 
-.f-row_24 .f-row__cell_23 {
+.f-row_24 .f-row__cell-23 {
 	flex: 0 0 auto;
 	width: calc(99.99% * 23/24 - (3.4rem - 3.4rem * 23/24));
 }
 
-.f-row_24 .f-row__cell_23:nth-child(1n) {
+.f-row_24 .f-row__cell-23:nth-child(1n) {
 	margin-right: 3.4rem;
 }
 
-.f-row_24 .f-row__cell_23:last-child {
+.f-row_24 .f-row__cell-23:last-child {
 	margin-right: 0;
 }
 
-.f-row_24 .f-row__cell_23:nth-child(24n) {
+.f-row_24 .f-row__cell-23:nth-child(24n) {
 	float: right;
 }
 
-.f-row_24 .f-row__cell_23:nth-child(24n) {
+.f-row_24 .f-row__cell-23:nth-child(24n) {
 	margin-right: 0;
 }
 
