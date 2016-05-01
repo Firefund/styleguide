@@ -65,12 +65,11 @@ FIFTH: transitions/transforms/animation
 SIXTH: weird stuff 
 */
 
-
-
-@import "variables";
-@import "grid";
+/* TODO: This is not run through postcss-partial-import - if we do then all the latter @imports will fuck up master
+@import "variables";*/
 
 @import url("base.css");
+@import url("grid.css");
 
 /* ### BEM blocks ### */
 @import url("blocks/f-right-heading.css");
