@@ -23,7 +23,7 @@ const grid = (cells) => {
 	const css = [
 		".f-row_",
 		cells,
-		" .f-row__cell_",
+		" .f-row__cell-",
 		null,//n
 		startBracket,
 		"\tlost-column: ",
