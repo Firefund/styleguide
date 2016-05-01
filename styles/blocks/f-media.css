@@ -26,6 +26,22 @@ MODIFIER f-media_left (float)
 </div> <!-- only here for the style guide - should not be used on the website --> 
 ```
 
+## Left image
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media f-media_left">
+	<img class="f-media__media" src="image/projecthero.png">
+	<figcaption class="f-media__caption">Techno viking!</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website --> 
+```
+
 ## Standard video
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -42,13 +58,13 @@ MODIFIER f-media_left (float)
 </div> <!-- only here for the style guide - should not be used on the website --> 
 ```
 
-## Standard video
+## Right video
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
 
-<figure class="f-media">
+<figure class="f-media f-media_right">
 	<iframe  class="f-media__media" width="854" height="480" src="https://www.youtube.com/embed/-8H4GKg-mYQ" frameborder="0" allowfullscreen></iframe>
 	<figcaption class="f-media__caption">Techno viking!</figcaption>
 </figure>
