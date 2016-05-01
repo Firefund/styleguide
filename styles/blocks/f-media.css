@@ -10,19 +10,59 @@ MODIFIER f-media_left (float)
 </pre>
 
 
-## Standard media
+## Standard image
 ```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
 <figure class="f-media">
-	<img class="f-media__media">
-	<caption class="f-media__caption">Caption text for da media</caption>
+	<img class="f-media__media" src="image/projecthero.png">
+	<figcaption class="f-media__caption">Caption text for da media</figcaption>
 </figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website --> 
+```
+
+## Standard video
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media">
+	<iframe class="f-media__media" src="http://www.youtube.com/embed/vaf13ZhmFb8?rel=0" allowfullscreen="" frameborder="0"></iframe>
+	<figcaption class="f-media__caption">Caption text for da media</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website --> 
+```
+
+## Standard video
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media">
+	<iframe  class="f-media__media" width="854" height="480" src="https://www.youtube.com/embed/-8H4GKg-mYQ" frameborder="0" allowfullscreen></iframe>
+	<figcaption class="f-media__caption">Techno viking!</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website --> 
 ```
 */
 	
 .f-media {
 	display: flex;
   flex-flow: column nowrap;
-  margin: 0.65rem 0 0;
+  margin: 0 0 0.65rem;
 }
 
 .f-media_left {
@@ -48,6 +88,7 @@ MODIFIER f-media_left (float)
 	margin: .55rem 0 0;
 
   color: var(--color-grey);
+	font-size: 1.2rem;
   font-style: italic;
   font-weight: lighter;
 }
