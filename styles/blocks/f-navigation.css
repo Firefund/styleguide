@@ -1,0 +1,33 @@
+/*
+Site navigation links.
+
+```
+<div class="f-navigation">
+	<a href="#" class="f-navigation__link">What and how</a>
+	<a href="#" class="f-navigation__link">About</a>
+</div>
+```
+*/
+
+@import "../variables";
+
+.f-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.f-navigation__link {
+	margin: 0 10%;
+
+	color: var(--color-grey-light, hsla(0, 0%, 84.7%, 1));
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 4.8rem;
+
+	cursor: pointer;
+	transition: color 260ms ease-out;
+}
+.f-navigation__link:hover {
+	color: var(--color-white, hsla(0, 0%, 100%, 1));
+}
