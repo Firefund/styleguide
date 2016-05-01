@@ -1,0 +1,53 @@
+/*
+Our media element. Can be an image or video.
+
+<pre>
+BLOCK f-media
+MODIFIER f-media_right (float)
+MODIFIER f-media_left (float)
+	ELEMENT f-media__media
+	ELEMENT f-media__caption
+</pre>
+
+
+## Standard media
+```
+<figure class="f-media">
+	<img class="f-media__media">
+	<caption class="f-media__caption">Caption text for da media</caption>
+</figure>
+```
+*/
+	
+.f-media {
+	display: flex;
+  flex-flow: column nowrap;
+  margin: 0.65rem 0 0;
+}
+
+.f-media_left {
+	float: left;
+  margin-right: 2.13rem;
+}
+.f-media_right {
+	float: right;
+  justify-content: flex-end;
+  margin-left: 2.13rem;
+}
+.f-media_left .f-media__media, .f-media_right .f-media__media {
+	display: inline-flex;
+  flex: none; /*TODO: what does this do? */
+}
+
+.f-media__media {
+	max-width: 100%;
+  width:100%;
+}
+
+.f-media__caption {
+	margin: .55rem 0 0;
+
+  color: var(--color-grey);
+  font-style: italic;
+  font-weight: lighter;
+}
