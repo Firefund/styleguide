@@ -1,0 +1,197 @@
+/*
+Our media element. Can be an image or video.
+
+<pre>
+BLOCK f-media
+MODIFIER f-media_right (float)
+MODIFIER f-media_left (float)
+	ELEMENT f-media__media
+	ELEMENT f-media__caption
+</pre>
+
+
+## Standard image
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media">
+	<img class="f-media__media" src="image/11.jpg">
+	<figcaption class="f-media__caption">Caption text for da media</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+
+## Left image
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<section class"f-text">
+
+		<h2 class="f-text__heading">Heading explaining what the text will be about</h2>
+
+		<p class="f-text__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+		</p>
+
+
+<!-- this should be used on the website -->
+
+<figure class="f-media f-media_left">
+	<img class="f-media__media" src="image/10.jpg">
+	<figcaption class="f-media__caption">Run! Run! Run! Run! Run! Run! Run! Run! Run!</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+		<p class="f-text__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+				autem doloremque voluptate fugiat.
+		</p>
+
+</section>
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+
+## Standard video
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media">
+	<iframe class="f-media__media" src="http://www.youtube.com/embed/vaf13ZhmFb8?rel=0" allowfullscreen="" frameborder="0"></iframe>
+	<figcaption class="f-media__caption">Caption text for da media</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+
+## Right video
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+
+<figure class="f-media f-media_right">
+	<iframe  class="f-media__media" width="854" height="480" src="https://www.youtube.com/embed/-8H4GKg-mYQ" frameborder="0" allowfullscreen></iframe>
+	<figcaption class="f-media__caption">Techno viking!</figcaption>
+</figure>
+
+<!-- this should be used on the website -->
+
+<section class"f-text">
+	<h2 class="f-text__heading">Heading explaining what the text will be about</h2>	
+	<p class="f-text__text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+	</p>
+	<p class="f-text__text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+	</p>		
+</section>
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+*/
+
+@import "../variables";
+
+.f-media {
+	display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 0.65rem;
+}
+
+.f-media_left {
+	float: left;
+  margin-right: 2.13rem;
+}
+.f-media_right {
+	float: right;
+  justify-content: flex-end;
+  margin-left: 2.13rem;
+}
+.f-media_left .f-media__media, .f-media_right .f-media__media {
+	display: inline-flex;
+  flex: none; /*TODO: what does this do? */
+}
+
+.f-media__media {
+	max-width: 100%;
+  width:100%;
+}
+
+.f-media__caption {
+	margin: .55rem 0 0;
+
+  color: var(--color-grey);
+	font-size: 1.2rem;
+  font-style: italic;
+  font-weight: lighter;
+}
