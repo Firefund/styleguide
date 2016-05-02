@@ -160,6 +160,8 @@ MODIFIER f-media_left (float)
 ```
 */
 
+@import "../variables";
+
 .f-media {
 	display: flex;
   flex-flow: column nowrap;

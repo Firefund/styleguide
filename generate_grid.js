@@ -2,9 +2,9 @@
 /**
  * Naive grid generator - creates rows with cells that can be pushed
  * to different start positions.
+ * Based on lost: https://github.com/peterramsing/lost#readme
  * TODO: Refactor to combine classes that does the same
  * 	E.g. These 3 declaration blocks are identical:
- *
  * ```css
 	.f-row_6 .f-row__cell_3 {
 		lost-cell: 3/6 flex;
@@ -17,81 +17,99 @@
 	}
 	```
  */
-const grid = (cells) => {
-	const startBracket = " {\r\n"
-	const endBracket = "\r\n}\r\n"
-	const css = [
-		".f-row_",
-		cells,
-		" .f-row__cell-",
-		null,//n
-		startBracket,
-		"\tlost-column: ",
-		null,//n
-		"/",
-		cells,
-		" flex;",
-		endBracket,
-		".f-row_",
-		cells,
-		" .f-row__cell_push_",
-		null,//n
-		startBracket,
-  	"\tlost-offset: -",
-		null,//n
-		"/",
-		cells,
-		";",
-		endBracket
-	]
-	const csss = []
-	for (let n = 1; n < cells; n++) {
-		csss.push(css.map(a => a == null ? n : a).join(""))
+
+/** nth take a selector as list and a declaration as list
+ * and combine them while inserting n in null positions
+ * [a] -> [a] -> b -> c
+ * @param {string[]} css
+ * @param {number} n
+ * @returns {string}
+*/
+const nth = (css, n) =>
+	css.map(a => a == types.cellNumber ? n : a).join("")
+
+const replace = (list, predicate, r) =>
+	list.map(a => a === predicate ? r : a)
+/**
+ * @param {string[]} selector
+ * @param [string[]] declaration
+ * @param {number} cells
+ */
+const generator = (selector, declaration, cells) => {
+	const output = []
+	const Rselector = replace(selector, types.rowNumber, cells)
+	const Rdeclaration = replace(declaration, types.rowNumber, cells)
+	for (let n = 1; n < cells; n++) {		
+		output.push( nth([...Rselector, ...Rdeclaration], n) )
 	}
-	csss.push("\r\n")
-	return csss.join("")
-}
-const grid_mobile = (cells) => {
-	const startBracket = " {\r\n"
-	const endBracket = "\r\n}\r\n"
-	const css = [
-		".f-row_",
-		cells,
-		" .f-row__cell-mobile-",
-		null,//n
-		startBracket,
-		"\tlost-column: ",
-		null,//n
-		"/",
-		cells,
-		" flex;",
-		endBracket,
-		".f-row_",
-		cells,
-		" .f-row__cell-mobile_push_",
-		null,//n
-		startBracket,
-  	"\tlost-offset: -",
-		null,//n
-		"/",
-		cells,
-		";",
-		endBracket
-	]
-	const csss = []
-	for (let n = 1; n < cells; n++) {
-		csss.push(css.map(a => a == null ? n : a).join(""))
-	}
-	csss.push("\r\n")
-	return csss.join("")
+	return output.join("	")
 }
 
-const grid_6 = grid(6)
-const grid_12 = grid(12)
-const grid_24 = grid(24)
-const grid_mobile_6 = grid_mobile(6)
-const grid_mobile_12= grid_mobile(12)
-const grid_mobile_24= grid_mobile(24)
+const types = {
+	rowNumber: "★",
+	cellNumber: "Ⓐ"
+}
+
+const startBracket = " {\r\n"
+const endBracket = "\r\n}\r\n"
+
+const cellSelector = [
+	".f-row_",
+	types.rowNumber,
+	" .f-row__cell-",
+	types.cellNumber
+]
+const pushSelector = [
+	".f-row_",
+	types.rowNumber,
+	" .f-row__cell_push_",
+	types.cellNumber
+]
+const mobileCellSelector = [
+	".f-row_",
+	types.rowNumber,
+	" .f-row__cell-mobile-",
+	types.cellNumber
+]
+const mobilePushSelector = [
+	".f-row_",
+	types.rowNumber,
+	" .f-row__cell-mobile_push_",
+	types.cellNumber
+]
+const widthDeclaration = [
+	startBracket,
+	"\tlost-column: ",
+	types.cellNumber,
+	"/",
+	types.rowNumber,
+	" flex;",
+	endBracket
+]
+const pushDeclaration = [
+	startBracket,
+	"\tlost-offset: -",
+	types.cellNumber,
+	"/",
+	types.rowNumber,
+	";",
+	endBracket
+]
+
+const grid_6 = generator(cellSelector, widthDeclaration, 6)
+const pushGrid_6 = generator(pushSelector, pushDeclaration, 6)
+const gridMobile_6 = generator(mobileCellSelector, widthDeclaration, 6)
+const pushGridMobile_6 = generator(mobilePushSelector, pushDeclaration, 6)
+
+const grid_12 = generator(cellSelector, widthDeclaration, 12)
+const pushGrid_12 = generator(pushSelector, pushDeclaration, 12)
+const gridMobile_12 = generator(mobileCellSelector, widthDeclaration, 12)
+const pushGridMobile_12 = generator(mobilePushSelector, pushDeclaration, 12)
+
+const grid_24 = generator(cellSelector, widthDeclaration, 24)
+const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
+const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
+const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
 
 console.log(`
 @lost gutter 3.4rem;
@@ -113,6 +131,10 @@ console.log(`
 
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none; }
+	
+	${pushGrid_6}
+	${pushGrid_12}
+	${pushGrid_24}
 }
 
 ${grid_6}
@@ -126,13 +148,16 @@ ${grid_24}
 */
 @media screen and (--viewport-mobile) {
   .f-row_not-mobile, .f-row__not-mobile { display: none; }
-	
+
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
 
-	${grid_mobile(6)}
+	${gridMobile_6}
+	${pushGridMobile_6}
+
+	${gridMobile_12}
+	${pushGridMobile_12}
 	
-	${grid_mobile(12)}
-	
-	${grid_mobile(24)}
+	${gridMobile_24}
+	${pushGridMobile_24}
 }
 `)
