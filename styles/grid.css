@@ -258,6 +258,7 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 @lost gutter var(--gutter-width, 3.4rem); */
 
 @lost gutter 3.4rem;
+
 .f-row {
 	lost-flex-container: row;
 }
@@ -279,318 +280,279 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row__not-desktop {
 		display: none;
 	}
+	.f-row_6 .f-row__cell_push_1 {
+		lost-offset: -1/6;
+	}
+	.f-row_6 .f-row__cell_push_2 {
+		lost-offset: -2/6;
+	}
+	.f-row_6 .f-row__cell_push_3 {
+		lost-offset: -3/6;
+	}
+	.f-row_6 .f-row__cell_push_4 {
+		lost-offset: -4/6;
+	}
+	.f-row_6 .f-row__cell_push_5 {
+		lost-offset: -5/6;
+	}
+	.f-row_12 .f-row__cell_push_1 {
+		lost-offset: -1/12;
+	}
+	.f-row_12 .f-row__cell_push_2 {
+		lost-offset: -2/12;
+	}
+	.f-row_12 .f-row__cell_push_3 {
+		lost-offset: -3/12;
+	}
+	.f-row_12 .f-row__cell_push_4 {
+		lost-offset: -4/12;
+	}
+	.f-row_12 .f-row__cell_push_5 {
+		lost-offset: -5/12;
+	}
+	.f-row_12 .f-row__cell_push_6 {
+		lost-offset: -6/12;
+	}
+	.f-row_12 .f-row__cell_push_7 {
+		lost-offset: -7/12;
+	}
+	.f-row_12 .f-row__cell_push_8 {
+		lost-offset: -8/12;
+	}
+	.f-row_12 .f-row__cell_push_9 {
+		lost-offset: -9/12;
+	}
+	.f-row_12 .f-row__cell_push_10 {
+		lost-offset: -10/12;
+	}
+	.f-row_12 .f-row__cell_push_11 {
+		lost-offset: -11/12;
+	}
+	.f-row_24 .f-row__cell_push_1 {
+		lost-offset: -1/24;
+	}
+	.f-row_24 .f-row__cell_push_2 {
+		lost-offset: -2/24;
+	}
+	.f-row_24 .f-row__cell_push_3 {
+		lost-offset: -3/24;
+	}
+	.f-row_24 .f-row__cell_push_4 {
+		lost-offset: -4/24;
+	}
+	.f-row_24 .f-row__cell_push_5 {
+		lost-offset: -5/24;
+	}
+	.f-row_24 .f-row__cell_push_6 {
+		lost-offset: -6/24;
+	}
+	.f-row_24 .f-row__cell_push_7 {
+		lost-offset: -7/24;
+	}
+	.f-row_24 .f-row__cell_push_8 {
+		lost-offset: -8/24;
+	}
+	.f-row_24 .f-row__cell_push_9 {
+		lost-offset: -9/24;
+	}
+	.f-row_24 .f-row__cell_push_10 {
+		lost-offset: -10/24;
+	}
+	.f-row_24 .f-row__cell_push_11 {
+		lost-offset: -11/24;
+	}
+	.f-row_24 .f-row__cell_push_12 {
+		lost-offset: -12/24;
+	}
+	.f-row_24 .f-row__cell_push_13 {
+		lost-offset: -13/24;
+	}
+	.f-row_24 .f-row__cell_push_14 {
+		lost-offset: -14/24;
+	}
+	.f-row_24 .f-row__cell_push_15 {
+		lost-offset: -15/24;
+	}
+	.f-row_24 .f-row__cell_push_16 {
+		lost-offset: -16/24;
+	}
+	.f-row_24 .f-row__cell_push_17 {
+		lost-offset: -17/24;
+	}
+	.f-row_24 .f-row__cell_push_18 {
+		lost-offset: -18/24;
+	}
+	.f-row_24 .f-row__cell_push_19 {
+		lost-offset: -19/24;
+	}
+	.f-row_24 .f-row__cell_push_20 {
+		lost-offset: -20/24;
+	}
+	.f-row_24 .f-row__cell_push_21 {
+		lost-offset: -21/24;
+	}
+	.f-row_24 .f-row__cell_push_22 {
+		lost-offset: -22/24;
+	}
+	.f-row_24 .f-row__cell_push_23 {
+		lost-offset: -23/24;
+	}
 }
 
 .f-row_6 .f-row__cell-1 {
 	lost-column: 1/6 flex;
 }
 
-.f-row_6 .f-row__cell_push_1 {
-	lost-offset: -1/6;
-}
-
 .f-row_6 .f-row__cell-2 {
 	lost-column: 2/6 flex;
-}
-
-.f-row_6 .f-row__cell_push_2 {
-	lost-offset: -2/6;
 }
 
 .f-row_6 .f-row__cell-3 {
 	lost-column: 3/6 flex;
 }
 
-.f-row_6 .f-row__cell_push_3 {
-	lost-offset: -3/6;
-}
-
 .f-row_6 .f-row__cell-4 {
 	lost-column: 4/6 flex;
-}
-
-.f-row_6 .f-row__cell_push_4 {
-	lost-offset: -4/6;
 }
 
 .f-row_6 .f-row__cell-5 {
 	lost-column: 5/6 flex;
 }
 
-.f-row_6 .f-row__cell_push_5 {
-	lost-offset: -5/6;
-}
-
 .f-row_12 .f-row__cell-1 {
 	lost-column: 1/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_1 {
-	lost-offset: -1/12;
 }
 
 .f-row_12 .f-row__cell-2 {
 	lost-column: 2/12 flex;
 }
 
-.f-row_12 .f-row__cell_push_2 {
-	lost-offset: -2/12;
-}
-
 .f-row_12 .f-row__cell-3 {
 	lost-column: 3/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_3 {
-	lost-offset: -3/12;
 }
 
 .f-row_12 .f-row__cell-4 {
 	lost-column: 4/12 flex;
 }
 
-.f-row_12 .f-row__cell_push_4 {
-	lost-offset: -4/12;
-}
-
 .f-row_12 .f-row__cell-5 {
 	lost-column: 5/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_5 {
-	lost-offset: -5/12;
 }
 
 .f-row_12 .f-row__cell-6 {
 	lost-column: 6/12 flex;
 }
 
-.f-row_12 .f-row__cell_push_6 {
-	lost-offset: -6/12;
-}
-
 .f-row_12 .f-row__cell-7 {
 	lost-column: 7/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_7 {
-	lost-offset: -7/12;
 }
 
 .f-row_12 .f-row__cell-8 {
 	lost-column: 8/12 flex;
 }
 
-.f-row_12 .f-row__cell_push_8 {
-	lost-offset: -8/12;
-}
-
 .f-row_12 .f-row__cell-9 {
 	lost-column: 9/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_9 {
-	lost-offset: -9/12;
 }
 
 .f-row_12 .f-row__cell-10 {
 	lost-column: 10/12 flex;
 }
 
-.f-row_12 .f-row__cell_push_10 {
-	lost-offset: -10/12;
-}
-
 .f-row_12 .f-row__cell-11 {
 	lost-column: 11/12 flex;
-}
-
-.f-row_12 .f-row__cell_push_11 {
-	lost-offset: -11/12;
 }
 
 .f-row_24 .f-row__cell-1 {
 	lost-column: 1/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_1 {
-	lost-offset: -1/24;
-}
-
 .f-row_24 .f-row__cell-2 {
 	lost-column: 2/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_2 {
-	lost-offset: -2/24;
 }
 
 .f-row_24 .f-row__cell-3 {
 	lost-column: 3/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_3 {
-	lost-offset: -3/24;
-}
-
 .f-row_24 .f-row__cell-4 {
 	lost-column: 4/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_4 {
-	lost-offset: -4/24;
 }
 
 .f-row_24 .f-row__cell-5 {
 	lost-column: 5/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_5 {
-	lost-offset: -5/24;
-}
-
 .f-row_24 .f-row__cell-6 {
 	lost-column: 6/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_6 {
-	lost-offset: -6/24;
 }
 
 .f-row_24 .f-row__cell-7 {
 	lost-column: 7/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_7 {
-	lost-offset: -7/24;
-}
-
 .f-row_24 .f-row__cell-8 {
 	lost-column: 8/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_8 {
-	lost-offset: -8/24;
 }
 
 .f-row_24 .f-row__cell-9 {
 	lost-column: 9/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_9 {
-	lost-offset: -9/24;
-}
-
 .f-row_24 .f-row__cell-10 {
 	lost-column: 10/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_10 {
-	lost-offset: -10/24;
 }
 
 .f-row_24 .f-row__cell-11 {
 	lost-column: 11/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_11 {
-	lost-offset: -11/24;
-}
-
 .f-row_24 .f-row__cell-12 {
 	lost-column: 12/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_12 {
-	lost-offset: -12/24;
 }
 
 .f-row_24 .f-row__cell-13 {
 	lost-column: 13/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_13 {
-	lost-offset: -13/24;
-}
-
 .f-row_24 .f-row__cell-14 {
 	lost-column: 14/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_14 {
-	lost-offset: -14/24;
 }
 
 .f-row_24 .f-row__cell-15 {
 	lost-column: 15/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_15 {
-	lost-offset: -15/24;
-}
-
 .f-row_24 .f-row__cell-16 {
 	lost-column: 16/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_16 {
-	lost-offset: -16/24;
 }
 
 .f-row_24 .f-row__cell-17 {
 	lost-column: 17/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_17 {
-	lost-offset: -17/24;
-}
-
 .f-row_24 .f-row__cell-18 {
 	lost-column: 18/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_18 {
-	lost-offset: -18/24;
 }
 
 .f-row_24 .f-row__cell-19 {
 	lost-column: 19/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_19 {
-	lost-offset: -19/24;
-}
-
 .f-row_24 .f-row__cell-20 {
 	lost-column: 20/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_20 {
-	lost-offset: -20/24;
 }
 
 .f-row_24 .f-row__cell-21 {
 	lost-column: 21/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_21 {
-	lost-offset: -21/24;
-}
-
 .f-row_24 .f-row__cell-22 {
 	lost-column: 22/24 flex;
 }
 
-.f-row_24 .f-row__cell_push_22 {
-	lost-offset: -22/24;
-}
-
 .f-row_24 .f-row__cell-23 {
 	lost-column: 23/24 flex;
-}
-
-.f-row_24 .f-row__cell_push_23 {
-	lost-offset: -23/24;
 }
 
 
@@ -609,29 +571,29 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row_6 .f-row__cell-mobile-1 {
 		lost-column: 1/6 flex;
 	}
-	.f-row_6 .f-row__cell-mobile_push_1 {
-		lost-offset: -1/6;
-	}
 	.f-row_6 .f-row__cell-mobile-2 {
 		lost-column: 2/6 flex;
-	}
-	.f-row_6 .f-row__cell-mobile_push_2 {
-		lost-offset: -2/6;
 	}
 	.f-row_6 .f-row__cell-mobile-3 {
 		lost-column: 3/6 flex;
 	}
-	.f-row_6 .f-row__cell-mobile_push_3 {
-		lost-offset: -3/6;
-	}
 	.f-row_6 .f-row__cell-mobile-4 {
 		lost-column: 4/6 flex;
 	}
-	.f-row_6 .f-row__cell-mobile_push_4 {
-		lost-offset: -4/6;
-	}
 	.f-row_6 .f-row__cell-mobile-5 {
 		lost-column: 5/6 flex;
+	}
+	.f-row_6 .f-row__cell-mobile_push_1 {
+		lost-offset: -1/6;
+	}
+	.f-row_6 .f-row__cell-mobile_push_2 {
+		lost-offset: -2/6;
+	}
+	.f-row_6 .f-row__cell-mobile_push_3 {
+		lost-offset: -3/6;
+	}
+	.f-row_6 .f-row__cell-mobile_push_4 {
+		lost-offset: -4/6;
 	}
 	.f-row_6 .f-row__cell-mobile_push_5 {
 		lost-offset: -5/6;
@@ -639,65 +601,65 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row_12 .f-row__cell-mobile-1 {
 		lost-column: 1/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_1 {
-		lost-offset: -1/12;
-	}
 	.f-row_12 .f-row__cell-mobile-2 {
 		lost-column: 2/12 flex;
-	}
-	.f-row_12 .f-row__cell-mobile_push_2 {
-		lost-offset: -2/12;
 	}
 	.f-row_12 .f-row__cell-mobile-3 {
 		lost-column: 3/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_3 {
-		lost-offset: -3/12;
-	}
 	.f-row_12 .f-row__cell-mobile-4 {
 		lost-column: 4/12 flex;
-	}
-	.f-row_12 .f-row__cell-mobile_push_4 {
-		lost-offset: -4/12;
 	}
 	.f-row_12 .f-row__cell-mobile-5 {
 		lost-column: 5/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_5 {
-		lost-offset: -5/12;
-	}
 	.f-row_12 .f-row__cell-mobile-6 {
 		lost-column: 6/12 flex;
-	}
-	.f-row_12 .f-row__cell-mobile_push_6 {
-		lost-offset: -6/12;
 	}
 	.f-row_12 .f-row__cell-mobile-7 {
 		lost-column: 7/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_7 {
-		lost-offset: -7/12;
-	}
 	.f-row_12 .f-row__cell-mobile-8 {
 		lost-column: 8/12 flex;
-	}
-	.f-row_12 .f-row__cell-mobile_push_8 {
-		lost-offset: -8/12;
 	}
 	.f-row_12 .f-row__cell-mobile-9 {
 		lost-column: 9/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_9 {
-		lost-offset: -9/12;
-	}
 	.f-row_12 .f-row__cell-mobile-10 {
 		lost-column: 10/12 flex;
 	}
-	.f-row_12 .f-row__cell-mobile_push_10 {
-		lost-offset: -10/12;
-	}
 	.f-row_12 .f-row__cell-mobile-11 {
 		lost-column: 11/12 flex;
+	}
+	.f-row_12 .f-row__cell-mobile_push_1 {
+		lost-offset: -1/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_2 {
+		lost-offset: -2/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_3 {
+		lost-offset: -3/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_4 {
+		lost-offset: -4/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_5 {
+		lost-offset: -5/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_6 {
+		lost-offset: -6/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_7 {
+		lost-offset: -7/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_8 {
+		lost-offset: -8/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_9 {
+		lost-offset: -9/12;
+	}
+	.f-row_12 .f-row__cell-mobile_push_10 {
+		lost-offset: -10/12;
 	}
 	.f-row_12 .f-row__cell-mobile_push_11 {
 		lost-offset: -11/12;
@@ -705,137 +667,137 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row_24 .f-row__cell-mobile-1 {
 		lost-column: 1/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_1 {
-		lost-offset: -1/24;
-	}
 	.f-row_24 .f-row__cell-mobile-2 {
 		lost-column: 2/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_2 {
-		lost-offset: -2/24;
 	}
 	.f-row_24 .f-row__cell-mobile-3 {
 		lost-column: 3/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_3 {
-		lost-offset: -3/24;
-	}
 	.f-row_24 .f-row__cell-mobile-4 {
 		lost-column: 4/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_4 {
-		lost-offset: -4/24;
 	}
 	.f-row_24 .f-row__cell-mobile-5 {
 		lost-column: 5/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_5 {
-		lost-offset: -5/24;
-	}
 	.f-row_24 .f-row__cell-mobile-6 {
 		lost-column: 6/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_6 {
-		lost-offset: -6/24;
 	}
 	.f-row_24 .f-row__cell-mobile-7 {
 		lost-column: 7/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_7 {
-		lost-offset: -7/24;
-	}
 	.f-row_24 .f-row__cell-mobile-8 {
 		lost-column: 8/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_8 {
-		lost-offset: -8/24;
 	}
 	.f-row_24 .f-row__cell-mobile-9 {
 		lost-column: 9/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_9 {
-		lost-offset: -9/24;
-	}
 	.f-row_24 .f-row__cell-mobile-10 {
 		lost-column: 10/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_10 {
-		lost-offset: -10/24;
 	}
 	.f-row_24 .f-row__cell-mobile-11 {
 		lost-column: 11/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_11 {
-		lost-offset: -11/24;
-	}
 	.f-row_24 .f-row__cell-mobile-12 {
 		lost-column: 12/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_12 {
-		lost-offset: -12/24;
 	}
 	.f-row_24 .f-row__cell-mobile-13 {
 		lost-column: 13/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_13 {
-		lost-offset: -13/24;
-	}
 	.f-row_24 .f-row__cell-mobile-14 {
 		lost-column: 14/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_14 {
-		lost-offset: -14/24;
 	}
 	.f-row_24 .f-row__cell-mobile-15 {
 		lost-column: 15/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_15 {
-		lost-offset: -15/24;
-	}
 	.f-row_24 .f-row__cell-mobile-16 {
 		lost-column: 16/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_16 {
-		lost-offset: -16/24;
 	}
 	.f-row_24 .f-row__cell-mobile-17 {
 		lost-column: 17/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_17 {
-		lost-offset: -17/24;
-	}
 	.f-row_24 .f-row__cell-mobile-18 {
 		lost-column: 18/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_18 {
-		lost-offset: -18/24;
 	}
 	.f-row_24 .f-row__cell-mobile-19 {
 		lost-column: 19/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_19 {
-		lost-offset: -19/24;
-	}
 	.f-row_24 .f-row__cell-mobile-20 {
 		lost-column: 20/24 flex;
-	}
-	.f-row_24 .f-row__cell-mobile_push_20 {
-		lost-offset: -20/24;
 	}
 	.f-row_24 .f-row__cell-mobile-21 {
 		lost-column: 21/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_21 {
-		lost-offset: -21/24;
-	}
 	.f-row_24 .f-row__cell-mobile-22 {
 		lost-column: 22/24 flex;
 	}
-	.f-row_24 .f-row__cell-mobile_push_22 {
-		lost-offset: -22/24;
-	}
 	.f-row_24 .f-row__cell-mobile-23 {
 		lost-column: 23/24 flex;
+	}
+	.f-row_24 .f-row__cell-mobile_push_1 {
+		lost-offset: -1/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_2 {
+		lost-offset: -2/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_3 {
+		lost-offset: -3/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_4 {
+		lost-offset: -4/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_5 {
+		lost-offset: -5/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_6 {
+		lost-offset: -6/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_7 {
+		lost-offset: -7/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_8 {
+		lost-offset: -8/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_9 {
+		lost-offset: -9/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_10 {
+		lost-offset: -10/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_11 {
+		lost-offset: -11/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_12 {
+		lost-offset: -12/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_13 {
+		lost-offset: -13/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_14 {
+		lost-offset: -14/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_15 {
+		lost-offset: -15/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_16 {
+		lost-offset: -16/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_17 {
+		lost-offset: -17/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_18 {
+		lost-offset: -18/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_19 {
+		lost-offset: -19/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_20 {
+		lost-offset: -20/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_21 {
+		lost-offset: -21/24;
+	}
+	.f-row_24 .f-row__cell-mobile_push_22 {
+		lost-offset: -22/24;
 	}
 	.f-row_24 .f-row__cell-mobile_push_23 {
 		lost-offset: -23/24;
