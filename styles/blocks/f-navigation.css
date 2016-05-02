@@ -2,9 +2,33 @@
 Site navigation links.
 
 ```
+<section class="f-row f-row_12 f-row_debug">
+	<div class="f-row__cell-4 f-row__cell-mobile-5"><h2 class="f-branding">Fire<span>fund</span></h2></div>
+	<div class="f-row__cell-8 f-row__cell-mobile-7">
+		<div class="f-navigation">
+			<div class="f-row f-row_12 f-row_debug">
+				<div class="f-row__cell-4 f-row__cell_push_4 f-row__cell-mobile-6">
+					<a href="#" class="f-navigation__link">What and how</a>
+				</div>
+				<div class="f-row__cell-4 f-row__cell-mobile-6">
+					<a href="#" class="f-navigation__link">About</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+```
+
+```
 <div class="f-navigation">
-	<a href="#" class="f-navigation__link">What and how</a>
-	<a href="#" class="f-navigation__link">About</a>
+	<div class="f-row f-row_6 f-row_debug">
+		<div class="f-row__cell-2 f-row__cell_push_2">
+			<a href="#" class="f-navigation__link">What and how</a>
+		</div>
+		<div class="f-row__cell-2">
+			<a href="#" class="f-navigation__link">About</a>
+		</div>
+	</div>
 </div>
 ```
 */
@@ -12,18 +36,24 @@ Site navigation links.
 @import "../variables";
 
 .f-navigation {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+	/*display: flex;*/
+	width: 100%;
+	/*flex-basis: 4rem;*/
+	/*align-self: flex-end;*/
+	/*align-content: flex-end;
+	align-items: flex-end;*/
 }
 .f-navigation__link {
-	margin: 0 10%;
-
+	/*align-self: flex-end;*/
+	/*display: inline;
+	vertical-align: text-bottom;*/
+	/*display: inline;*/
 	color: var(--color-grey-light, hsla(0, 0%, 84.7%, 1));
 	font-size: 1.8rem;
 	font-weight: bold;
 	text-decoration: none;
 	line-height: 4.8rem;
+	vertical-align: bottom;
 
 	cursor: pointer;
 	transition: color 260ms ease-out;
