@@ -17,13 +17,13 @@ MODIFIER f-media_left (float)
 <!-- this should be used on the website -->
 
 <figure class="f-media">
-	<img class="f-media__media" src="image/projecthero.png">
+	<img class="f-media__media" src="image/11.jpg">
 	<figcaption class="f-media__caption">Caption text for da media</figcaption>
 </figure>
 
 <!-- this should be used on the website -->
 
-</div> <!-- only here for the style guide - should not be used on the website --> 
+</div> <!-- only here for the style guide - should not be used on the website -->
 ```
 
 ## Left image
@@ -33,7 +33,7 @@ MODIFIER f-media_left (float)
 <section class"f-text">
 
 		<h2 class="f-text__heading">Heading explaining what the text will be about</h2>
-		
+
 		<p class="f-text__text">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
@@ -52,12 +52,13 @@ MODIFIER f-media_left (float)
 				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
 				autem doloremque voluptate fugiat.
 		</p>
-		
+
+
 <!-- this should be used on the website -->
 
 <figure class="f-media f-media_left">
-	<img class="f-media__media" src="image/projecthero.png">
-	<figcaption class="f-media__caption">Techno viking!</figcaption>
+	<img class="f-media__media" src="image/10.jpg">
+	<figcaption class="f-media__caption">Run! Run! Run! Run! Run! Run! Run! Run! Run!</figcaption>
 </figure>
 
 <!-- this should be used on the website -->
@@ -80,10 +81,10 @@ MODIFIER f-media_left (float)
 				necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
 				autem doloremque voluptate fugiat.
 		</p>
-        
+
 </section>
 
-</div> <!-- only here for the style guide - should not be used on the website --> 
+</div> <!-- only here for the style guide - should not be used on the website -->
 ```
 
 ## Standard video
@@ -99,7 +100,7 @@ MODIFIER f-media_left (float)
 
 <!-- this should be used on the website -->
 
-</div> <!-- only here for the style guide - should not be used on the website --> 
+</div> <!-- only here for the style guide - should not be used on the website -->
 ```
 
 ## Right video
@@ -115,10 +116,50 @@ MODIFIER f-media_left (float)
 
 <!-- this should be used on the website -->
 
-</div> <!-- only here for the style guide - should not be used on the website --> 
+<section class"f-text">
+	<h2 class="f-text__heading">Heading explaining what the text will be about</h2>	
+	<p class="f-text__text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+	</p>
+	<p class="f-text__text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+			necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
+			autem doloremque voluptate fugiat.
+	</p>		
+</section>
+
+</div> <!-- only here for the style guide - should not be used on the website -->
 ```
 */
-	
+
 .f-media {
 	display: flex;
   flex-flow: column nowrap;
