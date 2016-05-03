@@ -36,24 +36,14 @@ Site navigation links.
 @import "../variables";
 
 .f-navigation {
-	/*display: flex;*/
 	width: 100%;
-	/*flex-basis: 4rem;*/
-	/*align-self: flex-end;*/
-	/*align-content: flex-end;
-	align-items: flex-end;*/
 }
 .f-navigation__link {
-	/*align-self: flex-end;*/
-	/*display: inline;
-	vertical-align: text-bottom;*/
-	/*display: inline;*/
 	color: var(--color-grey-light, hsla(0, 0%, 84.7%, 1));
 	font-size: 1.8rem;
 	font-weight: bold;
-	text-decoration: none;
 	line-height: 4.8rem;
-	vertical-align: bottom;
+	text-decoration: none;
 
 	cursor: pointer;
 	transition: color 260ms ease-out;
