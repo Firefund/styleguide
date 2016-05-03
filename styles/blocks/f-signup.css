@@ -1,0 +1,60 @@
+/*
+
+From the footer. 
+
+`BLOCK f-signup`
+`    MODIFIER f-signup_error`
+`    ELEMENT f-signup__label`
+`    ELEMENT f-signup__feedback-text`
+`    ELEMENT f-signup__input`
+`    ELEMENT f-signup__button`
+
+```
+
+<p class="f-signup">Sign up for news: <p>
+<input class="f-signup f-signup__input">Yo, dog!</input>
+<button class="f-signup f-signup__button">SUBMIT</button>
+
+
+```
+
+*/
+
+@import "../variables";
+
+.f-signup {
+	color: var(--color-white);
+	font-size: 1.7rem;
+	font-weight: lighter;
+	background-color: var(--color-black);
+	outline-color: var(--color-red);  
+}
+
+.f-signup_error {
+	color: var(--color-red);
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+.f-signup__label {
+	color: cyan;
+}
+
+.f-signup__feedback-text {
+}
+
+.f-signup__input[type=text] {
+	border: 2px solid var(--color-white);
+	width: 18.8rem;
+	height: 2.8rem;
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+.f-signup__button {
+	border: 2px solid var(--color-red);
+	background-color: var(--color-red);
+	color: var(--color-black);
+	text-transform: uppercase;
+	font-weight: bold;
+}
