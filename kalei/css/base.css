@@ -7,6 +7,9 @@ This is the base for all our styles. In here we define:
 4. site wide classes
 */
 
+:root {/*--color-white-transparent: hsla(0, 0%, 100%, 5);*/
+}
+
 
 html {
   box-sizing: border-box;
@@ -42,6 +45,10 @@ body {
 a {
   color: hsla(1, 73.7%, 38.8%, 1);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 span {
