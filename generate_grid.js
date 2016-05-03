@@ -1,4 +1,4 @@
-
+"use strict"
 /**
  * Naive grid generator - creates rows with cells that can be pushed
  * to different start positions.
@@ -35,12 +35,12 @@ const replace = (list, predicate, r) =>
  * @param [string[]] declaration
  * @param {number} cells
  */
-const generator = (selector, declaration, cells) => {
+const generator = (selector, declaration, cells, f = nth) => {
 	const output = []
 	const Rselector = replace(selector, placeholders.rowNumber, cells)
 	const Rdeclaration = replace(declaration, placeholders.rowNumber, cells)
 	for (let n = 1; n < cells; n++) {		
-		output.push( nth([...Rselector, ...Rdeclaration], n) )
+		output.push( f([...Rselector, ...Rdeclaration], n) )
 	}
 	return output.join("	")
 }
@@ -105,9 +105,9 @@ const columnSelector = [
 	placeholders.cellNumber,
 	" > *"
 ]
-const mobilecolumnSelector = [
+const mobileColumnSelector = [
 	".f-column_mobile_",
-	placeholders.rowNumber,
+	placeholders.cellNumber,
 	" > *"
 ]
 const columnDeclaration = [
@@ -115,7 +115,7 @@ const columnDeclaration = [
 	"\tlost-column: 1/",
 	placeholders.cellNumber,
 	" ",
-	placeholders.rowNumber,
+	placeholders.cellNumber,
 	";",
 	endBracket
 ]
@@ -135,8 +135,10 @@ const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
 const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
 const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
 
-const columnGrid_6 = generator(columnSelector, columnDeclaration, 6)
-const columnMobileGrid_6 = generator(columnSelector, columnDeclaration, 6)
+const columnGridNth = (css, n) =>
+		css.map(a => a === placeholders.cellNumber ? n+1 : a).join("")
+const columnGrid_6 = generator(columnSelector, columnDeclaration,	6, columnGridNth)
+const columnMobileGrid_6 = generator(mobileColumnSelector, columnDeclaration, 6, columnGridNth)
 
 console.log(`
 @lost gutter 3.4rem;
