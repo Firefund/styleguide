@@ -1,4 +1,4 @@
-
+"use strict"
 /**
  * Naive grid generator - creates rows with cells that can be pushed
  * to different start positions.
@@ -35,12 +35,12 @@ const replace = (list, predicate, r) =>
  * @param [string[]] declaration
  * @param {number} cells
  */
-const generator = (selector, declaration, cells) => {
+const generator = (selector, declaration, cells, f = nth) => {
 	const output = []
 	const Rselector = replace(selector, placeholders.rowNumber, cells)
 	const Rdeclaration = replace(declaration, placeholders.rowNumber, cells)
 	for (let n = 1; n < cells; n++) {		
-		output.push( nth([...Rselector, ...Rdeclaration], n) )
+		output.push( f([...Rselector, ...Rdeclaration], n) )
 	}
 	return output.join("	")
 }
@@ -100,6 +100,26 @@ const pushDeclaration = [
 	endBracket
 ]
 
+const columnSelector = [
+	".f-column_",
+	placeholders.cellNumber,
+	" > *"
+]
+const mobileColumnSelector = [
+	".f-column_mobile_",
+	placeholders.cellNumber,
+	" > *"
+]
+const columnDeclaration = [
+	startBracket,
+	"\tlost-column: 1/",
+	placeholders.cellNumber,
+	" ",
+	placeholders.cellNumber,
+	";",
+	endBracket
+]
+
 const grid_6 = generator(cellSelector, widthDeclaration, 6)
 const pushGrid_6 = generator(pushSelector, pushDeclaration, 6)
 const gridMobile_6 = generator(mobileCellSelector, widthDeclaration, 6)
@@ -114,6 +134,11 @@ const grid_24 = generator(cellSelector, widthDeclaration, 24)
 const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
 const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
 const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
+
+const columnGridNth = (css, n) =>
+		css.map(a => a === placeholders.cellNumber ? n+1 : a).join("")
+const columnGrid_6 = generator(columnSelector, columnDeclaration,	6, columnGridNth)
+const columnMobileGrid_6 = generator(mobileColumnSelector, columnDeclaration, 6, columnGridNth)
 
 console.log(`
 @lost gutter 3.4rem;
@@ -134,6 +159,13 @@ console.log(`
 .f-row__cell {
   lost-column: 1 flex;
 }
+
+.f-column {
+	lost-flex-container: row;
+	width: 100%;
+}
+
+${columnGrid_6}
 
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none; }
@@ -156,6 +188,8 @@ ${grid_24}
   .f-row_not-mobile, .f-row__not-mobile { display: none; }
 
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
+
+	${columnMobileGrid_6}
 
 	${gridMobile_6}
 	${pushGridMobile_6}

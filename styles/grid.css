@@ -15,13 +15,16 @@
 
 ## The grid
 
-Our grid system consist of *rows* and *cells*. See <a href="grid.html">this test page</a> for a full
+TODO: write better explanatory text here @troldmand @magiker420
+
+We have two different grid-systems. One for layouting our pages, called `f-row`,
+and one for layouting smaller blocks on a page. The latter is called `f-column`.
+
+The row system consist of *rows* and *cells*. See <a href="grid.html">this test page</a> for a full
 demo: http://localhost:8080/grid.html
-TODO: write explanatory text here @troldmand @magiker420
 
-You can run `node generate_grid.js`, located in the root of this repository, to generate the grid and create
-new grid systems by calling the grid function with different cell numbers. E.g. `grid(8)`.
 
+## Row Grid Desktop Classes
 <pre>
 BLOCK f-row											- establish a row
 MODIFIER f-row_debug						- show the outline of your cells
@@ -157,7 +160,7 @@ In mobile width, every cell is staked.
 ```
 
 /*
- ## Mobile
+ ## Row Grid Mobile Classes
 Some of the classes are already documented but here is a recap in a
 mobile context.
 <pre>
@@ -250,6 +253,44 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	MODIFIER f-row__cell-mobile_push_22				- modify the cell indentation
 	MODIFIER f-row__cell-mobile_push_23				- modify the cell indentation
 </pre>
+
+
+## Column Grid Classes
+<pre>
+BLOCK f-column
+MODIFIER f-column_2
+MODIFIER f-column_3
+MODIFIER f-column_4
+MODIFIER f-column_5
+MODIFIER f-column_6
+MODIFIER f-column_mobile_2
+MODIFIER f-column_mobile_3
+MODIFIER f-column_mobile_4
+MODIFIER f-column_mobile_5
+MODIFIER f-column_mobile_6
+</pre>
+`f-column_N` and `f-column_mobile_N` are complementary while `f-column_N` and
+`f-column_N` or `f-column_mobile_N` and `f-column_mobile_N` are incompatible.
+
+## Column grid - 3 columns - 2 mobile columns
+```
+<section class="f-column f-column_3 f-column_mobile_2">
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+	<div class="demo">column 3</div>
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+	<div class="demo">column 3</div>
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+</section>
+```
+
+
+## Development
+You can run `node generate_grid.js`, located in the root of this repository, to generate the grid and create
+new grid systems by calling the grid function with different selectors, declarations and even a custom function
+to manipulate the css block while running in a loop.
 */
 
 @import "./variables";
@@ -268,12 +309,38 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	lost-utility: clearfix;
 }
 
-.f-row_debug, .f-row_debug > * {
+.f-row_debug,
+.f-row_debug > * {
 	border: 1px dashed cyan;
 }
 
 .f-row__cell {
 	lost-column: 1 flex;
+}
+
+.f-column {
+	lost-flex-container: row;
+	width: 100%;
+}
+
+.f-column_2 > * {
+	lost-column: 1/2 2;
+}
+
+.f-column_3 > * {
+	lost-column: 1/3 3;
+}
+
+.f-column_4 > * {
+	lost-column: 1/4 4;
+}
+
+.f-column_5 > * {
+	lost-column: 1/5 5;
+}
+
+.f-column_6 > * {
+	lost-column: 1/6 6;
 }
 
 @media screen and (--viewport-desktop) {
@@ -569,6 +636,21 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row__cell-mobile {
 		lost-column: 1 flex!important;
 	}
+	.f-column_mobile_2 > * {
+		lost-column: 1/2 2;
+	}
+	.f-column_mobile_3 > * {
+		lost-column: 1/3 3;
+	}
+	.f-column_mobile_4 > * {
+		lost-column: 1/4 4;
+	}
+	.f-column_mobile_5 > * {
+		lost-column: 1/5 5;
+	}
+	.f-column_mobile_6 > * {
+		lost-column: 1/6 6;
+	}
 	.f-row_6 .f-row__cell-mobile-1 {
 		lost-column: 1/6 flex;
 	}
@@ -804,3 +886,4 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 		lost-offset: -23/24;
 	}
 }
+
