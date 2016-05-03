@@ -4,6 +4,9 @@ Image inserted as html img tag and via js set as css background-image. The
 image is initial hidden but is reveal in a translateY/opacity movement, when
 the js has run and the image is loaded.
 
+Known issue: With some image dimensions and browser window dimensions the image is too short.
+E.i. the image doesn't reach the top of the container and the black background is visible.
+
 ## With grid
 ```
 <div class="f-hero">
@@ -37,9 +40,10 @@ the js has run and the image is loaded.
 	padding-top: 64px;
 	padding-top: 4rem;
 
+	/*TODO: set background-image via js */
 	background-image: url(../../image/projecthero.png);
 	background-repeat: no-repeat;
-	background-position: center top; /* cut sides until media query limit */
+	background-position: center bottom; /* cut sides until media query limit */
 }
 
 /* `<img>` tags are hidden */

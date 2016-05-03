@@ -45,5 +45,6 @@ Putting a lot of text now. <a href="">some text are links</a>
      font-size: 27.2px;
      font-size: 1.7rem;
      color: hsla(0, 0%, 100%, 1);
-     line-height: 1.6;
+     line-height: 35.2px;
+     line-height: 2.2rem;
  }

@@ -7,9 +7,13 @@ Our logo.
 */
 
 .f-branding {
+	margin: 0;
+
 	color: hsla(0, 0%, 100%, 1);
 	font-size: 65.6px;
 	font-size: 4.1rem;
+	line-height: 65.6px;
+	line-height: 4.1rem;
  	font-weight: bold;
 	text-transform: uppercase;
 }

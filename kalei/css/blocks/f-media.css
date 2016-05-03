@@ -206,7 +206,7 @@ MODIFIER f-media_left (float)
 	margin: 8.8px 0 0;
 	margin: .55rem 0 0;
 
-  color: var(--color-grey);
+  color: hsla(0, 0%, 40%, 1);
 	font-size: 19.2px;
 	font-size: 1.2rem;
   font-style: italic;

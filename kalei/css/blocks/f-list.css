@@ -54,7 +54,7 @@ A number list. (About Who-01, Project-01)
 	font-size: 1.4rem;
 	font-weight: lighter;
 	line-height: 28.8px;
-	line-height: 1.8rem;
+	line-height: 1.8rem; /*TODO: Correct this line-height, Karl*/
 }
 
 .f-list li::before {
