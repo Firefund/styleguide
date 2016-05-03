@@ -261,13 +261,14 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 
 .f-row {
 	lost-flex-container: row;
+	width: 100%;
 }
 
 .f-row::after {
 	lost-utility: clearfix;
 }
 
-.f-row_debug > * {
+.f-row_debug, .f-row_debug > * {
 	border: 1px dashed cyan;
 }
 
