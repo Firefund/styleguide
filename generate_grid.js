@@ -26,7 +26,7 @@
  * @returns {string}
 */
 const nth = (css, n) =>
-	css.map(a => a == types.cellNumber ? n : a).join("")
+	css.map(a => a === placeholders.cellNumber ? n : a).join("")
 
 const replace = (list, predicate, r) =>
 	list.map(a => a === predicate ? r : a)
@@ -37,17 +37,21 @@ const replace = (list, predicate, r) =>
  */
 const generator = (selector, declaration, cells) => {
 	const output = []
-	const Rselector = replace(selector, types.rowNumber, cells)
-	const Rdeclaration = replace(declaration, types.rowNumber, cells)
+	const Rselector = replace(selector, placeholders.rowNumber, cells)
+	const Rdeclaration = replace(declaration, placeholders.rowNumber, cells)
 	for (let n = 1; n < cells; n++) {		
 		output.push( nth([...Rselector, ...Rdeclaration], n) )
 	}
 	return output.join("	")
 }
 
-const types = {
-	rowNumber: "★",
-	cellNumber: "Ⓐ"
+// const types = {
+// 	rowNumber: "★",
+// 	cellNumber: "Ⓐ"
+// }
+const placeholders = {
+	rowNumber: Symbol("rowNumber"),
+	cellNumber: Symbol("cellNumber")
 }
 
 const startBracket = " {\r\n"
@@ -55,43 +59,43 @@ const endBracket = "\r\n}\r\n"
 
 const cellSelector = [
 	".f-row_",
-	types.rowNumber,
+	placeholders.rowNumber,
 	" .f-row__cell-",
-	types.cellNumber
+	placeholders.cellNumber
 ]
 const pushSelector = [
 	".f-row_",
-	types.rowNumber,
+	placeholders.rowNumber,
 	" .f-row__cell_push_",
-	types.cellNumber
+	placeholders.cellNumber
 ]
 const mobileCellSelector = [
 	".f-row_",
-	types.rowNumber,
+	placeholders.rowNumber,
 	" .f-row__cell-mobile-",
-	types.cellNumber
+	placeholders.cellNumber
 ]
 const mobilePushSelector = [
 	".f-row_",
-	types.rowNumber,
+	placeholders.rowNumber,
 	" .f-row__cell-mobile_push_",
-	types.cellNumber
+	placeholders.cellNumber
 ]
 const widthDeclaration = [
 	startBracket,
 	"\tlost-column: ",
-	types.cellNumber,
+	placeholders.cellNumber,
 	"/",
-	types.rowNumber,
+	placeholders.rowNumber,
 	" flex;",
 	endBracket
 ]
 const pushDeclaration = [
 	startBracket,
 	"\tlost-offset: -",
-	types.cellNumber,
+	placeholders.cellNumber,
 	"/",
-	types.rowNumber,
+	placeholders.rowNumber,
 	";",
 	endBracket
 ]
