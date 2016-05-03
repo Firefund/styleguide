@@ -84,11 +84,10 @@ SIXTH: weird stuff
 @import url("blocks/f-media.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
-@import url("blocks/f-right-heading.css");
-@import url("blocks/f-spacer.css");
-@import url("blocks/f-footer-text.css");
 @import url("blocks/f-postpay-info.css");
+@import url("blocks/f-right-heading.css");
 @import url("blocks/f-sitemap.css");
+@import url("blocks/f-spacer.css");
 @import url("blocks/f-standard-text.css"); 
 @import url("blocks/f-text-input.css");
 
