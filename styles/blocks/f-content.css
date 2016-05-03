@@ -47,14 +47,60 @@ BLOCK f-content
 <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
 </div>
 ```
+## Eksample 4 
+```
+<div class="f-content">
+    <ol class="f-list">
+        <li>The ordered one!</li>
+        <li>The ordered second one!!!  Lets make a loooooong sentence and se what the fuck is happining up in here! Double that shit up motherfucker yeah biiiitch</li>
+        <li>The ordered one!</li>
+    </ol>
+    <div class="f-text-input f-text-input_multiline">
+        <label class="f-text-input__label">Message
+            <textarea class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+        </label>
+    </div>
+    <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
 
+    <section class"f-text">
+        <h2 class="f-text__heading">Heading explaining what the text will be about</h2>
+
+        <p class="f-text__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, tenetur <a href"">excepturi</a> et repellendus dolorem 
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            autem doloremque voluptate fugiat.
+        </p>
+
+        <p class="f-text__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem 
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            autem doloremque voluptate fugiat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem 
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            autem doloremque voluptate fugiat.
+            <a href="">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            autem doloremque voluptate fugiat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            autem doloremque <a href="">voluptate fugiat.</a>
+        </p>
+    </section>
+
+</div>
+```
 */
 
 @import "../variables";
-
 .f-content {
     padding: 0 var(--gutter-width);
-
-    background-color: var(--color-white);    
+    background-color: var(--color-white);
     border-radius: 0.3rem;
 }
