@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>the GRID</title>
+		<link rel="stylesheet" href="css/grid.css">
+		<style>
+			.demo {
+				padding: 0.1rem;
+				border: 1px dotted hsla(240, 100%, 50%, .8);
+				
+				text-align: center;
+				text-transform: uppercase;
+				
+				background-color: hsla(240, 100%, 25%, .1);
+			}
+		</style>
+	</head>
+	<body>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell-mobile">
+				<div class="demo">1</div>
+			</div>
+			<div class="f-row__cell-2 f-row__cell-mobile">
+				<div class="demo">2</div>
+			</div>
+			<div class="f-row__cell-1 f-row__cell-mobile">
+				<div class="demo">1</div>
+			</div>
+			<div class="f-row__not-desktop f-row__cell-mobile_push_1 f-row__cell-mobile-2">
+				<div class="demo">mobile 2</div>
+			</div>
+			<div class="f-row__cell-1 f-row__cell_push_1 f-row__cell-mobile-2">
+				<div class="demo">last</div> <!-- the last element MUST be the last element! sound silly but don't try to put anything after this cell-->
+			</div>
+		</section>
+
+<hr>
+
+		<section class="f-row f-row_12 f-row_not-mobile">
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+			<div class="f-row__cell-2 f-row__cell_push_2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+
+<hr>
+
+		<section class="f-row f-row_24 f-row_not-mobile">
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-8">
+				<div class="demo">8</div>
+			</div>
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-4 f-row__cell_push_4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+
+<hr>
+<h3>cell width in 6 row</h3>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell">
+				<div class="demo">full</div>
+			</div>
+		</section>
+
+<hr>
+<h3>push in 6 row</h3>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell_push_1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell_push_2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell_push_3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell_push_4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_6">
+			<div class="f-row__cell-1 f-row__cell_push_5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+
+<hr>
+
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+			<div class="f-row__cell-2 f-row__cell_push_2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+
+<hr>
+<h3>cell width in 12 row</h3>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-6">
+				<div class="demo">6</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-7">
+				<div class="demo">7</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-8">
+				<div class="demo">8</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-9">
+				<div class="demo">9</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-10">
+				<div class="demo">10</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-11">
+				<div class="demo">11</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell">
+				<div class="demo">full</div>
+			</div>
+		</section>
+
+<hr>
+<h3>push in 12 row</h3>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_6">
+				<div class="demo">6</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_7">
+				<div class="demo">7</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_8">
+				<div class="demo">8</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_9">
+				<div class="demo">9</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_10">
+				<div class="demo">10</div>
+			</div>
+		</section>
+		<section class="f-row f-row_12">
+			<div class="f-row__cell-1 f-row__cell_push_11">
+				<div class="demo">11</div>
+			</div>
+		</section>
+
+<hr>
+
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-8">
+				<div class="demo">8</div>
+			</div>
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+			<div class="f-row__cell-4 f-row__cell_push_4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+
+<hr>
+<h3>cell width in 24 row</h3>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1">
+				<div class="demo">1</div>
+			</div>
+			<div class="f-row__cell-1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-6">
+				<div class="demo">6</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-7">
+				<div class="demo">7</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-8">
+				<div class="demo">8</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-9">
+				<div class="demo">9</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-10">
+				<div class="demo">10</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-11">
+				<div class="demo">11</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-12">
+				<div class="demo">12</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-13">
+				<div class="demo">13</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-14">
+				<div class="demo">14</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-15">
+				<div class="demo">15</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-16">
+				<div class="demo">16</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-17">
+				<div class="demo">17</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-18">
+				<div class="demo">18</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-19">
+				<div class="demo">19</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-20">
+				<div class="demo">20</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-21">
+				<div class="demo">21</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-22">
+				<div class="demo">22</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-23">
+				<div class="demo">23</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell">
+				<div class="demo">full</div>
+			</div>
+		</section>
+
+<hr>
+<h3>push in 24 row</h3>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_1">
+				<div class="demo">1</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_2">
+				<div class="demo">2</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_3">
+				<div class="demo">3</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_4">
+				<div class="demo">4</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_5">
+				<div class="demo">5</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_6">
+				<div class="demo">6</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_7">
+				<div class="demo">7</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_8">
+				<div class="demo">8</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_9">
+				<div class="demo">9</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_10">
+				<div class="demo">10</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_11">
+				<div class="demo">11</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_12">
+				<div class="demo">12</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_13">
+				<div class="demo">13</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_14">
+				<div class="demo">14</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_15">
+				<div class="demo">15</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_16">
+				<div class="demo">16</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_17">
+				<div class="demo">17</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_18">
+				<div class="demo">18</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_19">
+				<div class="demo">19</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_20">
+				<div class="demo">20</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_21">
+				<div class="demo">21</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_22">
+				<div class="demo">22</div>
+			</div>
+		</section>
+		<section class="f-row f-row_24">
+			<div class="f-row__cell-1 f-row__cell_push_23">
+				<div class="demo">23</div>
+			</div>
+		</section>
+
+		<script>
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
+	</body>
+</html>
