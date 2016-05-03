@@ -12,8 +12,8 @@ From the footer.
 ```
 
 <p class="f-signup">Sign up for news: <p>
-<input class="f-signup f-signup__input">Yo, dog!</input>
-<button class="f-signup f-signup__button">SUBMIT</button>
+<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
+<button class="f-signup__button">SUBMIT</button>
 
 
 ```
@@ -23,11 +23,13 @@ From the footer.
 @import "../variables";
 
 .f-signup {
+	margin-bottom: -0.5rem;
+
+	background-color: var(--color-black);
+	outline-color: var(--color-red);  
 	color: var(--color-white);
 	font-size: 1.7rem;
 	font-weight: lighter;
-	background-color: var(--color-black);
-	outline-color: var(--color-red);  
 }
 
 .f-signup_error {
@@ -37,24 +39,46 @@ From the footer.
 }
 
 .f-signup__label {
-	color: cyan;
 }
 
 .f-signup__feedback-text {
 }
 
-.f-signup__input[type=text] {
+.f-signup__input {
 	border: 2px solid var(--color-white);
 	width: 18.8rem;
 	height: 2.8rem;
-	background-color: var(--color-black);
+
 	color: var(--color-white);
+	background-color: var(--color-black);
+	font-weight: lighter;
+	font-size: 1.2rem;
+
+	outline: none;
 }
 
 .f-signup__button {
+	margin-left: 1rem;
 	border: 2px solid var(--color-red);
 	background-color: var(--color-red);
 	color: var(--color-black);
-	text-transform: uppercase;
+	font-size: 1.7rem;
 	font-weight: bold;
+	text-transform: uppercase;
+
+	outline: none;
 }
+
+.f-signup__button:hover {
+	border: 2px solid var(--color-black);
+
+	box-shadow: none;
+}
+
+.f-signup__button:active {
+	border: 2px solid var(--color-black);
+
+	background: var(--color-black);
+	color: var(--color-white);
+}
+
