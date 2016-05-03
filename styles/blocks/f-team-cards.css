@@ -1,8 +1,7 @@
 /*
 ## Example 1
 ```
-<section class="f-row f-row_12 f-row_debug">
-    <div class="f-row__cell-4 f-row__cell-mobile-6">
+<section class="f-cloumn f-column_3 f-column_mobile_2">
         <div class="f-thumbnail-group">
             <img class="f-thumbnail-group__image" src="image/team1.jpg">
             <div class="f-thumbnail-group__card">
@@ -19,10 +18,9 @@
                 </p>
             </div>
         </div>
-   </div>
-    <div class="f-row__cell-4 f-row__cell-mobile-6">
+  
         <div class="f-thumbnail-group">
-            <img class="f-thumbnail-group__image" src="image/team3.jpg">
+            <img class="f-thumbnail-group__image" src="image/team1.jpg">
             <div class="f-thumbnail-group__card">
                 <h2 class="f-thumbnail-group__heading">gdnjdni K</h2>
                 <p class="f-thumbnail-group__subheading">Board member</p>
@@ -37,8 +35,7 @@
                 </p>
             </div>
         </div>
-   </div>
-    <div class="f-row__cell-4 f-row__cell-mobile-6">
+  
         <div class="f-thumbnail-group">
             <img class="f-thumbnail-group__image" src="image/team2.jpg">
             <div class="f-thumbnail-group__card">
@@ -55,9 +52,7 @@
                 </p>
             </div>
         </div>
-   </div>
-
-    <div class="f-row__cell-4 f-row__cell-mobile-6">
+   
         <div class="f-thumbnail-group">
             <img class="f-thumbnail-group__image" src="image/team1.jpg">
             <div class="f-thumbnail-group__card">
@@ -74,16 +69,13 @@
                 </p>
             </div>
         </div>
-   </div>
- <div class="f-row__cell-4 f-row__cell-mobile-6">
         <div class="f-thumbnail-group">
             <img class="f-thumbnail-group__image" src="image/team1.jpg">
             <div class="f-thumbnail-group__card">
                 <h2 class="f-thumbnail-group__heading">Esther K</h2>
             </div>
         </div>
-   </div>
-    <div class="f-row__cell-4 f-row__cell-mobile-6">
+  
         <div class="f-thumbnail-group">
             <img class="f-thumbnail-group__image" src="image/team1.jpg">
             <div class="f-thumbnail-group__card">
@@ -100,7 +92,6 @@
                 </p>
             </div>
         </div>
-   </div>
 
 </section>
 ```
@@ -110,14 +101,20 @@
 
 .f-thumbnail-group {
     position: relative;
-    height: 100%;
-    width:100%;
+    
+    margin-bottom: var(--gutter-width);
+
 }
 
 .f-thumbnail-group__card {
   position: absolute;
   top: 0;
   left: 0; 
+  width: 100%;
+  height: 100%; 
+  
+  padding: 2rem;
+  
   
   background: var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));
 
@@ -127,10 +124,8 @@
 }
 
 .f-thumbnail-group:hover .f-thumbnail-group__card {
-    height: 100%;
-    width:100%;
 
-    opacity: 1;
+     opacity: 1;
 }
 
 .f-thumbnail-group__image {
@@ -139,19 +134,16 @@
 }
 
 .f-thumbnail-group__heading {
-  margin-right: 2rem;
+
   margin-bottom: 1rem;  
-  margin-left: 2rem;
-  
+    
   color: var(--color-black);
   font-size: 2rem;
   line-height: 0.2rem;   
 }
 
 .f-thumbnail-group__subheading {
-    margin-top: 0;
-    margin-right: 2rem;
-    margin-left: 2rem;  
+    margin-top: 0;  
    
     font-size: 1.2rem; 
     font-style: normal;  
@@ -159,20 +151,15 @@
 
 
 .f-thumbnail-group__byline {
-    height: 3px;
-    margin-right: 2rem;
-    margin-left: 2rem; 
+    height: 3px; 
     
     color: var(--color-red);
     
     background-color: var(--color-red);
 }
 
-
 .f-thumbnail-group__text {
-  margin-right: 2rem; 
-  margin-left: 2rem;
-  
+
   color: var(--color-black);
   font-size: 1.2rem;
   line-height: 1.7rem;
