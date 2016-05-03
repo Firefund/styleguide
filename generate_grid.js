@@ -113,7 +113,7 @@ const mobilecolumnSelector = [
 const columnDeclaration = [
 	startBracket,
 	"\tlost-column: 1/",
-	placeholders.rowNumber,
+	placeholders.cellNumber,
 	" ",
 	placeholders.rowNumber,
 	";",
