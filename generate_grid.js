@@ -119,13 +119,15 @@ console.log(`
 @lost gutter 3.4rem;
 
 .f-row {
-  lost-flex-container: row;
-}
-.f-row::after {
-  lost-utility: clearfix;
+	lost-flex-container: row;
+	width: 100%;
 }
 
-.f-row_debug > * {
+.f-row::after {
+	lost-utility: clearfix;
+}
+
+.f-row_debug, .f-row_debug > * {
 	border: 1px dashed cyan;
 }
 

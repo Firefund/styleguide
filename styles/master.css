@@ -72,33 +72,32 @@ SIXTH: weird stuff
 @import url("grid.css");
 
 /* ### BEM blocks ### */
-@import url("blocks/f-signup.css");
-@import url("blocks/f-right-heading.css");
-@import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
-@import url("blocks/f-list.css");
-@import url("blocks/f-navigation.css");
+@import url("blocks/f-content.css");
+@import url("blocks/f-cuff-text.css");
+@import url("blocks/f-donation-amount.css"); 
+@import url("blocks/f-footer-text.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
-@import url("blocks/f-one-liner.css");
-@import url("blocks/f-text-input.css");
-@import url("blocks/f-cuff-text.css");
-@import url("blocks/f-spacer.css");
-@import url("blocks/f-footer-text.css");
-@import url("blocks/f-content.css");
-@import url("blocks/f-standard-text.css"); 
-@import url("blocks/f-donation-amount.css"); 
+@import url("blocks/f-info-card.css");
+@import url("blocks/f-left-heading.css");
+@import url("blocks/f-list.css");
 @import url("blocks/f-media.css");
+@import url("blocks/f-navigation.css");
+@import url("blocks/f-one-liner.css");
+@import url("blocks/f-postpay-info.css");
+@import url("blocks/f-right-heading.css");
+@import url("blocks/f-signup.css");
+@import url("blocks/f-sitemap.css");
+@import url("blocks/f-spacer.css");
+@import url("blocks/f-standard-text.css"); 
+@import url("blocks/f-text-input.css");
 
 
 
 
 
 /*
-@import url("blocks/f-video.css")
-@import url("blocks/f-text.css");
-@import url("blocks/f-image.css");
-@import url("blocks/f-spacer.css");
 @import url("blocks/f-huge-button.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-horizontal-button-group.css");
