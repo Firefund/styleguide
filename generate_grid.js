@@ -100,8 +100,25 @@ const pushDeclaration = [
 	endBracket
 ]
 
-const cycleSelector = []
-const cycleDeclaration = []
+const columnSelector = [
+	".f-column_",
+	placeholders.cellNumber,
+	" > *"
+]
+const mobilecolumnSelector = [
+	".f-column_mobile_",
+	placeholders.rowNumber,
+	" > *"
+]
+const columnDeclaration = [
+	startBracket,
+	"\tlost-column: 1/",
+	placeholders.rowNumber,
+	" ",
+	placeholders.rowNumber,
+	";",
+	endBracket
+]
 
 const grid_6 = generator(cellSelector, widthDeclaration, 6)
 const pushGrid_6 = generator(pushSelector, pushDeclaration, 6)
@@ -118,7 +135,8 @@ const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
 const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
 const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
 
-const cycleGrid_6 = generator(cycleSelector, cycleDeclaration, 6)
+const columnGrid_6 = generator(columnSelector, columnDeclaration, 6)
+const columnMobileGrid_6 = generator(columnSelector, columnDeclaration, 6)
 
 console.log(`
 @lost gutter 3.4rem;
@@ -139,6 +157,13 @@ console.log(`
 .f-row__cell {
   lost-column: 1 flex;
 }
+
+.f-column {
+	lost-flex-container: row;
+	width: 100%;
+}
+
+${columnGrid_6}
 
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none; }
@@ -161,6 +186,8 @@ ${grid_24}
   .f-row_not-mobile, .f-row__not-mobile { display: none; }
 
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
+
+	${columnMobileGrid_6}
 
 	${gridMobile_6}
 	${pushGridMobile_6}

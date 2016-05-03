@@ -16,7 +16,7 @@
 ## The grid
 
 We have two different grid-systems. One for layouting our pages, called `f-row`,
-and one for layouting smaller blocks on a page. The latter is called `f-cycle`.
+and one for layouting smaller blocks on a page. The latter is called `f-column`.
 
 Our grid system consist of *rows* and *cells*. See <a href="grid.html">this test page</a> for a full
 demo: http://localhost:8080/grid.html
@@ -253,6 +253,20 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	MODIFIER f-row__cell-mobile_push_22				- modify the cell indentation
 	MODIFIER f-row__cell-mobile_push_23				- modify the cell indentation
 </pre>
+
+## Column grid - 3 columns - 2 mobile columns
+```
+<section class="f-column f-column_3 f-column_mobile_2">
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+	<div class="demo">column 3</div>
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+	<div class="demo">column 3</div>
+	<div class="demo">column 1</div>
+	<div class="demo">column 2</div>
+</section>
+```
 */
 
 @import "./variables";
@@ -279,23 +293,23 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	lost-column: 1 flex;
 }
 
-.f-cycle {
+.f-column {
 	lost-flex-container: row;
 	width: 100%;
 }
-.f-cycle_2 {
+.f-column_2 > * {
 	lost-column: 1/2 2;
 }
-.f-cycle_3 {
+.f-column_3 > * {
 	lost-column: 1/3 3;
 }
-.f-cycle_4 {
+.f-column_4 > * {
 	lost-column: 1/4 4;
 }
-.f-cycle_5 {
+.f-column_5 > * {
 	lost-column: 1/5 5;
 }
-.f-cycle_6 {
+.f-column_6 > * {
 	lost-column: 1/6 6;
 }
 
@@ -588,6 +602,9 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 	.f-row_not-mobile,
 	.f-row__not-mobile {
 		display: none;
+	}
+	.f-column_mobile_2 > * {
+		lost-column: 1/2 2;
 	}
 	.f-row__cell-mobile {
 		lost-column: 1 flex!important;
