@@ -9,15 +9,39 @@ From the footer.
 `    ELEMENT f-signup__input`
 `    ELEMENT f-signup__button`
 
+## Default:
+```
+<section class="f-signup">
+	<label class="f-signup__label">Sign up for news:
+		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
+	<label>
+	<button class="f-signup__button">SUBMIT</button>
+</section>
+
 ```
 
-<p class="f-signup">Sign up for news: <p>
-<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
-<button class="f-signup__button">SUBMIT</button>
-
+## Error:
+```
+<section class="f-signup f-signup_error">
+	<label class="f-signup__label">Sign up for news:
+		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
+	<label>
+	<button class="f-signup__button">SUBMIT</button>
+</section>
 
 ```
 
+## Success:
+```
+<section class="f-signup f-signup_success">
+	<label class="f-signup__label_error">Sorry I fuck you life!</label>
+	<label class="f-signup__label">Sign up for news:
+		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
+	<label>
+	<button class="f-signup__button">SUBMIT</button>
+</section>
+
+```
 */
 
 @import "../variables";
@@ -32,15 +56,21 @@ From the footer.
 	font-weight: lighter;
 }
 
-.f-signup_error {
+.f-signup__input {
+	transition: all 250ms ease-in;
+}
+.f-signup_error .f-signup__input, .f-signup_error .f-signup__label {
+	display: block;
+
 	color: var(--color-red);
-	background-color: var(--color-black);
-	color: var(--color-white);
 }
 
 .f-signup__label {
+	display: inline-block;
 }
-
+.f-signup__label_error {
+	display: none;
+}
 .f-signup__feedback-text {
 }
 
@@ -55,6 +85,10 @@ From the footer.
 	font-size: 1.2rem;
 
 	outline: none;
+}
+
+.f-signup__input:placeholder-shown {
+	font-style: italic;
 }
 
 .f-signup__button {
@@ -75,8 +109,8 @@ From the footer.
 	box-shadow: none;
 }
 
-.f-signup__button:active {
-	border: 2px solid var(--color-black);
+.f-signup__button:focus {
+	border: 2px solid var(--color-red);
 
 	background: var(--color-black);
 	color: var(--color-white);
