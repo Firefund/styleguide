@@ -100,6 +100,9 @@ const pushDeclaration = [
 	endBracket
 ]
 
+const cycleSelector = []
+const cycleDeclaration = []
+
 const grid_6 = generator(cellSelector, widthDeclaration, 6)
 const pushGrid_6 = generator(pushSelector, pushDeclaration, 6)
 const gridMobile_6 = generator(mobileCellSelector, widthDeclaration, 6)
@@ -114,6 +117,8 @@ const grid_24 = generator(cellSelector, widthDeclaration, 24)
 const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
 const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
 const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
+
+const cycleGrid_6 = generator(cycleSelector, cycleDeclaration, 6)
 
 console.log(`
 @lost gutter 3.4rem;

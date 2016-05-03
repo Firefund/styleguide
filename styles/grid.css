@@ -15,6 +15,9 @@
 
 ## The grid
 
+We have two different grid-systems. One for layouting our pages, called `f-row`,
+and one for layouting smaller blocks on a page. The latter is called `f-cycle`.
+
 Our grid system consist of *rows* and *cells*. See <a href="grid.html">this test page</a> for a full
 demo: http://localhost:8080/grid.html
 TODO: write explanatory text here @troldmand @magiker420
@@ -274,6 +277,26 @@ MODIFIER f-row_24														- modify row to be a 24 cell row
 
 .f-row__cell {
 	lost-column: 1 flex;
+}
+
+.f-cycle {
+	lost-flex-container: row;
+	width: 100%;
+}
+.f-cycle_2 {
+	lost-column: 1/2 2;
+}
+.f-cycle_3 {
+	lost-column: 1/3 3;
+}
+.f-cycle_4 {
+	lost-column: 1/4 4;
+}
+.f-cycle_5 {
+	lost-column: 1/5 5;
+}
+.f-cycle_6 {
+	lost-column: 1/6 6;
 }
 
 @media screen and (--viewport-desktop) {
