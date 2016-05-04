@@ -1,0 +1,37 @@
+﻿/*
+Display how much is donated out of the goal.
+
+Note on currency format in different countries: https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html
+
+## BEM
+<pre>
+BLOCK f-progress
+MODIFIER f-progress_small
+MODIFIER f-progress_horizontal
+	ELEMENT f-progress__bar
+		ELEMENT f-progress__value
+	ELEMENT f-progress__data
+	ELEMENT f-progress__data-element
+</pre>
+
+## Example
+```
+	<section class="f-progress" data-value="38">
+		<div class="f-progress__bar">
+			<div style="width: 38%;" class="progress-value"></div>
+		</div>
+		</div>
+		<div class="f-progress__data">
+			<p class="f-progress__data-element">
+				<span>38%</span> of $50,000
+			</p>
+			<p class="f-progress__data-elementt">
+				<span>$14,928</span> reached in total
+			</p>
+			<p class="f-progress__data-elementt">
+				<span>22</span> days to go
+			</p>
+		</div>
+	</section>
+```
+*/
