@@ -11,7 +11,8 @@ show:
 clean:
 	rm -r $(COMPILED_DIR); \
 	rm kalei/css/base.css; \
-	rm kalei/css/master.css
+	rm kalei/css/master.css \
+	rm kalei/css/grid.css
 
 $(COMPILED_DIR)/%.css: styles/blocks/%.css
 	npm run postcss -- --output $@ $<
