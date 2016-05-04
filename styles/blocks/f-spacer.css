@@ -5,8 +5,7 @@ So you can't see it without something on each side.
 
 ## Example, with two other blocks. 
 ```
-<!-- only here for the style guide - should not be used on the website -->
-<div class="kalei-background-white">  
+<div class="kalei-background-white">  <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
    
 <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
@@ -20,8 +19,7 @@ So you can't see it without something on each side.
 </div>
 
 <!-- this should be used on the website -->
-</div>
-<!-- only here for the style guide - should not be used on the website -->
+</div> <!-- only here for the style guide - should not be used on the website -->
 ```
 */
 
