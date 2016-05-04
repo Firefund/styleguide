@@ -4,9 +4,9 @@ A heading with the background reaching the right side of its container,
 if the container has a `--gutter-width` padding.
 If the container doesn't have a `--gutter-width` padding, then the heading
 will *leak* out.
-
+<pre>
 `BLOCK f-right-heading`
-
+<pre>
 
 ## Container with padding
 ```
