@@ -1,6 +1,6 @@
 COMPILED_DIR := kalei/css/blocks
 SOURCE_CSS := $(wildcard styles/blocks/*.css)
-COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )  
+COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
 
 all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css
 .phony: clean show
