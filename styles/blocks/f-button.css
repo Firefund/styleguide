@@ -62,7 +62,7 @@ A group of left justified buttons.
 	background: var(--color-red);
 	color: var(--color-white);
 	opacity: 0.75;
-	transition: opacity 0.3s ease 0s;
+	transition: opacity 0.01s ease 0s;
 }
 
 .f-button_attention:hover {
