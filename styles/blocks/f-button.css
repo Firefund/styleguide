@@ -1,62 +1,57 @@
 /*
-A group of left justified buttons.
+Buttons. 
+
+TODO: We need to clarify the button-hierarchy. 
 
 `BLOCK f-button`
 `MODIFIER f-button_attention`
 'MODIFIER f-button_donate'
+'MODIFIER f-button_organize'
 
 ## f-button
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 
 	<button class="f-button">encrypt</button>
 	<button class="f-button">reset</button>
 
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 </div>
 ```
 
 ## f-button_attention
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 
 	<button class="f-button f-button_attention">submit</button>
 
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 </div>
-
 ```
 
 ## f-button_donate
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 
 	<button class="f-button f-button_donate">Support now</button>
 
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 </div>
-
 ```
 
 ## f-button_organize
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 
 	<button class="f-button f-button_organize">organize a crowdfunding</button>
 
-	<!-- this should be used on the website -->
+<!-- this should be used on the website -->
 </div>
-
 ```
-
 */
 
 @import "../variables";
@@ -64,14 +59,18 @@ A group of left justified buttons.
 .f-button {
 	padding-bottom: 0.3rem;
 	margin: 0 3rem 3.2rem 0;
-	border: 2px solid var(--color-black);
 	width: 16.4rem;
+	border: 2px solid var(--color-black);
 	border-radius: 0.5rem;
+
 	font-size: 2.5rem;
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: center;
+
 	background-color: var(--color-white);
+
+	outline: none;
 }
 
 .f-button:hover {
@@ -79,15 +78,15 @@ A group of left justified buttons.
 }
 
 .f-button:active {
-	background: var(--color-black);
+	border: var(--color-black);
 	color: var(--color-white);
-	border: 3px solid var(--color-black);
+	background: var(--color-black);
 }
 
 .f-button_attention {
 	border: 2px solid var(--color-red);
-	background: var(--color-red);
 	color: var(--color-white);
+	background: var(--color-red);
 	opacity: 0.75;
 	transition: opacity 0.3s ease 0s;
 }
@@ -101,19 +100,20 @@ A group of left justified buttons.
 	background: var(--color-black);
 	color: var(--color-white);
 	border: 2px solid var(--color-black);
-
 }
 
 .f-button_donate {
-	
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
+	
+	color: var(--color-white);
+	opacity: 0.75;
+
 	font-size: 3.2rem;
 	text-transform: uppercase;
 	background: var(--color-red);
-	color: var(--color-white);
-	opacity: 0.75;
+	
 	transition: opacity 0.3s ease 0s;
 }
 
@@ -123,21 +123,23 @@ A group of left justified buttons.
 }
 
 .f-button_donate:active {
-	background: var(--color-black);
-	color: var(--color-white);
 	border: 2px solid var(--color-black);
-
+	color: var(--color-white);
+	background: var(--color-black);
 }
 
 .f-button_organize {
+	width: inherit;
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-black);
-	width: inherit;
+	
+	color: var(--color-black);
+	opacity: 0.75;
+	
 	font-size: 2.4rem;
 	text-transform: none;
 	background: var(--color-white);
-	color: var(--color-black);
-	opacity: 0.75;
+	
 	transition: opacity 0.3s ease 0s;
 }
 
@@ -147,9 +149,9 @@ A group of left justified buttons.
 }
 
 .f-button_organize:active {
-	background: var(--color-black);
-	color: var(--color-white);
 	border: 2px solid var(--color-red);
+	color: var(--color-white);
+	background: var(--color-black);
 }
 
 .f-button_organize::first-letter {
