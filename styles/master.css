@@ -1,5 +1,5 @@
 ﻿/*
-# Firefund - Style guide
+# Firefund - with style
 ## Generates live CSS documentation for use on the firefund website
 
 [![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.png?label=ready&title=Ready)](https://waffle.io/Firefund/styleguide)
@@ -8,14 +8,18 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 
 ## Prerequisites
 
-You can test if you have `git` and `node` installed by trying to call them in your terminal/cmd.
+You can test if you have `git`, `make` and `node` installed by trying to call them in your terminal/cmd.
 ```
 git --version
 node -v
+make -v
 ```
 
-1. Install [git](https://git-scm.com/downloads)
-2. Install [nodejs](https://nodejs.org/en/)
+1. Install [git](https://git-scm.com/downloads) our version control
+2. Install [git lfs](https://git-lfs.github.com/) our version control for large files like pictures and illustrator documents
+3. Install [nodejs](https://nodejs.org/en/) our server platform and platform for various helper tools
+4. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac.
+Probably also with your linux distro. Make is a task runner designed for compiling files. 
 
 
 ## Getting started
@@ -65,32 +69,42 @@ FIFTH: transitions/transforms/animation
 SIXTH: weird stuff 
 */
 
-
-
-@import "variables";
-@import "grid";
+/* TODO: This is not run through postcss-partial-import - if we do then all the latter @imports will fuck up master
+@import "variables";*/
 
 @import url("base.css");
+@import url("grid.css");
 
 /* ### BEM blocks ### */
 @import url("blocks/f-button.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
-@import url("blocks/f-list.css");
-@import url("blocks/f-navigation.css");
+@import url("blocks/f-content.css");
+@import url("blocks/f-cuff-text.css");
+@import url("blocks/f-donation-amount.css"); 
+@import url("blocks/f-footer-text.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
+@import url("blocks/f-info-card.css");
+@import url("blocks/f-left-heading.css");
+@import url("blocks/f-list.css");
+@import url("blocks/f-media.css");
+@import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
+@import url("blocks/f-postpay-info.css");
+@import url("blocks/f-right-heading.css");
+@import url("blocks/f-sitemap.css");
+@import url("blocks/f-spacer.css");
+@import url("blocks/f-standard-text.css"); 
+@import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
-@import url("blocks/f-cuff-text.css");
-@import url("blocks/f-spacer.css");
-@import url("blocks/f-footer-text.css");
+
+
+
+
+
 /*
-@import url("blocks/f-video.css")
-@import url("blocks/f-text.css");
-@import url("blocks/f-image.css");
-@import url("blocks/f-spacer.css");
 @import url("blocks/f-huge-button.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-horizontal-button-group.css");

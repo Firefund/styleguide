@@ -14,9 +14,11 @@ node -v
 make -v
 ```
 
-1. Install [git](https://git-scm.com/downloads)
-2. Install [nodejs](https://nodejs.org/en/)
-2. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac. Probably also with your linux distro.
+1. Install [git](https://git-scm.com/downloads) our version control
+2. Install [git lfs](https://git-lfs.github.com/) our version control for large files like pictures and illustrator documents
+3. Install [nodejs](https://nodejs.org/en/) our server platform and platform for various helper tools
+4. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac.
+Probably also with your linux distro. Make is a task runner designed for compiling files. 
 
 
 ## Getting started
@@ -37,6 +39,41 @@ to ensure that your styles work in all browsers)
 3. add the file name to the beginning of the Makefile (currently second line)
 4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
 5. if you need to use any of the variables defined in `styles/_variables.css`, you need to import it with: `@import "@import "../variables";"` <- **no url**
+
+
+## Clean CSS
+
+The anatomy for *clean* CSS declaration blocks is the following: 
+```
+/* Sorting the CSS in BEM blocks */
+ FIRST: position/box-model
+	position:
+	display:
+	top/right/bottom/left
+	float
+	content (only used with position: absolute/relative and ::before and/or ::after)
+
+
+SECOND: size
+	height:
+	margin:;
+	padding;
+	border
+
+THIRD: font/text
+	color
+	font-*
+	text-*
+	line-height
+
+FOURTH: background
+
+FIFTH: transitions/transforms/animation
+
+SIXTH: weird stuff
+	cursor:
+	list-style:
+```
 
 ## Initial CSS classes
 
