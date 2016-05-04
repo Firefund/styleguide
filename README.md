@@ -14,9 +14,11 @@ node -v
 make -v
 ```
 
-1. Install [git](https://git-scm.com/downloads)
-2. Install [nodejs](https://nodejs.org/en/)
-2. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac. Probably also with your linux distro.
+1. Install [git](https://git-scm.com/downloads) our version control
+2. Install [git lfs](https://git-lfs.github.com/) our version control for large files like pictures and illustrator documents
+3. Install [nodejs](https://nodejs.org/en/) our server platform and platform for various helper tools
+4. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac.
+Probably also with your linux distro. Make is a task runner designed for compiling files. 
 
 
 ## Getting started
