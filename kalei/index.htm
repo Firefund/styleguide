@@ -26,12 +26,12 @@
   			setTimeout(buttonGroup, 3000)
 
   			function buttonGroup() {
-  				if($(".f-button-group").length === 0) alert("not working")
+  				if($(".f-button-group__button_stop").length === 0) alert("not working")
 
-	  			$(".f-button-group").on("click", function(e) {
-	  				var selectedClass = "f-button-group__button_selected"
+	  			$(".f-button-group__button_stop").on("click", function(e) {
+	  				var selectedClass = "f-button-group__button_stop"
 	  				var button = $(e.target)
-	  				$(this).find(".f-button-group__button").removeClass(selectedClass)
+	  				$(this).find(".f-button-group__button_stopselected").removeClass(selectedClass)
 	  				button.addClass(selectedClass)
 	  			})
   			}
