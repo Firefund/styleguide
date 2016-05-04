@@ -107,18 +107,15 @@ A container that put 3 buttons per row with equal space between them, where the 
 }
 
 
-/*.f-button-group__button_selected {
-	color: var(--color-white);
-	background-color: var(--color-black);
-}
-*/
+
+
 /* This is where I want to create a 'click' effect, where the text goes color:white;, exactly when it's clicked. But it doesn't work :-(*/
 
-.f-button-group__button:target {
+/*.f-button-group__button:target {
 	color: var(--color-white);
-}
+}*/
 
-.f-button-group__button:hover, .f-button-group__button:focus, .f-button-group__button:active  {
+.f-button-group__button:hover {
 	color: var(--color-grey-light);
 }
 
@@ -138,8 +135,14 @@ A container that put 3 buttons per row with equal space between them, where the 
 	transition-timing-function: ease-out;
 }
 
-.f-button-group__button:hover:before, .f-button-group__button:focus:before, .f-button-group__button:active:before {
+.f-button-group__button:hover::before {
 	transform: scaleY(1);
 }
 
+.f-button-group__button_selected {
+	color: var(--color-white)!important;
+	background-color: var(--color-black);
+}
+/*
 
+*/
