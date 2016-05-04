@@ -66,7 +66,7 @@ FOURTH: background
 
 FIFTH: transitions/transforms/animation
 
-SIXTH: weird stuff 
+SIXTH: weird stuff
 */
 
 /* TODO: This is not run through postcss-partial-import - if we do then all the latter @imports will fuck up master
@@ -89,6 +89,7 @@ SIXTH: weird stuff
 @import url("blocks/f-media.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
+@import url("blocks/f-postpay-heading.css");
 @import url("blocks/f-postpay-info.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-sitemap.css");
@@ -96,6 +97,7 @@ SIXTH: weird stuff
 @import url("blocks/f-standard-text.css"); 
 @import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
+
 
 
 
