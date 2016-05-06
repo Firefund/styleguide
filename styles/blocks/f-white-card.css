@@ -9,10 +9,20 @@ BLOCK f-white-card
 
 </pre>
 ```
-<div class="f-white-card">
-	<button class="f-button-organize">Want to organize a crowdfunding campaign?</button>
-	<p class="f-one-liner_center">We are doing stuff a little different. Please read about us before you contact us. We are not Kickstarter.</p>
-</div>
+<section class="f-white-card">
+	<div class="f-row f-row_12">
+		<div class="f-row__cell_push_1 f-row__cell-10">
+			<button class="f-button f-button__organize">Want to organize a crowdfunding campaign?</button>
+		</div>
+		<div class="f-row__cell_push_2 f-row__cell-8">
+			<h2 class="f-one-liner f-one-liner_center">We are doing stuff a little different. Please read about us before you contact us. We are not Kickstarter.</h2>
+		</div>
+	</div>
+</section>
+
+
+
+
 
 ```
 */
@@ -20,8 +30,11 @@ BLOCK f-white-card
 @import "../variables";
 
 .f-white-card {
-	display: inline-flex;
+	display: block;
 	width: 100%;
 	background: var(--color-white);
-	height: 2.8rem;
+	height: 28rem;
+	padding: 6.5rem 0 6.5rem 0;
+	margin-bottom: 3rem;
 }
+
