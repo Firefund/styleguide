@@ -4,7 +4,9 @@
 Right now we're exploring different options. 
 So it's very much a work in proces. 
 
-TODO: We need to clarify the button-hierarchy.
+Right now I'm stuck at the f.button-default ... 
+I now exactly what it's supposed to look like, but I can't make it work. 
+
 
 <pre>BLOCK f-button
 		MODIFIER f-button_default
@@ -31,7 +33,20 @@ TODO: We need to clarify the button-hierarchy.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 	<button class="f-button f-button_default">encrypt</button>
-	<button class="f-button f-button_default">reset</button>
+	<p class="f.one-liner"> 
+	Okay, so the above one is what I get when I try to make it right. 
+	</p>	
+	<p class="f.one-liner"> 
+	The one beneath this is the 'best' I can do, but the problem with 
+	</p>
+	<p class="f.one-liner"> 
+	that one is the hovering black underline goes down, and not up like 
+	</p>
+	<p class="f.one-liner"> 
+	the other one. I'm stuck here, I'm afraid. 
+	</p>
+
+	<button class="f-button f-button_default2">reset</button>
 <!-- this should be used on the website -->
 </div>
 ```
@@ -115,7 +130,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	outline: none;
 }
 
-
 .f-button_default {
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -152,7 +166,8 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 
 
 /*THIS ALMOST WORKS! Just the wrong direction :-( */
-/*button {
+
+.f-button_default2 {
   padding-bottom: 0.3rem;
   border: 2px solid black;
   margin: 0 3rem 3.2rem 0;
@@ -164,8 +179,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   box-shadow: 0 1px 0 black;
   color: black;
   cursor: pointer;
-  font: "Roboto";
-  font-size: inherit;
   margin: 0;
   outline: 0;
   padding: 12px 20px;
@@ -175,7 +188,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   overflow: hidden;
 }
 
-.f-button:before {
+.f-button_default2:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -189,20 +202,19 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   transition-timing-function: ease-out;
 }
 
-button:hover {
+.f-button_default2:hover {
    box-shadow: 0 5px black;
 }
 
-button:hover:before, button:focus:before, button:active:before {
+.f-button_default2:hover:before, .f-button_default2:focus:before, .f-button_default2:active:before {
   transform: translateY(5px);
 }
 
-
-button:active {
+.f-button_default2:active {
   box-shadow: 0 2px 0 black;
   transform: translateY(3px);
 }
-*/
+
 
 
 
