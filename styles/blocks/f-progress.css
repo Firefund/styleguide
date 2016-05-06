@@ -7,7 +7,7 @@ Note on currency format in different countries: https://docs.oracle.com/cd/E1945
 <pre>
 BLOCK f-progress
 MODIFIER f-progress_small
-MODIFIER f-progress_horizontal
+MODIFIER f-progress_vertical
 	ELEMENT f-progress__bar
 		ELEMENT f-progress__value
 	ELEMENT f-progress__data
@@ -42,13 +42,13 @@ MODIFIER f-progress_horizontal
 </div>
 ```
 
-## Example horizontal
+## Example vertical
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
 	
-	<section class="f-progress f-progress_horizontal" data-value="38">
+	<section class="f-progress f-progress_vertical" data-value="38">
 		<div class="f-progress__bar">
 			<div style="width: 38%;" class="f-progress__value"></div>
 		</div>
@@ -76,18 +76,22 @@ MODIFIER f-progress_horizontal
 
 .f-progress {
 	width: 100%;
-  margin-bottom: 2.2rem;
+  	margin-bottom: 2.2rem;
 	padding-top: 1.4rem;
 }
 
 /*TODO: this modifier is in affect on f-project-thumbnail */
-.f-progress_small {}
+.f-progress_small {
+
+}
 
 .f-progress__bar, .f-progress__value {
 	height: 1rem;
 }
 
 .f-progress__bar {
+	margin-bottom: 1.8rem;
+
 	background-color: var(--color-black);
 }
 
@@ -103,22 +107,22 @@ MODIFIER f-progress_horizontal
 .f-progress__data {
 	display: flex;
 	flex-direction: row;
-  justify-content: space-between;
+  	justify-content: space-between;
 	
 	font-size: 1.6rem;
 }
-.f-progress_horizontal .f-progress__data {
+.f-progress_vertical .f-progress__data {
 	flex-direction: column;
 }
 
 .f-progress__data-element {
 	margin: 0;
 
-  color: var(--color-grey);
-  font-weight: normal;
-  line-height: 2.2rem;
+  	color: var(--color-grey);
+  	font-weight: normal;
+  	line-height: 2.2rem;
 }
 .f-progress__data-element span {
-  color: var(--color-grey-dark);
-  font-weight: bold;
+  	color: var(--color-grey-dark);
+  	font-weight: bold;
 }
