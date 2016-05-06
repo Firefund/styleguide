@@ -103,10 +103,10 @@ SIXTH: weird stuff
 
 
 /*
-@import url("blocks/f-huge-button.css");
-@import url("blocks/f-progress.css");
+@import url("blocks/f-donation-amount.css");
 @import url("blocks/f-horizontal-button-group.css");
-@import url("blocks/f-donation-amount.css");*/
+@import url("blocks/f-huge-button.css");
+@import url("blocks/f-progress.css");*/
 
 /* ##### Examples from kalei
 @import url("buttons.css");
