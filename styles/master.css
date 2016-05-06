@@ -77,6 +77,9 @@ SIXTH: weird stuff
 
 /* ### BEM blocks ### */
 @import url("blocks/f-white-card.css");
+@import url("blocks/f-signup.css");
+@import url("blocks/f-right-heading.css");
+@import url("blocks/f-left-heading.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-button.css");
 @import url("blocks/f-content.css");
