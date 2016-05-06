@@ -1,0 +1,27 @@
+/*
+A wide white card, splitting the page with a breath of light. 
+
+Designed for index, for the ORGANIZE section under thumbnails. 
+
+<pre>
+BLOCK f-white-card
+	ELEMENT f-white-card__text (or f-one-liner)
+
+</pre>
+```
+<div class="f-white-card">
+	<button class="f-button-organize">Want to organize a crowdfunding campaign?</button>
+	<p class="f-one-liner_center">We are doing stuff a little different. Please read about us before you contact us. We are not Kickstarter.</p>
+</div>
+
+```
+*/
+
+@import "../variables";
+
+.f-white-card {
+	display: inline-flex;
+	width: 100%;
+	background: var(--color-white);
+	height: 2.8rem;
+}
