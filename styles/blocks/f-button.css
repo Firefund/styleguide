@@ -369,7 +369,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 .f-button_organize {
 	width: 100%;
 	padding: 2.2rem 0 2.3rem 0;
-	border: 2px solid var(--color-black);
+	border: 3px solid var(--color-black);
 	
 	color: var(--color-black);
 	
