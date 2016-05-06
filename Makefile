@@ -1,6 +1,8 @@
 COMPILED_DIR := kalei/css/blocks
 SOURCE_CSS := $(wildcard styles/blocks/*.css)
 COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
+#TEST := $(call wildcard, kalei/css/blocks/, *.css) vpath %.css kalei/css/blocks "can not search for files that doesn't exist"  
+SOURCE_CSS := $(call vpath %.css styles/blocks/)
 
 all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css
 .phony: clean show
