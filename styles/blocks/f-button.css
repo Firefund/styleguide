@@ -1,81 +1,114 @@
 /*
-Buttons. 
+## Buttons!
 
-Right now we're exploring different options and re-setting the button hierarchy. 
+Right now we're exploring different options. 
 So it's very much a work in proces. 
 
-TODO: We need to clarify the button-hierarchy. 
+Right now I'm stuck at the f.button-default ... 
+I now exactly what it's supposed to look like, but I can't make it work. 
 
-`BLOCK f-button`
-`MODIFIER f-button_attention`
-'MODIFIER f-button_donate'
-'MODIFIER f-button_organize'
 
+<pre>BLOCK f-button
+		MODIFIER f-button_default
+		MODIFIER f-button_submit
+		ELEMENT f-button__donate
+		MODIFIER f-button__donate_A
+		MODIFIER f-button__donate_B
+		ELEMENT f-button__organize
+		~MODIFIER f-button__organize_now~
+		ELEMENT f-button__share</pre>
+	
 ## f-button
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
-
 	<button class="f-button">encrypt</button>
 	<button class="f-button">reset</button>
-
 <!-- this should be used on the website -->
 </div>
 ```
 
-## f-button_attention
+## f-button_default
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+	<button class="f-button f-button_default">encrypt</button>
+	<p class="f.one-liner"> 
+	Okay, so the above one is what I get when I try to make it right. 
+	</p>	
+	<p class="f.one-liner"> 
+	The one beneath this is the 'best' I can do, but the problem with 
+	</p>
+	<p class="f.one-liner"> 
+	that one is the hovering black underline goes down, and not up like 
+	</p>
+	<p class="f.one-liner"> 
+	the other one. I'm stuck here, I'm afraid. 
+	</p>
+
+	<button class="f-button f-button_default2">reset</button>
+<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_submit
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 
-	<button class="f-button f-button_attention">submit</button>
+	<button class="f-button f-button_submit">submit</button>
 
 <!-- this should be used on the website -->
 </div>
 ```
 
 ## f-button_donate
+Four donate buttons: Default, Kush, Shrink, Grow.
+One should be f-button_donate - and then two modifiers; A and B, for AB-testing. 
 
-# Default
 ```
-<div class="kalei-background-white">
-<!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 
-
 	<button class="f-button f-button_donate">Support now</button>
-<br>
-<br>
-<br>
 	<button class="f-button f-button_donate_kush">Support now</button>
-<br>
-<br>
-<br>
 	<button class="f-button f-button_donate_shrink">Support now</button>
-<br>
-<br>
-<br>
 	<button class="f-button f-button_donate_grow">Support now</button>
-<br>
-<br>
-<br>
 
 <!-- this should be used on the website -->
 </div>
-
 ```
-
 
 ## f-button_organize
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
+<button class="f-button f-button_organize">organize a crowdfunding</button>
+<!-- this should be used on the website -->
+</div>
+```
 
-	<button class="f-button f-button_organize">organize a crowdfunding</button>
+## f-button_organize_now
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+<button class="f-button f-button_organize f-button__organize_now">organize a crowdfunding now</button>
+<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_share
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+	<button class="f-button f-button__share">Share on facebook</button>
 
 <!-- this should be used on the website -->
 </div>
 ```
+
+
 */
 
 @import "../variables";
@@ -97,33 +130,116 @@ TODO: We need to clarify the button-hierarchy.
 	outline: none;
 }
 
-.f-button:hover {
-/*	box-shadow: inset 0 0 0 0 var(--color-black);*/
+.f-button_default {
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .1s linear, transform .1s linear;
 }
 
-.f-button:active {
-	border: var(--color-black);
-	color: var(--color-white);
-	background: var(--color-black);
+.f-button_default:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-black);
+  height: 4px;
+  transform: translateY(5px);
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
 }
 
-.f-button_attention {
-	border: 2px solid var(--color-red);
+.f-button_default:active {
+	box-shadow: 0 2px 0 black;
+    transform: translateY(2px);
+}
+
+.f-button_default:hover:before, .f-button_default:focus:before, .f-button_default:active:before {
+  transform: translateY(0);
+}
+
+
+/*THIS ALMOST WORKS! Just the wrong direction :-( */
+
+.f-button_default2 {
+  padding-bottom: 0.3rem;
+  border: 2px solid black;
+  margin: 0 3rem 3.2rem 0;
+  width: 16.4rem;
+  font-weight: bold;
+  
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 black;
+  color: black;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: box-shadow .1s linear, transform .1s linear;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.f-button_default2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  transform: translateY(0px);
+  transition-property: transform, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.f-button_default2:hover {
+   box-shadow: 0 5px black;
+}
+
+.f-button_default2:hover:before, .f-button_default2:focus:before, .f-button_default2:active:before {
+  transform: translateY(5px);
+}
+
+.f-button_default2:active {
+  box-shadow: 0 2px 0 black;
+  transform: translateY(3px);
+}
+
+
+
+
+
+.f-button_submit {
+	border-color: var(--color-red);
 	color: var(--color-white);
 	background: var(--color-red);
-	opacity: 0.75;
-	transition: opacity 0.3s ease 0s;
+	text-transform: uppercase;
 }
 
-.f-button_attention:hover {
-	opacity: 1;
+.f-button-submit:active {
+	border: var(--color-red);
+	background: var(--color-red);
+}
+
+.f-button_submit:hover {
 	box-shadow: none;
+	background: var(--color-red);
 }
 
-.f-button_attention:active {
-	background: var(--color-black);
+.f-button_submit:active, .f-button_submit:before {
+	background: var(--color-red);
 	color: var(--color-white);
-	border: 2px solid var(--color-black);
+	border: 2px solid var(--color-red);
 }
 
 .f-button_donate {
@@ -140,8 +256,9 @@ TODO: We need to clarify the button-hierarchy.
 	transition: opacity 0.3s ease 0s;
 }
 
-.f-button_donate:hover {
+.f-button_donate:hover, .f-button_donate:before {
 	box-shadow: none;
+	background: var(--color-red);
 }
 
 .f-button_donate:active {
@@ -195,7 +312,6 @@ TODO: We need to clarify the button-hierarchy.
 .f-button_donate_kush:hover:before, .f-button_donate_kush:focus:before, .f-button_donate_kush:active:before {
   transform: translateY(10px);
 }
-
 
 .f-button_donate_shrink {
 	padding: 2.2rem 0 2.3rem 0;
@@ -251,7 +367,7 @@ TODO: We need to clarify the button-hierarchy.
 
 
 .f-button_organize {
-	width: inherit;
+	width: 100%;
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-black);
 	
@@ -273,14 +389,16 @@ TODO: We need to clarify the button-hierarchy.
 .f-button_organize:active {
 	border: 2px solid var(--color-red);
 	color: var(--color-white);
-	background: var(--color-black);
+	background: var(--color-red);
 }
 
 .f-button_organize::first-letter {
 	text-transform: uppercase;
 }
 
-
-
+.f-button__share {
+	width: 100%;
+	text-transform: none;
+}
 
 
