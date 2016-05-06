@@ -117,7 +117,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	padding-bottom: 0.3rem;
 	margin: 0 3rem 3.2rem 0;
 	width: 16.4rem;
-	border: 2px solid var(--color-black);
+	border: 3px solid var(--color-black);
 	border-radius: 0.5rem;
 
 	font-size: 2.5rem;
@@ -372,7 +372,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	border: 2px solid var(--color-black);
 	
 	color: var(--color-black);
-	opacity: 0.75;
 	
 	font-size: 2.4rem;
 	text-transform: none;
@@ -382,7 +381,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 }
 
 .f-button_organize:hover {
-	opacity: 1;
 	box-shadow: none;
 }
 
