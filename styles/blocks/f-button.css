@@ -380,7 +380,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	transition: opacity 0.3s ease 0s;
 }
 
-.f-button_organize:hover {
+.f-button__organize:hover {
 	box-shadow: none;
 }
 
