@@ -20,6 +20,16 @@ TODO: We need to clarify the button-hierarchy.
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
+	<button class="f-button">encrypt</button>
+	<button class="f-button">reset</button>
+<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_default
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
 	<button class="f-button f-button_default">encrypt</button>
 	<button class="f-button f-button_default">reset</button>
 <!-- this should be used on the website -->
@@ -105,11 +115,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	outline: none;
 }
 
-.f-button:active {
-	border: 2px solid var(--color-black);
-	color: var(--color-white);
-	background: var(--color-black);
-}
 
 .f-button_default {
   transform: translateZ(0);
@@ -118,6 +123,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
+  transition: box-shadow .1s linear, transform .1s linear;
 }
 
 .f-button_default:before {
@@ -129,14 +135,77 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   bottom: 0;
   background: var(--color-black);
   height: 4px;
-  transform: translateY(4px);
+  transform: translateY(5px);
   transition-property: transform;
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
 }
+
+.f-button_default:active {
+	box-shadow: 0 2px 0 black;
+    transform: translateY(2px);
+}
+
 .f-button_default:hover:before, .f-button_default:focus:before, .f-button_default:active:before {
   transform: translateY(0);
 }
+
+
+/*THIS ALMOST WORKS! Just the wrong direction :-( */
+/*button {
+  padding-bottom: 0.3rem;
+  border: 2px solid black;
+  margin: 0 3rem 3.2rem 0;
+  width: 16.4rem;
+  font-weight: bold;
+  
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 black;
+  color: black;
+  cursor: pointer;
+  font: "Roboto";
+  font-size: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: box-shadow .1s linear, transform .1s linear;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.f-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  transform: translateY(0px);
+  transition-property: transform, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+button:hover {
+   box-shadow: 0 5px black;
+}
+
+button:hover:before, button:focus:before, button:active:before {
+  transform: translateY(5px);
+}
+
+
+button:active {
+  box-shadow: 0 2px 0 black;
+  transform: translateY(3px);
+}
+*/
+
+
+
 
 .f-button_submit {
 	border-color: var(--color-red);
