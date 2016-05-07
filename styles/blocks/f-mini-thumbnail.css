@@ -1,6 +1,9 @@
 /*
 
-Mini thumbnails! DAMN! SHIT'S GETTIN' REAL! 
+Mini thumbnails! 
+The scaling is totally off. I can't get the pictures right. 
+I want to work on it with a different approach - one that first makes the mobile design with the 'scrollme' and by that also makes a sort of 'clipping mask'. 
+Also, the data under the data-bar is crammin' together when making the window smaller. 
 
 <pre>
 BLOCK f-miniproject-thumbnail
@@ -12,93 +15,106 @@ BLOCK f-miniproject-thumbnail
     ELEMENT f-miniproject-thumbnail__progress
 </pre>
 
+
 ```
+<section ="f-content">
+	<section class="f-column f-column_3">
 
-## First GO
-<section class="f-column f-column_3 f-column_mobile_1">
+		<div class="f-miniproject-thumbnail">
 
-	<div class="f-miniproject-thumbnail">
+				<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
 
-		<img class="f-miniproject-thumbnail__image" src="image/06t.jpg">
-
-		<h2 class="f-miniproject-thumbnail__heading">
-			Kobane is rebuilding!
-		</h2>
-		<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
-		<p class="f-miniproject-thumbnail__text">
-		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-		</p>
-		<section class="f-progress f-progress_small" data-value="38">
-			<div class="f-progress__bar">
-				<div style="width: 38%;" class="f-progress__value"></div>
-			</div>
-		</section>
-	</div>
-
-
-
-	<div class="f-miniproject-thumbnail">
-
-		<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
-
-		<h2 class="f-miniproject-thumbnail__heading">
-			Kobane is rebuilding!
-		</h2>
-		<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
-		<p class="f-miniproject-thumbnail__text">
-		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-		</p>
-		<section class="f-progress f-progress_small" data-value="38">
-			<div class="f-progress__bar">
-				<div style="width: 38%;" class="f-progress__value"></div>
-			</div>
-			<div class="f-progress__data">
-				<p class="f-progress__data-element">
-					<span>38%</span> of $50,000
+				<h2 class="f-miniproject-thumbnail__heading">
+					Kobane is rebuilding!
+				</h2>
+				<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+				<p class="f-miniproject-thumbnail__text">
+				And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 				</p>
-				<p class="f-progress__data-element">
-					<span>$14,928</span> reached in total
-				</p>
-				<p class="f-progress__data-element">
-					<span>22</span> days to go
-				</p>
-			</div>
-		</section>
-	</div>
+				<section class="f-miniproject-thumbnail__progress" data-value="38">
+					<div class="f-miniproject-thumbnail__progress__bar">
+						<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+					</div>
+					<div class="f-miniproject-thumbnail__progress__data">
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>38%</span> of $50,000
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>$14,928</span> pledged
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>22</span> days to go
+						</p>
+					</div>
+				</section>
+
+		</div>
 
 
 
-	<div class="f-miniproject-thumbnail">
+		<div class="f-miniproject-thumbnail">
 
-		<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
 
-		<h2 class="f-miniproject-thumbnail__heading">
-			Kobane is rebuilding!
-		</h2>
-		<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
-		<p class="f-miniproject-thumbnail__text">
-		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-		</p>
-		<section class="f-progress f-progress_small" data-value="38">
-			<div class="f-progress__bar">
-				<div style="width: 38%;" class="f-progress__value"></div>
-			</div>
-			<div class="f-progress__data">
-				<p class="f-progress__data-element">
-					<span>38%</span> of $50,000
-				</p>
-				<p class="f-progress__data-element">
-					<span>$14,928</span> reached in total
-				</p>
-				<p class="f-progress__data-element">
-					<span>22</span> days to go
-				</p>
-			</div>
-		</section>
-	</div>
+			<h2 class="f-miniproject-thumbnail__heading">
+				Kobane is rebuilding!
+			</h2>
+			<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+			<p class="f-miniproject-thumbnail__text">
+			We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+			</p>
+			<section class="f-miniproject-thumbnail__progress" data-value="38">
+				<div class="f-miniproject-thumbnail__progress__bar">
+					<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+				</div>
+				<div class="f-miniproject-thumbnail__progress__data">
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>38%</span> of $50,000
+					</p>
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>$14,928</span> pledged
+					</p>
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>22</span> days to go
+					</p>
+				</div>
+			</section>
+		</div>
+
+
+
+		<div class="f-miniproject-thumbnail">
+
+			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
+
+			<h2 class="f-miniproject-thumbnail__heading">
+				Kobane is rebuilding!
+			</h2>
+			<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
+			<p class="f-miniproject-thumbnail__text">
+			After our first successful Kickstarter for Speculative Relationships: Volume 1!
+			</p>
+			<section class="f-miniproject-thumbnail__progress" data-value="38">
+				<div class="f-miniproject-thumbnail__progress__bar">
+					<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+				</div>
+				<div class="f-miniproject-thumbnail__progress__data">
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>38%</span> of $50,000
+					</p>
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>$14,928</span> pledged
+					</p>
+					<p class="f-miniproject-thumbnail__progress__data-element">
+						<span>22</span> days to go
+					</p>
+				</div>
+			</section>
+		</div>
+	</section>
 </section>
 
-
+<spacer>
 
 ```
 */
@@ -108,30 +124,44 @@ BLOCK f-miniproject-thumbnail
 
 
 .f-miniproject-thumbnail {
-	background-color: var(--color-white);
 	border-radius: 0.5rem;
+
 	height: 35.2rem;
+	max-width: 35.4rem;
+	min-width: 25.3;
+	margin: 0 3.6rem 3.0rem 0;
 	padding: 0 3.4rem 0.76rem 3.4rem;
 
+	background-color: var(--color-white);
 }
 
 .f-miniproject-thumbnail__image {
+	position: relative;
 
-	margin-bottom: 1rem;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
-	min-width: 100%;
+	
+	height: 15.7rem; /*This is not good*/
+	max-width: 36rem;
+	min-width: 25.3rem;
+	margin-bottom: 1rem;
+	
 	margin-left: -3.4rem;
+	
+	cursor: pointer;
 
+	overflow: hidden;
+
+	filter: grayscale(100%); /*TO DO: Need serious browser check-up*/
 }
 
-/*.f-miniproject-thumbnail__image img {
-
+.f-miniproject-thumbnail__image:hover {
+	filter: grayscale(0%);
+	transition: .3s ease-in-out;
 }
-*/
+
 
 .f-miniproject-thumbnail__image-text {
-
 }
 
 .f-miniproject-thumbnail__heading {
@@ -150,25 +180,64 @@ BLOCK f-miniproject-thumbnail
 .f-miniproject-thumbnail__byline {
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: var(--color-grey);
+	color: var(--color-grey-light);
 	margin-top: 0px;
 }
 
 .f-miniproject-thumbnail__text {
-
+	display: block;
+	margin-top: 1.08rem;
+	height: 7rem;
+	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: normal;
-	color: var(--color-grey);
 	line-height: 1.5rem;
-
-	margin-top: 1.08rem;
 }
+
 
 .f-miniproject-thumbnail__progress {
-
-
-
+	/*TO DO: These are long. Maybe we can just use progress directly instead? Then we need to clarify how to embed blocks in blocks.*/
 
 }
 
+
+.f-miniproject-thumbnail__progress__bar, .f-miniproject-thumbnail__progress__value {
+	height: 0.3rem;
+}
+
+.f-miniproject-thumbnail__progress__bar {
+	margin-bottom: 0.5rem;
+
+	background-color: var(--color-grey);
+}
+
+.f-miniproject-thumbnail__progress__value {
+	max-width: 100%;
+
+	background-color: var(--color-red);
+
+	transition: width 1s ease 260ms;
+	will-change: width;
+}
+
+.f-miniproject-thumbnail__progress__data {
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	
+	font-size: 1rem;
+	white-space: nowrap;
+}
+
+.f-miniproject-thumbnail__progress__data-element {
+	margin: 0;
+
+  	color: var(--color-grey);
+  	font-weight: normal;
+  	line-height: 2.2rem;
+}
+.f-miniproject-thumbnail__progress__data-element span {
+  	color: var(--color-grey-dark);
+  	font-weight: bold;
+}
 
