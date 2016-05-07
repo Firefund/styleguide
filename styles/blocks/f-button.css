@@ -1,11 +1,11 @@
 /*
 ## Buttons!
 
-Right now we're exploring different options. 
-So it's very much a work in proces. 
+Right now we're exploring different options.
+So it's very much a work in proces.
 
-Right now I'm stuck at the f.button-default ... 
-I now exactly what it's supposed to look like, but I can't make it work. 
+Right now I'm stuck at the f.button-default ...
+I now exactly what it's supposed to look like, but I can't make it work.
 
 
 <pre>BLOCK f-button
@@ -17,7 +17,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 		ELEMENT f-button__organize
 		~MODIFIER f-button__organize_now~
 		ELEMENT f-button__share</pre>
-	
+
 ## f-button
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -33,17 +33,17 @@ I now exactly what it's supposed to look like, but I can't make it work.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 	<button class="f-button f-button_default">encrypt</button>
-	<p class="f.one-liner"> 
-	Okay, so the above one is what I get when I try to make it right. 
-	</p>	
-	<p class="f.one-liner"> 
-	The one beneath this is the 'best' I can do, but the problem with 
+	<p class="f.one-liner">
+	Okay, so the above one is what I get when I try to make it right.
 	</p>
-	<p class="f.one-liner"> 
-	that one is the hovering black underline goes down, and not up like 
+	<p class="f.one-liner">
+	The one beneath this is the 'best' I can do, but the problem with
 	</p>
-	<p class="f.one-liner"> 
-	the other one. I'm stuck here, I'm afraid. 
+	<p class="f.one-liner">
+	that one is the hovering black underline goes down, and not up like
+	</p>
+	<p class="f.one-liner">
+	the other one. I'm stuck here, I'm afraid.
 	</p>
 
 	<button class="f-button f-button_default2">reset</button>
@@ -64,7 +64,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 
 ## f-button_donate
 Four donate buttons: Default, Kush, Shrink, Grow.
-One should be f-button_donate - and then two modifiers; A and B, for AB-testing. 
+One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
@@ -114,10 +114,10 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 @import "../variables";
 
 .f-button {
-	padding-bottom: 0.3rem;
 	margin: 0 3rem 3.2rem 0;
+	padding-bottom: 0.3rem;
 	width: 16.4rem;
-	border: 3px solid var(--color-black);
+	border: 2px solid var(--color-black);
 	border-radius: 0.5rem;
 
 	font-size: 2.5rem;
@@ -140,7 +140,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   transition: box-shadow .1s linear, transform .1s linear;
 }
 
-.f-button_default:before {
+.f-button_default::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -160,7 +160,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
     transform: translateY(2px);
 }
 
-.f-button_default:hover:before, .f-button_default:focus:before, .f-button_default:active:before {
+.f-button_default:hover::before, .f-button_default:focus::before, .f-button_default:active::before {
   transform: translateY(0);
 }
 
@@ -168,56 +168,68 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 /*THIS ALMOST WORKS! Just the wrong direction :-( */
 
 .f-button_default2 {
-  padding-bottom: 0.3rem;
-  border: 2px solid black;
-  margin: 0 3rem 3.2rem 0;
-  width: 16.4rem;
-  font-weight: bold;
-  
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 1px 0 black;
-  color: black;
-  cursor: pointer;
-  margin: 0;
-  outline: 0;
-  padding: 12px 20px;
-  transition: box-shadow .1s linear, transform .1s linear;
-  
   position: relative;
-  overflow: hidden;
+	height: 3.8rem;
+  margin: 0;
+	padding: 0;
+	padding-bottom: 0.2rem;
+	z-index: 1;
+
+  color: var(--color-black, black);
+  cursor: pointer;
+
+	box-shadow: inset 0 0 0 0 var(--color-black, black);
+  outline: none;
+
+	transition-property: box-shadow, transform, padding;
+  transition-duration: 0.1s;
+	transition-timing-function: linear;
+}
+.f-button_default2:hover {
+	box-shadow: inset 0 -.4rem 0 0 var(--color-black, black);
+}
+.f-button_default2:active {
+	transform: translateY(.2rem);
+	padding-bottom: 0;
+	box-shadow: inset 0 -.2rem 0 0 var(--color-black, black);
 }
 
-.f-button_default2:before {
-  content: "";
+/*
+.f-button_default2::before {
   position: absolute;
-  z-index: -1;
+  content: "";
+  width: 100%;
+	height: 2px;
   left: 0;
   right: 0;
   bottom: 0;
-  background: black;
-  transform: translateY(0px);
-  transition-property: transform, box-shadow;
+
+	background-color: var(--color-black, black);
+	border-radius: 0.5rem;
+
+  transform: translateY(0rem);
+  transition-property: height, transform;
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
-}
+}*/
 
-.f-button_default2:hover {
-   box-shadow: 0 5px black;
-}
-
-.f-button_default2:hover:before, .f-button_default2:focus:before, .f-button_default2:active:before {
-  transform: translateY(5px);
+/*.f-button_default2:hover::before {
+   height: .4rem;
 }
 
 .f-button_default2:active {
-  box-shadow: 0 2px 0 black;
-  transform: translateY(3px);
+  transform: translateY(0.3rem);
 }
+.f-button_default2:active::before {
+	height: 0;
+} */
+
+/*.f-button_default2:hover::before, .f-button_default2:focus::before, .f-button_default2:active::before {
+  transform: translateY(-5px);
+}*/
 
 
-
-
+transform: translateY(-0.4rem);
 
 .f-button_submit {
 	border-color: var(--color-red);
@@ -236,7 +248,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	background: var(--color-red);
 }
 
-.f-button_submit:active, .f-button_submit:before {
+.f-button_submit:active, .f-button_submit::before {
 	background: var(--color-red);
 	color: var(--color-white);
 	border: 2px solid var(--color-red);
@@ -246,17 +258,17 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
-	
+
 	color: var(--color-white);
 
 	font-size: 3.2rem;
 	text-transform: uppercase;
 	background: var(--color-red);
-	
+
 	transition: opacity 0.3s ease 0s;
 }
 
-.f-button_donate:hover, .f-button_donate:before {
+.f-button_donate:hover, .f-button_donate::before {
 	box-shadow: none;
 	background: var(--color-red);
 }
@@ -274,7 +286,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
-	
+
 	color: var(--color-white);
 
 	font-size: 3.2rem;
@@ -292,7 +304,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   transition-property: transform;
 }
 
-.f-button_donate_kush:before {
+.f-button_donate_kush::before {
   position: absolute;
   z-index: -1;
   content: '';
@@ -309,7 +321,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
   transform: translateY(-10px);
 }
 
-.f-button_donate_kush:hover:before, .f-button_donate_kush:focus:before, .f-button_donate_kush:active:before {
+.f-button_donate_kush:hover::before, .f-button_donate_kush:focus::before, .f-button_donate_kush:active::before {
   transform: translateY(10px);
 }
 
@@ -317,7 +329,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
-	
+
 	color: var(--color-white);
 
 	font-size: 3.2rem;
@@ -343,7 +355,7 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
-	
+
 	color: var(--color-white);
 
 	font-size: 3.2rem;
@@ -370,13 +382,13 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	width: 100%;
 	padding: 2.2rem 0 2.3rem 0;
 	border: 3px solid var(--color-black);
-	
+
 	color: var(--color-black);
-	
+
 	font-size: 2.4rem;
 	text-transform: none;
 	background: var(--color-white);
-	
+
 	transition: opacity 0.3s ease 0s;
 }
 
