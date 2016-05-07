@@ -1,0 +1,59 @@
+/*
+##EXAMPLE 1
+```
+ <div class="f-modal">
+  <div class="f-modal-content">
+	<div class="f-content">
+		<h1>Lorem ipsum dolor sit amet,
+			consectetur adipisicing elit.
+			Mollitia commodi debitis,
+			laborum deserunt accusantium,
+			consectetur hic voluptatem
+			ea animi quasi veritatis
+			quia minus, fugiat molestiae
+			natus vel quas! Dicta,
+			itaque.
+		</h1>
+	</div>
+ </div>
+</div>
+```
+*/
+
+@import "../variables";
+
+.f-modal {
+	position: fixed;
+	z-index: 100;
+	top:0;
+	left:0;
+	
+	width: 100%;
+	height: 100%;
+	
+	
+	background-color: var(--color-black-transparent);
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s ease;
+}
+
+.f-modal_visible {
+	
+	opacity: 1;
+}
+
+.f-modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+}
+
+.f-modal_autoclosable {
+
+
+}
