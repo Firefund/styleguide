@@ -1,0 +1,155 @@
+/*
+
+Mini thumbnails! DAMN! SHIT'S GETTIN' REAL! 
+
+<pre>
+BLOCK f-miniproject-thumbnail
+    ELEMENT f-miniproject-thumbnail__image
+    ELEMENT f-miniproject-thumbnail__image-text
+    ELEMENT f-miniproject-thumbnail__heading (1-2 lines but same height, flexbox centered)
+    ELEMENT f-miniproject-thumbnail__byline
+    ELEMENT f-miniproject-thumbnail__text
+    ELEMENT f-miniproject-thumbnail__progress
+</pre>
+
+```
+## First GO
+<section class="f-column f-column_3 f-column_mobile_1">
+
+	<div class="f-miniproject-thumbnail">
+		<figure>
+			<img class="f-miniproject-thumbnail__image" src="image/08.jpg">
+			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
+		</figure>
+		<h2 class="f-miniproject-thumbnail__heading">
+			Kobane is rebuilding!
+		</h2>
+		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
+		<p class="f-miniproject-thumbnail_text">
+		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+		</p>
+		<section class="f-progress f-progress_small" data-value="38">
+			<div class="f-progress__bar">
+				<div style="width: 38%;" class="f-progress__value"></div>
+			</div>
+			<div class="f-progress__data">
+				<p class="f-progress__data-element">
+					<span>38%</span> of $50,000
+				</p>
+				<p class="f-progress__data-element">
+					<span>$14,928</span> reached in total
+				</p>
+				<p class="f-progress__data-element">
+					<span>22</span> days to go
+				</p>
+			</div>
+		</section>
+	</div>
+
+
+
+	<div class="f-miniproject-thumbnail">
+		<figure>
+			<img class="f-miniproject-thumbnail__image" src="image/03.jpg">
+			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
+		</figure>
+		<h2 class="f-miniproject-thumbnail__heading">
+			Kobane is rebuilding!
+		</h2>
+		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
+		<p class="f-miniproject-thumbnail_text">
+		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+		</p>
+		<section class="f-progress f-progress_small" data-value="38">
+			<div class="f-progress__bar">
+				<div style="width: 38%;" class="f-progress__value"></div>
+			</div>
+			<div class="f-progress__data">
+				<p class="f-progress__data-element">
+					<span>38%</span> of $50,000
+				</p>
+				<p class="f-progress__data-element">
+					<span>$14,928</span> reached in total
+				</p>
+				<p class="f-progress__data-element">
+					<span>22</span> days to go
+				</p>
+			</div>
+		</section>
+	</div>
+
+
+
+	<div class="f-miniproject-thumbnail">
+		<figure>
+			<img class="f-miniproject-thumbnail__image" src="image/11.jpg">
+			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
+		</figure>
+		<h2 class="f-miniproject-thumbnail__heading">
+			Kobane is rebuilding!
+		</h2>
+		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
+		<p class="f-miniproject-thumbnail_text">
+		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+		</p>
+		<section class="f-progress f-progress_small" data-value="38">
+			<div class="f-progress__bar">
+				<div style="width: 38%;" class="f-progress__value"></div>
+			</div>
+			<div class="f-progress__data">
+				<p class="f-progress__data-element">
+					<span>38%</span> of $50,000
+				</p>
+				<p class="f-progress__data-element">
+					<span>$14,928</span> reached in total
+				</p>
+				<p class="f-progress__data-element">
+					<span>22</span> days to go
+				</p>
+			</div>
+		</section>
+	</div>
+</section>
+
+```
+*/
+
+
+@import "../variables";
+
+
+.f-miniproject-thumbnail {
+	background-color: var(--color-white);
+	border-radius: 0.5rem;
+}
+
+.f-miniproject-thumbnail__image {
+
+}
+
+.f-miniproject-thumbnail__image img {
+
+}
+
+
+.f-miniproject-thumbnail__image-text {
+
+}
+
+.f-miniproject-thumbnail__heading {
+
+}
+
+.f-miniproject-thumbnail__byline {
+
+}
+
+.f-miniproject-thumbnail__text {
+
+}
+
+.f-miniproject-thumbnail__progress {
+
+}
+
+
