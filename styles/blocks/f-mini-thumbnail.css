@@ -13,19 +13,39 @@ BLOCK f-miniproject-thumbnail
 </pre>
 
 ```
+
 ## First GO
 <section class="f-column f-column_3 f-column_mobile_1">
 
 	<div class="f-miniproject-thumbnail">
-		<figure>
-			<img class="f-miniproject-thumbnail__image" src="image/08.jpg">
-			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
-		</figure>
+
+		<img class="f-miniproject-thumbnail__image" src="image/06t.jpg">
+
 		<h2 class="f-miniproject-thumbnail__heading">
 			Kobane is rebuilding!
 		</h2>
-		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
-		<p class="f-miniproject-thumbnail_text">
+		<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+		<p class="f-miniproject-thumbnail__text">
+		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+		</p>
+		<section class="f-progress f-progress_small" data-value="38">
+			<div class="f-progress__bar">
+				<div style="width: 38%;" class="f-progress__value"></div>
+			</div>
+		</section>
+	</div>
+
+
+
+	<div class="f-miniproject-thumbnail">
+
+		<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+
+		<h2 class="f-miniproject-thumbnail__heading">
+			Kobane is rebuilding!
+		</h2>
+		<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+		<p class="f-miniproject-thumbnail__text">
 		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 		</p>
 		<section class="f-progress f-progress_small" data-value="38">
@@ -49,47 +69,14 @@ BLOCK f-miniproject-thumbnail
 
 
 	<div class="f-miniproject-thumbnail">
-		<figure>
-			<img class="f-miniproject-thumbnail__image" src="image/03.jpg">
-			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
-		</figure>
+
+		<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
+
 		<h2 class="f-miniproject-thumbnail__heading">
 			Kobane is rebuilding!
 		</h2>
-		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
-		<p class="f-miniproject-thumbnail_text">
-		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-		</p>
-		<section class="f-progress f-progress_small" data-value="38">
-			<div class="f-progress__bar">
-				<div style="width: 38%;" class="f-progress__value"></div>
-			</div>
-			<div class="f-progress__data">
-				<p class="f-progress__data-element">
-					<span>38%</span> of $50,000
-				</p>
-				<p class="f-progress__data-element">
-					<span>$14,928</span> reached in total
-				</p>
-				<p class="f-progress__data-element">
-					<span>22</span> days to go
-				</p>
-			</div>
-		</section>
-	</div>
-
-
-
-	<div class="f-miniproject-thumbnail">
-		<figure>
-			<img class="f-miniproject-thumbnail__image" src="image/11.jpg">
-			<figcaption class="f-miniproject-thumbnail__image-text">Sygt nok</figcaption>
-		</figure>
-		<h2 class="f-miniproject-thumbnail__heading">
-			Kobane is rebuilding!
-		</h2>
-		<h3 class="f-miniproject-thumbnail__bylane">Out of Africa</h3>
-		<p class="f-miniproject-thumbnail_text">
+		<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
+		<p class="f-miniproject-thumbnail__text">
 		We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 		</p>
 		<section class="f-progress f-progress_small" data-value="38">
@@ -111,6 +98,8 @@ BLOCK f-miniproject-thumbnail
 	</div>
 </section>
 
+
+
 ```
 */
 
@@ -121,34 +110,64 @@ BLOCK f-miniproject-thumbnail
 .f-miniproject-thumbnail {
 	background-color: var(--color-white);
 	border-radius: 0.5rem;
+	height: 35.2rem;
+	padding: 0 3.4rem 0.76rem 3.4rem;
+
 }
 
 .f-miniproject-thumbnail__image {
 
+	margin-bottom: 1rem;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	min-width: 100%;
+	margin-left: -3.4rem;
+
 }
 
-.f-miniproject-thumbnail__image img {
+/*.f-miniproject-thumbnail__image img {
 
 }
-
+*/
 
 .f-miniproject-thumbnail__image-text {
 
 }
 
 .f-miniproject-thumbnail__heading {
+	display: inline-flex;
 
+	margin: 0 0 0.4rem -var(--gutter-width);
+	padding: .68rem 1.0rem .86rem var(--gutter-width); 
+	
+	color: var(--color-white);
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	background-color: var(--color-black);
 }
 
 .f-miniproject-thumbnail__byline {
-
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--color-grey);
+	margin-top: 0px;
 }
 
 .f-miniproject-thumbnail__text {
 
+	font-size: 1.2rem;
+	font-weight: normal;
+	color: var(--color-grey);
+	line-height: 1.5rem;
+
+	margin-top: 1.08rem;
 }
 
 .f-miniproject-thumbnail__progress {
+
+
+
 
 }
 
