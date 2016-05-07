@@ -47,6 +47,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 	</p>
 
 	<button class="f-button f-button_default2">reset</button>
+	<hr>
 <!-- this should be used on the website -->
 </div>
 ```
@@ -115,19 +116,21 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 
 .f-button {
 	margin: 0 3rem 3.2rem 0;
-	padding-bottom: 0.3rem;
+	/*padding-bottom: 0.3rem;*/
 	width: 16.4rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
 
+	color: var(--color-black, black);
 	font-size: 2.5rem;
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: center;
 
 	background-color: var(--color-white);
+	border: .3rem solid var(--color-black);
+	border-radius: 0.5rem;
 
-	outline: none;
+  cursor: pointer;
+	outline: 0 none;
 }
 
 .f-button_default {
@@ -168,30 +171,41 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 /*THIS ALMOST WORKS! Just the wrong direction :-( */
 
 .f-button_default2 {
+	/*box-sizing: content-box;*/
   position: relative;
 	height: 3.8rem;
-  margin: 0;
-	padding: 0;
-	padding-bottom: 0.2rem;
-	z-index: 1;
+	/*padding: 12px 20px;*/
 
-  color: var(--color-black, black);
-  cursor: pointer;
+  /*margin: 0;*/
+	/*padding: 0;*/
 
-	box-shadow: inset 0 0 0 0 var(--color-black, black);
-  outline: none;
+	/*border: none;*/
+	box-shadow: 0 5px 0 #006599;
+	/*border-bottom-width: 0;*/
 
-	transition-property: box-shadow, transform, padding;
+	will-change: transform, box-shadow;
+	transition-property: transform, box-shadow;
   transition-duration: 0.1s;
 	transition-timing-function: linear;
 }
-.f-button_default2:hover {
-	box-shadow: inset 0 -.4rem 0 0 var(--color-black, black);
+
+/* remove outline in ff */
+.f-button_default2::-moz-focus-inner {
+  border: 0;
 }
+
+/*
+```
+
+```
+*/
+
+/*.f-button_default2:hover {
+	box-shadow:  0 3px 0 0 var(--color-black, black), inset 0 -1px 0 0 var(--color-black, black);
+}*/
 .f-button_default2:active {
-	transform: translateY(.2rem);
-	padding-bottom: 0;
-	box-shadow: inset 0 -.2rem 0 0 var(--color-black, black);
+	transform: translateY(2px);	
+	box-shadow:  0 3px 0 #006599;
 }
 
 /*
