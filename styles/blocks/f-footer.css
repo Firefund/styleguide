@@ -1,30 +1,39 @@
 /*
 ##EXAMPLE 1
 ```
-<section class="f-row f-row_6 f-row_debug">
-        <div class="f-row__cell-2">
-                <h2 class="f-branding f-branding_sitemap">Fire<span>fund</span></h2>
-            <ul class="f-sitemap__links">
-                <li><a href="">About us</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Terms</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Manifesto</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="">Who we are</a></li>
-                <li><a href="">How does it work</a></li>
-            </ul>
-            </div>        
-        <div class="f-row__cell-2">
+<section class="f-row f-row_12 f-row_debug">
+    <div class="f-row__cell-4">
+        <h2 class="f-branding f-branding_sitemap">Fire<span>fund</span></h2>
+        <ul class="f-sitemap__links">
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Manifesto</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Who we are</a></li>
+                    <li><a href="">How does it work</a></li>
+        </ul>
+    </div>        
+        <div class="f-row__cell-4 f-row__cell-mobile-6">
             <p class="f-footer-text">
                 We are activists from all over. we are everywhere. <span>Beware!</span>
                 We have knives and dogs. they <span>bite</span> and <a href="">sting</a>. 
                 love firefund <span>staff</span>
-            </p>        
-        </div>
-        <div class="f-row__cell-2">
-        <p class="f-icons">HERE WE WILL HAVE ICONS </P>
-        </div>      
+            </p>  
+            <section class="f-signup">
+	            <label class="f-signup__label">Sign up for news:
+		            <input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
+	            <label>
+	            <button class="f-signup__button">SUBMIT</button>
+            </section> 
+             <div class="f-row__cell-1 f-row__cell_push_2 f-row_not-desktop">
+                <p class="f-icons">X X </P>
+            </div>      
+       </div>
+       <div class="f-row__cell-1 f-row__cell_push_2 f-row_not-mobile">
+        <p class="f-icons">X X </P>
+    </div>      
 </section>
 
 ``` 

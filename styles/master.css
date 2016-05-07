@@ -76,12 +76,9 @@ SIXTH: weird stuff
 @import url("grid.css");
 
 /* ### BEM blocks ### */
-<<<<<<< HEAD
-=======
 @import url("blocks/f-signup.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-left-heading.css");
->>>>>>> 2c08c024d7661823007a03e450784bce08efddbc
 @import url("blocks/f-branding.css");
 @import url("blocks/f-content.css");
 @import url("blocks/f-cuff-text.css");
@@ -104,7 +101,7 @@ SIXTH: weird stuff
 @import url("blocks/f-standard-text.css"); 
 @import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
-@import url("blocks/f-footer.css"); 
+@import url("blocks/f-footer.css");
 
 
 
