@@ -1,10 +1,34 @@
+/*
+<style class="This is icon DEMO styling">
+	.codedemo span {
+		display: inline-block;
+		margin: 2rem;
+
+		color: white;
+		font-size: 3rem;
+	}
+</style>
+
+You almost always need to set `color` and `font-size`.
+
+## All icons
+```	
+	<span class="icon-home"></span>
+	<span class="icon-facebook"></span>
+	<span class="icon-twitter"></span>
+	<span class="icon-rss"></span>
+	<span class="icon-youtube"></span>
+	<span class="icon-reddit"></span>	
+```
+*/
+
 @font-face {
     font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?qcczkl');
-    src:    url('fonts/icomoon.eot?qcczkl#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?qcczkl') format('truetype'),
-        url('fonts/icomoon.woff?qcczkl') format('woff'),
-        url('fonts/icomoon.svg?qcczkl#icomoon') format('svg');
+    src:	url('../assets/fonts/icomoon.eot?qcczkl');
+    src:	url('../assets/fonts/icomoon.eot?qcczkl#iefix') format('embedded-opentype'),
+					url('../assets/fonts/icomoon.ttf?qcczkl') format('truetype'),
+					url('../assets/fonts/icomoon.woff?qcczkl') format('woff'),
+					url('../assets/fonts/icomoon.svg?qcczkl#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
