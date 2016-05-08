@@ -34,7 +34,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 .f-button {
 	position: relative;
 	top: 0;
-	width: 16.4rem;
+	min-width: 16.4rem;
 	margin: 0 3rem 3.2rem 0;
 	padding: 0; /*KLUDGE: padding set to 0 to avoid text moving while animating in Firefox */
 
