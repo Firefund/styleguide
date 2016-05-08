@@ -1,9 +1,10 @@
-COMPILED_DIR := kalei/css/blocks
 # Cheat sheet: https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html
-SOURCE_CSS := $(wildcard styles/blocks/*.css)
-COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
 
-all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css kalei/assets/fonts/* kalei/css/fonts.css
+COMPILED_DIR := kalei/css/blocks
+COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
+DEST_FONTS := $(patsubst assets/fonts/%,kalei/assets/fonts/%, $(wildcard assets/fonts/*) )
+
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css kalei/css/icons.css $(DEST_FONTS)
 .phony: clean show
 
 show:
@@ -23,7 +24,7 @@ $(COMPILED_CSS): | $(COMPILED_DIR)
 $(COMPILED_DIR):
 	npm run mkdir -- $(COMPILED_DIR)
 
-kalei/assets/fonts/%: assets/fonts/%
+$(DEST_FONTS): assets/fonts/%
 	cp --force $@ $<
 
 kalei/css/master.css: styles/master.css
@@ -35,5 +36,5 @@ kalei/css/base.css: styles/base.css
 kalei/css/grid.css: styles/grid.css
 	npm run postcss -- --output $@ $<
 
-kalei/css/fonts.css: styles/fonts.css
+kalei/css/icons.css: styles/icons.css
 	npm run postcss -- --output $@ $<
