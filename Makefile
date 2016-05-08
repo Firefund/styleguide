@@ -13,6 +13,7 @@ show:
 
 clean:
 	rm -r $(COMPILED_DIR); \
+	rm -r $(DEST_FONTS_DIR) \
 	rm kalei/css/base.css; \
 	rm kalei/css/master.css \
 	rm kalei/css/grid.css \
