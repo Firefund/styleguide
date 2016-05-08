@@ -48,17 +48,17 @@ I now exactly what it's supposed to look like, but I can't make it work.
 	border: .3rem solid var(--color-black);
 	border-radius: 0.5rem;
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
-	
+
 	transition-property: box-shadow, top;
-  transition-duration: 100ms;
+	transition-duration: 100ms;
 	transition-timing-function: linear;
 
-  cursor: pointer;
+	cursor: pointer;
 	outline: 0 none;
 }
 /* remove outline in Firefox */
 .f-button::-moz-focus-inner {
-  border: 0;
+	border: 0;
 }
 
 .f-button:hover {
@@ -69,6 +69,38 @@ I now exactly what it's supposed to look like, but I can't make it work.
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
 
+/*
+## Button with icon
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+<button class="f-button f-button_icon f-icon-twitter">twitter</button>
+<button class="f-button f-button_icon f-icon-facebook">facebook</button>
+<button class="f-button f-button_icon f-icon-youtube">youtube</button>
+<button class="f-button f-button_icon f-icon-reddit">reddit</button>
+<button class="f-button">No icon</button>
+<!-- this should be used on the website -->
+
+</div>
+```
+*/
+.f-button_icon::before {
+	position: absolute;
+
+	transform: translateX(-2.6rem);
+}
+.f-button_icon.f-icon-youtube::before {
+	transform: translate(-2.6rem, 0.3rem);
+}
+.f-button_icon.f-icon-facebook::before {
+	font-size: 2rem;
+
+	transform: translate(-2rem,0.4rem);
+}
+.f-button_icon.f-icon-reddit::before {
+	transform: translate(-3.2rem, 0.1rem);
+}
 
 /*
 ## f-button_submit
@@ -191,36 +223,36 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	text-transform: uppercase;
 	background: var(--color-red);
 
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px var(--color-red);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  transition-duration: 0.3s;
-  transition-property: transform;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px var(--color-red);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	transition-duration: 0.3s;
+	transition-property: transform;
 }
 
 .f-button_donate_kush::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  left: calc(50% - 10px);
-  bottom: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: var(--color-red) transparent transparent transparent;
-  transition-duration: 0.3s;
-  transition-property: transform;
+	position: absolute;
+	z-index: -1;
+	content: '';
+	left: calc(50% - 10px);
+	bottom: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: var(--color-red) transparent transparent transparent;
+	transition-duration: 0.3s;
+	transition-property: transform;
 }
 
 .f-button_donate_kush:hover, .f-button_donate_kush:focus, .f-button_donate_kush:active {
-  transform: translateY(-10px);
+	transform: translateY(-10px);
 }
 
 .f-button_donate_kush:hover::before, .f-button_donate_kush:focus::before, .f-button_donate_kush:active::before {
-  transform: translateY(10px);
+	transform: translateY(10px);
 }
 
 .f-button_donate_shrink {
@@ -234,18 +266,18 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	text-transform: uppercase;
 	background: var(--color-red);
 
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
 }
 
 .f-button_donate_shrink:hover, .f-button_donate_shrink:focus, .f-button_donate_shrink:active {
-  transform: scale(0.9);
+	transform: scale(0.9);
 }
 
 
@@ -260,18 +292,18 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	text-transform: uppercase;
 	background: var(--color-red);
 
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
 }
 
 .f-button_donate_grow:hover, .f-button_donate_grow:focus, .f-button_donate_grow:active {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 
