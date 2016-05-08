@@ -56,9 +56,8 @@ I now exactly what it's supposed to look like, but I can't make it work.
 	cursor: pointer;
 	outline: 0 none;
 }
-/* remove outline in Firefox */
 .f-button::-moz-focus-inner {
-	border: 0;
+	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
 .f-button:hover {
@@ -79,6 +78,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 <button class="f-button f-button_icon f-icon-facebook">facebook</button>
 <button class="f-button f-button_icon f-icon-youtube">youtube</button>
 <button class="f-button f-button_icon f-icon-reddit">reddit</button>
+<button class="f-button f-button_icon f-icon-home">home</button>
 <button class="f-button">No icon</button>
 <!-- this should be used on the website -->
 
@@ -100,6 +100,9 @@ I now exactly what it's supposed to look like, but I can't make it work.
 }
 .f-button_icon.f-icon-reddit::before {
 	transform: translate(-3.2rem, 0.1rem);
+}
+.f-button_icon.f-icon-home::before {
+	transform: translate(-3.3rem, 0.2rem);
 }
 
 /*
