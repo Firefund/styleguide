@@ -1,9 +1,6 @@
 /*
 
 Mini thumbnails! 
-The scaling is totally off. I can't get the pictures right. 
-I want to work on it with a different approach - one that first makes the mobile design with the 'scrollme' and by that also makes a sort of 'clipping mask'. 
-Also, the data under the data-bar is crammin' together when making the window smaller. 
 
 <pre>
 BLOCK f-miniproject-thumbnail
@@ -155,7 +152,7 @@ BLOCK f-miniproject-thumbnail
 	min-height: 35.2rem;
 	max-width: 50rem;
 
-	margin: 0 3.6rem 3.0rem 0;
+/*	margin: 0 3.6rem 3.0rem 0;*/
 /*	padding: 0 3.4rem 0.76rem 3.4rem;*/
 
 	background-color: var(--color-white);
@@ -184,11 +181,11 @@ BLOCK f-miniproject-thumbnail
 
 .f-miniproject-thumbnail__content {
 	height: 15rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
-	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 100%);
+	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%);
 }
 
 .f-miniproject-thumbnail__info {
-	margin: 0 3.4rem 0.76rem 3.4rem;
+	margin: 0 3.4rem 0.76rem 0;
 }
 
 .f-miniproject-thumbnail__image:hover {
@@ -204,7 +201,7 @@ BLOCK f-miniproject-thumbnail
 	display: inline-flex;
 
 	margin: 0 0 0.4rem -var(--gutter-width);
-	padding: .68rem 1.0rem .86rem var(--gutter-width); 
+	padding: .68rem 1.0rem .86rem calc(var(--gutter-width)*2); 
 	
 	color: var(--color-white);
 	font-size: 1.5rem;
@@ -217,12 +214,12 @@ BLOCK f-miniproject-thumbnail
 	font-size: 1.2rem;
 	font-weight: bold;
 	color: var(--color-grey);
-	margin-top: 0px;
+	margin: 0 0 0 3.4rem;
 }
 
 .f-miniproject-thumbnail__text {
 	display: block;
-	margin-top: 1.08rem;
+	margin: 1.08rem 0 0 3.4rem;
 	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: normal;
@@ -234,8 +231,7 @@ BLOCK f-miniproject-thumbnail
 
 
 .f-miniproject-thumbnail__progress {
-	/*TO DO: These are long. Maybe we can just use progress directly instead? Then we need to clarify how to embed blocks in blocks.*/
-
+	margin-left: 3.4rem;
 }
 
 
