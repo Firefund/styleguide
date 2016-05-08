@@ -8,37 +8,40 @@ Also, the data under the data-bar is crammin' together when making the window sm
 <pre>
 BLOCK f-miniproject-thumbnail
     ELEMENT f-miniproject-thumbnail__image
-    ELEMENT f-miniproject-thumbnail__image-text
-    ELEMENT f-miniproject-thumbnail__heading (1-2 lines but same height, flexbox centered)
-    ELEMENT f-miniproject-thumbnail__byline
-    ELEMENT f-miniproject-thumbnail__text
+    ELEMENT f-miniproject-thumbnail__image-text (TO DO: This is for text on top of picture)
+    ELEMENT f-miniproject-thumbnail__info (This is all informative content - so everything minus the image)
+    ELEMENT f-miniproject-thumbnail__content (This is all content for the specific campaign - minus the 'data' (__progress))
+    ELEMENT f-miniproject-thumbnail__heading (1-2 lines but same height, flexbox centered <-- oh, didn't do that)
+    ELEMENT f-miniproject-thumbnail__byline (The 'sender')
+    ELEMENT f-miniproject-thumbnail__text 
     ELEMENT f-miniproject-thumbnail__progress
 </pre>
 
 
-<!-- Core - commented until it's fixed below
+# Core - commented until it's fixed below
 ```
 <section ="f-content">
-	<section class="f-column f-column_3">
+	<section class="f-column f-column_3 f-column_mobile_1">
 
 		<div class="f-miniproject-thumbnail">
-
-				<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
-
-				<h2 class="f-miniproject-thumbnail__heading">
-					Kobane is rebuilding!
-				</h2>
-				<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
-				<p class="f-miniproject-thumbnail__text">
-				And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-				</p>
+			<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
+			<div class="f-miniproject-thumbnail__info">
+				<div class="f-miniproject-thumbnail__content">
+					<h2 class="f-miniproject-thumbnail__heading">
+						They keep changing things! 
+					</h2>
+					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+					<p class="f-miniproject-thumbnail__text">
+					And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1! And there's much more! Much more actually! So much more, that we don't really have room for it here. 
+					</p>
+				</div>
 				<section class="f-miniproject-thumbnail__progress" data-value="38">
 					<div class="f-miniproject-thumbnail__progress__bar">
 						<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
 					</div>
 					<div class="f-miniproject-thumbnail__progress__data">
 						<p class="f-miniproject-thumbnail__progress__data-element">
-							<span>38%</span> of $50,000
+							<span>38%</span> of $50K
 						</p>
 						<p class="f-miniproject-thumbnail__progress__data-element">
 							<span>$14,928</span> pledged
@@ -48,70 +51,75 @@ BLOCK f-miniproject-thumbnail
 						</p>
 					</div>
 				</section>
-
+			</div>
 		</div>
 
 		<div class="f-miniproject-thumbnail">
-
 			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
-
-			<h2 class="f-miniproject-thumbnail__heading">
-				Kobane is rebuilding!
-			</h2>
-			<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
-			<p class="f-miniproject-thumbnail__text">
-			We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-			</p>
-			<section class="f-miniproject-thumbnail__progress" data-value="38">
-				<div class="f-miniproject-thumbnail__progress__bar">
-					<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
-				</div>
-				<div class="f-miniproject-thumbnail__progress__data">
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>38%</span> of $50,000
-					</p>
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>$14,928</span> pledged
-					</p>
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>22</span> days to go
+			<div class="f-miniproject-thumbnail__info">
+				<div class="f-miniproject-thumbnail__content">
+					<h2 class="f-miniproject-thumbnail__heading">
+						This one is just outta' control!
+					</h2>
+					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+					<p class="f-miniproject-thumbnail__text">
+					We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 					</p>
 				</div>
-			</section>
+				<section class="f-miniproject-thumbnail__progress" data-value="38">
+					<div class="f-miniproject-thumbnail__progress__bar">
+						<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+					</div>
+					<div class="f-miniproject-thumbnail__progress__data">
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>38%</span> of $50K
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>$14,928</span> pledged
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>22</span> days to go
+						</p>
+					</div>
+				</section>
+			</div>
 		</div>
 
 		<div class="f-miniproject-thumbnail">
 
 			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
-
-			<h2 class="f-miniproject-thumbnail__heading">
-				Kobane is rebuilding!
-			</h2>
-			<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
-			<p class="f-miniproject-thumbnail__text">
-			After our first successful Kickstarter for Speculative Relationships: Volume 1!
-			</p>
-			<section class="f-miniproject-thumbnail__progress" data-value="38">
-				<div class="f-miniproject-thumbnail__progress__bar">
-					<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
-				</div>
-				<div class="f-miniproject-thumbnail__progress__data">
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>38%</span> of $50,000
-					</p>
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>$14,928</span> pledged
-					</p>
-					<p class="f-miniproject-thumbnail__progress__data-element">
-						<span>22</span> days to go
+			<div class="f-miniproject-thumbnail__info">
+				<div class="f-miniproject-thumbnail__content">
+					<h2 class="f-miniproject-thumbnail__heading">
+						Kobane is rebuilding!
+					</h2>
+					<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
+					<p class="f-miniproject-thumbnail__text">
+					After our first successful Kickstarter for Speculative Relationships: Volume 1!
 					</p>
 				</div>
-			</section>
+				<section class="f-miniproject-thumbnail__progress" data-value="38">
+					<div class="f-miniproject-thumbnail__progress__bar">
+						<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+					</div>
+					<div class="f-miniproject-thumbnail__progress__data">
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>38%</span> of $50K
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>$14,928</span> pledged
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>22</span> days to go
+						</p>
+					</div>
+				</section>
+			</div>
 		</div>
 	</section>
 </section>
 
- -->
+
 
 ```
 
@@ -121,7 +129,7 @@ BLOCK f-miniproject-thumbnail
 	<section class="f-column f-column_3">
 
 		<div class="f-miniproject-thumbnail">
-				<img class="f-miniproject-thumbnail__image__test" src="image/rick.jpg">
+				<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
 		</div>
 		<div class="f-miniproject-thumbnail">
 			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
@@ -143,9 +151,9 @@ BLOCK f-miniproject-thumbnail
 
 .f-miniproject-thumbnail {
 	border-radius: 0.5rem;
-	border: 2px dotted cyan;
 
 	min-height: 35.2rem;
+	max-width: 50rem;
 
 	margin: 0 3.6rem 3.0rem 0;
 /*	padding: 0 3.4rem 0.76rem 3.4rem;*/
@@ -153,43 +161,34 @@ BLOCK f-miniproject-thumbnail
 	background-color: var(--color-white);
 }
 
-.f-miniproject-thumbnail__image__test {
 
-	border-top-left-radius: 0.5rem;
-	border-top-right-radius: 0.5rem;
-
-/*	max-height: 16rem; */
+.f-miniproject-thumbnail__image {
 	height: 16rem;
 	width: 100%;
-
-
-/*	margin-left: -3.4rem;*/
+	margin-bottom: 1rem;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
 	
 	object-fit: cover;
 	object-position: 50% 50%;
-	cursor: pointer;
-	
-/*	overflow: hidden;*/
 
-	filter: grayscale(100%); /*TO DO: Need serious browser check-up*/
+	cursor: pointer;
+	filter: grayscale(100%); /*TO DO: Need browser check-up*/
 }
 
-.f-miniproject-thumbnail__image {
+@media screen and (--viewport-mobile) {
+	.f-miniproject-thumbnail__image {
+		filter: none;
+	}
+}
 
-	border-top-left-radius: 0.5rem;
-	border-top-right-radius: 0.5rem;
+.f-miniproject-thumbnail__content {
+	height: 15rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
+	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 100%);
+}
 
-	max-height: 16rem; 
-	width: 100%;
-
-
-/*	margin-left: -3.4rem;*/
-	
-	cursor: pointer;
-	
-/*	overflow: hidden;*/
-
-	filter: grayscale(100%); /*TO DO: Need serious browser check-up*/
+.f-miniproject-thumbnail__info {
+	margin: 0 3.4rem 0.76rem 3.4rem;
 }
 
 .f-miniproject-thumbnail__image:hover {
@@ -217,18 +216,20 @@ BLOCK f-miniproject-thumbnail
 .f-miniproject-thumbnail__byline {
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: var(--color-grey-light);
+	color: var(--color-grey);
 	margin-top: 0px;
 }
 
 .f-miniproject-thumbnail__text {
 	display: block;
 	margin-top: 1.08rem;
-	height: 7rem;
 	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: normal;
 	line-height: 1.5rem;
+
+	overflow: hidden;
+/*    mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 100%);*/
 }
 
 
