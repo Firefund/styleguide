@@ -2,6 +2,17 @@
 
 Mini thumbnails! 
 
+TO DO's: 
+- Browser checkup for grayscale
+- f-mini-project-thumbnail__image-text
+- Scrollme for mobile 
+- Clean up HTML 
+- Clean up CSS and re-read (+comments)
+- Test optimal pre-cropping of images
+- Write down optimal count for text-bits
+- Clean the imported progress-BEM (maybe? New names?)
+- For Jon: Test how easy it is to use the f-progress, instead of my copied code here
+
 <pre>
 BLOCK f-miniproject-thumbnail
     ELEMENT f-miniproject-thumbnail__image
@@ -113,6 +124,40 @@ BLOCK f-miniproject-thumbnail
 				</section>
 			</div>
 		</div>
+
+
+		<div class="f-miniproject-thumbnail">
+			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			<div class="f-miniproject-thumbnail__info">
+				<div class="f-miniproject-thumbnail__content">
+					<h2 class="f-miniproject-thumbnail__heading">
+						This one is just outta' control!
+					</h2>
+					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
+					<p class="f-miniproject-thumbnail__text">
+					We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+					</p>
+				</div>
+				<section class="f-miniproject-thumbnail__progress" data-value="38">
+					<div class="f-miniproject-thumbnail__progress__bar">
+						<div style="width: 38%;" class="f-miniproject-thumbnail__progress__value"></div>
+					</div>
+					<div class="f-miniproject-thumbnail__progress__data">
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>38%</span> of $50K
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>$14,928</span> pledged
+						</p>
+						<p class="f-miniproject-thumbnail__progress__data-element">
+							<span>22</span> days to go
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+
 	</section>
 </section>
 
@@ -152,8 +197,7 @@ BLOCK f-miniproject-thumbnail
 	min-height: 35.2rem;
 	max-width: 50rem;
 
-/*	margin: 0 3.6rem 3.0rem 0;*/
-/*	padding: 0 3.4rem 0.76rem 3.4rem;*/
+	margin: 0 3.6rem 3.0rem 0;
 
 	background-color: var(--color-white);
 }
