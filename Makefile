@@ -3,9 +3,9 @@
 COMPILED_DIR := kalei/css/blocks
 COMPILED_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
 DEST_FONTS_DIR := kalei/assets/fonts
-#$(patsubst assets/fonts/%,kalei/assets/fonts/%, $(wildcard assets/fonts/*) )
+DEST_FONTS := $(patsubst assets/fonts/%,kalei/assets/fonts/%, $(wildcard assets/fonts/*) )
 
-all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css kalei/css/icons.css $(DEST_FONTS_DIR)
+all: $(COMPILED_CSS) kalei/css/base.css kalei/css/master.css kalei/css/grid.css kalei/css/icons.css $(DEST_FONTS)
 .phony: clean show
 
 show:
@@ -25,6 +25,12 @@ $(COMPILED_CSS): | $(COMPILED_DIR)
 
 $(COMPILED_DIR):
 	npm run mkdir -- $(COMPILED_DIR)
+
+
+$(DEST_FONTS): | $(DEST_FONTS_DIR)
+
+$(DEST_FONTS_DIR):
+	npm run mkdir -- $(DEST_FONTS_DIR)
 
 $(DEST_FONTS_DIR)/%: assets/fonts/%
 	cp --force $< $@
