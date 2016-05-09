@@ -1,0 +1,286 @@
+/*
+Buttons. 
+
+Right now we're exploring different options and re-setting the button hierarchy. 
+So it's very much a work in proces. 
+
+TODO: We need to clarify the button-hierarchy. 
+
+`BLOCK f-button`
+`MODIFIER f-button_attention`
+'MODIFIER f-button_donate'
+'MODIFIER f-button_organize'
+
+## f-button
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+	<button class="f-button">encrypt</button>
+	<button class="f-button">reset</button>
+
+<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_attention
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+	<button class="f-button f-button_attention">submit</button>
+
+<!-- this should be used on the website -->
+</div>
+```
+
+## f-button_donate
+
+# Default
+```
+<div class="kalei-background-white">
+<!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+
+	<button class="f-button f-button_donate">Support now</button>
+<br>
+<br>
+<br>
+	<button class="f-button f-button_donate_kush">Support now</button>
+<br>
+<br>
+<br>
+	<button class="f-button f-button_donate_shrink">Support now</button>
+<br>
+<br>
+<br>
+	<button class="f-button f-button_donate_grow">Support now</button>
+<br>
+<br>
+<br>
+
+<!-- this should be used on the website -->
+</div>
+
+```
+
+
+## f-button_organize
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+	<button class="f-button f-button_organize">organize a crowdfunding</button>
+
+<!-- this should be used on the website -->
+</div>
+```
+*/
+
+@import "../variables";
+
+.f-button {
+	padding-bottom: 0.3rem;
+	margin: 0 3rem 3.2rem 0;
+	width: 16.4rem;
+	border: 2px solid var(--color-black);
+	border-radius: 0.5rem;
+
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	text-align: center;
+
+	background-color: var(--color-white);
+
+	outline: none;
+}
+
+.f-button:hover {
+/*	box-shadow: inset 0 0 0 0 var(--color-black);*/
+}
+
+.f-button:active {
+	border: var(--color-black);
+	color: var(--color-white);
+	background: var(--color-black);
+}
+
+.f-button_attention {
+	border: 2px solid var(--color-red);
+	color: var(--color-white);
+	background: var(--color-red);
+	opacity: 0.75;
+	transition: opacity 0.3s ease 0s;
+}
+
+.f-button_attention:hover {
+	opacity: 1;
+	box-shadow: none;
+}
+
+.f-button_attention:active {
+	background: var(--color-black);
+	color: var(--color-white);
+	border: 2px solid var(--color-black);
+}
+
+.f-button_donate {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+	
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+	
+	transition: opacity 0.3s ease 0s;
+}
+
+.f-button_donate:hover {
+	box-shadow: none;
+}
+
+.f-button_donate:active {
+	border: 2px solid var(--color-black);
+	color: var(--color-white);
+	background: var(--color-black);
+}
+
+/* DONATE BUBBLE KUSH*/
+
+
+.f-button_donate_kush {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+	
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px var(--color-red);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.f-button_donate_kush:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  bottom: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: var(--color-red) transparent transparent transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.f-button_donate_kush:hover, .f-button_donate_kush:focus, .f-button_donate_kush:active {
+  transform: translateY(-10px);
+}
+
+.f-button_donate_kush:hover:before, .f-button_donate_kush:focus:before, .f-button_donate_kush:active:before {
+  transform: translateY(10px);
+}
+
+
+.f-button_donate_shrink {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+	
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.f-button_donate_shrink:hover, .f-button_donate_shrink:focus, .f-button_donate_shrink:active {
+  transform: scale(0.9);
+}
+
+
+.f-button_donate_grow {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+	
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.f-button_donate_grow:hover, .f-button_donate_grow:focus, .f-button_donate_grow:active {
+  transform: scale(1.1);
+}
+
+
+
+.f-button_organize {
+	width: inherit;
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-black);
+	
+	color: var(--color-black);
+	opacity: 0.75;
+	
+	font-size: 2.4rem;
+	text-transform: none;
+	background: var(--color-white);
+	
+	transition: opacity 0.3s ease 0s;
+}
+
+.f-button_organize:hover {
+	opacity: 1;
+	box-shadow: none;
+}
+
+.f-button_organize:active {
+	border: 2px solid var(--color-red);
+	color: var(--color-white);
+	background: var(--color-black);
+}
+
+.f-button_organize::first-letter {
+	text-transform: uppercase;
+}
+
+
+
+
+
