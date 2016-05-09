@@ -6,7 +6,7 @@ BLOCK f-content
 ## 1 SMALL
 ```
 <div class="f-content">
-<h1>Lorem ipsum dolor sit amet,
+<p class="f-text">Lorem ipsum dolor sit amet,
     consectetur adipisicing elit.
     Mollitia commodi debitis,
     laborum deserunt accusantium,
@@ -15,7 +15,7 @@ BLOCK f-content
     quia minus, fugiat molestiae
     natus vel quas! Dicta, 
     itaque.
- </h1>
+ </p>
 
 </div>
 ```
