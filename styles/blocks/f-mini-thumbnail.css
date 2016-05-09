@@ -3,8 +3,8 @@
 Mini thumbnails! 
 
 TO DO's: 
-- Browser checkup for grayscale
-- f-mini-project-thumbnail__image-text
+- Browser checkup for grayscale - Chrome, Safari and Firefox 👏 👍 🤘 
+- f-mini-project-thumbnail__image-text 
 - Scrollme for mobile 
 - Clean up HTML 
 - Clean up CSS and re-read (+comments)
@@ -171,8 +171,14 @@ BLOCK f-miniproject-thumbnail
 	<section class="f-column f-column_3">
 
 		<div class="f-miniproject-thumbnail">
+			<div class="f-miniproject-thumbnail__image-filter">
 				<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
+				<div class="f-miniproject-thumbnail__image-text">Being organized</div>
+			</div>
 		</div>
+
+
+
 		<div class="f-miniproject-thumbnail">
 			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
 		</div>
@@ -213,6 +219,8 @@ BLOCK f-miniproject-thumbnail
 	object-fit: cover;
 	object-position: 50% 50%;
 
+/*	opacity: 50%;*/
+
 	cursor: pointer;
 	filter: grayscale(100%); /*TO DO: Need browser check-up*/
 }
@@ -223,9 +231,16 @@ BLOCK f-miniproject-thumbnail
 	}
 }
 
+
 .f-miniproject-thumbnail__content {
 	height: 15rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
-	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%);
+	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
+	mask: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
+
+	/*
+	Doesn't work in FIREFOX. I think we need a .svg filter for it to work in firefox. I'm out of my legue here.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/mask
+	*/
 }
 
 .f-miniproject-thumbnail__info {
@@ -238,8 +253,51 @@ BLOCK f-miniproject-thumbnail
 }
 
 
+
+
+
+
+
+
+
+
 .f-miniproject-thumbnail__image-text {
+
+/*    top: 0;
+    left: 0;
+
+    position: inherit;
+    
+    padding: 0 2rem 2rem 2rem;
+    background: cyan;
+	opacity: 0.5;*/
+    
+/*    var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));*/
+   
+	
 }
+
+.f-miniproject-thumbnail__image-filter {
+	height: 16rem;
+	width: 100%;
+
+	object-fit: cover;
+	object-position: 50% 50%;
+
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+
+    background: var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+
 
 .f-miniproject-thumbnail__heading {
 	display: inline-flex;
