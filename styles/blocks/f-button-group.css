@@ -4,9 +4,9 @@ A container that put 3 buttons per row with equal space between them, where the 
 Goes into two columns on mobile. 
 
 <pre>
-`BLOCK f-button-group`
-    `ELEMENT f-button-group__button`
-    `MODIFIER f-button-group__button_selected`
+BLOCK f-button-group
+    ELEMENT f-button-group__button
+    MODIFIER f-button-group__button_selected
 </pre>
 
 ## What I would like: 
@@ -29,12 +29,12 @@ I think it would look awesome!
 
 	<section class="f-button-group">
 		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button_stop">Terms</button>
-			<button class="f-button-group__button_stop">Blog</button>
-			<button class="f-button-group__button_stop">Manifesto</button>
-			<button class="f-button-group__button_underline">Contact</button>
-			<button class="f-button-group__button_underline">Who we are</button>
-			<button class="f-button-group__button_underline">Dank memes</button>
+			<button class="f-button-group__button f-button-group__button_stop">Terms</button>
+			<button class="f-button-group__button f-button-group__button_stop">Blog</button>
+			<button class="f-button-group__button f-button-group__button_stop">Manifesto</button>
+			<button class="f-button-group__button f-button-group__button_underline">Contact</button>
+			<button class="f-button-group__button f-button-group__button_underline">Who we are</button>
+			<button class="f-button-group__button f-button-group__button_underline">Dank memes</button>
 		</div>
 ```
 */
@@ -43,18 +43,11 @@ I think it would look awesome!
 
 .f-button-group {}
 
-.f-button-group__button {
-	display: inline;
-	
-	width: 100%;
-}
+.f-button-group__button {}
 
 .f-button-group__button::first-letter {
 	text-transform: uppercase;
 }
-
-
-
 
 .f-button-group__button_stop {
 	/*########## (S)WEEP TO (TOP)*/	
