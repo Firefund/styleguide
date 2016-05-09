@@ -211,12 +211,15 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	width: inherit;
 
 	color: var(--color-white);
-
 	font-size: 3.2rem;
 	text-transform: uppercase;
 	background: var(--color-red);
 
 	transition: opacity 0.3s ease 0s;
+/*
+	opacity: 0.75;
+	transition: opacity 0.01s ease 0s;
+*/
 }
 
 .f-button_donate:hover, .f-button_donate::before {

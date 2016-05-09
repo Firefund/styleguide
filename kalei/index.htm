@@ -20,6 +20,23 @@
 <body>
   <!-- Initially populated by templates/layout.html -->
   <div class="kalei"></div>
+
+  	<script>
+  		define(["jquery"], function($) {
+  			setTimeout(buttonGroup, 3000)
+
+  			function buttonGroup() {
+  				if($(".f-button-group__button_stop").length === 0) alert("not working")
+
+	  			$(".f-button-group__button_stop").on("click", function(e) {
+	  				var selectedClass = "f-button-group__button_stop"
+	  				var button = $(e.target)
+	  				$(this).find(".f-button-group__button_stopselected").removeClass(selectedClass)
+	  				button.addClass(selectedClass)
+	  			})
+  			}
+  		})
+  	</script>
 	<script>
 		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 	</script>

@@ -2,63 +2,68 @@
 /*
 A container that put 3 buttons per row with equal space between them, where the first and last button are justified to the edge.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Goes into two columns on mobile. 
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
 `BLOCK f-button-group`
     `ELEMENT f-button-group__button`
-    `MODIFIER f-button-group__button_active`
+    `MODIFIER f-button-group__button_selected`
 
-## Applying grid
+## Button effects
+
+So yeah, it's hard to choose. The simple one? The minimalistic underline? The big sweeping one? 
 
 ```
-
 <!-- this should be used on the website -->
-<div class="kalei-background-white"> 
+<div class="kalei-background-white">
 <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 
-<!-- SECOND ROW OF BUTTONS -->
-<section class="f-button-group">
-	<div class="f-row f-row_6">
-		<div class="f-row__cell-2 f-row_not-mobile">
-			<button class="f-button-group__button">Test</button>
+	<section class="f-button-group">
+		<div class="f-column f-column_3 f-column_mobile_2">
+			<button class="f-button-group__button_fade">Terms</button>
+			<button class="f-button-group__button_underline">Blog</button>
+			<button class="f-button-group__button_stop">Manifesto</button>
+			<button class="f-button-group__button_fade">Contact</button>
+			<button class="f-button-group__button_underline">Who we are</button>
+			<button class="f-button-group__button_stop">Dank memes</button>
 		</div>
-		<div class="f-row__cell-3 f-row_not-desktop">
-			<button class="f-button-group__button">Terms</button>
-		</div>
-		<div class="f-row__cell-2 f-row__not-mobile">
-			<button class="f-button-group__button">Blog</button>
-		</div>
-		<div class="f-row__cell-2 f-row__cell-mobile-3">
-			<button class="f-button-group__button">Manifesto</button>
-		</div>
-	</div>
-</section>
+	</section>
 
-<section class="f-button-group">
-	<div class="f-row f-row_6">
-		<div class="f-row__cell-2 f-row_not-mobile">
-			<button class="f-button-group__button">Contact</button>
-		</div>
-		<div class="f-row__cell-3 f-row_not-desktop">
-			<button class="f-button-group__button">Contact</button>
-		</div>
-		<div class="f-row__cell-2 f-row__not-mobile">
-			<button class="f-button-group__button">Who we are</button>
-		</div>
-		<div class="f-row__cell-2 f-row__cell-mobile-3">
-			<button class="f-button-group__button">Dank memes</button>
-		</div>
-	</div>
-</section>
+<!-- this should be used on the website -->
+</div>
+```
 
-<section class="f-button-group">
-	<div class="f-row f-row_6">
-		<div class="f-row__cell-3 f-row_not-desktop">
-			<button class="f-button-group__button">Who we are</button>
+## What I would like: 
+
+Well, this is just an idea - and I've tried but I lack the skill to build it myself. 
+So instead of spending 3 days of trying, I'm going to explain here and on Waffle/github, and maybe @dotnetcarpenter can give it at go? 
+
+Maybe the idea is stupid. But maybe it's just what we're looking for here. 
+
+In the following example, we have two hover effects. One on the bottomline, and another on on the top line. 
+Can we mix them? Could we use the bottom effect as a hovereffect, and then 'on click' use the top 'sweep' effect? 
+
+I think it would look awesome! 
+
+```
+<!-- this should be used on the website -->
+<div class="kalei-background-white">
+<!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+
+	<section class="f-button-group">
+		<div class="f-column f-column_3 f-column_mobile_2">
+			<button class="f-button-group__button_stop">Terms</button>
+			<button class="f-button-group__button_stop">Blog</button>
+			<button class="f-button-group__button_stop">Manifesto</button>
+			<button class="f-button-group__button_underline">Contact</button>
+			<button class="f-button-group__button_underline">Who we are</button>
+			<button class="f-button-group__button_underline">Dank memes</button>
 		</div>
-		<div class="f-row__cell-3 f-row_not-desktop">
-			<button class="f-button-group__button">Blog</button>
-		</div>
+<<<<<<< HEAD
 	</div>
 </section>
 =======
@@ -121,15 +126,22 @@ I think it would look awesome!
 		</div>
 	</section>
 >>>>>>> master
+=======
+	</section>
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
 <!-- this should be used on the website -->
 </div>
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> master
+=======
+
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 */
 
 @import "../variables";
@@ -139,22 +151,31 @@ I think it would look awesome!
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .f-button-group__button {
 /*	flex-basis: calc(1/3 * 99.99% - var(--grid-padding) * 2);*/
 	display: inline;
 	
 	width: 100%;
+=======
+.f-button-group__button::first-letter {
+	text-transform: uppercase;
+}
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
+/*########## SWEEP TO TOP*/
+.f-button-group__button_stop {
+	/*From Karl's CSS:*/
 	margin-bottom: 3.0rem;
 	border: 2px solid var(--color-black);
-	border-radius: 0.3rem;
+	border-radius: 0.5rem;
 	
-	font-size: 3.2rem;
+	font-size: 3rem;
 	font-weight: bold;
-	text-align: center;
 	
 	background-color: var(--color-white);
 
+<<<<<<< HEAD
 	cursor: pointer;
 
 	outline: none;
@@ -178,6 +199,9 @@ I think it would look awesome!
 
 	/*From Hover.css*/
 >>>>>>> master
+=======
+	/*From Hover.css*/
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     backface-visibility: hidden;
@@ -186,28 +210,26 @@ I think it would look awesome!
     transition-property: color;
     transition-duration: 0.2s;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 .f-button-group__button::first-letter {
 	text-transform: uppercase;
 }
+=======
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
-
-.f-button-group__button_selected {
-	color: var(--color-white);
-	background-color: var(--color-black);
+    /*From Karl's CSS*/
+	cursor: pointer;
+	outline: none;
 }
 
-/* This is where I want to create a 'click' effect, where the text goes color:white;, exactly when it's clicked. But it doesn't work :-(*/
-
-/*.f-button-group__button:target {
-	color: var(--color-white);
-}*/
-
-.f-button-group__button:hover, .f-button-group__button:focus, .f-button-group__button:active  {
+	/*From Hover.css*/
+.f-button-group__button_stop:hover {
 	color: var(--color-grey-light);
 }
 
+<<<<<<< HEAD
 .f-button-group__button:before {
 =======
 
@@ -224,6 +246,10 @@ I think it would look awesome!
 /*From Hover.css*/
 .f-button-group__button_stop:before {
 >>>>>>> master
+=======
+/*From Hover.css*/
+.f-button-group__button_stop:before {
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -240,11 +266,18 @@ I think it would look awesome!
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .f-button-group__button:hover:before, .f-button-group__button:focus:before, .f-button-group__button:active:before {
+=======
+.f-button-group__button_stop:hover::before {
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 	transform: scaleY(1);
 }
 
+/* ########## FADE*/
+.f-button-group__button_fade {
 
+<<<<<<< HEAD
 =======
 .f-button-group__button_stop:hover::before {
 	transform: scaleY(1);
@@ -253,6 +286,8 @@ I think it would look awesome!
 /* ########## FADE*/
 .f-button-group__button_fade {
 
+=======
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 	/*From Karl's CSS*/
 	margin-bottom: 3.0rem;
 	border: 2px solid var(--color-black);
@@ -382,4 +417,7 @@ I think it would look awesome!
 	color: var(--color-white)!important;
 	background-color: var(--color-black);
 }
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
