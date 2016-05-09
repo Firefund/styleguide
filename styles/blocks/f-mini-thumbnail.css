@@ -160,10 +160,8 @@ BLOCK f-miniproject-thumbnail
 
 	</section>
 </section>
-
-
-
 ```
+
 
 #Working on images
 ```
@@ -171,26 +169,39 @@ BLOCK f-miniproject-thumbnail
 	<section class="f-column f-column_3">
 
 		<div class="f-miniproject-thumbnail">
-			<div class="f-miniproject-thumbnail__image-filter">
-				<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
-				<div class="f-miniproject-thumbnail__image-text">Being organized</div>
-			</div>
+
+			<figure class="f-miniproject-thumbnail__image">
+				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			</figure>
+
+				<div>
+					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
+				</div>
 		</div>
-
-
 
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+
+			<figure class="f-miniproject-thumbnail__image">
+				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			</figure>
+				<div>
+					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
+				</div>
 		</div>
+
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
-		</div>
-			</section>
+
+			<figure class="f-miniproject-thumbnail__image">
+				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			</figure>
+				<div>
+					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
+				</div>
 		</div>
 
 	</section>
 </section>
-
+```
 */
 
 
@@ -210,6 +221,7 @@ BLOCK f-miniproject-thumbnail
 
 
 .f-miniproject-thumbnail__image {
+	margin: 0 0 0 0;
 	height: 16rem;
 	width: 100%;
 	margin-bottom: 1rem;
@@ -263,14 +275,19 @@ BLOCK f-miniproject-thumbnail
 
 .f-miniproject-thumbnail__image-text {
 
-/*    top: 0;
-    left: 0;
+/*	display: block;*/
 
-    position: inherit;
+	top: 3rem;
+	left: 7rem;
+
+    margin: 6rem 2rem 1rem 2rem;
+/*    color: var(--color-white);*/
+	color: cyan;
+
+	font-size: 3.0rem;
+
+    position: relative;
     
-    padding: 0 2rem 2rem 2rem;
-    background: cyan;
-	opacity: 0.5;*/
     
 /*    var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));*/
    
@@ -279,16 +296,14 @@ BLOCK f-miniproject-thumbnail
 
 .f-miniproject-thumbnail__image-filter {
 	height: 16rem;
-	width: 100%;
-
-	object-fit: cover;
-	object-position: 50% 50%;
 
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 
     background: var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));
-	opacity: 0.5;
+	filter: blur(2px);
+
+	position: relative;
 }
 
 
