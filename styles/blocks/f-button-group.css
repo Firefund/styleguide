@@ -48,6 +48,49 @@ I think it would look awesome!
 .f-button-group__button::first-letter {
 	text-transform: uppercase;
 }
+.f-button-group__button_underline {
+/* ######### Underline Reveal */
+
+	/*Karl's CSS*/
+	margin-bottom: 3.0rem;
+	border: 2px solid var(--color-black);
+	border-radius: 0.5rem;
+	
+	font-size: 3rem;
+	font-weight: bold;
+	
+	background-color: var(--color-white);
+
+	cursor: pointer;
+	outline: none;
+
+	/*From Hover.css*/
+  	transform: translateZ(0);
+  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  	backface-visibility: hidden;
+  	-moz-osx-font-smoothing: grayscale;
+  	position: relative;
+  	overflow: hidden;
+}
+
+.f-button-group__button_underline:before {
+	/*From Hover.css:*/
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--color-black);
+	height: 4px;
+	transform: translateY(4px);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+.f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
+	transform: translateY(0);
+}
 
 .f-button-group__button_stop {
 	/*########## (S)WEEP TO (TOP)*/	
@@ -102,49 +145,6 @@ I think it would look awesome!
 }
 
 
-.f-button-group__button_underline {
-/* ######### Underline Reveal */
-
-	/*Karl's CSS*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-	
-	font-size: 3rem;
-	font-weight: bold;
-	
-	background-color: var(--color-white);
-
-	cursor: pointer;
-	outline: none;
-
-	/*From Hover.css*/
-  	transform: translateZ(0);
-  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  	backface-visibility: hidden;
-  	-moz-osx-font-smoothing: grayscale;
-  	position: relative;
-  	overflow: hidden;
-}
-
-.f-button-group__button_underline:before {
-	/*From Hover.css:*/
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--color-black);
-	height: 4px;
-	transform: translateY(4px);
-	transition-property: transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
-.f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
-	transform: translateY(0);
-}
 
 .f-button-group__button_underline-sweep {
 	/*MIX UNDERLINE & SWEEP - this is where I try and fail. */
