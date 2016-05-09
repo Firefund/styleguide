@@ -79,30 +79,38 @@ I now exactly what it's supposed to look like, but I can't make it work.
 <button class="f-button f-button_icon f-icon-youtube">youtube</button>
 <button class="f-button f-button_icon f-icon-reddit">reddit</button>
 <button class="f-button f-button_icon f-icon-home">home</button>
+<button class="f-button f-button_icon f-icon-twitter">twitter</button>
+<button class="f-button f-button_icon f-icon-facebook">facebook</button>
+<button class="f-button f-button_icon f-icon-youtube">youtube</button>
+<button class="f-button f-button_icon f-icon-reddit">reddit</button>
+<button class="f-button f-button_icon f-icon-home">home</button>
 <button class="f-button">No icon</button>
 <!-- this should be used on the website -->
 
 </div>
 ```
 */
+.f-button_icon {
+	padding: 0 2.4rem 0 4rem;
+}
 .f-button_icon::before {
 	position: absolute;
 
-	transform: translateX(-2.6rem);
+	transform: translateX(-3.1rem);
 }
 .f-button_icon.f-icon-youtube::before {
-	transform: translate(-2.6rem, 0.3rem);
+	transform: translate(-3.1rem, 0.3rem);
 }
 .f-button_icon.f-icon-facebook::before {
 	font-size: 2rem;
 
-	transform: translate(-2rem,0.4rem);
+	transform: translate(-2.6rem, 0.4rem);
 }
 .f-button_icon.f-icon-reddit::before {
-	transform: translate(-3.2rem, 0.1rem);
+	transform: translate(-3.6rem, 0.1rem);
 }
 .f-button_icon.f-icon-home::before {
-	transform: translate(-3.3rem, 0.2rem);
+	transform: translate(-3.7rem, 0.2rem);
 }
 
 /*
