@@ -3,14 +3,19 @@ Site navigation links.
 
 ```
 <section class="f-row f-row_12">
-	<div class="f-row__cell-4 f-row__cell-mobile-5"><h2 class="f-branding">Fire<span>fund</span></h2></div>
+	<div class="f-row__cell-4 f-row__cell-mobile-5">
+		<h2 class="f-branding">Fire<span>fund</span></h2>
+	</div>
 	<div class="f-row__cell-8 f-row__cell-mobile-7">
 		<div class="f-navigation">
 			<div class="f-row f-row_12">
-				<div class="f-row__cell-4 f-row__cell_push_4 f-row__cell-mobile-6">
-					<a href="#" class="f-navigation__link">What and how</a>
+				<div class="f-row__cell-3 f-row__cell_push_6 f-row__not-mobile">
+					<a href="#" class="f-navigation__link">How it works</a>
 				</div>
-				<div class="f-row__cell-4 f-row__cell-mobile-6">
+				<div class="f-row__not-desktop f-row__cell-mobile_push_6 f-row__cell-mobile-2">
+					<a href="#" class="f-navigation__link">How</a>
+				</div>
+				<div class="f-row__cell-3 f-row__cell-mobile-3">
 					<a href="#" class="f-navigation__link">About</a>
 				</div>
 			</div>
@@ -21,20 +26,20 @@ Site navigation links.
 
 ```
 <div class="f-navigation">
-	<div class="f-row f-row_6">
-		<div class="f-row__cell-2 f-row__cell_push_2">
-			<a href="#" class="f-navigation__link">What and how</a>
+	<div class="f-row f-row_12">
+		<div class="f-row__cell-3 f-row__cell_push_6 f-row__not-mobile">
+			<a href="#" class="f-navigation__link">How it works</a>
 		</div>
-		<div class="f-row__cell-2">
+		<div class="f-row__not-desktop f-row__cell-mobile_push_6 f-row__cell-mobile-2">
+			<a href="#" class="f-navigation__link">How</a>
+		</div>
+		<div class="f-row__cell-3 f-row__cell-mobile-3">
 			<a href="#" class="f-navigation__link">About</a>
 		</div>
 	</div>
 </div>
 ```
 */
-
-:root {/*--color-white-transparent: hsla(0, 0%, 100%, 5);*/
-}
 
 .f-navigation {
 	width: 100%;
