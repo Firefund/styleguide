@@ -3,6 +3,9 @@
 Mini thumbnails! 
 
 <pre>
+
+So we're almost there. They are fully functional, I would say. Minor bugs, tho. And the 'text on image' I cannot do at the moment.
+
 TO DO's: 
 - Browser checkup for grayscale - Chrome, Safari and Firefox 👏 👍 🤘 
 - f-mini-project-thumbnail__image-text - 👎 CAN'T DO IT 😿🔫
@@ -191,21 +194,19 @@ BLOCK f-miniproject-thumbnail
 
 
 .f-miniproject-thumbnail {
-	border-radius: 0.5rem;
-
 	min-height: 35.2rem;
 	max-width: 50rem;
-
 	margin: 0 3.6rem 3.0rem 0;
+	border-radius: 0.5rem;
 
 	background-color: var(--color-white);
 }
 
 
 .f-miniproject-thumbnail__image {
-	margin: 0 0 0 0;
 	height: 16rem;
 	width: 100%;
+	margin: 0 0 0 0;
 	margin-bottom: 1rem;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
@@ -213,21 +214,20 @@ BLOCK f-miniproject-thumbnail
 	object-fit: cover;
 	object-position: 50% 50%;
 
-/*	opacity: 50%;*/
-
 	cursor: pointer;
 	filter: grayscale(100%); /*TO DO: Need browser check-up*/
 }
 
+/*This makes sure the grayscale filter won't be on mobile:*/
 @media screen and (--viewport-mobile) {
 	.f-miniproject-thumbnail__image {
 		filter: none;
 	}
 }
 
-
 .f-miniproject-thumbnail__content {
 	height: 15rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
+
 	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
 	mask: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
 
@@ -237,58 +237,35 @@ BLOCK f-miniproject-thumbnail
 	*/
 }
 
-.f-miniproject-thumbnail__info {
-	margin: 0 3.4rem 0.76rem 0;
-}
-
 .f-miniproject-thumbnail__image:hover {
 	filter: grayscale(0%);
 	transition: .3s ease-in-out;
 }
 
+.f-miniproject-thumbnail__info {
+	margin: 0 3.4rem 0.76rem 0;
+}
 
-
-
-
-
-
-
-
-
-.f-miniproject-thumbnail__image-text {
-
-/*	display: block;*/
-    margin: 0 0 0 0;
-	color: cyan;
-
-	font-size: 3.0rem;
-
+.f-miniproject-thumbnail__image-text { /*Broken code - can't fix it -Karl*/
     position: absolute;
-    
-    
-/*    var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));*/
-   
-	
+
+    margin: 0 0 0 0;
+
+	color: var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));
+	font-size: 3.0rem;
 }
 
 .f-miniproject-thumbnail__image-filter {
-	height: 16rem;
+	position: relative;
 
+	height: 16rem;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 
     background: var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));
+
 	filter: blur(2px);
-
-	position: relative;
 }
-
-
-
-
-
-
-
 
 
 .f-miniproject-thumbnail__heading {
@@ -305,29 +282,29 @@ BLOCK f-miniproject-thumbnail
 }
 
 .f-miniproject-thumbnail__byline {
+	margin: 0 0 0 3.4rem;
+
+	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: var(--color-grey);
-	margin: 0 0 0 3.4rem;
 }
 
 .f-miniproject-thumbnail__text {
 	display: block;
+
 	margin: 1.08rem 0 0 3.4rem;
+
 	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: normal;
 	line-height: 1.5rem;
 
 	overflow: hidden;
-/*    mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 100%);*/
 }
-
 
 .f-miniproject-thumbnail__progress {
 	margin-left: 3.4rem;
 }
-
 
 .f-miniproject-thumbnail__progress__bar, .f-miniproject-thumbnail__progress__value {
 	height: 0.3rem;
@@ -350,10 +327,12 @@ BLOCK f-miniproject-thumbnail
 
 .f-miniproject-thumbnail__progress__data {
 	display: flex;
+
 	flex-direction: row;
   	justify-content: space-between;
 	
 	font-size: 1rem;
+
 	white-space: nowrap;
 }
 
