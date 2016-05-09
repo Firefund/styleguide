@@ -1,40 +1,13 @@
 
 /*
 A container that put 3 buttons per row with equal space between them, where the first and last button are justified to the edge.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 Goes into two columns on mobile. 
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
+<pre>
 `BLOCK f-button-group`
     `ELEMENT f-button-group__button`
     `MODIFIER f-button-group__button_selected`
-
-## Button effects
-
-So yeah, it's hard to choose. The simple one? The minimalistic underline? The big sweeping one? 
-
-```
-<!-- this should be used on the website -->
-<div class="kalei-background-white">
-<!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
-
-	<section class="f-button-group">
-		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button_fade">Terms</button>
-			<button class="f-button-group__button_underline">Blog</button>
-			<button class="f-button-group__button_stop">Manifesto</button>
-			<button class="f-button-group__button_fade">Contact</button>
-			<button class="f-button-group__button_underline">Who we are</button>
-			<button class="f-button-group__button_stop">Dank memes</button>
-		</div>
-	</section>
-
-<!-- this should be used on the website -->
-</div>
-```
+</pre>
 
 ## What I would like: 
 
@@ -63,108 +36,29 @@ I think it would look awesome!
 			<button class="f-button-group__button_underline">Who we are</button>
 			<button class="f-button-group__button_underline">Dank memes</button>
 		</div>
-<<<<<<< HEAD
-	</div>
-</section>
-=======
-Goes into two columns on mobile. 
-
-`BLOCK f-button-group`
-    `ELEMENT f-button-group__button`
-    `MODIFIER f-button-group__button_selected`
-
-## Button effects
-
-So yeah, it's hard to choose. The simple one? The minimalistic underline? The big sweeping one? 
-
 ```
-<div class="kalei-background-white">
-<!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
-
-	<section class="f-button-group">
-		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button_fade">Terms</button>
-			<button class="f-button-group__button_underline">Blog</button>
-			<button class="f-button-group__button_stop">Manifesto</button>
-			<button class="f-button-group__button_fade">Contact</button>
-			<button class="f-button-group__button_underline">Who we are</button>
-			<button class="f-button-group__button_stop">Dank memes</button>
-		</div>
-	</section>
-
-<!-- this should be used on the website -->
-</div>
-```
-
-## What I would like: 
-
-Well, this is just an idea - and I've tried but I lack the skill to build it myself. 
-So instead of spending 3 days of trying, I'm going to explain here and on Waffle/github, and maybe @dotnetcarpenter can give it at go? 
-
-Maybe the idea is stupid. But maybe it's just what we're looking for here. 
-
-In the following example, we have two hover effects. One on the bottomline, and another on on the top line. 
-Can we mix them? Could we use the bottom effect as a hovereffect, and then 'on click' use the top 'sweep' effect? 
-
-I think it would look awesome! 
-
-```
-<!-- this should be used on the website -->
-<div class="kalei-background-white">
-<!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
-
-	<section class="f-button-group">
-		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button_stop">Terms</button>
-			<button class="f-button-group__button_stop">Blog</button>
-			<button class="f-button-group__button_stop">Manifesto</button>
-			<button class="f-button-group__button_underline">Contact</button>
-			<button class="f-button-group__button_underline">Who we are</button>
-			<button class="f-button-group__button_underline">Dank memes</button>
-		</div>
-	</section>
->>>>>>> master
-=======
-	</section>
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
-
-<!-- this should be used on the website -->
-</div>
-```
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> master
-=======
-
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 */
 
 @import "../variables";
 
-.f-button-group { 
+.f-button-group {}
 
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 .f-button-group__button {
-/*	flex-basis: calc(1/3 * 99.99% - var(--grid-padding) * 2);*/
 	display: inline;
 	
 	width: 100%;
-=======
+}
+
 .f-button-group__button::first-letter {
 	text-transform: uppercase;
 }
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 
-/*########## SWEEP TO TOP*/
+
+
+
 .f-button-group__button_stop {
+	/*########## (S)WEEP TO (TOP)*/	
+
 	/*From Karl's CSS:*/
 	margin-bottom: 3.0rem;
 	border: 2px solid var(--color-black);
@@ -175,33 +69,10 @@ I think it would look awesome!
 	
 	background-color: var(--color-white);
 
-<<<<<<< HEAD
 	cursor: pointer;
-
 	outline: none;
 
-=======
-.f-button-group__button::first-letter {
-	text-transform: uppercase;
-}
-
-/*########## SWEEP TO TOP*/
-.f-button-group__button_stop {
-	/*From Karl's CSS:*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-	
-	font-size: 3rem;
-	font-weight: bold;
-	
-	background-color: var(--color-white);
-
 	/*From Hover.css*/
->>>>>>> master
-=======
-	/*From Hover.css*/
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     backface-visibility: hidden;
@@ -209,47 +80,19 @@ I think it would look awesome!
     position: relative;
     transition-property: color;
     transition-duration: 0.2s;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-.f-button-group__button::first-letter {
-	text-transform: uppercase;
-}
-=======
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
-
-    /*From Karl's CSS*/
-	cursor: pointer;
-	outline: none;
-}
-
-	/*From Hover.css*/
 .f-button-group__button_stop:hover {
-	color: var(--color-grey-light);
+	color: var(--color-white);
 }
 
-<<<<<<< HEAD
-.f-button-group__button:before {
-=======
 
-    /*From Karl's CSS*/
-	cursor: pointer;
-	outline: none;
+.f-button-group__button_stop:hover::before {
+	transform: scaleY(1);
 }
 
+.f-button-group__button_stop:before {
 	/*From Hover.css*/
-.f-button-group__button_stop:hover {
-	color: var(--color-grey-light);
-}
-
-/*From Hover.css*/
-.f-button-group__button_stop:before {
->>>>>>> master
-=======
-/*From Hover.css*/
-.f-button-group__button_stop:before {
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -265,29 +108,53 @@ I think it would look awesome!
 	transition-timing-function: ease-out;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.f-button-group__button:hover:before, .f-button-group__button:focus:before, .f-button-group__button:active:before {
-=======
-.f-button-group__button_stop:hover::before {
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
-	transform: scaleY(1);
+
+.f-button-group__button_underline {
+/* ######### Underline Reveal */
+
+	/*Karl's CSS*/
+	margin-bottom: 3.0rem;
+	border: 2px solid var(--color-black);
+	border-radius: 0.5rem;
+	
+	font-size: 3rem;
+	font-weight: bold;
+	
+	background-color: var(--color-white);
+
+	cursor: pointer;
+	outline: none;
+
+	/*From Hover.css*/
+  	transform: translateZ(0);
+  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  	backface-visibility: hidden;
+  	-moz-osx-font-smoothing: grayscale;
+  	position: relative;
+  	overflow: hidden;
 }
 
-/* ########## FADE*/
-.f-button-group__button_fade {
-
-<<<<<<< HEAD
-=======
-.f-button-group__button_stop:hover::before {
-	transform: scaleY(1);
+.f-button-group__button_underline:before {
+	/*From Hover.css:*/
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--color-black);
+	height: 4px;
+	transform: translateY(4px);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+.f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
+	transform: translateY(0);
 }
 
-/* ########## FADE*/
-.f-button-group__button_fade {
-
-=======
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
+.f-button-group__button_underline-sweep {
+	/*MIX UNDERLINE & SWEEP - this is where I try and fail. */
 	/*From Karl's CSS*/
 	margin-bottom: 3.0rem;
 	border: 2px solid var(--color-black);
@@ -303,121 +170,33 @@ I think it would look awesome!
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
+	position: relative;
 	overflow: hidden;
-	transition-duration: 0.3s;
-
-	transition-property: color, background-color;
-
-	/*From Karl's CSS*/
-	cursor: pointer;
-	outline: none;
-}
-
-/*From Hover.css*/
-.f-button-group__button_fade:hover, .f-button-group__button_fade:focus, .f-button-group__button_fade:active {
-	background-color: var(--color-black);
-	color: white;
-}
-
-
-/* ######### Underline Reveal */
-.f-button-group__button_underline {
-
-	/*Karl's CSS*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-	
-	font-size: 3rem;
-	font-weight: bold;
-	
-	background-color: var(--color-white);
-
-  /*From Hover.css*/
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-
-  	/*Karl's CSS: Should be on no matter what:*/
-	cursor: pointer;
-	outline: none;
-}
-
-/*From Hover.css:*/
-.f-button-group__button_underline:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-black);
-  height: 4px;
-  transform: translateY(4px);
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
-  transform: translateY(0);
-}
-
-
-/*MIX UNDERLINE & SWEEP*/
-
-.f-button-group__button_underline-sweep {
-	/*From Karl's CSS*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-	
-	font-size: 3rem;
-	font-weight: bold;
-	
-	background-color: var(--color-white);
-
-  /*From Hover.css*/
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
 
 }
+
 .f-button-group__button_underline-sweep:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-black);
-  height: 4px;
-  transform: translateY(4px);
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+	/*From Hover.css*/
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--color-black);
+	height: 4px;
+	transform: translateY(4px);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
 
 .f-button-group__button_underline-sweep:hover:before, .f-button-group__button_underline-sweep:focus:before, .f-button-group__button_underline-sweep:active:before {
-  transform: translateY(0);
+	transform: translateY(0);
 }
 
-
-
-
-/*---------*/
-
-/*From Jon's CSS - something with the .js*/
 .f-button-group__button_stopselected {
+	/*From Jon's CSS - something with the .js*/
 	color: var(--color-white)!important;
 	background-color: var(--color-black);
 }
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> da37248ed5179a612c0da6bf3ae54334dfed4edd
