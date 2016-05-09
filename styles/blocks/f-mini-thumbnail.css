@@ -2,16 +2,18 @@
 
 Mini thumbnails! 
 
+<pre>
 TO DO's: 
 - Browser checkup for grayscale - Chrome, Safari and Firefox 👏 👍 🤘 
-- f-mini-project-thumbnail__image-text 
-- Scrollme for mobile 
-- Clean up HTML 
-- Clean up CSS and re-read (+comments)
+- f-mini-project-thumbnail__image-text - 👎 CAN'T DO IT 😿🔫
+- Scrollme for mobile - Waiting for webcomponents! 
+- Clean up HTML - Done. 
+- Clean up CSS and re-read (+comments) - Doin' it when I've solved my last hurdle, I guess. 
 - Test optimal pre-cropping of images
 - Write down optimal count for text-bits
 - Clean the imported progress-BEM (maybe? New names?)
 - For Jon: Test how easy it is to use the f-progress, instead of my copied code here
+</pre>
 
 <pre>
 BLOCK f-miniproject-thumbnail
@@ -30,17 +32,16 @@ BLOCK f-miniproject-thumbnail
 ```
 <section ="f-content">
 	<section class="f-column f-column_3 f-column_mobile_1">
-
 		<div class="f-miniproject-thumbnail">
 			<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
-						They keep changing things! 
+					They keep changing things!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
 					<p class="f-miniproject-thumbnail__text">
-					And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1! And there's much more! Much more actually! So much more, that we don't really have room for it here. 
+						And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1! And there's much more! Much more actually! So much more, that we don't really have room for it here.
 					</p>
 				</div>
 				<section class="f-miniproject-thumbnail__progress" data-value="38">
@@ -61,17 +62,16 @@ BLOCK f-miniproject-thumbnail
 				</section>
 			</div>
 		</div>
-
 		<div class="f-miniproject-thumbnail">
 			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
-						This one is just outta' control!
+					This one is just outta' control!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
 					<p class="f-miniproject-thumbnail__text">
-					We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+						We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 					</p>
 				</div>
 				<section class="f-miniproject-thumbnail__progress" data-value="38">
@@ -92,18 +92,16 @@ BLOCK f-miniproject-thumbnail
 				</section>
 			</div>
 		</div>
-
 		<div class="f-miniproject-thumbnail">
-
 			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
-						Kobane is rebuilding!
+					Kobane is rebuilding!
 					</h2>
 					<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
 					<p class="f-miniproject-thumbnail__text">
-					After our first successful Kickstarter for Speculative Relationships: Volume 1!
+						After our first successful Kickstarter for Speculative Relationships: Volume 1!
 					</p>
 				</div>
 				<section class="f-miniproject-thumbnail__progress" data-value="38">
@@ -124,18 +122,16 @@ BLOCK f-miniproject-thumbnail
 				</section>
 			</div>
 		</div>
-
-
 		<div class="f-miniproject-thumbnail">
 			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
-						This one is just outta' control!
+					This one is just outta' control!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
 					<p class="f-miniproject-thumbnail__text">
-					We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
+						We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
 					</p>
 				</div>
 				<section class="f-miniproject-thumbnail__progress" data-value="38">
@@ -156,52 +152,38 @@ BLOCK f-miniproject-thumbnail
 				</section>
 			</div>
 		</div>
-
-
 	</section>
 </section>
 ```
 
 
-#Working on images
-```
+# Broken code. Tryin' to put the image-text on top of the image, but ... Can't. Also fucking up BEM, so I'll just stop it already.
+```<!-- 
 <section ="f-content">
 	<section class="f-column f-column_3">
-
 		<div class="f-miniproject-thumbnail">
-
 			<figure class="f-miniproject-thumbnail__image">
 				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+				<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
 			</figure>
-
+		</div>
+		<div class="f-miniproject-thumbnail">
+			<figure class="f-miniproject-thumbnail__image">
+				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+				<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
+			</figure>
+		</div>
+		<div class="f-miniproject-thumbnail">
+			<figure class="f-miniproject-thumbnail__image">
+				<img class="f-miniproject-thumbnail__image f-miniproject-thumbnail__image-filter" src="image/12t.jpg">
 				<div>
 					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
 				</div>
-		</div>
-
-		<div class="f-miniproject-thumbnail">
-
-			<figure class="f-miniproject-thumbnail__image">
-				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
 			</figure>
-				<div>
-					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
-				</div>
 		</div>
-
-		<div class="f-miniproject-thumbnail">
-
-			<figure class="f-miniproject-thumbnail__image">
-				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
-			</figure>
-				<div>
-					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
-				</div>
-		</div>
-
 	</section>
 </section>
-```
+ -->```
 */
 
 
@@ -276,17 +258,12 @@ BLOCK f-miniproject-thumbnail
 .f-miniproject-thumbnail__image-text {
 
 /*	display: block;*/
-
-	top: 3rem;
-	left: 7rem;
-
-    margin: 6rem 2rem 1rem 2rem;
-/*    color: var(--color-white);*/
+    margin: 0 0 0 0;
 	color: cyan;
 
 	font-size: 3.0rem;
 
-    position: relative;
+    position: absolute;
     
     
 /*    var(--color-white-transparent, hsla(0, 0%, 100%, 0.8));*/
