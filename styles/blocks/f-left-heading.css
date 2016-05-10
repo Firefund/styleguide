@@ -1,9 +1,8 @@
 /*
 
 A heading with the background reaching the left side of its container,
-if the container has a `--gutter-width` padding.
-If the container doesn't have a `--gutter-width` padding, then the heading
-will *leak* out.
+
+If the container isn't `f-content`', then the heading will *leak* out.
 
 <pre>
 BLOCK f-left-heading
@@ -25,6 +24,9 @@ BLOCK f-left-heading
 
 
 ## f-left-heading - leaking out of container
+
+If the container isn't `f-content`', then the heading will *leak* out.
+
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
