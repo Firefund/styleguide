@@ -94,7 +94,7 @@ standard heading and text for bigger text blogs.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
             necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
-            autem doloremque <a href="">voluptate fugiat.</a>
+            autem doloremque <a href="#">voluptate fugiat.</a>
         </p>
     </section>
 
@@ -103,7 +103,6 @@ standard heading and text for bigger text blogs.
 */
 
 @import "../variables";
-/*  the BEM block class is missing -> .f-text {} */
 
 .f-text {}
 
@@ -113,7 +112,6 @@ standard heading and text for bigger text blogs.
 
     color: var(--color-grey-dark);
     font-weight: normal;
-    font-size: 2rem;
     font-size: 2rem;   
 }
 
@@ -124,8 +122,10 @@ standard heading and text for bigger text blogs.
     color: var(--color-grey-dark);
     font-weight: lighter;
     font-size: 1.4rem;
-    text-rendering: optimizeLegibility;
-    line-height: 2.4rem;
-    /*text-rendering: optimizeLegibility;*/
     line-height: 1.82rem;  
+    text-rendering: optimizeLegibility;
+}
+
+.f-text__text a:hover {
+  text-decoration: underline;
 }
