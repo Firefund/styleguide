@@ -2,12 +2,14 @@
 
 From the footer. 
 
-`BLOCK f-signup`
-`    MODIFIER f-signup_error`
-`    ELEMENT f-signup__label`
-`    ELEMENT f-signup__feedback-text`
-`    ELEMENT f-signup__input`
-`    ELEMENT f-signup__button`
+<pre>
+BLOCK f-signup
+    MODIFIER f-signup_error
+    ELEMENT f-signup__label
+    ELEMENT f-signup__feedback-text
+    ELEMENT f-signup__input
+    ELEMENT f-signup__button
+</pre>
 
 ## Default:
 ```

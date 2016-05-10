@@ -118,10 +118,10 @@ MODIFIER f-progress_vertical
 	-webkit-flex-direction: row;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
-  	-webkit-box-pack: justify;
-  	-webkit-justify-content: space-between;
-  	    -ms-flex-pack: justify;
-  	        justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	
 	font-size: 25.6px;
 	

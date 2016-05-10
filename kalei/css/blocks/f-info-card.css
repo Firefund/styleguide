@@ -72,15 +72,11 @@ As seen on "How does it work".
 
 */
 
-:root {/*--color-white-transparent: hsla(0, 0%, 100%, 5);*/
-}
-
-.f-info-card {
-	border-bottom: 20px;
-}
+.f-info-card {}
 
 .f-info-card_number {
 	display: inline;
+
 	color: hsla(1, 73.7%, 38.8%, 1);
 	font-weight: bold;
 	font-size: 126.4px;
@@ -93,6 +89,7 @@ As seen on "How does it work".
 	display: inline;
 	margin-left: 38.4px;
 	margin-left: 2.4rem;
+
 	color: hsla(0, 0%, 0%, 1);
 	font-size: 48px;
 	font-size: 3rem;
@@ -100,9 +97,10 @@ As seen on "How does it work".
 }
 
 .f-info-card_line {
+	margin-top: 7px;
+
 	border-top-color: hsla(0, 0%, 84.7%, 1);
 	border-width: 2px 0 0;
-	margin-top: 7px;
 }
 
 .f-info-card_text {
@@ -111,15 +109,15 @@ As seen on "How does it work".
 	top: -1.6rem;
 	margin-bottom: 43.2px;
 	margin-bottom: 2.7rem;
+
 	color: hsla(0, 0%, 20%, 1);
-	line-height: 38.4px;
-	line-height: 2.4rem;
-	font-weight: lighter;
 	font-size: 32px;
 	font-size: 2.0rem;
+	font-weight: lighter;
+	line-height: 38.4px;
+	line-height: 2.4rem;
 }
 
 .f-info-card_image {
 	/*TODO f-info-card_image */
 }
-

@@ -48,14 +48,12 @@
  ```
  */
 
- :root { /*--color-white-transparent: hsla(0, 0%, 100%, 5);*/
-}
-
  .f-postpay-info {
     margin-top: 0px;
     margin-top: 0rem;
     margin-bottom: 128px;
     margin-bottom: 8rem;
+
     color: hsla(0, 0%, 100%, 1);
     font-size: 41.6px;
     font-size: 2.6rem;
@@ -67,6 +65,7 @@
     margin-bottom: 48px;
     margin-bottom: 3rem;
     padding: 0;
+
     line-height: 48px;
     line-height: 3rem;
     list-style: none;

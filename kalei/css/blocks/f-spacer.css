@@ -24,6 +24,7 @@ So you can't see it without something on each side.
 */
 
 .f-spacer {
+		display: block;
     height: 96px;
     height: 6rem;
 }

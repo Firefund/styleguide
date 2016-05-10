@@ -3,9 +3,11 @@
 A container that put 3 buttons per row with equal space between them, where the first and last button are justified to the edge.
 Goes into two columns on mobile. 
 
-`BLOCK f-button-group`
-    `ELEMENT f-button-group__button`
-    `MODIFIER f-button-group__button_selected`
+<pre>
+BLOCK f-button-group
+    ELEMENT f-button-group__button
+    MODIFIER f-button-group__button_selected
+</pre>
 
 ## Button effects
 

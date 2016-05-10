@@ -3,7 +3,7 @@
 ## f-one-liner
 
 One line of text. Can contain link(s). If you want you can (ab)use this block as a multiple line text. 
-Just wrap it in a small grid column. Top and bottom margin can be achieved by inserting  elements.
+Just wrap it in a small grid column. `Top` and bottom margin can be achieved by inserting  elements.
 
 <pre>
 BLOCK f-one-liner
@@ -11,7 +11,7 @@ BLOCK f-one-liner
     MODIFIER f-one-liner_right
     MODIFIER f-one-liner_size_medium
     MODIFIER f-one-liner_size_big
-<pre>
+</pre>
 
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -30,8 +30,8 @@ BLOCK f-one-liner
 
 ```
 
-## f-one-liner_center
 
+## f-one-liner_center
 
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -47,12 +47,10 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 </div>
-
 ```
 
+
 ## f-one-liner_right
-
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
@@ -67,12 +65,10 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 </div>
-
 ```
 
+
 ## f-one-liner_size_medium
-
-
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
@@ -87,11 +83,9 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 </div>
-
 ```
 
 ## f-one-liner_size_big
-
 
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
@@ -107,7 +101,6 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 </div>
-
 ```
 
 */
@@ -115,6 +108,8 @@ BLOCK f-one-liner
 .f-one-liner {
 	margin: 0 0px 22.4px 0px;
 	margin: 0 0rem 1.4rem 0rem;
+	
+	color: hsla(0, 0%, 20%, 1);
 	font-size: 28.8px;
 	font-size: 1.8rem;
 	font-weight: normal;
