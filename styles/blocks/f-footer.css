@@ -42,15 +42,17 @@
                 </section> 
             </div>
                 <div class="f-row__cell-1 f-row__cell_push_2 f-row_not-desktop">
-                    <div class="f-footer-icons">
-                    <p>X X </P>
-                    </div>
+                   <ul class="f-icons f-icons_horizontal">
+                    <li class="f-icons__icon f-icon-reddit"></li>
+                    <li class="f-icons__icon f-icon-twitter"></li>
+                    </ul> 
                 </div>      
         </div>
         <div class="f-row__cell-1 f-row__cell_push_2 f-row_not-mobile">
-            <div class="f-footer-icons">
-            <p>X X </P>
-            </div>
+            <ul class="f-icons f-icons_horizontal">
+            <li class="f-icons__icon f-icon-reddit"></li>
+            <li class="f-icons__icon f-icon-twitter"></li>
+            </ul> 
         </div>          
     </section>
 </div>
