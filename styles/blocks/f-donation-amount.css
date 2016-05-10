@@ -1,7 +1,7 @@
 /*
 <pre>
 Block f-donation-amount
-        Element f-donation-amount__data
+	Element f-donation-amount__data
 </pre>
 
 ## Direct donation amount.
@@ -18,15 +18,15 @@ Block f-donation-amount
  @import "../variables";
 
  .f-donation-amount {
-  margin-top: 0;
-  margin-bottom: 3rem;
+	margin-top: 0;
+	margin-bottom: 3rem;
 
-  color: var(--color-grey);
-  font-size: 1.6rem;
-  font-weight: normal;
+	color: var(--color-grey);
+	font-size: 1.6rem;
+	font-weight: normal;
  }
 
  .f-donation-amount__data {
-   color: var(--color-grey-dark);
-   font-weight: bold;
+	 color: var(--color-grey-dark);
+	 font-weight: bold;
  }
