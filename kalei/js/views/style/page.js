@@ -258,21 +258,22 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
 				heading: "",
 			};
 			var block = _.clone(block_def);
+			var scripts = [];
 
 			_.each(lexedCommentblock, function (comment) {
 				switch (comment.type) {
-					case "code":
+					case 'code':
 						//Push the code for an example
 						block.content.push({
-						  type: 'html',
+						  type: comment.lang || 'html',
 						  text: '<div class="codedemo"><div class="codedemo-margin">' + comment.text + '</div><div style="clear: both;"></div></div>'
 						});
 						//Push the code section so marked can parse it as a <pre><code> block
 						comment.text = comment.text.replace(/class=([""'])fixie\1|(?![""' ])fixie(?=[""' ])/g, "")
 						block.content.push(comment);
 						break;
-					case "heading":
-						if (block.heading != "") {  //Multiple headings in one comment block
+					case 'heading':
+						if (block.heading != '') {  //Multiple headings in one comment block
 													//We want to break them up
 							//Parse the content blocks and return the HTML to display
 							block.content.links = lexerLinks
@@ -291,6 +292,11 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
 							//console.log("else", comment)
 						}
 						break;
+					case 'html': // this is probably <script>
+						// do not parse this as markdown later
+						scripts.push(comment)
+						console.log('page.js::parse_commentblock Injecting script from comment into this page');
+						break;
 					default:
 						//Push everything else
 						block.content.push(comment);
@@ -301,6 +307,9 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
 			//Parse the content blocks and return the HTML to display
 			block.content.links = lexerLinks
 			block.content = marked.parser(block.content)
+			block.content += scripts.reduce(function(s1, s2) {
+				return s1.text + '\n' + s2.text;
+			}, { text: '' });
 
 			return_val.push(block);
 			return return_val;
