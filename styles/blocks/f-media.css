@@ -61,7 +61,6 @@ BLOCK f-media
 			<!-- this should be used on the website -->
 			<figure class="f-media">
 				<img class="f-media__media" src="image/10.jpg">
-				<figcaption class="f-media__caption">Run! Run! Run! Run! Run! Run! Run! Run! Run!</figcaption>
 			</figure>
 			<!-- this should be used on the website -->
 
@@ -159,7 +158,6 @@ BLOCK f-media
 		<!-- this should be used on the website -->
 		<figure class="f-media">
 			<iframe class="f-media__media" height="450" src="http://www.youtube.com/embed/vaf13ZhmFb8?rel=0" allowfullscreen="" frameborder="0"></iframe>
-			<figcaption class="f-media__caption">Caption text for da media</figcaption>
 		</figure>
 		<!-- this should be used on the website -->
 
