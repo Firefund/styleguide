@@ -19,7 +19,7 @@ make -v
 2. Install [git lfs](https://git-lfs.github.com/) our version control for large files like pictures and illustrator documents
 3. Install [nodejs](https://nodejs.org/en/) our server platform and platform for various helper tools
 4. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac.
-Probably also with your linux distro. Make is a task runner designed for compiling files. 
+Probably also with your linux distro. Make is a task runner designed for compiling files.
 
 
 ## Getting started
@@ -82,7 +82,7 @@ SIXTH: weird stuff
 @import url("blocks/f-button.css");
 @import url("blocks/f-content.css");
 @import url("blocks/f-cuff-text.css");
-@import url("blocks/f-donation-amount.css"); 
+@import url("blocks/f-donation-amount.css");
 @import url("blocks/f-footer-text.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
@@ -102,7 +102,7 @@ SIXTH: weird stuff
 @import url("blocks/f-spacer.css");
 @import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
-@import url("blocks/f-text.css"); 
+@import url("blocks/f-text.css");
 @import url("blocks/f-white-card.css");
 
 /*
