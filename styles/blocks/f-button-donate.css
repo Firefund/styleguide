@@ -4,6 +4,8 @@
 The donate button, for all campaigns, that takes you to the payment module in a modal window. 
 Is currently placed in top-right, and bottom of each project page.
 
+TO DO:
+
 - Create examples on different placing
 - Make sure examples have spacing and are easy to evaluate
 
@@ -16,11 +18,17 @@ Is currently placed in top-right, and bottom of each project page.
 ## Variations 
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
+<br> <br>
 	<button class="f-button-donate">SUPPORT</button>
+<br> <br>	
 	<button class="f-button-donate">DONATE</button>
+<br> <br>	
 	<button class="f-button-donate">SUPPORT NOW</button>
+<br> <br>	
 	<button class="f-button-donate">Support Now</button>
+<br> <br>	
 	<button class="f-button-donate">Support now</button>
+<br> <br>
 <!-- this should be used on the website -->
 </div>
 ```
@@ -30,10 +38,15 @@ Is currently placed in top-right, and bottom of each project page.
 ## Transformations 
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
+<br> <br>
 	<button class="f-button-donate">SUPPORT</button>
+<br> <br>	
 	<button class="f-button-donate_kush">SUPPORT</button>
+<br> <br>	
 	<button class="f-button-donate_shrink">SUPPORT</button>
+<br> <br>	
 	<button class="f-button-donate_grow">SUPPORT</button>
+<br> <br>
 <!-- this should be used on the website -->
 </div>
 ```
@@ -67,7 +80,6 @@ Is currently placed in top-right, and bottom of each project page.
 }
 
 .f-button-donate_kush {
-/* DONATE BUBBLE KUSH*/
 	padding: 2.2rem 0 2.3rem 0;
 	border: 2px solid var(--color-red);
 	width: inherit;
