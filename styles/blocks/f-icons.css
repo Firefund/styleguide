@@ -1,0 +1,32 @@
+/*## Example 1 
+```
+<div class="f-icons">
+    <ul class"f-icons__icon f-icons__horizontal">
+        <li class="f-icons__icon f-icon-reddit"><a href=""></a></li>
+        <li class="f-icons__icon f-icon-twitter"><a href=""></a></li>
+    </ul>    
+</div>
+
+
+
+```
+*/
+@import "../variables"; 
+
+.f-icons {
+    
+}
+
+.f-icons__icon {
+   display: inline;
+   font-size: 4rem; 
+   color: var(--color-white); 
+   
+   list-style: none; 
+    
+}
+
+.f-icons__horizontal {
+ 
+}
+
