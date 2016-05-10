@@ -51,9 +51,8 @@ I think it would look awesome!
 .f-button-group__button_underline {
 /* ######### Underline Reveal */
 
-	/*Karl's CSS*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
+	margin-bottom: 3.2rem;
+	border: 3px solid var(--color-black);
 	border-radius: 0.5rem;
 	
 	font-size: 3rem;
