@@ -6,8 +6,8 @@ Designed for index, for the ORGANIZE section under thumbnails.
 <pre>
 BLOCK f-white-card
 	ELEMENT f-white-card__text (or f-one-liner)
-
 </pre>
+
 ```
 <section class="f-white-card">
 	<div class="f-row f-row_12">
@@ -19,11 +19,6 @@ BLOCK f-white-card
 		</div>
 	</div>
 </section>
-
-
-
-
-
 ```
 */
 
@@ -32,9 +27,12 @@ BLOCK f-white-card
 .f-white-card {
 	display: block;
 	width: 100%;
-	background: var(--color-white);
 	height: 28rem;
-	padding: 6.5rem 0 6.5rem 0;
 	margin-bottom: 3rem;
+	padding: 6.5rem 0 6.5rem 0;
+	
+	text-align: center;
+	
+	background: var(--color-white);
 }
 
