@@ -25,13 +25,13 @@ $(COMPILED_DIR)/%.css: styles/blocks/%.css
 $(COMPILED_CSS): | $(COMPILED_DIR)
 
 $(COMPILED_DIR):
-	npm run mkdir -- -p $(COMPILED_DIR)
+	npm run mkdir -- $(COMPILED_DIR)
 
 
 $(DEST_FONTS): | $(DEST_FONTS_DIR)
 
 $(DEST_FONTS_DIR):
-	npm run mkdir -- -p $(DEST_FONTS_DIR)
+	npm run mkdir -- $(DEST_FONTS_DIR)
 
 $(DEST_FONTS_DIR)/%: assets/fonts/%
 	npm run cp -- $< $@
