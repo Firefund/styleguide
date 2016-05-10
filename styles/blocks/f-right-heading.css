@@ -1,10 +1,10 @@
 /*
 
 A heading with the background reaching the right side of its container,
-If the container isn't `f-content`', then the heading will *leak* out.
+If the container isn't `f-content`, then the heading will *leak* out.
 <pre>
-`BLOCK f-right-heading`
-<pre>
+BLOCK f-right-heading
+</pre>
 
 ## Container with padding
 ```
