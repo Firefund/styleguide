@@ -6,14 +6,14 @@ If the container doesn't have a `--gutter-width` padding, then the heading
 will *leak* out.
 
 <pre>
-BLOCK f-left-heading`
+BLOCK f-left-heading
 </pre>
 
 
 ## f-left-heading - container with padding
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
-	<div style="padding:3.4rem;">
+	<div class="f-content">
 
 <!-- this should be used on the website -->
 	<h1 class="f-left-heading">Rebuild Kobanê</h1>
@@ -39,7 +39,7 @@ BLOCK f-left-heading`
 ```
 <div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
-	<div style="padding:3.4rem;">
+	<div class="f-content">
 <!-- this should be used on the website -->
 	<h1 class="f-left-heading f-left-heading_big">About us</h1>
 <!-- this should be used on the website -->

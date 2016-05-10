@@ -1,6 +1,6 @@
 /*
 <pre>
-BLOCK f-content 
+BLOCK f-content
 </pre>
 
 ## 1 SMALL
@@ -25,9 +25,9 @@ BLOCK f-content
 <div class="f-content">
 <h1 class="f-left-heading">Rebuild Kobanê</h1>
 <p class="f-cuff-text">
-    This is a cuff text Lorem ipsum 
+    This is a cuff text Lorem ipsum
     dolor sit amet, consectetur adipisicing elit. <span>Debitis amet quia</span>
-    illo libero in totam, nihil, molestiae optio, officia dolores 
+    illo libero in totam, nihil, molestiae optio, officia dolores
     ducimus! Quam ullam labore <a href="">eum optio laudantium tempora est aspernatur</a>.
 </p>
 
@@ -50,7 +50,8 @@ BLOCK f-content
 <h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
 </div>
 ```
-## Eksample 4 
+
+## Eksample 4
 ```
 <div class="f-content">
     <ol class="f-list">
@@ -70,29 +71,29 @@ BLOCK f-content
 
         <p class="f-text__text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, tenetur <a href"">excepturi</a> et repellendus dolorem 
-            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            Nulla perspiciatis, atque id, tenetur <a href"">excepturi</a> et repellendus dolorem
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
             autem doloremque voluptate fugiat.
         </p>
 
         <p class="f-text__text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem 
-            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
             autem doloremque voluptate fugiat.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem 
-            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            Nulla perspiciatis, atque id, <a href"">tenetur excepturi</a> et repellendus dolorem
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
             autem doloremque voluptate fugiat.
             <a href="">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
-            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
             autem doloremque voluptate fugiat.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem 
-            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati 
+            Nulla perspiciatis, atque id, tenetur excepturi et repellendus dolorem
+            necessitatibus corporis fuga? Dolorem quasi earum omnis nam obcaecati
             autem doloremque <a href="">voluptate fugiat.</a>
         </p>
     </section>
@@ -102,8 +103,10 @@ BLOCK f-content
 */
 
 @import "../variables";
+
 .f-content {
     padding: 0 var(--gutter-width);
+
     background-color: var(--color-white);
     border-radius: 0.3rem;
 }
