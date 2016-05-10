@@ -6,7 +6,8 @@ So it's very much a work in proces.
 
 I now exactly what it's supposed to look like, but I can't make it work.
 
-<pre>BLOCK f-button
+<pre>
+BLOCK f-button
 		MODIFIER f-button_default
 		MODIFIER f-button_submit
 		ELEMENT f-button__donate
@@ -15,17 +16,18 @@ I now exactly what it's supposed to look like, but I can't make it work.
 		ELEMENT f-button__organize
 		~MODIFIER f-button__organize_now~
 		ELEMENT f-button__share</pre>
+</pre>
 
 ## f-button
 ```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
 	<button class="f-button">encrypt</button>
 	<button class="f-button">reset</button>
 <!-- this should be used on the website -->
 
-</div>
+</div><!-- only here for the style guide - should not be used on the website -->
 ```
 */
 
@@ -337,13 +339,13 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	box-shadow: none;
 }
 
-.f-button_organize:active {
+.f-button__organize:active {
 	border: 2px solid var(--color-red);
 	color: var(--color-white);
 	background: var(--color-red);
 }
 
-.f-button_organize::first-letter {
+.f-button__organize::first-letter {
 	text-transform: uppercase;
 }
 
