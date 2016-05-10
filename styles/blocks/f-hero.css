@@ -89,6 +89,8 @@ E.i. the image doesn't reach the top of the container and the black background i
   content: "";
 
   background-color: var(--color-black-transparent);
+	
+	pointer-events: none;
 }
 
 .f-hero__text span {
