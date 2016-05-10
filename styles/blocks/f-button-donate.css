@@ -1,0 +1,25 @@
+/*
+## Donate
+
+The donate button, for all campaigns, that takes you to the payment module in a modal window. 
+Is currently placed in top-right, and bottom of each project page.
+
+- Create examples on different placing
+- Make sure examples have spacing and are easy to evaluate
+
+<pre>BLOCK f-button-donate</pre>
+
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<!-- this should be used on the website -->
+	<button class="f-button-donate">SUPPORT</button>
+	<button class="f-button-donate">DONATE</button>
+	<button class="f-button-donate">SUPPORT NOW</button>
+	<button class="f-button-donate">Support Now</button>
+	<button class="f-button-donate">Support now</button>
+<!-- this should be used on the website -->
+</div>
+```
+*/
+
+
