@@ -22,4 +22,147 @@ Is currently placed in top-right, and bottom of each project page.
 ```
 */
 
+@import "../variables";
+
+.f-button-donate {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+	transition: opacity 0.3s ease 0s;
+
+
+@import "../variables";}
+
+.f-button-donate:hover, .f-button-donate::before {
+	box-shadow: none;
+	background: var(--color-red);
+}
+
+@import "../variables";
+
+.f-button-donate:active {
+	border: 2px solid var(--color-black);
+	color: var(--color-white);
+	background: var(--color-black);
+}
+
+/* DONATE BUBBLE KUSH*/
+
+
+@import "../variables";
+
+.f-button-donate_kush {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px var(--color-red);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+
+@import "../variables";
+
+.f-button-donate_kush::before {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	left: calc(50% - 10px);
+	bottom: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: var(--color-red) transparent transparent transparent;
+	transition-duration: 0.3s;
+	transition-property: transform;
+
+
+@import "../variables";}
+
+.f-button-donate_kush:hover, .f-button-donate_kush:focus, .f-button-donate_kush:active {
+	transform: translateY(-10px);
+
+
+@import "../variables";}
+
+.f-button-donate_kush:hover::before, .f-button-donate_kush:focus::before, .f-button-donate_kush:active::before {
+	transform: translateY(10px);
+}
+
+@import "../variables";
+
+.f-button-donate_shrink {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
+
+
+@import "../variables";}
+
+.f-button-donate_shrink:hover, .f-button-donate_shrink:focus, .f-button-donate_shrink:active {
+	transform: scale(0.9);
+}
+
+
+@import "../variables";
+
+.f-button-donate_grow {
+	padding: 2.2rem 0 2.3rem 0;
+	border: 2px solid var(--color-red);
+	width: inherit;
+
+	color: var(--color-white);
+
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	background: var(--color-red);
+
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
+
+
+@import "../variables";}
+
+.f-button-donate_grow:hover, .f-button-donate_grow:focus, .f-button-donate_grow:active {
+	transform: scale(1.1);
+}
 
