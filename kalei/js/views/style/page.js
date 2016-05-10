@@ -293,10 +293,12 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
 						}
 						break;
 					case 'html': // this is probably <script>
-						// do not parse this as markdown later
-						scripts.push(comment)
-						console.log('page.js::parse_commentblock Injecting script from comment into this page');
-						break;
+						// do not parse <script> as markdown later
+						if( /<script/.test(comment.text)) {
+							scripts.push(comment)
+							console.log('page.js::parse_commentblock Injecting script from comment into this page');
+							break;							
+						} // else fall through to default:
 					default:
 						//Push everything else
 						block.content.push(comment);
@@ -307,10 +309,11 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
 			//Parse the content blocks and return the HTML to display
 			block.content.links = lexerLinks
 			block.content = marked.parser(block.content)
-			block.content += scripts.reduce(function(s1, s2) {
-				return s1.text + '\n' + s2.text;
-			}, { text: '' });
-
+			if(scripts.length > 0) {
+				block.content += scripts.reduce(function(s1, s2) {
+					return s1.text + '\n' + s2.text;
+				}, { text: '' });
+			}
 			return_val.push(block);
 			return return_val;
 		},
