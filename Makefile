@@ -34,7 +34,7 @@ $(DEST_FONTS_DIR):
 	npm run mkdir -- -p $(DEST_FONTS_DIR)
 
 $(DEST_FONTS_DIR)/%: assets/fonts/%
-	npm run cp -- -f $< $@
+	npm run cp -- $< $@
 
 kalei/css/master.css: styles/master.css
 	npm run postcss:no-import -- --output $@ $<
@@ -48,4 +48,4 @@ kalei/css/grid.css: styles/grid.css
 # do not use postcss because we lose font-feature-settings
 # TODO: create an issue in the correct repo for loosing font-feature-settings
 kalei/css/icons.css: styles/icons.css
-	npm run cp -- -f $< $@
+	npm run cp -- $< $@
