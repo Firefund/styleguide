@@ -29,6 +29,7 @@
   "dependencies": {
     "@dotnetcarpenter/firefund-cli": "^0.5.8",
     "cp-cli": "^1.0.2",
+    "gzipme": "0.0.9",
     "mkdirp": "^0.5.1",
     "nodemon": "^1.9.1",
     "npm-run-all": "^1.8.0",
