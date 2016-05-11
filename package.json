@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Firefund/styleguide#readme",
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "^0.5.5",
+    "@dotnetcarpenter/firefund-cli": "^0.5.8",
     "cp-cli": "^1.0.2",
     "mkdirp": "^0.5.1",
     "nodemon": "^1.9.1",
