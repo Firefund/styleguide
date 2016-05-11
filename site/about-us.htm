@@ -6,20 +6,18 @@
 		<title>FIREFUND</title>
 		<style>
     /* Style splash screen here	*/
-			@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+			@import url(//fonts.googleapis.com/css?family=Roboto:700);
 			* { font-family: "Roboto"; }
 			body {
 				background-color: black;
 			}
 			@keyframes light-white {
-				from { color: hsla(0, 0%, 100%, 1); }
 				to { color: hsla(0, 0%, 85%, 1); }
 			}
 			@keyframes light-red {
-				from { color: hsla(1, 73.7%, 38.8%, 1); }
 				to { color: hsla(1, 73.7%, 31%, 1); }
 			}
-			
+
 			.f-modal {
 				position: fixed;
 				z-index: 100;
@@ -51,18 +49,16 @@
 				margin: 0;
 
 				color: hsla(0, 0%, 100%, 1);
-				font-size: 65.6px;
 				font-size: 4.1rem;
-				line-height: 65.6px;
 				line-height: 4.1rem;
 				font-weight: 700;
 				text-transform: uppercase;
-				
+
 				animation: light-white 1s ease-in-out alternate infinite;
 			}
 			.f-branding span {
 				color: hsla(1, 73.7%, 38.8%, 1);
-				
+
 				animation: light-red 1s ease-in-out alternate infinite 250ms;
 			}
 			#splash {
@@ -76,5 +72,12 @@
 				<h2 class="f-branding">Fire<span>fund</span></h2>
 			</div>
 		</div>
+
+		<f-header></f-header>
+
+		<script src="js/loader.js" charset="utf8" async>
+		<script>// TODO: Why is this needed?!?
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
 	</body>
 </html>
