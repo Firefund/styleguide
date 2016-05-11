@@ -58,11 +58,11 @@ A number list. (About Who-01, Project-01)
 .f-list li::before {
 	display: table-cell;
 	position: relative;
-	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
 	top: 0.9rem; /* set the vertical position of the bullet if necessary. Make sure to use rem or % */
 
 	padding-right: 1.25rem; /* give the bullet some padding from the text Make sure to use rem*/
-	padding-left: 1.3rem;
+	padding-left: 0;
+	content: "\2022"; /* /2022 is the numerical unicode for &bull; */
 
 	color: var(--color-red);
 	font-size: 3.8rem; /* set the font-size of the bullet if necessary. Make sure to use rem or %*/
