@@ -1,5 +1,4 @@
 /*
-
 With a smaller font text under.
 
 
@@ -12,7 +11,6 @@ BLOCK f-postpay-heading
 ```
 <h2 class="f-postpay-heading">thank you</h2>
 <h3 class="f-postpay-heading f-postpay-heading__sub">We have raised <span>$50022</span> so far!</h3>
-
 ```
 */
 
@@ -23,15 +21,14 @@ BLOCK f-postpay-heading
 
 	font-size: 10.2rem;
 	color: var(--color-white);
-	
+
 	text-transform: uppercase;
 }
 
 .f-postpay-heading__sub {
 	margin: 0 0 6.6rem 0;
-	
+
 	font-size: 5.6rem;
-	
+
 	text-transform: none;
 }
-

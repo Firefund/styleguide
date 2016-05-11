@@ -46,10 +46,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 span {
   color: var(--color-red);
 }

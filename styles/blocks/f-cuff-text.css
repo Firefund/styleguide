@@ -7,9 +7,10 @@ Bold text with big line-height
 
 	<!-- this should be used on the website -->
     <p class="f-cuff-text">This is a cuff text Lorem ipsum 
-    dolor sit amet, consectetur adipisicing elit. Debitis amet quia
-     illo libero in totam, nihil, molestiae optio, officia dolores 
-     ducimus! Quam ullam labore eum optio laudantium tempora est aspernatur.</p>
+        dolor sit amet, consectetur adipisicing elit. Debitis amet quia
+        illo libero in totam, nihil, molestiae optio, officia dolores 
+        ducimus! Quam ullam labore eum optio laudantium tempora est aspernatur.
+     </p>
 	<!-- this should be used on the website -->
 
 </div>
@@ -55,12 +56,15 @@ Bold text with big line-height
 
 </div>
 ```
-
-
-
 */
+
+@import "../variables";
+
 .f-cuff-text {
-    margin-top: 0; 
+    margin-top: 0;
+    margin-bottom: var(--margin-text);
+
+    color: var(--color-grey-dark);
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 2.4rem;
