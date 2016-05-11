@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "#preguide": "cp --update --recursive styles/* kalei/css/",
-    "##preguide": "css --dir kalei/css styles/base.css",
+    "prepoly": "assets site/lib",
+    "poly": "server site site/**/*",
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",
     "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
