@@ -1,28 +1,21 @@
 /*
-## Buttons!
+Basic button.
 
-Right now we're exploring different options.
-So it's very much a work in proces.
+This is pr. 2.0 only used as 'Encrypt' and 'Reset' on contact-pages, but more is to come. 
+Remember the BEM-structure: All buttons are it's own block. This is not a block, where the other buttons are it's elements. 
+This is stand-alone. 
 
-I now exactly what it's supposed to look like, but I can't make it work.
+<pre>
+BLOCK f-button-basic
+</pre>
 
-<pre>BLOCK f-button
-		MODIFIER f-button_default
-		MODIFIER f-button_submit
-		ELEMENT f-button__donate
-		MODIFIER f-button__donate_A
-		MODIFIER f-button__donate_B
-		ELEMENT f-button__organize
-		~MODIFIER f-button__organize_now~
-		ELEMENT f-button__share</pre>
-
-## f-button
+## f-button-basic
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
-	<button class="f-button">encrypt</button>
-	<button class="f-button">reset</button>
+	<button class="f-button-basic">encrypt</button>
+	<button class="f-button-basic">reset</button>
 <!-- this should be used on the website -->
 
 </div>
@@ -31,7 +24,7 @@ I now exactly what it's supposed to look like, but I can't make it work.
 
 @import "../variables";
 
-.f-button {
+.f-button-basic {
 	position: relative;
 	top: 0;
 	min-width: 16.4rem;
@@ -56,61 +49,16 @@ I now exactly what it's supposed to look like, but I can't make it work.
 	cursor: pointer;
 	outline: 0 none;
 }
-.f-button::-moz-focus-inner {
+.f-button-basic::-moz-focus-inner {
 	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
-.f-button:hover {
+.f-button-basic:hover {
 	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
-.f-button:active {
+.f-button-basic:active {
 	top: .3rem;
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
-}
-
-/*
-## Button with icon
-```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-
-<!-- this should be used on the website -->
-<button class="f-button f-button_icon f-icon-twitter">twitter</button>
-<button class="f-button f-button_icon f-icon-facebook">facebook</button>
-<button class="f-button f-button_icon f-icon-youtube">youtube</button>
-<button class="f-button f-button_icon f-icon-reddit">reddit</button>
-<button class="f-button f-button_icon f-icon-home">home</button>
-<button class="f-button f-button_icon f-icon-twitter">twitter</button>
-<button class="f-button f-button_icon f-icon-facebook">facebook</button>
-<button class="f-button f-button_icon f-icon-youtube">youtube</button>
-<button class="f-button f-button_icon f-icon-reddit">reddit</button>
-<button class="f-button f-button_icon f-icon-home">home</button>
-<button class="f-button">No icon</button>
-<!-- this should be used on the website -->
-
-</div>
-```
-*/
-.f-button_icon {
-	padding: 0 2.4rem 0 4rem;
-}
-.f-button_icon::before {
-	position: absolute;
-
-	transform: translateX(-3.1rem);
-}
-.f-button_icon.f-icon-youtube::before {
-	transform: translate(-3.1rem, 0.3rem);
-}
-.f-button_icon.f-icon-facebook::before {
-	font-size: 2rem;
-
-	transform: translate(-2.6rem, 0.4rem);
-}
-.f-button_icon.f-icon-reddit::before {
-	transform: translate(-3.6rem, 0.1rem);
-}
-.f-button_icon.f-icon-home::before {
-	transform: translate(-3.7rem, 0.2rem);
 }
 
 /*
