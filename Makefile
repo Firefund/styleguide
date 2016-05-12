@@ -22,7 +22,7 @@ prod: site/css/bundle.css $(PROD_CSS_BLOCKS)
 	@echo "Finish building our production CSS"
 
 # compile first bundle
-site/css/bundle.css: styles/bundle.css
+site/css/bundle.css: styles/bundle.css styles/base.css styles/grid.css
 	@npm run postcss:prod -- --output $@ $<
 
 # compile blocks
