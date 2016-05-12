@@ -3,11 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="j.gz">
 		<title>FIREFUND</title>
 		<style>
     /* Style splash screen here	*/
-			@import url(//fonts.googleapis.com/css?family=Roboto:700);
 			* { font-family: "Roboto"; }
 			body {
 				background-color: black;
@@ -19,7 +17,7 @@
 				to { color: hsla(1, 73.7%, 31%, 1); }
 			}
 
-			.f-modal {
+			.f-splash {
 				position: fixed;
 				z-index: 100;
 				top:0;
@@ -29,16 +27,15 @@
 
 				background-color: hsla(0, 0%, 0%, 0.6);
 
-				-webkit-transition: opacity .3s ease;
-				transition: opacity .3s ease;
+				-webkit-transition: opacity 300ms ease 1s;
+				transition: opacity 300ms ease 1s;
 
 				opacity: 0;
-				pointer-events: none;
 			}
-			.f-modal_visible {
+			.f-splash_loading {
 				opacity: 1;
 			}
-			.f-modal__content {
+			.f-splash__content {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -63,13 +60,18 @@
 				animation: light-red 1s ease-in-out alternate infinite 250ms;
 			}
 			#splash {
-				transform: scale(2);
+				transform: scale(3);
 			}
     </style>
+		<link rel="stylesheet" href="css/bundle.css">
+		<!-- 1. Async HTML Imports do not block rending. Benefit of keeping it declarative
+       (instead of dynamically loading it later in JS) is that the parser can go
+       to town pre-fetching resources, etc. -->
+  	<link rel="import" class="f-import" href="wc/header.htm" async>
 	</head>
 	<body>
-		<div id="splash" class="f-modal f-modal_visible">
-			<div class="f-modal__content">
+		<div id="splash" class="f-splash f-splash_loading">
+			<div class="f-splash__content">
 				<h2 class="f-branding">Fire<span>fund</span></h2>
 			</div>
 		</div>
