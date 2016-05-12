@@ -23,11 +23,11 @@ prod: site/css/bundle.css $(PROD_CSS_BLOCKS)
 
 # compile first bundle
 site/css/bundle.css: styles/bundle.css
-	npm run postcss:prod -- --output $@ $<
+	@npm run postcss:prod -- --output $@ $<
 
 # compile blocks
 site/css/blocks/%.css: styles/blocks/%.css
-	npm run postcss -- --output $@ $< 
+	@npm run postcss:prod -- --output $@ $< 
 
 
 
