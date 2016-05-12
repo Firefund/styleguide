@@ -11,7 +11,8 @@
     "guide": "server kalei/ kalei/css/**/*.css",
     "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
     "postcss:no-import": "postcss --use postcss-cssnext",
-    "make": "make -j",
+    "postcss-prod": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
+    "make": "make --jobs=4",
     "watch": "nodemon --watch styles --ext .css --exec npm run make",
     "mkdir": "mkdirp",
     "cp": "cp-cli"
@@ -29,7 +30,7 @@
   "dependencies": {
     "@dotnetcarpenter/firefund-cli": "^0.5.8",
     "cp-cli": "^1.0.2",
-    "gzipme": "0.0.9",
+    "gulp-gzip": "^1.3.0",
     "mkdirp": "^0.5.1",
     "nodemon": "^1.9.1",
     "npm-run-all": "^1.8.0",

@@ -1,0 +1,96 @@
+/*
+
+A heading with the background reaching the left side of its container,
+
+If the container isn't `f-content`', then the heading will *leak* out.
+
+<pre>
+BLOCK f-left-heading
+</pre>
+
+
+## f-left-heading - container with padding
+```
+<div class="f-content">
+
+	<!-- this should be used on the website -->
+	<h1 class="f-left-heading">Rebuild Kobanê</h1>
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+
+## f-left-heading - leaking out of container
+
+If the container isn't `f-content`', then the heading will *leak* out.
+
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	<h1 class="f-left-heading">Rebuild Kobanê</h1>
+	<!-- this should be used on the website -->
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
+
+## .f-left-heading_big - container with padding
+```
+<div class="f-content">
+	<!-- this should be used on the website -->
+	<h1 class="f-left-heading f-left-heading_big">About us</h1>
+	<!-- this should be used on the website -->
+</div>
+```
+
+
+## .f-left-heading_big - leaking out of container
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+	<h1 class="f-left-heading f-left-heading_big">About us</h1>
+	<!-- this should be used on the website -->
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
+*/
+
+.f-left-heading {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+
+	margin: 0 0 44.8px -54.4px;
+	margin: 0 0 2.8rem -3.4rem;
+	padding: 12.8px 30.88px 12.8px 54.4px;
+	padding: .8rem 1.93rem .8rem 3.4rem; 
+	
+	color: hsla(0, 0%, 100%, 1);
+	font-size: 48px;
+	font-size: 3.0rem;
+
+	background-color: hsla(0, 0%, 0%, 1);
+}
+
+.f-left-heading_big {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+
+	margin: 0 0 44.8px -54.4px;
+	margin: 0 0 2.8rem -3.4rem;
+	padding: 9.6px 30.88px 19.2px 54.4px;
+	padding: .6rem 1.93rem 1.2rem 3.4rem; 
+	
+	color: hsla(0, 0%, 100%, 1);
+	font-size: 105.6px;
+	font-size: 6.6rem;
+	line-height: 0.9;
+
+	background-color: hsla(0, 0%, 0%, 1);
+}
+
