@@ -1,0 +1,60 @@
+/*
+
+Icons - the buttons formerly known as 'sharebuttons'. 
+
+
+<pre>
+BLOCK f-button-icon
+	ELEMENT f-button-icon__twitter
+	ELEMENT f-button-icon__facebook
+	ELEMENT f-button-icon__youtube
+	ELEMENT f-button-icon__reddit
+	ELEMENT f-button-icon__home	
+</pre>
+
+
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+<!-- this should be used on the website -->
+<button class="f-button-icon  f-button-icon__twitter">twitter</button>
+<button class="f-button-icon  f-button-icon__facebook">facebook</button>
+<button class="f-button-icon  f-button-icon__youtube">youtube</button>
+<button class="f-button-icon  f-button-icon__reddit">reddit</button>
+<button class="f-button-icon  f-button-icon__home">home</button>
+<button class="f-button f-button-icon  f-button-icon__twitter">twitter</button>
+<button class="f-button f-button-icon  f-button-icon__facebook">facebook</button>
+<button class="f-button f-button-icon  f-button-icon__youtube">youtube</button>
+<button class="f-button f-button-icon  f-button-icon__reddit">reddit</button>
+<button class="f-button f-button-icon  f-button-icon__home">home</button>
+<button class="f-button">No icon</button>
+<!-- this should be used on the website -->
+
+</div><!-- only here for the style guide - should not be used on the website -->
+```
+*/
+
+@import "../variables";
+
+.f-button-icon  {
+	padding: 0 2.4rem 0 4rem;
+}
+.f-button-icon ::before {
+	position: absolute;
+
+	transform: translateX(-3.1rem);
+}
+.f-button-icon .f-button-icon__youtube::before {
+	transform: translate(-3.1rem, 0.3rem);
+}
+.f-button-icon .f-button-icon__facebook::before {
+	font-size: 2rem;
+
+	transform: translate(-2.6rem, 0.4rem);
+}
+.f-button-icon .f-button-icon__reddit::before {
+	transform: translate(-3.6rem, 0.1rem);
+}
+.f-button-icon .f-button-icon__home::before {
+	transform: translate(-3.7rem, 0.2rem);
+}
