@@ -3,6 +3,9 @@
   "version": "1.0.0-alpha",
   "description": "Firefund live styleguide",
   "private": true,
+  "bin": {
+    "j": "bin/gzip.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepoly": "assets site/lib",
@@ -15,7 +18,8 @@
     "make": "make --jobs=4",
     "watch": "nodemon --watch styles --ext .css --exec npm run make",
     "mkdir": "mkdirp",
-    "cp": "cp-cli"
+    "cp": "cp-cli",
+    "jon": "echo .f-branding{color:cyan!important;} | j > site/j.gz"
   },
   "repository": {
     "type": "git",

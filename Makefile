@@ -2,7 +2,7 @@
 
 KALEI_DIR := kalei/css/blocks
 KALEI_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
-PROD_CSS_BLOCKS :=  $(patsubst styles/%,site/css/%, $(wildcard styles/blocks/*.css) )
+PROD_CSS_BLOCKS :=  $(patsubst styles/%,site/css/%.gz, $(wildcard styles/blocks/*.css) )
 DEST_FONTS_DIR := kalei/assets/fonts
 DEST_FONTS := $(patsubst assets/fonts/%,kalei/assets/fonts/%, $(wildcard assets/fonts/*) )
 
@@ -18,14 +18,18 @@ clean:
 	rm kalei/css/icons.css
 
 # production build
-prod:
+prod: site/css/bundle.css.gz
 	@echo "Building production files"
-	@npm run postcss -- --output site/css/bundle.css styles/bundle.css
-	@$(MAKE) $(PROD_CSS_BLOCKS)
+	#$(MAKE) site/css/bundle.css.gz
+	#$(MAKE) $(PROD_CSS_BLOCKS)
+
+# compile first bundle
+site/css/bundle.css.gz: styles/bundle.css
+	npm run postcss -- styles/bundle.css | node bin/gzip.js
 
 # compile blocks
-site/css/blocks/%.css: styles/blocks/%.css
-	npm run postcss -- --output $@ $<
+site/css/blocks/%.css.gz: styles/blocks/%.css
+	npm run postcss -- $< | bin/gzip > $@
 
 
 
