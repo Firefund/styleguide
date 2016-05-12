@@ -17,7 +17,7 @@ BLOCK f-button-organize
 <!-- only here for the style guide - should not be used on the website -->
 <!-- this should be used on the website -->
 
-<button class="f-button f-button-organize">I'm definitely going to press this huge button!</button>
+<button class="f-button-organize">I'm definitely going to press this huge button!</button>
 
 <!-- this should be used on the website -->
 <h2 class="f-one-liner_center"> I know. That button is more tasty than a Big Tasty fresh out of old McDonald. That's why you are going to click it. Bitch.</h2>
@@ -28,32 +28,36 @@ BLOCK f-button-organize
 @import "../variables"; 
 
 .f-button-organize {
+	position: relative;
 	width: 100%;
+	top: 0;
 	padding: 2.2rem 0 2.3rem 0;
 	border: 3px solid var(--color-black);
+	border-radius: 0.8rem;
 
 	color: var(--color-black);
-
 	font-size: 2.4rem;
-	text-transform: none !important;
-	background: var(--color-white);
-    border-radius: 0.8em;
 
-	transition: opacity 0.3s ease 0s;
+    background-color: var(--color-white);
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
 
-	/*overwrites*/
+	transition-property: box-shadow, top;
+	transition-duration: 100ms;
+	transition-timing-function: linear;
 
+    outline: 0 none;
+}
 
+.f-button::-moz-focus-inner {
+	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
 .f-button-organize:hover {
-	box-shadow: none;
+	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
-
 .f-button-organize:active {
-	border: 3px solid var(--color-black);
-	color: var(--color-white);
-	background: var(--color-black);
+	top: .3rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
 
 .f-button-organize::first-letter {
