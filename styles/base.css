@@ -1,0 +1,51 @@
+/*
+### base
+This is the base for all our styles. In here we define:
+
+2. font sizes
+3. box-sizing *NOTE:* box-sizing http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+4. site wide classes
+*/
+
+@import "./variables";
+
+
+html {
+  box-sizing: border-box;
+  /* Change 1 rem to mean 10px in a standard browser */
+  font-size: 62.5%;
+}
+
+@media screen and (--viewport-max) {
+  html {
+    font-size: 1vw; /* no more scaling */
+  }
+}
+@media screen and (--viewport-mobile) {
+  html {
+    font-size: 1.625vw; /* 16/10 */
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-black);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic);
+
+* { font-family: "Roboto"; }
+
+a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
+span {
+  color: var(--color-red);
+}
