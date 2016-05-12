@@ -18,18 +18,18 @@ clean:
 	rm kalei/css/icons.css
 
 # production build
-prod: site/css/bundle.css.gz
+prod: site/css/bundle.css
 	@echo "Building production files"
-	#$(MAKE) site/css/bundle.css.gz
+	$(MAKE) site/css/bundle.css
 	#$(MAKE) $(PROD_CSS_BLOCKS)
 
 # compile first bundle
-site/css/bundle.css.gz: styles/bundle.css
-	npm run postcss -- styles/bundle.css | node bin/gzip.js
+site/css/bundle.css: styles/bundle.css
+	npm run postcss -- --output $@ $<
 
 # compile blocks
 site/css/blocks/%.css.gz: styles/blocks/%.css
-	npm run postcss -- $< | bin/gzip > $@
+	npm run postcss -- --output $@ $< 
 
 
 
