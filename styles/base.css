@@ -18,7 +18,7 @@ html {
   lost-center: 192rem;
 }
 
-@media screen and (--viewport-max) {
+@media screen and (--viewport-max-scale) {
   html {
     font-size: 1vw; /* no more scaling */
   }
