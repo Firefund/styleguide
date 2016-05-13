@@ -1,7 +1,7 @@
 /*
 <pre>
 Block f-donation-amount
-        Element f-donation-amount__data
+	Element f-donation-amount__data
 </pre>
 
 ## Direct donation amount.
@@ -17,17 +17,17 @@ Block f-donation-amount
  */
 
  .f-donation-amount {
-  margin-top: 0;
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
+	margin-top: 0;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
 
-  color: hsla(0, 0%, 40%, 1);
-  font-size: 25.6px;
-  font-size: 1.6rem;
-  font-weight: normal;
+	color: hsla(0, 0%, 40%, 1);
+	font-size: 25.6px;
+	font-size: 1.6rem;
+	font-weight: normal;
  }
 
  .f-donation-amount__data {
-   color: hsla(0, 0%, 20%, 1);
-   font-weight: bold;
+	 color: hsla(0, 0%, 20%, 1);
+	 font-weight: bold;
  }

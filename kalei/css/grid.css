@@ -293,15 +293,17 @@ new grid systems by calling the grid function with different selectors, declarat
 to manipulate the css block while running in a loop.
 */
 
-:root {/*--color-white-transparent: hsla(0, 0%, 100%, 5);*/
-}
-
 /* --gutter-width variable doesn't work probably due to @lost gutter not being a proper css declaration block
 @lost gutter var(--gutter-width, 3.4rem); */
 
 .f-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
 	width: 100%;
 }
 
@@ -326,11 +328,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row__cell {
-	flex: 0 0 auto;
-	width: calc(99.99% * 1 - (3.4rem - 3.4rem * 1));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: 99.99%;
 }
 
 .f-row__cell:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -347,19 +353,37 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
 	width: 100%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+[class^="f-column_"] > *, [class*=" f-column_"] > * {
+	/* FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 */
+	margin-right: 0!important;
+	margin-left: 0!important;
 }
 
 .f-column_2 > * {
-	width: calc(99.99% * 1/2 - (3.4rem - 3.4rem * 1/2));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/2 - 1.7rem);
 }
 
 .f-column_2 > *:nth-child(1n) {
-	float: left;
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
-	clear: none;
 }
 
 .f-column_2 > *:last-child {
@@ -367,22 +391,24 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column_2 > *:nth-child(2n) {
-	margin-right: 0;
 	float: right;
 }
 
-.f-column_2 > *:nth-child(2n + 1) {
-	clear: left;
+.f-column_2 > *:nth-child(2n) {
+	margin-right: 0;
 }
 
 .f-column_3 > * {
-	width: calc(99.99% * 1/3 - (3.4rem - 3.4rem * 1/3));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/3 - 2.26667rem);
 }
 
 .f-column_3 > *:nth-child(1n) {
-	float: left;
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
-	clear: none;
 }
 
 .f-column_3 > *:last-child {
@@ -390,22 +416,24 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column_3 > *:nth-child(3n) {
-	margin-right: 0;
 	float: right;
 }
 
-.f-column_3 > *:nth-child(3n + 1) {
-	clear: left;
+.f-column_3 > *:nth-child(3n) {
+	margin-right: 0;
 }
 
 .f-column_4 > * {
-	width: calc(99.99% * 1/4 - (3.4rem - 3.4rem * 1/4));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/4 - 2.55rem);
 }
 
 .f-column_4 > *:nth-child(1n) {
-	float: left;
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
-	clear: none;
 }
 
 .f-column_4 > *:last-child {
@@ -413,22 +441,24 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column_4 > *:nth-child(4n) {
-	margin-right: 0;
 	float: right;
 }
 
-.f-column_4 > *:nth-child(4n + 1) {
-	clear: left;
+.f-column_4 > *:nth-child(4n) {
+	margin-right: 0;
 }
 
 .f-column_5 > * {
-	width: calc(99.99% * 1/5 - (3.4rem - 3.4rem * 1/5));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/5 - 2.72rem);
 }
 
 .f-column_5 > *:nth-child(1n) {
-	float: left;
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
-	clear: none;
 }
 
 .f-column_5 > *:last-child {
@@ -436,22 +466,24 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column_5 > *:nth-child(5n) {
-	margin-right: 0;
 	float: right;
 }
 
-.f-column_5 > *:nth-child(5n + 1) {
-	clear: left;
+.f-column_5 > *:nth-child(5n) {
+	margin-right: 0;
 }
 
 .f-column_6 > * {
-	width: calc(99.99% * 1/6 - (3.4rem - 3.4rem * 1/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/6 - 2.83333rem);
 }
 
 .f-column_6 > *:nth-child(1n) {
-	float: left;
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
-	clear: none;
 }
 
 .f-column_6 > *:last-child {
@@ -459,12 +491,11 @@ to manipulate the css block while running in a loop.
 }
 
 .f-column_6 > *:nth-child(6n) {
-	margin-right: 0;
 	float: right;
 }
 
-.f-column_6 > *:nth-child(6n + 1) {
-	clear: left;
+.f-column_6 > *:nth-child(6n) {
+	margin-right: 0;
 }
 
 @media screen and (min-width: 640px) {
@@ -473,130 +504,134 @@ to manipulate the css block while running in a loop.
 		display: none;
 	}
 	.f-row_6 .f-row__cell_push_1 {
-		margin-left: calc(99.99% * (-1/6 * -1) - (3.4rem - 3.4rem * (-1/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell_push_2 {
-		margin-left: calc(99.99% * (-2/6 * -1) - (3.4rem - 3.4rem * (-2/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell_push_3 {
-		margin-left: calc(99.99% * (-3/6 * -1) - (3.4rem - 3.4rem * (-3/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell_push_4 {
-		margin-left: calc(99.99% * (-4/6 * -1) - (3.4rem - 3.4rem * (-4/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell_push_5 {
-		margin-left: calc(99.99% * (-5/6 * -1) - (3.4rem - 3.4rem * (-5/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_1 {
-		margin-left: calc(99.99% * (-1/12 * -1) - (3.4rem - 3.4rem * (-1/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.08333 - 3.11668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_2 {
-		margin-left: calc(99.99% * (-2/12 * -1) - (3.4rem - 3.4rem * (-2/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_3 {
-		margin-left: calc(99.99% * (-3/12 * -1) - (3.4rem - 3.4rem * (-3/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.25 - 2.55rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_4 {
-		margin-left: calc(99.99% * (-4/12 * -1) - (3.4rem - 3.4rem * (-4/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_5 {
-		margin-left: calc(99.99% * (-5/12 * -1) - (3.4rem - 3.4rem * (-5/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.41667 - 1.98332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_6 {
-		margin-left: calc(99.99% * (-6/12 * -1) - (3.4rem - 3.4rem * (-6/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_7 {
-		margin-left: calc(99.99% * (-7/12 * -1) - (3.4rem - 3.4rem * (-7/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.58333 - 1.41668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_8 {
-		margin-left: calc(99.99% * (-8/12 * -1) - (3.4rem - 3.4rem * (-8/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_9 {
-		margin-left: calc(99.99% * (-9/12 * -1) - (3.4rem - 3.4rem * (-9/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.75 - 0.85rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_10 {
-		margin-left: calc(99.99% * (-10/12 * -1) - (3.4rem - 3.4rem * (-10/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell_push_11 {
-		margin-left: calc(99.99% * (-11/12 * -1) - (3.4rem - 3.4rem * (-11/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.91667 - 0.28332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_1 {
-		margin-left: calc(99.99% * (-1/24 * -1) - (3.4rem - 3.4rem * (-1/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.04167 - 3.25832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_2 {
-		margin-left: calc(99.99% * (-2/24 * -1) - (3.4rem - 3.4rem * (-2/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.08333 - 3.11668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_3 {
-		margin-left: calc(99.99% * (-3/24 * -1) - (3.4rem - 3.4rem * (-3/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.125 - 2.975rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_4 {
-		margin-left: calc(99.99% * (-4/24 * -1) - (3.4rem - 3.4rem * (-4/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_5 {
-		margin-left: calc(99.99% * (-5/24 * -1) - (3.4rem - 3.4rem * (-5/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.20833 - 2.69168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_6 {
-		margin-left: calc(99.99% * (-6/24 * -1) - (3.4rem - 3.4rem * (-6/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.25 - 2.55rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_7 {
-		margin-left: calc(99.99% * (-7/24 * -1) - (3.4rem - 3.4rem * (-7/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.29167 - 2.40832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_8 {
-		margin-left: calc(99.99% * (-8/24 * -1) - (3.4rem - 3.4rem * (-8/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_9 {
-		margin-left: calc(99.99% * (-9/24 * -1) - (3.4rem - 3.4rem * (-9/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.375 - 2.125rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_10 {
-		margin-left: calc(99.99% * (-10/24 * -1) - (3.4rem - 3.4rem * (-10/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.41667 - 1.98332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_11 {
-		margin-left: calc(99.99% * (-11/24 * -1) - (3.4rem - 3.4rem * (-11/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.45833 - 1.84168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_12 {
-		margin-left: calc(99.99% * (-12/24 * -1) - (3.4rem - 3.4rem * (-12/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_13 {
-		margin-left: calc(99.99% * (-13/24 * -1) - (3.4rem - 3.4rem * (-13/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.54167 - 1.55832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_14 {
-		margin-left: calc(99.99% * (-14/24 * -1) - (3.4rem - 3.4rem * (-14/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.58333 - 1.41668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_15 {
-		margin-left: calc(99.99% * (-15/24 * -1) - (3.4rem - 3.4rem * (-15/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.625 - 1.275rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_16 {
-		margin-left: calc(99.99% * (-16/24 * -1) - (3.4rem - 3.4rem * (-16/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_17 {
-		margin-left: calc(99.99% * (-17/24 * -1) - (3.4rem - 3.4rem * (-17/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.70833 - 0.99168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_18 {
-		margin-left: calc(99.99% * (-18/24 * -1) - (3.4rem - 3.4rem * (-18/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.75 - 0.85rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_19 {
-		margin-left: calc(99.99% * (-19/24 * -1) - (3.4rem - 3.4rem * (-19/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.79167 - 0.70832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_20 {
-		margin-left: calc(99.99% * (-20/24 * -1) - (3.4rem - 3.4rem * (-20/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_21 {
-		margin-left: calc(99.99% * (-21/24 * -1) - (3.4rem - 3.4rem * (-21/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.875 - 0.425rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_22 {
-		margin-left: calc(99.99% * (-22/24 * -1) - (3.4rem - 3.4rem * (-22/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.91667 - 0.28332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell_push_23 {
-		margin-left: calc(99.99% * (-23/24 * -1) - (3.4rem - 3.4rem * (-23/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.95833 - 0.14168rem + 3.4rem) !important;
 	}
 }
 
 .f-row_6 .f-row__cell-1 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 1/6 - (3.4rem - 3.4rem * 1/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/6 - 2.83333rem);
 }
 
 .f-row_6 .f-row__cell-1:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -613,11 +648,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_6 .f-row__cell-2 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 2/6 - (3.4rem - 3.4rem * 2/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 2/6 - 2.26667rem);
 }
 
 .f-row_6 .f-row__cell-2:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -634,11 +673,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_6 .f-row__cell-3 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 3/6 - (3.4rem - 3.4rem * 3/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 3/6 - 1.7rem);
 }
 
 .f-row_6 .f-row__cell-3:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -655,11 +698,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_6 .f-row__cell-4 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 4/6 - (3.4rem - 3.4rem * 4/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 4/6 - 1.13333rem);
 }
 
 .f-row_6 .f-row__cell-4:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -676,11 +723,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_6 .f-row__cell-5 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 5/6 - (3.4rem - 3.4rem * 5/6));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 5/6 - 0.56667rem);
 }
 
 .f-row_6 .f-row__cell-5:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -697,11 +748,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-1 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 1/12 - (3.4rem - 3.4rem * 1/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/12 - 3.11667rem);
 }
 
 .f-row_12 .f-row__cell-1:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -718,11 +773,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-2 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 2/12 - (3.4rem - 3.4rem * 2/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 2/12 - 2.83333rem);
 }
 
 .f-row_12 .f-row__cell-2:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -739,11 +798,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-3 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 3/12 - (3.4rem - 3.4rem * 3/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 3/12 - 2.55rem);
 }
 
 .f-row_12 .f-row__cell-3:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -760,11 +823,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-4 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 4/12 - (3.4rem - 3.4rem * 4/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 4/12 - 2.26667rem);
 }
 
 .f-row_12 .f-row__cell-4:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -781,11 +848,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-5 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 5/12 - (3.4rem - 3.4rem * 5/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 5/12 - 1.98333rem);
 }
 
 .f-row_12 .f-row__cell-5:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -802,11 +873,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-6 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 6/12 - (3.4rem - 3.4rem * 6/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 6/12 - 1.7rem);
 }
 
 .f-row_12 .f-row__cell-6:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -823,11 +898,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-7 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 7/12 - (3.4rem - 3.4rem * 7/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 7/12 - 1.41667rem);
 }
 
 .f-row_12 .f-row__cell-7:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -844,11 +923,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-8 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 8/12 - (3.4rem - 3.4rem * 8/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 8/12 - 1.13333rem);
 }
 
 .f-row_12 .f-row__cell-8:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -865,11 +948,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-9 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 9/12 - (3.4rem - 3.4rem * 9/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 9/12 - 0.85rem);
 }
 
 .f-row_12 .f-row__cell-9:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -886,11 +973,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-10 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 10/12 - (3.4rem - 3.4rem * 10/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 10/12 - 0.56667rem);
 }
 
 .f-row_12 .f-row__cell-10:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -907,11 +998,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_12 .f-row__cell-11 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 11/12 - (3.4rem - 3.4rem * 11/12));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 11/12 - 0.28333rem);
 }
 
 .f-row_12 .f-row__cell-11:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -928,11 +1023,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-1 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 1/24 - (3.4rem - 3.4rem * 1/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 1/24 - 3.25833rem);
 }
 
 .f-row_24 .f-row__cell-1:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -949,11 +1048,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-2 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 2/24 - (3.4rem - 3.4rem * 2/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 2/24 - 3.11667rem);
 }
 
 .f-row_24 .f-row__cell-2:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -970,11 +1073,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-3 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 3/24 - (3.4rem - 3.4rem * 3/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 3/24 - 2.975rem);
 }
 
 .f-row_24 .f-row__cell-3:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -991,11 +1098,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-4 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 4/24 - (3.4rem - 3.4rem * 4/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 4/24 - 2.83333rem);
 }
 
 .f-row_24 .f-row__cell-4:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1012,11 +1123,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-5 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 5/24 - (3.4rem - 3.4rem * 5/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 5/24 - 2.69167rem);
 }
 
 .f-row_24 .f-row__cell-5:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1033,11 +1148,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-6 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 6/24 - (3.4rem - 3.4rem * 6/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 6/24 - 2.55rem);
 }
 
 .f-row_24 .f-row__cell-6:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1054,11 +1173,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-7 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 7/24 - (3.4rem - 3.4rem * 7/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 7/24 - 2.40833rem);
 }
 
 .f-row_24 .f-row__cell-7:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1075,11 +1198,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-8 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 8/24 - (3.4rem - 3.4rem * 8/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 8/24 - 2.26667rem);
 }
 
 .f-row_24 .f-row__cell-8:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1096,11 +1223,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-9 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 9/24 - (3.4rem - 3.4rem * 9/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 9/24 - 2.125rem);
 }
 
 .f-row_24 .f-row__cell-9:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1117,11 +1248,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-10 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 10/24 - (3.4rem - 3.4rem * 10/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 10/24 - 1.98333rem);
 }
 
 .f-row_24 .f-row__cell-10:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1138,11 +1273,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-11 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 11/24 - (3.4rem - 3.4rem * 11/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 11/24 - 1.84167rem);
 }
 
 .f-row_24 .f-row__cell-11:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1159,11 +1298,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-12 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 12/24 - (3.4rem - 3.4rem * 12/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 12/24 - 1.7rem);
 }
 
 .f-row_24 .f-row__cell-12:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1180,11 +1323,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-13 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 13/24 - (3.4rem - 3.4rem * 13/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 13/24 - 1.55833rem);
 }
 
 .f-row_24 .f-row__cell-13:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1201,11 +1348,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-14 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 14/24 - (3.4rem - 3.4rem * 14/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 14/24 - 1.41667rem);
 }
 
 .f-row_24 .f-row__cell-14:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1222,11 +1373,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-15 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 15/24 - (3.4rem - 3.4rem * 15/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 15/24 - 1.275rem);
 }
 
 .f-row_24 .f-row__cell-15:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1243,11 +1398,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-16 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 16/24 - (3.4rem - 3.4rem * 16/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 16/24 - 1.13333rem);
 }
 
 .f-row_24 .f-row__cell-16:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1264,11 +1423,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-17 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 17/24 - (3.4rem - 3.4rem * 17/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 17/24 - 0.99167rem);
 }
 
 .f-row_24 .f-row__cell-17:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1285,11 +1448,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-18 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 18/24 - (3.4rem - 3.4rem * 18/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 18/24 - 0.85rem);
 }
 
 .f-row_24 .f-row__cell-18:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1306,11 +1473,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-19 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 19/24 - (3.4rem - 3.4rem * 19/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 19/24 - 0.70833rem);
 }
 
 .f-row_24 .f-row__cell-19:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1327,11 +1498,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-20 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 20/24 - (3.4rem - 3.4rem * 20/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 20/24 - 0.56667rem);
 }
 
 .f-row_24 .f-row__cell-20:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1348,11 +1523,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-21 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 21/24 - (3.4rem - 3.4rem * 21/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 21/24 - 0.425rem);
 }
 
 .f-row_24 .f-row__cell-21:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1369,11 +1548,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-22 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 22/24 - (3.4rem - 3.4rem * 22/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 22/24 - 0.28333rem);
 }
 
 .f-row_24 .f-row__cell-22:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1390,11 +1573,15 @@ to manipulate the css block while running in a loop.
 }
 
 .f-row_24 .f-row__cell-23 {
-	flex: 0 0 auto;
-	width: calc(99.99% * 23/24 - (3.4rem - 3.4rem * 23/24));
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: calc(99.99% * 23/24 - 0.14167rem);
 }
 
 .f-row_24 .f-row__cell-23:nth-child(1n) {
+	margin-right: 54.4px;
 	margin-right: 3.4rem;
 }
 
@@ -1421,8 +1608,11 @@ to manipulate the css block while running in a loop.
 		display: none;
 	}
 	.f-row__cell-mobile {
-		flex: 0 0 auto!important;
-		width: calc(99.99% * 1 - (3.4rem - 3.4rem * 1))!important;
+		-webkit-box-flex: 0!important;
+		-webkit-flex: 0 0 auto!important;
+		    -ms-flex: 0 0 auto!important;
+		        flex: 0 0 auto!important;
+		width: 99.99%!important;
 	}
 	.f-row__cell-mobile:nth-child(1n) {
 		margin-right: 3.4rem!important;
@@ -1437,7 +1627,7 @@ to manipulate the css block while running in a loop.
 		margin-right: 0!important;
 	}
 	.f-column_mobile_2 > * {
-		width: calc(99.99% * 1/2 - (3.4rem - 3.4rem * 1/2));
+		width: calc(99.99% * 1/2 - 1.7rem);
 	}
 	.f-column_mobile_2 > *:nth-child(1n) {
 		float: left;
@@ -1455,7 +1645,7 @@ to manipulate the css block while running in a loop.
 		clear: left;
 	}
 	.f-column_mobile_3 > * {
-		width: calc(99.99% * 1/3 - (3.4rem - 3.4rem * 1/3));
+		width: calc(99.99% * 1/3 - 2.26667rem);
 	}
 	.f-column_mobile_3 > *:nth-child(1n) {
 		float: left;
@@ -1473,7 +1663,7 @@ to manipulate the css block while running in a loop.
 		clear: left;
 	}
 	.f-column_mobile_4 > * {
-		width: calc(99.99% * 1/4 - (3.4rem - 3.4rem * 1/4));
+		width: calc(99.99% * 1/4 - 2.55rem);
 	}
 	.f-column_mobile_4 > *:nth-child(1n) {
 		float: left;
@@ -1491,7 +1681,7 @@ to manipulate the css block while running in a loop.
 		clear: left;
 	}
 	.f-column_mobile_5 > * {
-		width: calc(99.99% * 1/5 - (3.4rem - 3.4rem * 1/5));
+		width: calc(99.99% * 1/5 - 2.72rem);
 	}
 	.f-column_mobile_5 > *:nth-child(1n) {
 		float: left;
@@ -1509,7 +1699,7 @@ to manipulate the css block while running in a loop.
 		clear: left;
 	}
 	.f-column_mobile_6 > * {
-		width: calc(99.99% * 1/6 - (3.4rem - 3.4rem * 1/6));
+		width: calc(99.99% * 1/6 - 2.83333rem);
 	}
 	.f-column_mobile_6 > *:nth-child(1n) {
 		float: left;
@@ -1527,8 +1717,11 @@ to manipulate the css block while running in a loop.
 		clear: left;
 	}
 	.f-row_6 .f-row__cell-mobile-1 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 1/6 - (3.4rem - 3.4rem * 1/6));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 1/6 - 2.83333rem);
 	}
 	.f-row_6 .f-row__cell-mobile-1:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1543,8 +1736,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_6 .f-row__cell-mobile-2 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 2/6 - (3.4rem - 3.4rem * 2/6));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 2/6 - 2.26667rem);
 	}
 	.f-row_6 .f-row__cell-mobile-2:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1559,8 +1755,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_6 .f-row__cell-mobile-3 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 3/6 - (3.4rem - 3.4rem * 3/6));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 3/6 - 1.7rem);
 	}
 	.f-row_6 .f-row__cell-mobile-3:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1575,8 +1774,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_6 .f-row__cell-mobile-4 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 4/6 - (3.4rem - 3.4rem * 4/6));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 4/6 - 1.13333rem);
 	}
 	.f-row_6 .f-row__cell-mobile-4:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1591,8 +1793,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_6 .f-row__cell-mobile-5 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 5/6 - (3.4rem - 3.4rem * 5/6));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 5/6 - 0.56667rem);
 	}
 	.f-row_6 .f-row__cell-mobile-5:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1607,23 +1812,26 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_6 .f-row__cell-mobile_push_1 {
-		margin-left: calc(99.99% * (-1/6 * -1) - (3.4rem - 3.4rem * (-1/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell-mobile_push_2 {
-		margin-left: calc(99.99% * (-2/6 * -1) - (3.4rem - 3.4rem * (-2/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell-mobile_push_3 {
-		margin-left: calc(99.99% * (-3/6 * -1) - (3.4rem - 3.4rem * (-3/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell-mobile_push_4 {
-		margin-left: calc(99.99% * (-4/6 * -1) - (3.4rem - 3.4rem * (-4/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_6 .f-row__cell-mobile_push_5 {
-		margin-left: calc(99.99% * (-5/6 * -1) - (3.4rem - 3.4rem * (-5/6 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile-1 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 1/12 - (3.4rem - 3.4rem * 1/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 1/12 - 3.11667rem);
 	}
 	.f-row_12 .f-row__cell-mobile-1:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1638,8 +1846,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-2 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 2/12 - (3.4rem - 3.4rem * 2/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 2/12 - 2.83333rem);
 	}
 	.f-row_12 .f-row__cell-mobile-2:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1654,8 +1865,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-3 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 3/12 - (3.4rem - 3.4rem * 3/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 3/12 - 2.55rem);
 	}
 	.f-row_12 .f-row__cell-mobile-3:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1670,8 +1884,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-4 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 4/12 - (3.4rem - 3.4rem * 4/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 4/12 - 2.26667rem);
 	}
 	.f-row_12 .f-row__cell-mobile-4:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1686,8 +1903,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-5 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 5/12 - (3.4rem - 3.4rem * 5/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 5/12 - 1.98333rem);
 	}
 	.f-row_12 .f-row__cell-mobile-5:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1702,8 +1922,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-6 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 6/12 - (3.4rem - 3.4rem * 6/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 6/12 - 1.7rem);
 	}
 	.f-row_12 .f-row__cell-mobile-6:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1718,8 +1941,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-7 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 7/12 - (3.4rem - 3.4rem * 7/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 7/12 - 1.41667rem);
 	}
 	.f-row_12 .f-row__cell-mobile-7:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1734,8 +1960,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-8 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 8/12 - (3.4rem - 3.4rem * 8/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 8/12 - 1.13333rem);
 	}
 	.f-row_12 .f-row__cell-mobile-8:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1750,8 +1979,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-9 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 9/12 - (3.4rem - 3.4rem * 9/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 9/12 - 0.85rem);
 	}
 	.f-row_12 .f-row__cell-mobile-9:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1766,8 +1998,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-10 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 10/12 - (3.4rem - 3.4rem * 10/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 10/12 - 0.56667rem);
 	}
 	.f-row_12 .f-row__cell-mobile-10:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1782,8 +2017,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile-11 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 11/12 - (3.4rem - 3.4rem * 11/12));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 11/12 - 0.28333rem);
 	}
 	.f-row_12 .f-row__cell-mobile-11:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1798,41 +2036,44 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_12 .f-row__cell-mobile_push_1 {
-		margin-left: calc(99.99% * (-1/12 * -1) - (3.4rem - 3.4rem * (-1/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.08333 - 3.11668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_2 {
-		margin-left: calc(99.99% * (-2/12 * -1) - (3.4rem - 3.4rem * (-2/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_3 {
-		margin-left: calc(99.99% * (-3/12 * -1) - (3.4rem - 3.4rem * (-3/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.25 - 2.55rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_4 {
-		margin-left: calc(99.99% * (-4/12 * -1) - (3.4rem - 3.4rem * (-4/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_5 {
-		margin-left: calc(99.99% * (-5/12 * -1) - (3.4rem - 3.4rem * (-5/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.41667 - 1.98332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_6 {
-		margin-left: calc(99.99% * (-6/12 * -1) - (3.4rem - 3.4rem * (-6/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_7 {
-		margin-left: calc(99.99% * (-7/12 * -1) - (3.4rem - 3.4rem * (-7/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.58333 - 1.41668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_8 {
-		margin-left: calc(99.99% * (-8/12 * -1) - (3.4rem - 3.4rem * (-8/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_9 {
-		margin-left: calc(99.99% * (-9/12 * -1) - (3.4rem - 3.4rem * (-9/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.75 - 0.85rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_10 {
-		margin-left: calc(99.99% * (-10/12 * -1) - (3.4rem - 3.4rem * (-10/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_12 .f-row__cell-mobile_push_11 {
-		margin-left: calc(99.99% * (-11/12 * -1) - (3.4rem - 3.4rem * (-11/12 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.91667 - 0.28332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile-1 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 1/24 - (3.4rem - 3.4rem * 1/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 1/24 - 3.25833rem);
 	}
 	.f-row_24 .f-row__cell-mobile-1:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1847,8 +2088,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-2 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 2/24 - (3.4rem - 3.4rem * 2/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 2/24 - 3.11667rem);
 	}
 	.f-row_24 .f-row__cell-mobile-2:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1863,8 +2107,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-3 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 3/24 - (3.4rem - 3.4rem * 3/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 3/24 - 2.975rem);
 	}
 	.f-row_24 .f-row__cell-mobile-3:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1879,8 +2126,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-4 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 4/24 - (3.4rem - 3.4rem * 4/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 4/24 - 2.83333rem);
 	}
 	.f-row_24 .f-row__cell-mobile-4:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1895,8 +2145,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-5 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 5/24 - (3.4rem - 3.4rem * 5/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 5/24 - 2.69167rem);
 	}
 	.f-row_24 .f-row__cell-mobile-5:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1911,8 +2164,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-6 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 6/24 - (3.4rem - 3.4rem * 6/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 6/24 - 2.55rem);
 	}
 	.f-row_24 .f-row__cell-mobile-6:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1927,8 +2183,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-7 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 7/24 - (3.4rem - 3.4rem * 7/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 7/24 - 2.40833rem);
 	}
 	.f-row_24 .f-row__cell-mobile-7:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1943,8 +2202,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-8 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 8/24 - (3.4rem - 3.4rem * 8/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 8/24 - 2.26667rem);
 	}
 	.f-row_24 .f-row__cell-mobile-8:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1959,8 +2221,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-9 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 9/24 - (3.4rem - 3.4rem * 9/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 9/24 - 2.125rem);
 	}
 	.f-row_24 .f-row__cell-mobile-9:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1975,8 +2240,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-10 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 10/24 - (3.4rem - 3.4rem * 10/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 10/24 - 1.98333rem);
 	}
 	.f-row_24 .f-row__cell-mobile-10:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -1991,8 +2259,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-11 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 11/24 - (3.4rem - 3.4rem * 11/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 11/24 - 1.84167rem);
 	}
 	.f-row_24 .f-row__cell-mobile-11:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2007,8 +2278,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-12 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 12/24 - (3.4rem - 3.4rem * 12/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 12/24 - 1.7rem);
 	}
 	.f-row_24 .f-row__cell-mobile-12:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2023,8 +2297,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-13 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 13/24 - (3.4rem - 3.4rem * 13/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 13/24 - 1.55833rem);
 	}
 	.f-row_24 .f-row__cell-mobile-13:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2039,8 +2316,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-14 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 14/24 - (3.4rem - 3.4rem * 14/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 14/24 - 1.41667rem);
 	}
 	.f-row_24 .f-row__cell-mobile-14:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2055,8 +2335,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-15 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 15/24 - (3.4rem - 3.4rem * 15/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 15/24 - 1.275rem);
 	}
 	.f-row_24 .f-row__cell-mobile-15:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2071,8 +2354,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-16 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 16/24 - (3.4rem - 3.4rem * 16/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 16/24 - 1.13333rem);
 	}
 	.f-row_24 .f-row__cell-mobile-16:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2087,8 +2373,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-17 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 17/24 - (3.4rem - 3.4rem * 17/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 17/24 - 0.99167rem);
 	}
 	.f-row_24 .f-row__cell-mobile-17:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2103,8 +2392,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-18 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 18/24 - (3.4rem - 3.4rem * 18/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 18/24 - 0.85rem);
 	}
 	.f-row_24 .f-row__cell-mobile-18:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2119,8 +2411,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-19 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 19/24 - (3.4rem - 3.4rem * 19/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 19/24 - 0.70833rem);
 	}
 	.f-row_24 .f-row__cell-mobile-19:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2135,8 +2430,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-20 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 20/24 - (3.4rem - 3.4rem * 20/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 20/24 - 0.56667rem);
 	}
 	.f-row_24 .f-row__cell-mobile-20:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2151,8 +2449,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-21 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 21/24 - (3.4rem - 3.4rem * 21/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 21/24 - 0.425rem);
 	}
 	.f-row_24 .f-row__cell-mobile-21:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2167,8 +2468,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-22 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 22/24 - (3.4rem - 3.4rem * 22/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 22/24 - 0.28333rem);
 	}
 	.f-row_24 .f-row__cell-mobile-22:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2183,8 +2487,11 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile-23 {
-		flex: 0 0 auto;
-		width: calc(99.99% * 23/24 - (3.4rem - 3.4rem * 23/24));
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		width: calc(99.99% * 23/24 - 0.14167rem);
 	}
 	.f-row_24 .f-row__cell-mobile-23:nth-child(1n) {
 		margin-right: 3.4rem;
@@ -2199,73 +2506,73 @@ to manipulate the css block while running in a loop.
 		margin-right: 0;
 	}
 	.f-row_24 .f-row__cell-mobile_push_1 {
-		margin-left: calc(99.99% * (-1/24 * -1) - (3.4rem - 3.4rem * (-1/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.04167 - 3.25832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_2 {
-		margin-left: calc(99.99% * (-2/24 * -1) - (3.4rem - 3.4rem * (-2/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.08333 - 3.11668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_3 {
-		margin-left: calc(99.99% * (-3/24 * -1) - (3.4rem - 3.4rem * (-3/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.125 - 2.975rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_4 {
-		margin-left: calc(99.99% * (-4/24 * -1) - (3.4rem - 3.4rem * (-4/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.16667 - 2.83332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_5 {
-		margin-left: calc(99.99% * (-5/24 * -1) - (3.4rem - 3.4rem * (-5/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.20833 - 2.69168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_6 {
-		margin-left: calc(99.99% * (-6/24 * -1) - (3.4rem - 3.4rem * (-6/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.25 - 2.55rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_7 {
-		margin-left: calc(99.99% * (-7/24 * -1) - (3.4rem - 3.4rem * (-7/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.29167 - 2.40832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_8 {
-		margin-left: calc(99.99% * (-8/24 * -1) - (3.4rem - 3.4rem * (-8/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.33333 - 2.26668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_9 {
-		margin-left: calc(99.99% * (-9/24 * -1) - (3.4rem - 3.4rem * (-9/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.375 - 2.125rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_10 {
-		margin-left: calc(99.99% * (-10/24 * -1) - (3.4rem - 3.4rem * (-10/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.41667 - 1.98332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_11 {
-		margin-left: calc(99.99% * (-11/24 * -1) - (3.4rem - 3.4rem * (-11/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.45833 - 1.84168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_12 {
-		margin-left: calc(99.99% * (-12/24 * -1) - (3.4rem - 3.4rem * (-12/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.5 - 1.7rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_13 {
-		margin-left: calc(99.99% * (-13/24 * -1) - (3.4rem - 3.4rem * (-13/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.54167 - 1.55832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_14 {
-		margin-left: calc(99.99% * (-14/24 * -1) - (3.4rem - 3.4rem * (-14/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.58333 - 1.41668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_15 {
-		margin-left: calc(99.99% * (-15/24 * -1) - (3.4rem - 3.4rem * (-15/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.625 - 1.275rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_16 {
-		margin-left: calc(99.99% * (-16/24 * -1) - (3.4rem - 3.4rem * (-16/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.66667 - 1.13332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_17 {
-		margin-left: calc(99.99% * (-17/24 * -1) - (3.4rem - 3.4rem * (-17/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.70833 - 0.99168rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_18 {
-		margin-left: calc(99.99% * (-18/24 * -1) - (3.4rem - 3.4rem * (-18/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.75 - 0.85rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_19 {
-		margin-left: calc(99.99% * (-19/24 * -1) - (3.4rem - 3.4rem * (-19/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.79167 - 0.70832rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_20 {
-		margin-left: calc(99.99% * (-20/24 * -1) - (3.4rem - 3.4rem * (-20/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.83333 - 0.56668rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_21 {
-		margin-left: calc(99.99% * (-21/24 * -1) - (3.4rem - 3.4rem * (-21/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.875 - 0.425rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_22 {
-		margin-left: calc(99.99% * (-22/24 * -1) - (3.4rem - 3.4rem * (-22/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.91667 - 0.28332rem + 3.4rem) !important;
 	}
 	.f-row_24 .f-row__cell-mobile_push_23 {
-		margin-left: calc(99.99% * (-23/24 * -1) - (3.4rem - 3.4rem * (-23/24 * -1)) + 3.4rem) !important;
+		margin-left: calc(99.99% * 0.95833 - 0.14168rem + 3.4rem) !important;
 	}
 }
 

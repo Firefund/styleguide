@@ -4,7 +4,7 @@
 <button class="f-button">Toggle modal window</button>
 ```
  <div class="f-modal f-modal_visible">
-  <div class="f-modal-content">
+  <div class="f-modal__content">
 	<div class="f-content">
 		<h1 class="f-left-heading">Rebuild Kobanê</h1>
 		<p class="f-text__text">
@@ -45,7 +45,7 @@
 	opacity: 1;
 }
 
-.f-modal-content {
+.f-modal__content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
