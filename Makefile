@@ -1,5 +1,5 @@
 # Cheat sheet: https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html
-CSS_VARIABLES = styles/_variables.css
+CSS_DEPENDENCY = styles/_variables.css
 
 KALEI_DIR = kalei/css/blocks
 KALEI_CSS := $(patsubst styles/%,kalei/css/%, $(wildcard styles/blocks/*.css) )
@@ -22,15 +22,15 @@ clean:
 	rm kalei/css/icons.css
 
 # production build
-prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_VARIABLES)
+prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY)
 	@echo "Finish building our production CSS"
 
 # compile first bundle
-site/css/bundle.css: styles/bundle.css styles/base.css styles/grid.css $(CSS_VARIABLES)
+site/css/bundle.css: styles/bundle.css styles/base.css styles/grid.css $(CSS_DEPENDENCY)
 	@npm run postcss:prod -- --output $@ $<
 
 # compile blocks
-site/css/blocks/%.css: styles/blocks/%.css $(CSS_VARIABLES)
+site/css/blocks/%.css: styles/blocks/%.css $(CSS_DEPENDENCY)
 	@npm run postcss:prod -- --output $@ $<
 
 # font files into site
@@ -44,7 +44,7 @@ $(PROD_DEST_FONTS_DIR)/%: assets/fonts/%
 
 
 # kalei builds
-$(KALEI_DIR)/%.css: styles/blocks/%.css $(CSS_VARIABLES)
+$(KALEI_DIR)/%.css: styles/blocks/%.css $(CSS_DEPENDENCY)
 	npm run postcss -- --output $@ $<
 
 $(KALEI_CSS): | $(KALEI_DIR)
@@ -52,18 +52,18 @@ $(KALEI_CSS): | $(KALEI_DIR)
 $(KALEI_DIR):
 	npm run mkdir -- $(KALEI_DIR)
 
-kalei/css/styleguide.css: styles/styleguide.css $(CSS_VARIABLES)
+kalei/css/styleguide.css: styles/styleguide.css $(CSS_DEPENDENCY)
 	npm run postcss:no-import -- --output $@ $<
 
-kalei/css/base.css: styles/base.css $(CSS_VARIABLES)
+kalei/css/base.css: styles/base.css $(CSS_DEPENDENCY)
 	npm run postcss -- --output $@ $<
 
-kalei/css/grid.css: styles/grid.css $(CSS_VARIABLES)
+kalei/css/grid.css: styles/grid.css $(CSS_DEPENDENCY)
 	npm run postcss -- --output $@ $<
 
 # do not use postcss because we lose font-feature-settings
 # TODO: create an issue in the correct repo for loosing font-feature-settings
-kalei/css/icons.css: styles/icons.css $(CSS_VARIABLES)
+kalei/css/icons.css: styles/icons.css $(CSS_DEPENDENCY)
 	npm run cp -- $< $@
 
 # font files into kalei
