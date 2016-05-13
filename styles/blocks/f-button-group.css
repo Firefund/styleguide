@@ -9,17 +9,20 @@ BLOCK f-button-group
     MODIFIER f-button-group__button_selected
 </pre>
 
+## Where we are now:
+
+The code is very messy, but I've not cleaned it with the proper style from master.css, because right now it shows clearly what I've been writing myself, and what I've importet from hover.css. 
+It might still be very much easier to start over - you'll be the judge. 
+
+The effects from the Hover.css file is called: 'Underline Reveal' and 'Sweep to top'. 
+
 ## What I would like: 
 
-Well, this is just an idea - and I've tried but I lack the skill to build it myself. 
-So instead of spending 3 days of trying, I'm going to explain here and on Waffle/github, and maybe @dotnetcarpenter can give it at go? 
-
-Maybe the idea is stupid. But maybe it's just what we're looking for here. 
-
-In the following example, we have two hover effects. One on the bottomline, and another on on the top line. 
+In the following example, we have two hover effects. One on the bottom line of buttons (Contact, Who we are, Dank memes), and another on the top line (Terms, Blog, Manifesto). 
 Can we mix them? Could we use the bottom effect as a hovereffect, and then 'on click' use the top 'sweep' effect? 
 
 I think it would look awesome! 
+
 
 ```
 <!-- this should be used on the website -->
@@ -36,23 +39,30 @@ I think it would look awesome!
 			<button class="f-button-group__button f-button-group__button_underline">Who we are</button>
 			<button class="f-button-group__button f-button-group__button_underline">Dank memes</button>
 		</div>
+	</section>
 ```
 */
 
 @import "../variables";
 
-.f-button-group {}
+.f-button-group {
+/*	Maybe this, or __button has become absolute? 
+	TO DO: BEM-clean-up
+*/
+}
 
-.f-button-group__button {}
+.f-button-group__button {
+
+}
 
 .f-button-group__button::first-letter {
 	text-transform: uppercase;
 }
 .f-button-group__button_underline {
 /* ######### Underline Reveal */
-
+/*TO DO: There's a minor bug on this one - the underline doesn't always go all the way in both ends, leaving a little bit of white*/
 	margin-bottom: 3.2rem;
-	border: 3px solid var(--color-black);
+	border: 2px solid var(--color-black);
 	border-radius: 0.5rem;
 	
 	font-size: 3rem;
@@ -88,12 +98,12 @@ I think it would look awesome!
 	transition-timing-function: ease-out;
 }
 .f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
+	/*From Hover.css:*/
 	transform: translateY(0);
 }
 
 .f-button-group__button_stop {
 	/*########## (S)WEEP TO (TOP)*/	
-
 	/*From Karl's CSS:*/
 	margin-bottom: 3.0rem;
 	border: 2px solid var(--color-black);
@@ -143,49 +153,6 @@ I think it would look awesome!
 	transition-timing-function: ease-out;
 }
 
-
-
-.f-button-group__button_underline-sweep {
-	/*MIX UNDERLINE & SWEEP - this is where I try and fail. */
-	/*From Karl's CSS*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-	
-	font-size: 3rem;
-	font-weight: bold;
-	
-	background-color: var(--color-white);
-
-	/*From Hover.css*/
-	transform: translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	backface-visibility: hidden;
-	-moz-osx-font-smoothing: grayscale;
-	position: relative;
-	overflow: hidden;
-
-}
-
-.f-button-group__button_underline-sweep:before {
-	/*From Hover.css*/
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--color-black);
-	height: 4px;
-	transform: translateY(4px);
-	transition-property: transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
-
-.f-button-group__button_underline-sweep:hover:before, .f-button-group__button_underline-sweep:focus:before, .f-button-group__button_underline-sweep:active:before {
-	transform: translateY(0);
-}
 
 .f-button-group__button_stopselected {
 	/*From Jon's CSS - something with the .js*/
