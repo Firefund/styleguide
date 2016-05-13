@@ -20,14 +20,14 @@ BLOCK f-button
 
 ## f-button
 ```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
 	<button class="f-button">encrypt</button>
 	<button class="f-button">reset</button>
 <!-- this should be used on the website -->
 
-</div>
+</div><!-- only here for the style guide - should not be used on the website -->
 ```
 */
 
@@ -116,17 +116,50 @@ BLOCK f-button
 }
 
 /*
-## f-button_submit
+## f-submit-button
 ```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
-
-	<button class="f-button f-button_submit">submit</button>
+<div class="f-content">
 
 <!-- this should be used on the website -->
+	<button class="f-submit-button">submit</button>
+<!-- this should be used on the website -->
+
 </div>
 ```
+*/
+.f-submit-button {
+	margin: 0 3rem 3.2rem 0;
+	padding: .2rem 1rem;
+	
+	color: var(--color-black, black);
+	font-size: 2.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	border: none;
+	background: var(--color-red);
+}
+.f-submit-button::-moz-focus-inner {
+	border: 0; /*KLUDGE: remove outline in Firefox */
+}
+/*
+.f-button-submit:active {
+	border: var(--color-red);
+	background: var(--color-red);
+}
 
+.f-button_submit:hover {
+	box-shadow: none;
+	background: var(--color-red);
+}
+
+.f-button_submit:active, .f-button_submit::before {
+	background: var(--color-red);
+	color: var(--color-white);
+	border: 2px solid var(--color-red);
+}
+
+/*
 ## f-button_donate
 Four donate buttons: Default, Kush, Shrink, Grow.
 One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
@@ -164,12 +197,12 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 
 ## f-button_share
 ```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
+<div class="f-content">
 
+<!-- this should be used on the website -->
 	<button class="f-button f-button__share">Share on facebook</button>
-
 <!-- this should be used on the website -->
+
 </div>
 ```
 */
@@ -233,7 +266,6 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	background: var(--color-black);
 }
 
-/* DONATE BUBBLE KUSH*/
 
 
 .f-button_donate_kush {
@@ -350,13 +382,13 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	box-shadow: none;
 }
 
-.f-button_organize:active {
+.f-button__organize:active {
 	border: 2px solid var(--color-red);
 	color: var(--color-white);
 	background: var(--color-red);
 }
 
-.f-button_organize::first-letter {
+.f-button__organize::first-letter {
 	text-transform: uppercase;
 }
 
@@ -365,4 +397,4 @@ One should be f-button_donate - and then two modifiers; A and B, for AB-testing.
 	text-transform: none;
 }
 
-
+*/

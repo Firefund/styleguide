@@ -74,12 +74,11 @@ As seen on "How does it work".
 
 @import "../variables";
 
-.f-info-card {
-	border-bottom: 20px;
-}
+.f-info-card {}
 
 .f-info-card_number {
 	display: inline;
+
 	color: var(--color-red);
 	font-weight: bold;
 	font-size: 7.9rem;
@@ -89,28 +88,30 @@ As seen on "How does it work".
 .f-info-card_heading {
 	display: inline;
 	margin-left: 2.4rem;
+
 	color: var(--color-black);
 	font-size: 3rem;
 	font-weight: bold;
 }
 
 .f-info-card_line {
+	margin-top: 7px;
+
 	border-top-color: var(--color-grey-light);
 	border-width: 2px 0 0;
-	margin-top: 7px;
 }
 
 .f-info-card_text {
 	position: relative;
 	top: -1.6rem;
 	margin-bottom: 2.7rem;
+
 	color: var(--color-grey-dark);
-	line-height: 2.4rem;
-	font-weight: lighter;
 	font-size: 2.0rem;
+	font-weight: lighter;
+	line-height: 2.4rem;
 }
 
 .f-info-card_image {
 	/*TODO f-info-card_image */
 }
-
