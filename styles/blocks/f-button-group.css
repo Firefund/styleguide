@@ -23,71 +23,79 @@ Can we mix them? Could we use the bottom effect as a hovereffect, and then 'on c
 
 I think it would look awesome!
 
-
+## Default
 ```
 <div class="kalei-background-white">
 
 <!-- this should be used on the website -->
-	<section class="f-button-group_reverse">
+	<section class="f-button-group">
 		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button f-button-group__button_stop">Terms</button>
-			<button class="f-button-group__button f-button-group__button_stop">Blog</button>
-			<button class="f-button-group__button f-button-group__button_stop">Manifesto</button>
-			<button class="f-button-group__button f-button-group__button_underline">Contact</button>
-			<button class="f-button-group__button f-button-group__button_underline">Who we are</button>
-			<button class="f-button-group__button f-button-group__button_underline">Dank memes</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Terms</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Blog</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Manifesto</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Contact</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Who we are</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Dank memes</button>
+		</div>
+	</section>
+<!-- this should be used on the website -->
+</div>
+```
+
+
+## Reverse
+```
+<div class="kalei-background-white">
+
+<!-- this should be used on the website -->
+	<section class="f-button-group f-button-group_reverse">
+		<div class="f-column f-column_3 f-column_mobile_2">
+			<button class="f-button-group__button f-button-group__button_stop2">Terms</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Blog</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Manifesto</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Contact</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Who we are</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Dank memes</button>
 		</div>
 	</section>
 <!-- this should be used on the website -->
 
+</div>
+```
+
+## Vertical
+```
+<div class="kalei-background-white">
+
 <!-- this should be used on the website -->
-	<section class="f-button-group2">
+	<section class="f-button-group f-button-group_vertical">
 		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button2 f-button-group__button_stop2">Terms</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Blog</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Manifesto</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Contact</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Who we are</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Dank memes</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Terms</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Blog</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Manifesto</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Contact</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Who we are</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Dank memes</button>
 		</div>
 	</section>
 <!-- this should be used on the website -->
-<hr>
+
+</div>
+```
+
+## Vertical Reverse
+```
+<div class="kalei-background-white">
+
 <!-- this should be used on the website -->
-	<section class="f-button-group2 f-button-group2_reverse">
+	<section class="f-button-group f-button-group_vertical_reverse">
 		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button2 f-button-group__button_stop2">Terms</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Blog</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Manifesto</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Contact</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Who we are</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Dank memes</button>
-		</div>
-	</section>
-<!-- this should be used on the website -->
-<hr>
-<!-- this should be used on the website -->
-	<section class="f-button-group2 f-button-group2_vertical">
-		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button2 f-button-group__button_stop2">Terms</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Blog</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Manifesto</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Contact</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Who we are</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Dank memes</button>
-		</div>
-	</section>
-<!-- this should be used on the website -->
-<hr>
-<!-- this should be used on the website -->
-	<section class="f-button-group2 f-button-group2_vertical_reverse">
-		<div class="f-column f-column_3 f-column_mobile_2">
-			<button class="f-button-group__button2 f-button-group__button_stop2">Terms</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Blog</button>
-			<button class="f-button-group__button2 f-button-group__button_stop2">Manifesto</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Contact</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Who we are</button>
-			<button class="f-button-group__button2 f-button-group__button_underline2">Dank memes</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Terms</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Blog</button>
+			<button class="f-button-group__button f-button-group__button_stop2">Manifesto</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Contact</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Who we are</button>
+			<button class="f-button-group__button f-button-group__button_underline2">Dank memes</button>
 		</div>
 	</section>
 <!-- this should be used on the website -->
@@ -98,31 +106,37 @@ I think it would look awesome!
 
 @import "../variables";
 
-.f-button-group2 {}
-.f-button-group2 > .f-column {
+.f-button-group {}
+.f-button-group > .f-column {
 	justify-content: space-between;
 }
-.f-button-group2_vertical > .f-column {
+.f-button-group_vertical > .f-column {
 	flex-direction: column;
 }
-.f-button-group2_vertical_reverse > .f-column {
+.f-button-group_vertical_reverse > .f-column {
 	flex-direction: column-reverse;
 	flex-wrap: wrap-reverse;
 }
-.f-button-group2_reverse > .f-column {
+.f-button-group_reverse > .f-column {
 	flex-direction: row-reverse;
 	flex-wrap: wrap-reverse;
 }
 
-.f-button-group__button2 {
+.f-button-group__button {
 	position: relative;
 	margin-bottom: 3.2rem;
 
 	font-size: 3rem;
 	font-weight: bold;
 	-moz-osx-font-smoothing: grayscale;
+	
+	transition-property: all; /*background;*/
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
 
-	background-color: var(--color-white);
+	background: linear-gradient(to top, black 50%, white 50%);
+	background-size: 100% 200%;
+	background-position:left top;
 	border: .2rem solid var(--color-black);
 	border-radius: 0.5rem;
 
@@ -130,129 +144,11 @@ I think it would look awesome!
 	outline: none;
 	overflow: hidden;
 }
-.f-button-group__button2::before {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	content: "";
-	height: .4rem;
-	width: 100%;	
-	
-	background: var(--color-black);
-	
-	transform: translateY(4px);
-	transition-property: transform;
-	transition-duration: 300ms;
-	transition-timing-function: ease-out;
+.f-button-group__button:hover, .f-button-group__button:focus {
+	background-position: left 13%;
 }
-.f-button-group__button2:hover::before {
-	transform: translateY(0);
-}
-
-
-
-.f-button-group {
-/*	Maybe this, or __button has become absolute?
-	TODO: BEM-clean-up
-*/
-}
-
-.f-button-group__button {}
-
-.f-button-group__button::first-letter {
-	text-transform: uppercase;
-}
-.f-button-group__button_underline {
-/* ######### Underline Reveal */
-/*TO DO: There's a minor bug on this one - the underline doesn't always go all the way in both ends, leaving a little bit of white*/
-	margin-bottom: 3.2rem;
-
-	font-size: 3rem;
-	font-weight: bold;
-
-	background-color: var(--color-white);
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-
-	cursor: pointer;
-	outline: none;
-
-	/*From Hover.css*/
-  	transform: translateZ(0);
-  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  	backface-visibility: hidden;
-  	-moz-osx-font-smoothing: grayscale;
-  	position: relative;
-  	overflow: hidden;
-}
-
-.f-button-group__button_underline:before {
-	/*From Hover.css:*/
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--color-black);
-	height: 4px;
-	transform: translateY(4px);
-	transition-property: transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
-.f-button-group__button_underline:hover:before, .f-button-group__button_underline:focus:before, .f-button-group__button_underline:active:before {
-	/*From Hover.css:*/
-	transform: translateY(0);
-}
-
-.f-button-group__button_stop {
-	/*########## (S)WEEP TO (TOP)*/
-	/*From Karl's CSS:*/
-	margin-bottom: 3.0rem;
-	border: 2px solid var(--color-black);
-	border-radius: 0.5rem;
-
-	font-size: 3rem;
-	font-weight: bold;
-
-	background-color: var(--color-white);
-
-	cursor: pointer;
-	outline: none;
-
-	/*From Hover.css*/
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    transition-property: color;
-    transition-duration: 0.2s;
-}
-
-.f-button-group__button_stop:hover {
+.f-button-group__button:active, .f-button-group__button_selected {
 	color: var(--color-white);
-}
-
-
-.f-button-group__button_stop:hover::before {
-	transform: scaleY(1);
-}
-
-.f-button-group__button_stop:before {
-	/*From Hover.css*/
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--color-black);
-	transform: scaleY(0);
-	transform-origin: 50% 100%;
-	transition-property: transform;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-out;
+	background-position: left bottom;
+	background-size: 100% 300%; /*KLUDGE: background height scaled bigger because some of the white background shows */
 }
