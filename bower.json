@@ -1,7 +1,11 @@
 {
   "name": "firefund-styleguide",
   "description": "Firefund live styleguide",
-  "main": "kalei/index.htm",
+  "authors": [
+    "dotnetCarpenter <jon.ronnenberg@gmail.com>",
+    "troldmand",
+    "magiker420"
+  ],
   "license": "Unlicense",
   "homepage": "https://github.com/Firefund/styleguide",
   "private": true,
