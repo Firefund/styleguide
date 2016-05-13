@@ -357,7 +357,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 .kalei-show-margin > * {
   background-color: black; /* recreate black demo area */
 }
-.kalei-show-margin.kalei-background-white > * {
+.kalei-show-margin.kalei-background-white > *, .kalei-show-margin.f-content > * {
   background-color: white; /* recreate white demo area */
 }
 /** END Jon: show debug margin**/

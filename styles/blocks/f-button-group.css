@@ -25,11 +25,9 @@ I think it would look awesome!
 
 
 ```
-<!-- this should be used on the website -->
 <div class="kalei-background-white">
-<!-- only here for the style guide - should not be used on the website -->
-<!-- this should be used on the website -->
 
+<!-- this should be used on the website -->
 	<section class="f-button-group">
 		<div class="f-column f-column_3 f-column_mobile_2">
 			<button class="f-button-group__button f-button-group__button_stop">Terms</button>
@@ -40,6 +38,9 @@ I think it would look awesome!
 			<button class="f-button-group__button f-button-group__button_underline">Dank memes</button>
 		</div>
 	</section>
+<!-- this should be used on the website -->
+
+</div>
 ```
 */
 
