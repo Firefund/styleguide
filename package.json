@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepoly": "assets site/lib",
-    "poly": "server site site/**/*",
+    "poly": "server site site/**/* --port 10420",
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",
     "postcss": "postcss --use postcss-partial-import --use lost --use postcss-cssnext",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/Firefund/styleguide#readme",
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "0.5.9 - 1.0",
+    "@dotnetcarpenter/firefund-cli": "0.6.0 - 1.0",
     "cp-cli": "^1.0.2",
     "cssnano": "^3.5.2",
     "postcss-cli": "^2.5.2",
