@@ -26,6 +26,7 @@ body {
     left: 0;
 }
 
+/* Inline code blocks - in markdown it's `code` */
 code.undefined {
   padding: 2px 4px;
   font-size: 90%;
@@ -42,10 +43,9 @@ code.undefined {
   border-right: 1px solid #ccc;
   background-color: #fff;
   
-  transition: width 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 250ms 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   
-  will-change: width;
-}
+  willchange: width;}
 .kalei-style-menu-container:hover {
   width: 30rem;
 }
@@ -72,7 +72,7 @@ code.undefined {
 
   background-color: #f6f4f4;
   
-  transition: left 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275), width 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: left 250ms 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275), width 250ms 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   
   will-change: left, width;
 }
@@ -331,11 +331,11 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 }
 /** Jon: show debug margin**/
 /*.codedemo-margin > *:first-child {
-  -webkit-transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
-  -moz-transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
-  transition: background-color 250ms cubic-bezier(.29,-0.45,.67,1.4);
+  -webkit-transition: background-color 250ms 250ms cubic-bezier(.29,-0.45,.67,1.4);
+  -moz-transition: background-color 250ms 250ms cubic-bezier(.29,-0.45,.67,1.4);
+  transition: background-color 250ms 250ms cubic-bezier(.29,-0.45,.67,1.4);
 }*/
-.kalei-background-white { /* white demo area */
+.kalei-background-white { /* whitedemo area */
   float: left;
   clear: both;
 
@@ -357,7 +357,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 .kalei-show-margin > * {
   background-color: black; /* recreate black demo area */
 }
-.kalei-show-margin.kalei-background-white > * {
+.kalei-show-margin.kalei-background-white > *, .kalei-show-margin.f-content > * {
   background-color: white; /* recreate white demo area */
 }
 /** END Jon: show debug margin**/

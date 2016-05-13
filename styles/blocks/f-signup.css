@@ -1,47 +1,48 @@
 /*
-
-From the footer. 
+Our email newsletter signup form. Used in the footer.
 
 <pre>
 BLOCK f-signup
-    MODIFIER f-signup_error
-    ELEMENT f-signup__label
-    ELEMENT f-signup__feedback-text
-    ELEMENT f-signup__input
-    ELEMENT f-signup__button
+MODIFIER f-signup_error
+	ELEMENT f-signup__label
+	ELEMENT f-signup__feedback-text
+	ELEMENT f-signup__input
+	ELEMENT f-signup__button
 </pre>
 
-## Default:
+## Default
 ```
-<section class="f-signup">
+<form class="f-signup">
 	<label class="f-signup__label">Sign up for news:
-		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
-	<label>
-	<button class="f-signup__button">SUBMIT</button>
-</section>
+		<input class="f-signup__input" type="email" placeholder="mail@radical.rev" required>
+	</label>
+	<button class="f-signup__button">Submit</button>
+</form>
+```
 
+## In a cell
+```
+<section class="f-row f-row_6">
+	<div class="f-row__cell_push_2 f-row__cell-2">
+
+		<form class="f-signup">
+			<label class="f-signup__label">Sign up for news:
+				<input class="f-signup__input" type="email" placeholder="mail@radical.rev" required>
+			</label>
+			<button class="f-signup__button">Submit</button>
+		</form>
+
+		</div>
+</section>
 ```
 
 ## Error:
 ```
-<section class="f-signup f-signup_error">
-	<label class="f-signup__label">Sign up for news:
-		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
-	<label>
-	<button class="f-signup__button">SUBMIT</button>
-</section>
 
 ```
 
 ## Success:
 ```
-<section class="f-signup f-signup_success">
-	<label class="f-signup__label_error">Sorry I fuck you life!</label>
-	<label class="f-signup__label">Sign up for news:
-		<input class="f-signup__input" type="text" placeholder=" mail@radical.rev"></input>
-	<label>
-	<button class="f-signup__button">SUBMIT</button>
-</section>
 
 ```
 */
@@ -49,66 +50,64 @@ BLOCK f-signup
 @import "../variables";
 
 .f-signup {
-	margin-bottom: -0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	margin-bottom: 2rem;
 
-	background-color: var(--color-black);
-	outline-color: var(--color-red);  
 	color: var(--color-white);
 	font-size: 1.7rem;
 	font-weight: lighter;
-}
 
-.f-signup__input {
-	transition: all 250ms ease-in;
-}
-.f-signup_error .f-signup__input, .f-signup_error .f-signup__label {
-	display: block;
-
-	color: var(--color-red);
+	outline-color: var(--color-red);
 }
 
 .f-signup__label {
-	display: inline-block;
-}
-.f-signup__label_error {
-	display: none;
-}
-.f-signup__feedback-text {
+	display: flex;
+	flex-direction: column;
 }
 
 .f-signup__input {
-	border: 2px solid var(--color-white);
 	width: 18.8rem;
 	height: 2.8rem;
+	margin-top: 1rem;
+	padding-left: .8rem;
 
 	color: var(--color-white);
 	background-color: var(--color-black);
 	font-weight: lighter;
 	font-size: 1.2rem;
 
+	border: 2px solid var(--color-white);
+
 	outline: none;
 }
 
-.f-signup__input:placeholder-shown {
+.f-signup__input::placeholder {
 	font-style: italic;
 }
 
 .f-signup__button {
-	margin-left: 1rem;
-	border: 2px solid var(--color-red);
-	background-color: var(--color-red);
-	color: var(--color-black);
+	margin: 0 0 0 1rem;
+	padding: .14rem .7rem;
+	height: 2.8rem;
+
+	color: var(--color-black, black);
 	font-size: 1.7rem;
 	font-weight: bold;
 	text-transform: uppercase;
 
+	border: 2px solid var(--color-red);
+	background: var(--color-red);
+
+	transition: all 250ms ease-in;
+
+	cursor: pointer;
 	outline: none;
 }
 
 .f-signup__button:hover {
-	border: 2px solid var(--color-black);
-
-	box-shadow: none;
+	border-color: var(--color-black);
 }
 
 .f-signup__button:focus {
@@ -117,4 +116,3 @@ BLOCK f-signup
 	background: var(--color-black);
 	color: var(--color-white);
 }
-
