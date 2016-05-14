@@ -106,7 +106,7 @@ MODIFIER f-progress_vertical
 .f-progress__data {
 	display: flex;
 	flex-direction: row;
-  	justify-content: space-between;
+	justify-content: space-between;
 	
 	font-size: 1.6rem;
 }

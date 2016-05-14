@@ -20,7 +20,6 @@ require.config({
     templates: '../templates'
   },
 	urlArgs: "bust=" +  (new Date()).getTime()
-
 });
 
 // Let's kick off the application

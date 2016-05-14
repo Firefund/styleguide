@@ -9,17 +9,17 @@ We use [kalei](https://github.com/Firefund/kaleistyleguide/) to generate our CSS
 ## Prerequisites
 
 You can test if you have `git`, `make` and `node` installed by trying to call them in your terminal/cmd.
-```
+<pre>
 git --version
 node -v
 make -v
-```
+</pre>
 
 1. Install [git](https://git-scm.com/downloads) our version control
 2. Install [git lfs](https://git-lfs.github.com/) our version control for large files like pictures and illustrator documents
 3. Install [nodejs](https://nodejs.org/en/) our server platform and platform for various helper tools
 4. Install [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm). It's preinstalled on Mac.
-Probably also with your linux distro. Make is a task runner designed for compiling files. 
+Probably also with your linux distro. Make is a task runner designed for compiling files.
 
 
 ## Getting started
@@ -62,7 +62,7 @@ THIRD: font/text
 	text-*
 	line-height
 
-FOURTH: background
+FOURTH: background/border
 
 FIFTH: transitions/transforms/animation
 
@@ -74,41 +74,46 @@ SIXTH: weird stuff
 
 @import url("base.css");
 @import url("grid.css");
+@import url("icons.css");
 
 /* ### BEM blocks ### */
 @import url("blocks/f-thumbnail.css");
 @import url("blocks/f-mini-thumbnail.css");
 @import url("blocks/f-branding.css");
+@import url("blocks/f-button-group.css");
+@import url("blocks/f-button.css");
 @import url("blocks/f-content.css");
 @import url("blocks/f-cuff-text.css");
-@import url("blocks/f-donation-amount.css"); 
+@import url("blocks/f-donation-amount.css");
 @import url("blocks/f-footer-text.css");
+@import url("blocks/f-footer.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
+@import url("blocks/f-icon-list.css"); 
 @import url("blocks/f-info-card.css");
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-list.css");
 @import url("blocks/f-media.css");
+@import url("blocks/f-modal-window.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
 @import url("blocks/f-postpay-heading.css");
 @import url("blocks/f-postpay-info.css");
 @import url("blocks/f-progress.css");
 @import url("blocks/f-right-heading.css");
+@import url("blocks/f-signup.css");
 @import url("blocks/f-sitemap.css");
 @import url("blocks/f-spacer.css");
-@import url("blocks/f-standard-text.css"); 
 @import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
-
+@import url("blocks/f-text.css");
+@import url("blocks/f-white-card.css");
 
 
 
 /*
-@import url("blocks/f-donation-amount.css");
 @import url("blocks/f-horizontal-button-group.css");
-@import url("blocks/f-huge-button.css");
-@import url("blocks/f-progress.css");*/
+@import url("blocks/f-huge-button.css");*/
 
 /* ##### Examples from kalei
 @import url("buttons.css");
