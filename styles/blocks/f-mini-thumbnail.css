@@ -15,7 +15,7 @@ TO DO's:
 - Test optimal pre-cropping of images
 - Write down optimal count for text-bits
 - Clean the imported progress-BEM (maybe? New names?)
-- For Jon: Test how easy it is to use the f-progress, instead of my copied code here
+- For Jon: Test how easy it is to use the f-progress, instead of my copied code here. If we just use f-progress, I'm guessing it would be easier on the serverside.
 </pre>
 
 <pre>
@@ -31,7 +31,8 @@ BLOCK f-miniproject-thumbnail
 </pre>
 
 
-# Core - commented until it's fixed below
+# Small thumbnails
+
 ```
 <section ="f-content">
 	<section class="f-column f-column_3 f-column_mobile_1">
@@ -157,36 +158,8 @@ BLOCK f-miniproject-thumbnail
 		</div>
 	</section>
 </section>
+
 ```
-
-
-# Broken code. Tryin' to put the image-text on top of the image, but ... Can't. Also fucking up BEM, so I'll just stop it already.
-```<!-- 
-<section ="f-content">
-	<section class="f-column f-column_3">
-		<div class="f-miniproject-thumbnail">
-			<figure class="f-miniproject-thumbnail__image">
-				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
-				<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
-			</figure>
-		</div>
-		<div class="f-miniproject-thumbnail">
-			<figure class="f-miniproject-thumbnail__image">
-				<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
-				<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
-			</figure>
-		</div>
-		<div class="f-miniproject-thumbnail">
-			<figure class="f-miniproject-thumbnail__image">
-				<img class="f-miniproject-thumbnail__image f-miniproject-thumbnail__image-filter" src="image/12t.jpg">
-				<div>
-					<h2 class="f-miniproject-thumbnail__image-text">Being organized</h2>
-				</div>
-			</figure>
-		</div>
-	</section>
-</section>
- -->```
 */
 
 
