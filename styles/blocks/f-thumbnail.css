@@ -2,6 +2,14 @@
 
 Big thumbnails! 
 
+Not at all done, so do not review just yet. 
+
+To do:
+- Progress bar need styling
+- Margins need to work
+- The .js data element needs to be there
+- Cleanup, tests, etc. 
+
 <pre>
 BLOCK f-project-thumbnail
     ELEMENT f-project-thumbnail__image
@@ -15,85 +23,33 @@ BLOCK f-project-thumbnail
 </pre>
 
 
-# First one, cloned from mini
+# First edition, cloned from mini and not done yet
 ```
-<section ="f-content">
-	<section class="f-column">
 		<div class="f-project-thumbnail">
-<!-- 			<img class="f-project-thumbnail__image" src="image/12t.jpg"> -->
-			<div class="f-project-thumbnail__info">
-				<div class="f-project-thumbnail__content">
-					<h2 class="f-project-thumbnail__heading">
-					This one is just outta' control!
-					</h2>
-					<h3 class="f-project-thumbnail__byline">Out of Africa</h3>
-					<p class="f-project-thumbnail__text">
-						We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-					</p>
-				</div>
-				<section class="f-project-thumbnail__progress" data-value="38">
-					<div class="f-project-thumbnail__progress__bar">
-						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
-					</div>
-					<div class="f-project-thumbnail__progress__data">
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>38%</span> of $50K
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>$14,928</span> pledged
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>22</span> days to go
-						</p>
-					</div>
-				</section>
-			</div>
-		</div>
-	</section>
-</section>
-
-
-<section ="f-content">
-	<section class="f-row">
-		<div class="f-project-thumbnail">
-			<div class="f-row_6"> 
-				<div class="f-row__cell-2"
+			<div class="f-row f-row_6"> 
+				<div class="f-row__cell-2">
 					<div class="f-project-thumbnail__content">
-						<h2 class="f-project-thumbnail__heading">Rebuild Bobane!</h2>
+						<h2 class="f-left-heading f-project-thumbnail__heading">Project Rebuild Bobane!</h2>
 						<h3 class="f-project-thumbnail__byline">Out of Africa!</h3>
 						<p class="f-project-thumbnail__text">
 						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us. 
 						</p>
 					</div>
-				<div class="f-row__cell-3"
+				</div>
+				<div class="f-row__cell-4">
 					<figure>
 						<img class="f-project-thumbnail__image" src="image/12t.jpg"</img>
 					</figure>
 				</div>
 			</div>
-			<div class="f-row_6"> 
-				<section class="f-project-thumbnail__progress" data-value="38">
-					<div class="f-project-thumbnail__progress__bar">
-						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
+			<div class="f-row f-row_6"> 
+				<section class="f-row__cell f-progress" data-value="38">
+					<div class="f-progress__bar">
+						<div style="width: 38%;" class="f-progress__value"></div>
 					</div>
-<!-- 					<div class="f-project-thumbnail__progress__data">
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>38%</span> of $50K
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>$14,928</span> pledged
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>22</span> days to go
-						</p>
-					</div> -->
 				</section>
 			</div>
 		</div>
-	</section>
-</section>
-
-
 ```
 */
 
@@ -102,7 +58,7 @@ BLOCK f-project-thumbnail
 
 
 .f-project-thumbnail {
-	min-height: 35.2rem;
+/*	min-height: 35.2rem;*/
 	margin: 0 3.6rem 3.0rem 0;
 
 	background-color: var(--color-white);
@@ -110,13 +66,13 @@ BLOCK f-project-thumbnail
 
 
 .f-project-thumbnail__image {
-	height: 16rem;
+	height: 22.4rem;
 	width: 100%;
 	margin: 0 0 0 0;
 	margin-bottom: 1rem;
 	
-	object-fit: cover;
-	object-position: 50% 50%;
+/*	object-fit: cover;
+	object-position: 50% 50%;*/
 
 	cursor: pointer;
 	filter: grayscale(100%);
@@ -130,8 +86,8 @@ BLOCK f-project-thumbnail
 }
 
 .f-project-thumbnail__content {
-	height: 15rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
-
+	height: 26rem; /*Set's the height of the whole content area. For longer thumbnails, this is the one.*/
+	margin-top: 0rem;
 	mask-image: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
 	mask: linear-gradient(top, rgba(0, 0, 0, 1) 69%, rgba(0, 0, 0, 0) 96%); 
 
@@ -175,7 +131,9 @@ BLOCK f-project-thumbnail
 .f-project-thumbnail__heading {
 	display: inline-flex;
 
-	margin: 0 0 0.4rem -var(--gutter-width);
+	margin-left: 0rem !important;
+/*
+	margin: 0 0 0.4rem -var(--gutter-width);*/
 	padding: .68rem 1.0rem .86rem calc(var(--gutter-width)*2); 
 	
 	color: var(--color-white);
@@ -206,12 +164,12 @@ BLOCK f-project-thumbnail
 	overflow: hidden;
 }
 
-.f-project-thumbnail__progress {
+/*.f-project-thumbnail__progress {
 	margin-left: 3.4rem;
 }
 
 .f-project-thumbnail__progress__bar, .f-project-thumbnail__progress__value {
-	height: 0.3rem;
+	height: 1rem;
 }
 
 .f-project-thumbnail__progress__bar {
@@ -221,7 +179,7 @@ BLOCK f-project-thumbnail
 }
 
 .f-project-thumbnail__progress__value {
-	max-width: 100%;
+	width: 100%;
 
 	background-color: var(--color-red);
 
@@ -251,4 +209,4 @@ BLOCK f-project-thumbnail
   	color: var(--color-grey-dark);
   	font-weight: bold;
 }
-
+*/
