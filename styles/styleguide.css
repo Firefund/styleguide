@@ -77,8 +77,6 @@ SIXTH: weird stuff
 @import url("icons.css");
 
 /* ### BEM blocks ### */
-@import url("blocks/f-thumbnail.css");
-@import url("blocks/f-mini-thumbnail.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-button-group.css");
 @import url("blocks/f-button.css");
@@ -94,6 +92,7 @@ SIXTH: weird stuff
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-list.css");
 @import url("blocks/f-media.css");
+@import url("blocks/f-mini-thumbnail.css");
 @import url("blocks/f-modal-window.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
@@ -107,6 +106,7 @@ SIXTH: weird stuff
 @import url("blocks/f-team-cards.css");
 @import url("blocks/f-text-input.css");
 @import url("blocks/f-text.css");
+@import url("blocks/f-thumbnail.css");
 @import url("blocks/f-white-card.css");
 
 
