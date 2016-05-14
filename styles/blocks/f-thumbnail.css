@@ -13,7 +13,7 @@ To do:
 <pre>
 BLOCK f-project-thumbnail
     ELEMENT f-project-thumbnail__image
-    ELEMENT f-project-thumbnail__image-text (TO DO: This is for text on top of picture)
+    ELEMENT f-project-thumbnail__image-text (TODO: This is for text on top of picture)
     ELEMENT f-project-thumbnail__info (This is all informative content - so everything minus the image)
     ELEMENT f-project-thumbnail__content (This is all content for the specific campaign - minus the 'data' (__progress))
     ELEMENT f-project-thumbnail__heading (1-2 lines but same height, flexbox centered <-- oh, didn't do that)
@@ -43,9 +43,11 @@ BLOCK f-project-thumbnail
 				</div>
 			</div>
 			<div class="f-row f-row_6"> 
-				<section class="f-row__cell f-progress" data-value="38">
-					<div class="f-progress__bar">
-						<div style="width: 38%;" class="f-progress__value"></div>
+				<section class="f-row__cell">
+					<div class="f-progress" data-value="38">
+						<div class="f-progress__bar">
+							<div style="width: 38%;" class="f-progress__value"></div>
+						</div>
 					</div>
 				</section>
 			</div>
