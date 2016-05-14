@@ -20,14 +20,16 @@ TO DO's:
 
 <pre>
 BLOCK f-miniproject-thumbnail
-    ELEMENT f-miniproject-thumbnail__image
-    ELEMENT f-miniproject-thumbnail__image-text (TO DO: This is for text on top of picture)
+	MODIFIER f-miniproject-thumbnail_reverse
     ELEMENT f-miniproject-thumbnail__info (This is all informative content - so everything minus the image)
     ELEMENT f-miniproject-thumbnail__content (This is all content for the specific campaign - minus the 'data' (__progress))
     ELEMENT f-miniproject-thumbnail__heading (1-2 lines but same height, flexbox centered <-- oh, didn't do that)
     ELEMENT f-miniproject-thumbnail__byline (The 'sender')
     ELEMENT f-miniproject-thumbnail__text 
+    ELEMENT f-miniproject-thumbnail__summary
     ELEMENT f-miniproject-thumbnail__progress
+    ELEMENT f-miniproject-thumbnail__image
+    	ELEMENT f-miniproject-thumbnail__image-text (TODO: This is for text on top of picture)
 </pre>
 
 
