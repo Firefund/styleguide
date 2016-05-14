@@ -5,10 +5,6 @@ Our logo.
 <h2 class="f-branding">Fire<span>fund</span></h2>
 ```
 
-Our logo displayed in the footer with [f-sitemap](#/style/blocks/f-sitemap.css).
-```
-<h2 class="f-branding f-branding_sitemap">Fire<span>fund</span></h2>
-```
 */
 
 @import "../variables";
@@ -21,10 +17,4 @@ Our logo displayed in the footer with [f-sitemap](#/style/blocks/f-sitemap.css).
 	line-height: 4.1rem;
  	font-weight: bold;
 	text-transform: uppercase;
-}
-
-.f-branding_sitemap {
-	margin-top: 0rem;
-	margin-bottom: 0rem;
-	font-size: 2rem;	
 }

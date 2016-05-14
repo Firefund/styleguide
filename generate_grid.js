@@ -116,7 +116,7 @@ const columnDeclaration = [
 	placeholders.cellNumber,
 	" ",
 	placeholders.cellNumber,
-	";",
+	" flex;",
 	endBracket
 ]
 
@@ -163,6 +163,13 @@ console.log(`
 .f-column {
 	lost-flex-container: row;
 	width: 100%;
+	justify-content: space-between;
+}
+
+[class^="f-column_"] > *, [class*=" f-column_"] > * {
+		/* FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 */
+	margin-right: 0!important;
+	margin-left: 0!important;
 }
 
 ${columnGrid_6}
