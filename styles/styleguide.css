@@ -84,8 +84,10 @@ SIXTH: weird stuff
 @import url("blocks/f-cuff-text.css");
 @import url("blocks/f-donation-amount.css");
 @import url("blocks/f-footer-text.css");
+@import url("blocks/f-footer.css");
 @import url("blocks/f-hero.css");
 @import url("blocks/f-huge-heading.css");
+@import url("blocks/f-icon-list.css"); 
 @import url("blocks/f-info-card.css");
 @import url("blocks/f-left-heading.css");
 @import url("blocks/f-list.css");
@@ -104,6 +106,7 @@ SIXTH: weird stuff
 @import url("blocks/f-text-input.css");
 @import url("blocks/f-text.css");
 @import url("blocks/f-white-card.css");
+
 
 
 /*
