@@ -54,8 +54,41 @@ BLOCK f-project-thumbnail
 
 
 <section ="f-content">
-	<section class="f-column">
+	<section class="f-row">
 		<div class="f-project-thumbnail">
+			<div class="f-row_6"> 
+				<div class="f-row__cell-2"
+					<div class="f-project-thumbnail__content">
+						<h2 class="f-project-thumbnail__heading">Rebuild Bobane!</h2>
+						<h3 class="f-project-thumbnail__byline">Out of Africa!</h3>
+						<p class="f-project-thumbnail__text">
+						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us. 
+						</p>
+					</div>
+				<div class="f-row__cell-3"
+					<figure>
+						<img class="f-project-thumbnail__image" src="image/12t.jpg"</img>
+					</figure>
+				</div>
+			</div>
+			<div class="f-row_6"> 
+				<section class="f-project-thumbnail__progress" data-value="38">
+					<div class="f-project-thumbnail__progress__bar">
+						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
+					</div>
+<!-- 					<div class="f-project-thumbnail__progress__data">
+						<p class="f-project-thumbnail__progress__data-element">
+							<span>38%</span> of $50K
+						</p>
+						<p class="f-project-thumbnail__progress__data-element">
+							<span>$14,928</span> pledged
+						</p>
+						<p class="f-project-thumbnail__progress__data-element">
+							<span>22</span> days to go
+						</p>
+					</div> -->
+				</section>
+			</div>
 		</div>
 	</section>
 </section>
@@ -77,18 +110,16 @@ BLOCK f-project-thumbnail
 
 
 .f-project-thumbnail__image {
-/*	height: 16rem;
+	height: 16rem;
 	width: 100%;
 	margin: 0 0 0 0;
 	margin-bottom: 1rem;
-	border-top-left-radius: 0.5rem;
-	border-top-right-radius: 0.5rem;
 	
 	object-fit: cover;
 	object-position: 50% 50%;
 
 	cursor: pointer;
-	filter: grayscale(100%);*/
+	filter: grayscale(100%);
 }
 
 /*This makes sure the grayscale filter won't be on mobile:*/
