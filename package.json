@@ -5,16 +5,17 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "#preguide": "cp --update --recursive styles/* kalei/css/",
-    "##preguide": "css --dir kalei/css styles/base.css",
+    "prepoly": "assets site/lib",
+    "poly": "server site site/**/* --port 10420",
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",
-    "postcss": "postcss --use postcss-partial-import --use postcss-cssnext --use lost",
+    "postcss": "postcss --use postcss-partial-import --use lost --use postcss-cssnext",
     "postcss:no-import": "postcss --use postcss-cssnext",
-    "make": "make -j",
+    "postcss:prod": "postcss --use postcss-partial-import --use lost --use postcss-cssnext --use cssnano",
+    "make": "make --jobs=4",
     "watch": "nodemon --watch styles --ext .css --exec npm run make",
-    "mkdir": "mkdir",
-    "cp": "cp"
+    "mkdir": "mkdirp",
+    "cp": "cp-cli"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,16 @@
   },
   "homepage": "https://github.com/Firefund/styleguide#readme",
   "dependencies": {
-    "@dotnetcarpenter/firefund-cli": "^0.5.5",
+    "@dotnetcarpenter/firefund-cli": "0.6.0 - 1.0",
+    "cp-cli": "^1.0.2",
+    "cssnano": "^3.5.2",
+    "postcss-cli": "^2.5.2",
+    "postcss-cssnext": "^2.5.2",
+    "lost": "^6.7.2",
+    "gulp-gzip": "^1.3.0",
+    "mkdirp": "^0.5.1",
     "nodemon": "^1.9.1",
-    "npm-run-all": "^1.8.0",
+    "npm-run-all": "^2.0.0",
     "postcss-partial-import": "^1.3.0"
   }
 }
