@@ -15,42 +15,12 @@ BLOCK f-project-thumbnail
 </pre>
 
 
-# Core - commented until it's fixed below
+# First one, cloned from mini
 ```
 <section ="f-content">
-	<section class="f-column f-column_3 f-column_mobile_1">
+	<section class="f-column">
 		<div class="f-project-thumbnail">
-			<img class="f-project-thumbnail__image" src="image/rick.jpg">
-			<div class="f-project-thumbnail__info">
-				<div class="f-project-thumbnail__content">
-					<h2 class="f-project-thumbnail__heading">
-					They keep changing things!
-					</h2>
-					<h3 class="f-project-thumbnail__byline">Out of Africa</h3>
-					<p class="f-project-thumbnail__text">
-						And this time with a longer text! We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1! And there's much more! Much more actually! So much more, that we don't really have room for it here.
-					</p>
-				</div>
-				<section class="f-project-thumbnail__progress" data-value="38">
-					<div class="f-project-thumbnail__progress__bar">
-						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
-					</div>
-					<div class="f-project-thumbnail__progress__data">
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>38%</span> of $50K
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>$14,928</span> pledged
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>22</span> days to go
-						</p>
-					</div>
-				</section>
-			</div>
-		</div>
-		<div class="f-project-thumbnail">
-			<img class="f-project-thumbnail__image" src="image/12t.jpg">
+<!-- 			<img class="f-project-thumbnail__image" src="image/12t.jpg"> -->
 			<div class="f-project-thumbnail__info">
 				<div class="f-project-thumbnail__content">
 					<h2 class="f-project-thumbnail__heading">
@@ -79,103 +49,8 @@ BLOCK f-project-thumbnail
 				</section>
 			</div>
 		</div>
-		<div class="f-project-thumbnail">
-			<img class="f-project-thumbnail__image" src="image/16t.jpg">
-			<div class="f-project-thumbnail__info">
-				<div class="f-project-thumbnail__content">
-					<h2 class="f-project-thumbnail__heading">
-					Kobane is rebuilding!
-					</h2>
-					<h4 class="f-project-thumbnail__byline">Out of Africa</h4>
-					<p class="f-project-thumbnail__text">
-						After our first successful Kickstarter for Speculative Relationships: Volume 1!
-					</p>
-				</div>
-				<section class="f-project-thumbnail__progress" data-value="38">
-					<div class="f-project-thumbnail__progress__bar">
-						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
-					</div>
-					<div class="f-project-thumbnail__progress__data">
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>38%</span> of $50K
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>$14,928</span> pledged
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>22</span> days to go
-						</p>
-					</div>
-				</section>
-			</div>
-		</div>
-
-
-
-		<div class="f-project-thumbnail">
-			<img class="f-project-thumbnail__image" src="image/12t.jpg">
-			<div class="f-project-thumbnail__info">
-				<div class="f-project-thumbnail__content">
-					<h2 class="f-project-thumbnail__heading">
-					This one is just outta' control!
-					</h2>
-					<h3 class="f-project-thumbnail__byline">Out of Africa</h3>
-					<p class="f-project-thumbnail__text">
-						We are back with more science fiction romance, after our first successful Kickstarter for Speculative Relationships: Volume 1!
-					</p>
-				</div>
-				<section class="f-project-thumbnail__progress" data-value="38">
-					<div class="f-project-thumbnail__progress__bar">
-						<div style="width: 38%;" class="f-project-thumbnail__progress__value"></div>
-					</div>
-					<div class="f-project-thumbnail__progress__data">
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>38%</span> of $50K
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>$14,928</span> pledged
-						</p>
-						<p class="f-project-thumbnail__progress__data-element">
-							<span>22</span> days to go
-						</p>
-					</div>
-				</section>
-			</div>
-		</div>
-	</section>
-</section>
-
-
-
 
 ```
-# Broken code. Tryin' to put the image-text on top of the image, but ... Can't. Also fucking up BEM, so I'll just stop it already.
-```<!-- 
-<section ="f-content">
-	<section class="f-column f-column_3">
-		<div class="f-project-thumbnail">
-			<figure class="f-project-thumbnail__image">
-				<img class="f-project-thumbnail__image" src="image/12t.jpg">
-				<h2 class="f-project-thumbnail__image-text">Being organized</h2>
-			</figure>
-		</div>
-		<div class="f-project-thumbnail">
-			<figure class="f-project-thumbnail__image">
-				<img class="f-project-thumbnail__image" src="image/12t.jpg">
-				<h2 class="f-project-thumbnail__image-text">Being organized</h2>
-			</figure>
-		</div>
-		<div class="f-project-thumbnail">
-			<figure class="f-project-thumbnail__image">
-				<img class="f-project-thumbnail__image f-project-thumbnail__image-filter" src="image/12t.jpg">
-				<div>
-					<h2 class="f-project-thumbnail__image-text">Being organized</h2>
-				</div>
-			</figure>
-		</div>
-	</section>
-</section>
- -->```
 */
 
 
@@ -184,16 +59,14 @@ BLOCK f-project-thumbnail
 
 .f-project-thumbnail {
 	min-height: 35.2rem;
-	max-width: 50rem;
 	margin: 0 3.6rem 3.0rem 0;
-	border-radius: 0.5rem;
 
 	background-color: var(--color-white);
 }
 
 
 .f-project-thumbnail__image {
-	height: 16rem;
+/*	height: 16rem;
 	width: 100%;
 	margin: 0 0 0 0;
 	margin-bottom: 1rem;
@@ -204,7 +77,7 @@ BLOCK f-project-thumbnail
 	object-position: 50% 50%;
 
 	cursor: pointer;
-	filter: grayscale(100%); /*TO DO: Need browser check-up*/
+	filter: grayscale(100%);*/
 }
 
 /*This makes sure the grayscale filter won't be on mobile:*/
