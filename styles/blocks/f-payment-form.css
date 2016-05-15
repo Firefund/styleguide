@@ -1,5 +1,4 @@
 /*
-
 In the modal window, the two different payment forms - one for mobile, one for desktop.
 
 <pre>
@@ -28,13 +27,13 @@ BLOCK f-payment
 		<div class="f-payment">
 			<div class="f-row f-row_6">
 				<div class="f-row__cell-3">
-					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
+					<h2 class="f-payment__heading f-left-heading"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 					<button class="f-payment__button f-button">Bitcoin</button>
 					<button class="f-payment__button f-button">Stripe</button>
 				</div>
 				<div class="f-row__cell-1">
-					<div class="f-payment__arrow">'>'</div>
+					<div class="f-payment__arrow">></div>
 				</div>
 				<div class="f-row__cell-2">
 					<div class="f-column f-column_2">
@@ -47,25 +46,24 @@ BLOCK f-payment
 					</div>
 				</div>
 			</div>
-			<div class="f-row f-row_6">
-				<div class="f-row__cell-3">
-					<div class="f-payment__footer">
+			<div class="f-payment__footer">
+				<div class="f-row f-row_6">
+					<div class="f-row__cell-3">
 						<div class="f-payment__footer-text f-text">Please, pay more to us, than you do to the activists. We love money.</div>
 					</div>
 					<div class="f-row__cell-3">
-						<div class="f-payment__slider">SLIDER WUUUH
+						<div class="f-payment__slider">SLIDER WUUUH</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 <!--  </div>
 </div> -->
 
 ```
 */
+
 
 
 @import "../variables";
@@ -79,8 +77,10 @@ BLOCK f-payment
 .f-payment_pledge {
 }
 
-.f-payment__heading {
-	
+.f-payment__heading .f-left-heading{
+	font-size: 2.6rem;
+	line-height: 2.7rem;
+	margin: 2.4rem 2rem 0 inherit;
 }
 
 .f-payment__text {
@@ -88,11 +88,21 @@ BLOCK f-payment
 }
 
 .f-payment__button {
-	
+}
+
+.f-button .f-payment__button {
+	min-width: 100%;
+	margin-bottom: 0;
 }
 
 .f-payment__button_narrow {
 	
+}
+
+.f-payment__arrow {
+	font-size: 9rem;
+	color: var(--color-grey-light);
+	margin-top: 75%;
 }
 
 .f-payment__radio {
@@ -102,13 +112,18 @@ BLOCK f-payment
 	
 }
 .f-payment__footer {
-	height: 20rem;
+	height: 9.3rem;
 	background: var(--color-grey-light);
+	margin: 0 -var(--gutter-width) 0 -var(--gutter-width);
+	padding: 0 3.4rem 0 3.4rem;
 	
 }
 
 .f-payment__footer-text {
+	font-weight: 1.2rem;
+	color: var(--color-grey);
 
+	margin-top: 2rem;
 }
 
 
