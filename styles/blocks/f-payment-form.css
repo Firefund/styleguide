@@ -29,8 +29,8 @@ BLOCK f-payment
 				<div class="f-row__cell-7">
 					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-					<button class="f-payment__button">Bitcoin</button>
-					<button class="f-payment__button">Stripe</button>
+					<button class="f-payment__button">Direct</button>
+					<button class="f-payment__button">Pledge</button>
 				</div>
 				<div class="f-row__cell-1">
 					<div class="f-payment__arrow">></div>
@@ -48,12 +48,8 @@ BLOCK f-payment
 					<label for="rb1">$50</label><br>
 					<input type="radio" id="rb2" name="rb"value="">
 					<label for="rb2">$25</label><br>
-
-
-					<input type="radio" id="rb3" name="rb" value="">
-					<input type="text" name="$ 10" label="$10"/>
-
-					<input type="radio" name="rb" value=""><input type="text" name="$ 10" />
+					<input type="radio" id="rb2" name="rb"value="">
+					<label for="rb2">$25</label><br> <!-- TODO: This should be a text input, for the user to write it's own number -->
 				</div>
 			</div>
 			<div class="f-payment__footer">
@@ -117,13 +113,13 @@ BLOCK f-payment
 	padding: 0; /*KLUDGE: padding set to 0 to avoid text moving while animating in Firefox */
 
 	color: var(--color-black, black);
-	font-size: 2.5rem;
+	font-size: 2.0rem;
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: center;
 
 	background-color: var(--color-white);
-	border: .3rem solid var(--color-black);
+	border: .2rem solid var(--color-black);
 	border-radius: 0.5rem;
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
 
@@ -140,8 +136,9 @@ BLOCK f-payment
 }
 
 .f-payment-button:hover {
-	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+	box-shadow: 0 .2rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
+
 .f-payment-button:active {
 	top: .3rem;
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
@@ -157,11 +154,12 @@ BLOCK f-payment
 	margin: 6rem 0 0 -1rem;
 }
 	
+
 .f-payment__radio {
 }
 .f-payment__radio-input {
-
 }
+
 
 input[type=radio], input[type=checkbox] {
     display:none;
@@ -180,11 +178,11 @@ input[type=radio] + label:before {
 
     border: solid 0.3rem var(--color-black);
     background-color: var(--color-white);  
-    border-radius: 13px;  
+    border-radius: 11px;  
 }
 
 .f-payment__footer {
-	height: 9.3rem;
+	height: 11rem;
 	background: var(--color-grey-light);
 	margin: 2.5rem -var(--gutter-width) 0 -var(--gutter-width);
 	padding: 0 3.4rem 0 3.4rem;
