@@ -19,22 +19,97 @@ BLOCK f-payment
 
 ```
 # First edition
- <div class="f-modal f-modal_visible">
-  <div class="f-modal__content">
+<!--  <div class="f-modal f-modal_visible">
+  <div class="f-modal__content"> -->
 	<div class="f-content">
 		
 		
 
-		<div class="f-payment"
-
-			<h2 class="f-left-heading"> Pay the man!</h2>
-
-
+		<div class="f-payment">
+			<div class="f-row f-row_6">
+				<div class="f-row__cell-3">
+					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
+					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+					<button class="f-payment__button f-button">Bitcoin</button>
+					<button class="f-payment__button f-button">Stripe</button>
+				</div>
+				<div class="f-row__cell-1">
+					<div class="f-payment__arrow">'>'</div>
+				</div>
+				<div class="f-row__cell-2">
+					<div class="f-column f-column_2">
+						<button class="f-payment__radio">$10</button>
+						<button class="f-payment__radio">$25</button>
+						<button class="f-payment__radio">$50</button>
+						<button class="f-payment__radio">$100</button>
+						<button class="f-payment__radio">$250</button>
+						<button class="f-payment__radio-input f-text-input">$10</button>
+					</div>
+				</div>
+			</div>
+			<div class="f-row f-row_6">
+				<div class="f-row__cell-3">
+					<div class="f-payment__footer">
+						<div class="f-payment__footer-text f-text">Please, pay more to us, than you do to the activists. We love money.</div>
+					</div>
+					<div class="f-row__cell-3">
+						<div class="f-payment__slider">SLIDER WUUUH
+					</div>
+				</div>
+			</div>
 		</div>
 
+
 	</div>
- </div>
-</div>
+<!--  </div>
+</div> -->
 
 ```
 */
+
+
+@import "../variables";
+
+.f-payment {
+}
+
+.f-payment_direct {
+}
+
+.f-payment_pledge {
+}
+
+.f-payment__heading {
+	
+}
+
+.f-payment__text {
+	
+}
+
+.f-payment__button {
+	
+}
+
+.f-payment__button_narrow {
+	
+}
+
+.f-payment__radio {
+	
+}
+.f-payment__radio-input {
+	
+}
+.f-payment__footer {
+	height: 20rem;
+	background: var(--color-grey-light);
+	
+}
+
+.f-payment__footer-text {
+
+}
+
+
+
