@@ -18,38 +18,48 @@ BLOCK f-payment
 
 ```
 # First edition
-<!--  <div class="f-modal f-modal_visible">
-  <div class="f-modal__content"> -->
+ <div class="f-modal f-modal_visible">
+  <div class="f-modal__content">
 	<div class="f-content">
 		
 		
 
 		<div class="f-payment">
-			<div class="f-row f-row_6">
-				<div class="f-row__cell-3">
-					<h2 class="f-payment__heading f-left-heading"> Choose the amount and method of payment</h2>
+			<div class="f-row f-row_12">
+				<div class="f-row__cell-7">
+					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-					<button class="f-payment__button f-button">Bitcoin</button>
-					<button class="f-payment__button f-button">Stripe</button>
+					<button class="f-payment__button">Bitcoin</button>
+					<button class="f-payment__button">Stripe</button>
 				</div>
 				<div class="f-row__cell-1">
 					<div class="f-payment__arrow">></div>
 				</div>
 				<div class="f-row__cell-2">
-					<div class="f-column f-column_2">
-						<button class="f-payment__radio">$10</button>
-						<button class="f-payment__radio">$25</button>
-						<button class="f-payment__radio">$50</button>
-						<button class="f-payment__radio">$100</button>
-						<button class="f-payment__radio">$250</button>
-						<button class="f-payment__radio-input f-text-input">$10</button>
-					</div>
+					<input type="radio" id="rb1" name="rb" value="" checked>
+					<label for="rb1">$500</label><br>
+					<input type="radio" id="rb2" name="rb"value="">
+					<label for="rb2">$250</label><br>
+					<input type="radio" id="rb3" name="rb" value="">
+					<label for="rb3">$100</label>
+				</div>
+				<div class="f-row__cell-2">
+					<input type="radio" id="rb1" name="rb" value="" checked>
+					<label for="rb1">$50</label><br>
+					<input type="radio" id="rb2" name="rb"value="">
+					<label for="rb2">$25</label><br>
+
+
+					<input type="radio" id="rb3" name="rb" value="">
+					<input type="text" name="$ 10" label="$10"/>
+
+					<input type="radio" name="rb" value=""><input type="text" name="$ 10" />
 				</div>
 			</div>
 			<div class="f-payment__footer">
 				<div class="f-row f-row_6">
 					<div class="f-row__cell-3">
-						<div class="f-payment__footer-text f-text">Please, pay more to us, than you do to the activists. We love money.</div>
+						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
 					<div class="f-row__cell-3">
 						<div class="f-payment__slider">SLIDER WUUUH</div>
@@ -58,8 +68,8 @@ BLOCK f-payment
 			</div>
 		</div>
 	</div>
-<!--  </div>
-</div> -->
+ </div>
+</div>
 
 ```
 */
@@ -69,6 +79,9 @@ BLOCK f-payment
 @import "../variables";
 
 .f-payment {
+	padding-top: 2.3rem;
+	width: 64.5rem;
+	height: 41.5rem;
 }
 
 .f-payment_direct {
@@ -77,50 +90,109 @@ BLOCK f-payment
 .f-payment_pledge {
 }
 
-.f-payment__heading .f-left-heading{
-	font-size: 2.6rem;
+.f-payment__heading {
+	display: inline-flex;
+
 	line-height: 2.7rem;
-	margin: 2.4rem 2rem 0 inherit;
+
+	margin: 0 0 1.9rem -var(--gutter-width);
+	padding: .8rem 1.93rem .8rem var(--gutter-width); 
+	
+	color: var(--color-white);
+	font-size: 2.6rem;
+
+	background-color: var(--color-black);
 }
 
 .f-payment__text {
-	
+	margin-top: 0;
 }
+
 
 .f-payment__button {
+	position: relative;
+	top: 0;
+	width: 100%;
+	margin: 0 0 0.3rem 0;
+	padding: 0; /*KLUDGE: padding set to 0 to avoid text moving while animating in Firefox */
+
+	color: var(--color-black, black);
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	text-align: center;
+
+	background-color: var(--color-white);
+	border: .3rem solid var(--color-black);
+	border-radius: 0.5rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
+
+	transition-property: box-shadow, top;
+	transition-duration: 100ms;
+	transition-timing-function: linear;
+
+	cursor: pointer;
+	outline: 0 none;
 }
 
-.f-button .f-payment__button {
-	min-width: 100%;
-	margin-bottom: 0;
+.f-payment-button::-moz-focus-inner {
+	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
-.f-payment__button_narrow {
-	
+.f-payment-button:hover {
+	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+}
+.f-payment-button:active {
+	top: .3rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+}
+
+
+.f-payment__button_narrow {	
 }
 
 .f-payment__arrow {
 	font-size: 9rem;
 	color: var(--color-grey-light);
-	margin-top: 75%;
+	margin: 6rem 0 0 -1rem;
 }
-
-.f-payment__radio {
 	
+.f-payment__radio {
 }
 .f-payment__radio-input {
-	
+
 }
+
+input[type=radio], input[type=checkbox] {
+    display:none;
+}
+
+input[type=radio] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 26px;  
+    height: 26px;  
+    vertical-align:middle;
+    margin: 1.5rem 0.8rem 1.9rem 0;  
+
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    border: solid 0.3rem var(--color-black);
+    background-color: var(--color-white);  
+    border-radius: 13px;  
+}
+
 .f-payment__footer {
 	height: 9.3rem;
 	background: var(--color-grey-light);
-	margin: 0 -var(--gutter-width) 0 -var(--gutter-width);
+	margin: 2.5rem -var(--gutter-width) 0 -var(--gutter-width);
 	padding: 0 3.4rem 0 3.4rem;
-	
 }
 
 .f-payment__footer-text {
-	font-weight: 1.2rem;
+	font-size: 1.2rem;
+	font-weight: 100;
 	color: var(--color-grey);
 
 	margin-top: 2rem;
