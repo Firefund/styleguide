@@ -77,6 +77,7 @@ SIXTH: weird stuff
 @import url("icons.css");
 
 /* ### BEM blocks ### */
+@import url("blocks/f-payment-form.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-button-group.css");
 @import url("blocks/f-button.css");
