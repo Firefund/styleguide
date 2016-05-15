@@ -1,0 +1,40 @@
+/*
+
+In the modal window, the two different payment forms - one for mobile, one for desktop.
+
+<pre>
+BLOCK f-payment
+    MODIFIER f-payment_direct
+    MODIFIER f-payment_pledge
+    ELEMENT f-payment__heading
+    ELEMENT f-payment__text
+    ELEMENT f-payment__button
+    MODIFIER f-payment__button_narrow
+    ELEMENT f-payment__radio
+    ELEMENT f-payment__radio-input
+    ELEMENT f-payment__footer
+    ELEMENT f-payment__footer-text
+</pre>
+
+
+```
+# First edition
+ <div class="f-modal f-modal_visible">
+  <div class="f-modal__content">
+	<div class="f-content">
+		
+		
+
+		<div class="f-payment"
+
+			<h2 class="f-left-heading"> Pay the man!</h2>
+
+
+		</div>
+
+	</div>
+ </div>
+</div>
+
+```
+*/
