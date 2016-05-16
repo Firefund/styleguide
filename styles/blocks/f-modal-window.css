@@ -1,7 +1,7 @@
 /*
 ##EXAMPLE 1
 
-<button class="f-button">Toggle modal window</button>
+<button class="f-button-basic">Toggle modal window</button>
 ```
  <div class="f-modal f-modal_visible">
   <div class="f-modal__content">
@@ -17,7 +17,7 @@
 
 <script>
 	// demo script
-	document.querySelector(".f-button").addEventListener("click", function(e) {
+	document.querySelector("f-button-basic").addEventListener("click", function(e) {
 		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
 	})
 </script>
