@@ -643,6 +643,9 @@ to manipulate the css block while running in a loop.
 	.f-row__cell-mobile {
 		lost-column: 1 flex!important;
 	}
+	.f-column_mobile_1 > * {
+		lost-column: 1 1;
+	}
 	.f-column_mobile_2 > * {
 		lost-column: 1/2 2;
 	}
