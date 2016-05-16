@@ -1626,6 +1626,24 @@ to manipulate the css block while running in a loop.
 	.f-row__cell-mobile:nth-child(undefinedn) {
 		margin-right: 0!important;
 	}
+	.f-column_mobile_1 > * {
+		width: 99.99%;
+	}
+	.f-column_mobile_1 > *:nth-child(1n) {
+		float: left;
+		margin-right: 3.4rem;
+		clear: none;
+	}
+	.f-column_mobile_1 > *:last-child {
+		margin-right: 0;
+	}
+	.f-column_mobile_1 > *:nth-child(1n) {
+		margin-right: 0;
+		float: right;
+	}
+	.f-column_mobile_1 > *:nth-child(1n + 1) {
+		clear: left;
+	}
 	.f-column_mobile_2 > * {
 		width: calc(99.99% * 1/2 - 1.7rem);
 	}
