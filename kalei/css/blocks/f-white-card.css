@@ -15,7 +15,7 @@ BLOCK f-white-card
 <!-- only here as an example - should not be used on the website -->
 	<div class="f-row f-row_12">
 		<div class="f-row__cell_push_1 f-row__cell-10">
-			<button class="f-button">Want to organize a crowdfunding campaign?</button>
+			<button class="f-button-basic">Want to organize a crowdfunding campaign?</button>
 		</div>
 		<div class="f-row__cell_push_2 f-row__cell-8">
 			<h2 class="f-one-liner f-one-liner_center">We are doing stuff a little different. Please read about us before you contact us. We are not Kickstarter.</h2>
