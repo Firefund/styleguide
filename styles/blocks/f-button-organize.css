@@ -45,7 +45,7 @@ BLOCK f-button-organize
     outline: 0 none;
 }
 
-.f-button::-moz-focus-inner {
+.f-button-organize::-moz-focus-inner {
 	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
