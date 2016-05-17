@@ -43,8 +43,12 @@ BLOCK f-payment
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row__cell-1 f-row__cell-mobile_push_4 f-row__cell-mobile-4">
+				<div class="f-row__cell-1 f-row_not-mobile">
 					<div class="f-payment__arrow"></div>
+				</div>
+
+				<div class="f-row_not-desktop f-row__cell-mobile_push_5 f-row__cell-mobile-8">
+					<div class="f-payment__arrow f-payment__arrow_mobile"></div>
 				</div>
 
 				<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
@@ -109,8 +113,12 @@ BLOCK f-payment
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+				<div class="f-row__cell-1 f-row_not-mobile">
 					<div class="f-payment__arrow"></div>
+				</div>
+
+				<div class="f-row_not-desktop f-row__cell-mobile_push_5 f-row__cell-mobile-8">
+					<div class="f-payment__arrow f-payment__arrow_mobile"></div>
 				</div>
 
 				<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
@@ -234,6 +242,12 @@ BLOCK f-payment
 	border-bottom: 5px solid var(--color-grey-light);
 	border-right: 5px solid var(--color-grey-light);
 
+	transform: rotate(-45deg);
+}
+
+.f-payment__arrow_mobile {
+
+	transform: rotate(45deg);
 }
 	
 .f-payment__radio {
