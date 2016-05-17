@@ -29,15 +29,22 @@ BLOCK f-payment
 		<div class="f-payment">
 
 			<div class="f-row f-row_12">
-				<div class="f-row__cell-7 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+				<div class="f-row__cell-7 f-row_not-mobile">
 					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 					<button class="f-payment__button">Direct</button>
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
-					<div class="f-payment__arrow">></div>
+				<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+					<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
+					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+					<button class="f-payment__button">Direct</button>
+					<button class="f-payment__button">Pledge</button>
+				</div>
+
+				<div class="f-row__cell-1 f-row__cell-mobile_push_4 f-row__cell-mobile-4">
+					<div class="f-payment__arrow"></div>
 				</div>
 
 				<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
@@ -63,11 +70,11 @@ BLOCK f-payment
 			</div>
 
 			<div class="f-payment__footer">
-				<div class="f-row f-row_6">
-					<div class="f-row__cell-3 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+				<div class="f-row f-row_6 ">
+					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile-4">
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
-					<div class="f-row__cell-3 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
 						<div class="f-payment__slider">SLIDER WUUUH</div>
 					</div>
 				</div>
@@ -88,18 +95,25 @@ BLOCK f-payment
 		<div class="f-payment">
 
 			<div class="f-row f-row_12">
-				<div class="f-row__cell-7 f-row__cell-mobile">
+				<div class="f-row__cell-7 f-row_not-mobile">
 					<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 					<button class="f-payment__button">Direct</button>
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row__cell-1 f-row__cell-mobile">
-					<div class="f-payment__arrow">></div>
+				<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+					<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
+					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+					<button class="f-payment__button">Direct</button>
+					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row__cell-4 f-row__cell-mobile">
+				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+					<div class="f-payment__arrow"></div>
+				</div>
+
+				<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 					<div class="f-payment-radio">
 						<div class="f-column f-column_2">
 							<input type="radio" id="rb1" name="rb" value="">
@@ -122,11 +136,11 @@ BLOCK f-payment
 			</div>
 
 			<div class="f-payment__footer">
-				<div class="f-row f-row_6">
-					<div class="f-row__cell-3">
+				<div class="f-row f-row_6 ">
+					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile-4">
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
-					<div class="f-row__cell-3">
+					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
 						<div class="f-payment__slider">SLIDER WUUUH</div>
 					</div>
 				</div>
@@ -176,6 +190,11 @@ BLOCK f-payment
 	background-color: var(--color-black);
 }
 
+.f-payment__heading_mobile {
+	margin: 0 0 1.9rem -13.6rem;
+	padding: .8rem 1.93rem .8rem 13.6rem; 
+}
+
 .f-payment__text {
 	margin-top: 0;
 }
@@ -208,9 +227,13 @@ BLOCK f-payment
 }
 
 .f-payment__arrow {
-	font-size: 9rem;
-	color: var(--color-grey-light);
-	margin: 6rem 0 0 -1rem;
+
+	height: 4rem;
+	width: 4rem;
+
+	border-bottom: 5px solid var(--color-grey-light);
+	border-right: 5px solid var(--color-grey-light);
+
 }
 	
 .f-payment__radio {
