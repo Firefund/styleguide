@@ -11,6 +11,7 @@
 			}
     </style>
 		<link rel="stylesheet" href="css/bundle.css">
+		<script src="js/loader.js" charset="utf8"></script>
 		<!-- 1. Async HTML Imports do not block rending. Benefit of keeping it declarative
        (instead of dynamically loading it later in JS) is that the parser can go
        to town pre-fetching resources, etc. -->
@@ -25,10 +26,5 @@
 			<f-secure-text-input></f-secure-text-input>
 		</article>
 
-		<script src="js/loader.js" charset="utf8" async>
-		<!-- <script src="lib/openpgp.js"> -->
-		<script>// TODO: Why is this needed?!?
-			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':10421/livereload.js?snipver=1"></' + 'script>')
-		</script>
 	</body>
 </html>
