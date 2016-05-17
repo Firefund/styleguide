@@ -8,13 +8,14 @@
 		<link rel="stylesheet" href="/css/blocks/f-button-basic.css">
 
 		<form action="http://localhost:10420/openpgp.htm" method="POST">
-			<input type="hidden" value="" id="secretFormSource">
+			<input type="hidden" value="" id="secretFormSource" name="secretFormSource">
 			<div class="f-text-input f-text-input_multiline">
 				<label class="f-text-input__label">Message
 					<textarea id="enctext" class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
 				</label>
 			</div>
-				<input id="enc_button" type="submit" class="f-button-basic" value="Encrypt">
+				<button id="enc_button" class="f-button-basic">Encrypt</button>
+				<input type="submit" class="f-button-basic">
 				<button id="dec_button" class="f-button-basic">Descrypt</button>
 		</form>
 
