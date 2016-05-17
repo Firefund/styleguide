@@ -1,4 +1,4 @@
-﻿# generate public pgp key
+# generate public pgp key
 
 ```
 gpg --gen-key
@@ -7,6 +7,16 @@ gpg --armor --export ja
 
 On Windows you can copy to output to the clipboard with
 `gpg --armor --export ja | clip` to export key *ja*.
+
+
+## Windows line endings
+
+If you copy the encrypted content from your browser's console on Windows,
+you get wrong line endings (CRLF instead of LF). Wrong in the sense
+that `gpg -d [your output file]`, where *your output file* has the content
+you copied, will fail because of the line endings. In the case of visual
+studio code, you can delete every second line.
+
 
 ## cheat sheet
 
