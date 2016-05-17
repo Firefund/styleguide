@@ -81,7 +81,7 @@ BLOCK f-payment
 					</div>
 					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
 						<input type="range" id="s1">
-						<label for="s1">$42</label>
+						<label for="s1"></label>
 					</div>
 				</div>
 			</div>
@@ -108,7 +108,7 @@ BLOCK f-payment
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+				<div class="f-row_not-desktop f-row__cell-mobile_	push_2 f-row__cell-mobile-8">
 					<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 					<button class="f-payment__button">Direct</button>
@@ -146,15 +146,31 @@ BLOCK f-payment
 			</div>
 
 			<div class="f-payment__footer">
-				<div class="f-row f-row_6 ">
-					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile-4">
+				<div class="f-row f-row_12 ">
+					<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
-					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
-						<input type="range" id="s1">
-						<label for="s1">$42</label>
+					<div class="f-row__cell-1 f-row__cell-mobile_push_2">
+						<div class="f-payment__footer-text f-text">FIREFUND</div>
+						<div class="f-payment__footer-text f-text">KOBANE</div>
+					</div>
+
+					<div class="f-row__cell-2">
+						<div class="f-payment__slider">
+							<input class="f-payment__slider_style" type="range" id="s1">
+							<label for="s1"></label>
+						</div>
+						<div class="f-payment__slider">
+							<input class="f-payment__slider_style" type="range" id="s1">
+							<label for="s1"></label>
+						</div>
+					</div>
+					<div class="f-row__cell-1">
+						<div class="f-payment__footer-text f-text">$42.45</div>
+						<div class="f-payment__footer-text f-text">$8.55</div>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
@@ -297,25 +313,35 @@ input[type=radio] + label:before {
 	margin-top: 2rem;
 }
 
+.f-payment__slider {
+	display: inline-block;
+	height: 3rem;
+	width: 16rem;
 
-input[type=range].f-payment__slider {
+	margin: 1rem 0 0 0;
+
+	border-left: 2px solid var(--color-grey);
+	border-right: 2px solid var(--color-grey);
+}
+
+input[type=range].f-payment__slider_style {
   -webkit-appearance: none;
   width: 100%;
-  margin: 12px 0;
+  margin: 11.5px 0 0 0;
 }
-input[type=range].f-payment__slider:focus {
+input[type=range].f-payment__slider_style:focus {
   outline: none;
 }
-input[type=range].f-payment__slider::-webkit-slider-runnable-track {
+input[type=range].f-payment__slider_style::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1px;
+  height: 2px;
   cursor: pointer;
-  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
   background: #808080;
   border-radius: 0px;
-  border: 0px solid #010101;
+  border: 0px solid rgba(1, 1, 1, 0);
 }
-input[type=range].f-payment__slider::-webkit-slider-thumb {
+input[type=range].f-payment__slider_style::-webkit-slider-thumb {
   box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #808080;
   height: 25px;
@@ -324,21 +350,21 @@ input[type=range].f-payment__slider::-webkit-slider-thumb {
   background: #d8d8d8;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -12px;
+  margin-top: -11.5px;
 }
-input[type=range].f-payment__slider:focus::-webkit-slider-runnable-track {
+input[type=range].f-payment__slider_style:focus::-webkit-slider-runnable-track {
   background: #c0c0c0;
 }
-input[type=range].f-payment__slider::-moz-range-track {
+input[type=range].f-payment__slider_style::-moz-range-track {
   width: 100%;
-  height: 1px;
+  height: 2px;
   cursor: pointer;
-  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
   background: #808080;
   border-radius: 0px;
-  border: 0px solid #010101;
+  border: 0px solid rgba(1, 1, 1, 0);
 }
-input[type=range].f-payment__slider::-moz-range-thumb {
+input[type=range].f-payment__slider_style::-moz-range-thumb {
   box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #808080;
   height: 25px;
@@ -347,27 +373,27 @@ input[type=range].f-payment__slider::-moz-range-thumb {
   background: #d8d8d8;
   cursor: pointer;
 }
-input[type=range].f-payment__slider::-ms-track {
+input[type=range].f-payment__slider_style::-ms-track {
   width: 100%;
-  height: 1px;
+  height: 2px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
-input[type=range].f-payment__slider::-ms-fill-lower {
+input[type=range].f-payment__slider_style::-ms-fill-lower {
   background: #404040;
-  border: 0px solid #010101;
+  border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 0px;
-  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
-input[type=range].f-payment__slider::-ms-fill-upper {
+input[type=range].f-payment__slider_style::-ms-fill-upper {
   background: #808080;
-  border: 0px solid #010101;
+  border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 0px;
-  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
-input[type=range].f-payment__slider::-ms-thumb {
+input[type=range].f-payment__slider_style::-ms-thumb {
   box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #808080;
   height: 25px;
@@ -375,14 +401,11 @@ input[type=range].f-payment__slider::-ms-thumb {
   border-radius: 12px;
   background: #d8d8d8;
   cursor: pointer;
-  height: 1px;
+  height: 2px;
 }
-input[type=range].f-payment__slider:focus::-ms-fill-lower {
+input[type=range].f-payment__slider_style:focus::-ms-fill-lower {
   background: #808080;
 }
-input[type=range].f-payment__slider:focus::-ms-fill-upper {
+input[type=range].f-payment__slider_style:focus::-ms-fill-upper {
   background: #c0c0c0;
 }
-
-
-
