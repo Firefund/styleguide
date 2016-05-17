@@ -13,6 +13,7 @@ BLOCK f-payment
     ELEMENT f-payment__radio-input
     ELEMENT f-payment__footer
     ELEMENT f-payment__footer-text
+    ELEMENT f-payment__slider
 </pre>
 
 
@@ -79,7 +80,8 @@ BLOCK f-payment
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
 					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
-						<div class="f-payment__slider">SLIDER WUUUH</div>
+						<input type="range" id="s1">
+						<label for="s1">$42</label>
 					</div>
 				</div>
 			</div>
@@ -149,7 +151,8 @@ BLOCK f-payment
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
 					<div class="f-row__cell-3 f-row__cell-mobile_push_1 f-row__cell-mobile">
-						<div class="f-payment__slider">SLIDER WUUUH</div>
+						<input type="range" id="s1">
+						<label for="s1">$42</label>
 					</div>
 				</div>
 			</div>
@@ -292,6 +295,93 @@ input[type=radio] + label:before {
 	color: var(--color-grey);
 
 	margin-top: 2rem;
+}
+
+
+input[type=range].f-payment__slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 12px 0;
+}
+input[type=range].f-payment__slider:focus {
+  outline: none;
+}
+input[type=range].f-payment__slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  background: #808080;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].f-payment__slider::-webkit-slider-thumb {
+  box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #808080;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  background: #d8d8d8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -12px;
+}
+input[type=range].f-payment__slider:focus::-webkit-slider-runnable-track {
+  background: #c0c0c0;
+}
+input[type=range].f-payment__slider::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+  background: #808080;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].f-payment__slider::-moz-range-thumb {
+  box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #808080;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  background: #d8d8d8;
+  cursor: pointer;
+}
+input[type=range].f-payment__slider::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].f-payment__slider::-ms-fill-lower {
+  background: #404040;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].f-payment__slider::-ms-fill-upper {
+  background: #808080;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0.3px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].f-payment__slider::-ms-thumb {
+  box-shadow: 1px 1px 2px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #808080;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  background: #d8d8d8;
+  cursor: pointer;
+  height: 1px;
+}
+input[type=range].f-payment__slider:focus::-ms-fill-lower {
+  background: #808080;
+}
+input[type=range].f-payment__slider:focus::-ms-fill-upper {
+  background: #c0c0c0;
 }
 
 
