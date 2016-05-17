@@ -1,0 +1,83 @@
+﻿<link rel="import" href="/lib/polymer.html">
+<!--<link rel="import" href="/lib/openpgp.min.html">-->
+<script src="/lib/openpgp.js"></script>
+
+<dom-module id="f-secure-text-input" attributes="armoredOutput">
+
+	<template>
+		<link rel="stylesheet" href="/css/blocks/f-text-input.css">
+		<link rel="stylesheet" href="/css/blocks/f-button-basic.css">
+
+		<form id="contactForm" action="http://localhost:10420/openpgp.htm" method="GET">
+			<input type="hidden" value="" id="secretFormSource">
+			<div class="f-text-input f-text-input_multiline">
+				<label class="f-text-input__label">Message
+					<textarea id="enctext" class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+				</label>
+			</div>
+				<input type="submit" class="f-button-basic" >
+				<input type="reset" class="f-button-basic">
+		</form>
+
+	</template>
+
+	<script>
+		Polymer({
+			/* this is the element's prototype */
+			is: 'f-secure-text-input',
+			ready: function() {
+				// debugger;
+				window.openpgp.initWorker({ path:"/lib/openpgp.worker.js" }) // set the relative web worker path
+				window.openpgp.config.aead_protect = true // activate fast AES-GCM mode (not yet OpenPGP standard)
+				var public = openpgp.key.readArmored(this.secretSource).keys
+console.log(public)
+				var self = this
+				this.$$("input[type='submit']").addEventListener("click", function(e) {
+					e.preventDefault()
+					console.log( self.$.enctext.value )
+					openpgp.encrypt({
+						publicKeys: public,
+						data: self.$.enctext.value
+					}).then(function(ciphertext) {
+							encrypted = ciphertext.data; // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
+							console.log(encrypted)
+							self.$.secretFormSource.value = encrypted
+							var contactForm = self.$.contactForm 
+							setTimeout(contactForm.submit, 5000)
+					});
+
+				})
+			}, secretSource: `-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.13 (MingW32)
+
+mQENBFc6UpEBCADDGAKA+IY4eQmq+lyZdKRTHYX67q2lwgRuLBlhrtfoLWFNQ3Ds
+pTp3jL+RQX9CchsUJpukvZMYcgN5vI7FqcY1WcVWjy19ejXVaXYjqzQmy+qn8k/P
+aa07Kdt5EtXyUguEpvjKaYmv0Zs9VkqdX/bEB9FBiuR43DBkAMfl60H6RS07/9y9
+4CvUDlVyesGKHYaYSbKaw4A5UgoNvAmgHyKik1i2oDJaQGlXQx3m61VyQ3t41ABM
+Ne7GXgFFimUCSBlIM5vyiCPSjGKBMiBzGjyheKehHRyeFrH9SGNyuYa+uobWUdYj
+fNOASc/Ukj4mkUoM/V/unAuPh4XinbNVJY4bABEBAAG0BUphIEphiQE+BBMBAgAo
+BQJXOlKRAhsDBQkATxoABgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAhc9KJ
+DxXxRq8HCACRUKcThowqxZTQwcJIBlEOITAQXnEqJNf8IOjJusP0pKEmZ22/DoQ5
+giZtMmestOnCpVPAwnfCk+H9oUSTci4c5PU3YpTZwi9XgzJUEXCFO4JJebRr2MYZ
+0MjFkbOJ3otC5ZSuSJrxUiSNIryEQAOT3n9Jf7TwgP+efzNAr1JmDvh6Iq1xm3ao
+YTEjJzbasNiku0elk5kp4G6pdwcfoWj/+rrDOzdpKmC32pc9xEQDHJj/25XGxT9S
+a6yiMajhb4GNO08mMJTs2PKHcAvHn7XK0AwK3EuvSOD+W8HG0h7fnXztLxUImpQn
+O1blxCrifSimWEwB0CseQbggRLarctLguQENBFc6UpEBCAC5bVqGYKOu8xXrr4FA
+U2Ig3OJJpWQKE2nIh4SSfjTgUDp11cLl8CpDicKV0NdTi59zrhhVQuzF7yyf3fEL
+/uMVxJmPopi9t1BLfFNLYY0l8AFQqATecJ5bAYkaEDRbmA7Vw72tKgbNuNeBek25
+Z2rYyQXRZ47suJBLoy5qFMwD1Q+xi86iz3EDTsmATz9k8Uh7cm5uXSt8d+77rBjU
+dSkf+g1AZ14cNNN5BtudqbPGHcTtSg/MzYBV8G+2Z0AkJHHDB9n9D1/1tRdZ3Jzt
+HXibcyg64w+ZW5B1y8sS1P645v5Ka8WAcdLgzsq+b2aKpbnIWsLGHWRqCPmWlxDm
+gN1XABEBAAGJASUEGAECAA8FAlc6UpECGwwFCQBPGgAACgkQIXPSiQ8V8UYGQwf/
+bKxgKaSu673ZLDYOAEWyYbYDKXW59BeWXScLKVOGjWL43QRERnSx/qR6Lkv5r4hB
+vTFRbc8rNfgPVGwdcSk9vqz8mGpzVpzel5vh6qPNvtwl5Fddj0gu+Vn9paVjW/Uq
+MBAJo286FGQHIJa13H64IVEUZ5VYw8r2d+3DWn4OJwkgOAfPyPTAwnhCxK3raW97
+y0WG787vvMrhQIXB/GcdSNQosknO14eG2U2PkOIg6tS+6e67Z3LS9Rf8gb83iVsz
+p+rCFGPD0kej+X15An/qJ6qR6ZokDrh73nkQG95tzX+Og4Doz2Bqh042ryNbbKwq
++jmIyFGp0X6lak7C6eS0XQ==
+=dPTY
+-----END PGP PUBLIC KEY BLOCK-----`
+		})
+  </script>
+
+</dom-module>

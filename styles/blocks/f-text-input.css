@@ -82,6 +82,7 @@ A text input field, with a label, that can be one line or multiple lines.
 	display: block;
 	margin-left: -1px; /* align with text-field -  adjust to the border  */
 	
+	color: var(--color-grey-dark);
 	line-height: 1.8;
 }
 f-text-input_multiline, .f-text-input__text-field {
