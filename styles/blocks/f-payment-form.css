@@ -48,7 +48,7 @@ BLOCK f-payment
 					<div class="f-payment__arrow"></div>
 				</div>
 
-				<div class="f-row_not-desktop f-row__cell-mobile_push_5 f-row__cell-mobile-8">
+				<div class="f-row_not-desktop f-row__cell-mobile_push_3 f-row__cell-mobile-8">
 					<div class="f-payment__arrow f-payment__arrow_mobile"></div>
 				</div>
 
@@ -60,7 +60,7 @@ BLOCK f-payment
 							<input type="radio" id="rb2" name="rb"value="">
 							<label for="rb2">$250</label><br>
 							<input type="radio" id="rb3" name="rb" value="">
-							<label for="rb3">$100</label>
+							<label for="rb3">$100</label><br>
 							<input type="radio" id="rb4" name="rb" value="">
 							<label for="rb4">$50</label><br>
 							<input type="radio" id="rb5" name="rb"value="">
@@ -75,11 +75,11 @@ BLOCK f-payment
 			</div>
 
 			<div class="f-payment__footer">
-				<div class="f-row f-row_12 ">
+				<div class="f-row f-row_12 f-row_debug">
 					<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 						<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
 					</div>
-					<div class="f-row__cell-1 f-row__cell-mobile_push_2">
+					<div class="f-row__cell-1 f-row__cell-mobile_push_3 f-row__cell-mobile-1">
 						<div class="f-payment__footer-text f-text">FIREFUND</div>
 						<div class="f-payment__footer-text f-text">KOBANE</div>
 					</div>
@@ -94,7 +94,7 @@ BLOCK f-payment
 							<label for="s1"></label>
 						</div>
 					</div>
-					<div class="f-row__cell-1 f-row__cell_push_1">
+					<div class="f-row__cell-1">
 						<div class="f-payment__footer-text f-text">$42.45</div>
 						<div class="f-payment__footer-text f-text">$8.55</div>
 					</div>
@@ -124,7 +124,7 @@ BLOCK f-payment
 					<button class="f-payment__button">Pledge</button>
 				</div>
 
-				<div class="f-row_not-desktop f-row__cell-mobile_	push_2 f-row__cell-mobile-8">
+				<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 					<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
 					<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 					<button class="f-payment__button">Direct</button>
@@ -147,13 +147,14 @@ BLOCK f-payment
 							<input type="radio" id="rb2" name="rb"value="">
 							<label for="rb2">$250</label><br>
 							<input type="radio" id="rb3" name="rb" value="">
-							<label for="rb3">$100</label>
+							<label for="rb3">$100</label><br>
 							<input type="radio" id="rb4" name="rb" value="">
+							<label for="rb5">$25</label><br>
+							<input type="radio" id="rb6" name="rb"value="">
 							<label for="rb4">$50</label><br>
 							<input type="radio" id="rb5" name="rb"value="">
 							<label for="rb5">$25</label><br>
-							<input type="radio" id="rb6" name="rb"value="">
-							<label for="rb6">$25</label><br> <!-- TODO: This should be a text input, for the user to write it's own number -->
+							<!-- TODO: This should be a text input, for the user to write it's own number -->
 						</div>
 						<button class="f-payment__button">Bitcoin</button>
 						<button class="f-payment__button">Credit card</button>
@@ -171,7 +172,7 @@ BLOCK f-payment
 						<div class="f-payment__footer-text f-text">KOBANE</div>
 					</div>
 
-					<div class="f-row__cell-4">
+					<div class="f-row__cell-3">
 						<div class="f-payment__slider">
 							<input class="f-payment__slider_style" type="range" id="s1">
 							<label for="s1"></label>
@@ -181,7 +182,7 @@ BLOCK f-payment
 							<label for="s1"></label>
 						</div>
 					</div>
-					<div class="f-row__cell-1 f-row__cell_push_1">
+					<div class="f-row__cell-1">
 						<div class="f-payment__footer-text f-text">$42.45</div>
 						<div class="f-payment__footer-text f-text">$8.55</div>
 					</div>
@@ -211,6 +212,8 @@ BLOCK f-payment
 	padding-top: 2.3rem;
 	width: 100%;
 	height: 100%;
+
+	float: bottom;
 }
 
 .f-payment_direct {
@@ -239,7 +242,7 @@ BLOCK f-payment
 }
 
 .f-payment__text {
-	margin-top: 0;
+	margin: 0;
 }
 
 
@@ -302,14 +305,11 @@ input[type=radio] + label:before {
     display: inline-block;  
     width: 2.6rem;  
     height: 2.6rem;  
-    vertical-align: middle;
+    vertical-align: -1rem;
 
-    margin: 1.5rem 0.8rem 1.9rem 0;  
+    margin: 1.5rem 0.5rem 0.2rem 0rem; 
 
-    font-size: 1.7rem;
-    font-weight: bold;
-
-    border: solid 0.3rem var(--color-black);
+    border: solid 0.4rem var(--color-black);
     background-color: var(--color-white);  
     border-radius: 1.3rem;  
 }
