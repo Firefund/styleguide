@@ -27,14 +27,12 @@ In the modal window, the two different payment forms - one for mobile, one for d
 		<div class="f-row f-row_12">
 			<div class="f-row__cell-7 f-row_not-mobile">
 				<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
-				<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-payment__button">Direct</button>
+				<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 				<button class="f-payment__button">Pledge</button>
 			</div>
 			<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 				<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
-				<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-payment__button">Direct</button>
+				<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
 				<button class="f-payment__button">Pledge</button>
 			</div>
 			<div class="f-row__cell-1 f-row_not-mobile">
@@ -69,10 +67,14 @@ In the modal window, the two different payment forms - one for mobile, one for d
 			</div>
 		</div>
 		<div class="f-payment__footer">
-			<div class="f-row f-row_12 f-row_debug">
+			<div class="f-row f-row_12">
+
+
 				<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
-					<div class="f-payment__footer-text f-text">FIREFUND is currently in beta. We hope to get the full site up and running as soon as possible. Therefore we ask you to consider this when choosing our share.</div>
+					<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
+					</div>
 				</div>
+
 				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
 					<div class="f-payment__footer-text f-text">FIREFUND</div>
 					<div class="f-payment__footer-text f-text">KOBANE</div>
@@ -89,6 +91,7 @@ In the modal window, the two different payment forms - one for mobile, one for d
 						</div>
 					</div>
 				</div>
+
 				<div class="f-row__cell-2">
 					<div class="f-payment__footer-text f-text">$42.45</div>
 					<div class="f-payment__footer-text f-text">$8.55</div>
@@ -142,7 +145,7 @@ In the modal window, the two different payment forms - one for mobile, one for d
 
 .f-payment__text {
 	margin: 0;
-	height: 11rem;
+	height: 11.4rem;
 }
 .f-payment__button {
 	position: relative;
@@ -194,7 +197,7 @@ In the modal window, the two different payment forms - one for mobile, one for d
 
 .f-payment__radio {
 	position: relative;
-	height: 19.8rem;
+	height: 15.8rem;
 }
 
 .f-payment__radio-input {
@@ -217,22 +220,21 @@ input[type=radio] + label:before {
 }
 
 .f-payment__footer {
-
-	height: 100%;
 	background: var(--color-grey-light);
-	margin: 2.5rem -var(--gutter-width) 0 -var(--gutter-width);
-	padding: 0 3.4rem 3.4rem 3.4rem;
+	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
+	padding: 3.4rem 0 2rem 3.4rem;
 }
 
 .f-payment__footer-text {
 	font-size: 1.2rem;
 	font-weight: 100;
 	color: var(--color-grey);
-	margin-top: 2.4rem;
+	line-height: 1.8rem;
 }
 
 .f-payment__slider {
-	margin-top: 2.4rem;
+	margin: 0.5rem 0 0 0.4rem;
+
 }
 
 .f-payment__slider_ends {
