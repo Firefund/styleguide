@@ -28,14 +28,14 @@ In the modal window, the two different payment forms - one for mobile, one for d
 			<div class="f-row__cell-7 f-row_not-mobile">
 				<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 				<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-button f-payment__button">Direct</button>
-				<button class="f-button f-payment__button">Pledge</button>
+				<button class="f-payment__button">Direct</button>
+				<button class="f-payment__button">Pledge</button>
 			</div>
 			<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 				<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
 				<p class="f-payment__text"> A direct donation transfers directly. A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-button f-payment__button">Direct</button>
-				<button class="f-button f-payment__button">Pledge</button>
+				<button class="f-payment__button">Direct</button>
+				<button class="f-payment__button">Pledge</button>
 			</div>
 			<div class="f-row__cell-1 f-row_not-mobile">
 				<div class="f-payment__arrow"></div>
@@ -63,8 +63,8 @@ In the modal window, the two different payment forms - one for mobile, one for d
 						<label for="rb3">$100</label><br>
 						<!-- TODO: This should be a text input, for the user to write it's own number -->
 					</div>
-					<button class="f-button f-payment__button">Bitcoin</button>
-					<button class="f-button f-payment__button">Credit card</button>
+					<button class="f-payment__button">Bitcoin</button>
+					<button class="f-payment__button">Credit card</button>
 				</div>
 			</div>
 		</div>
@@ -159,6 +159,18 @@ In the modal window, the two different payment forms - one for mobile, one for d
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
 	cursor: pointer;
 	outline: 0 none;
+}
+
+.f-payment__button::-moz-focus-inner {
+	border: 0; /*KLUDGE: remove outline in Firefox */
+}
+
+.f-payment__button:hover {
+	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+}
+.f-payment__button:active {
+	top: .3rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
 
 .f-payment__button_narrow {
