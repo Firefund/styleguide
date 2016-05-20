@@ -70,9 +70,9 @@ In the modal window, the two different payment forms - one for mobile, one for d
 			<div class="f-row f-row_12">
 
 
-				<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+				<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
 					<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
-					</div>
+					</div><br>
 				</div>
 
 				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
@@ -191,7 +191,7 @@ In the modal window, the two different payment forms - one for mobile, one for d
 }
 
 .f-payment__arrow_mobile {
-	margin: 4rem 0 2rem 8rem;
+	margin: 4rem 0 2rem 12rem;
 	transform: rotate(45deg);
 }
 
