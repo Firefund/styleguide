@@ -39,7 +39,7 @@ BLOCK f-miniproject-thumbnail
 <section ="f-content">
 	<section class="f-column f-column_3 f-column_mobile_1">
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/rick.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
@@ -69,7 +69,7 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
@@ -99,7 +99,7 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/16t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
@@ -129,7 +129,7 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
 					<h2 class="f-miniproject-thumbnail__heading">
