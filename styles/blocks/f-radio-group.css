@@ -63,8 +63,8 @@ With a `f-text-input` field
 		<div class="f-text-input f-radio-group__element">
 			<input id="rb9" radio-group="amount" type="radio" name="rb" value="20">
 			<label for="rb9">
-			</label>
 				<input class="f-text-input__text-field" type="number" pattern="[0-9]+" placeholder="$10">
+			</label>
 		</div>
 	</fieldset>
 
@@ -89,8 +89,6 @@ With a `f-text-input` field
 	position: relative;
 
 	margin: 0 0 .6rem 0;
-	
-	line-height: 2.6rem;
 }
 .f-radio-group__element input[type="radio"] {
 	visibility: hidden;
@@ -144,11 +142,11 @@ With a `f-text-input` field
 	
 	width: calc(100% - 3rem); /* 3rem = radio width + border */
 	
-	line-height: normal;
+	vertical-align: middle;
 	
-	-moz-appearance: textfield; /*KLUDGE: remove number controls in firefox */
+	-moz-appearance: textfield; /* KLUDGE: remove controls from Firefox */
 }
-/* Remove controls from Safari and Chrome */
+/*KLUDG: remove controls from Safari and Chrome */
 .f-radio-group__element .f-text-input__text-field::-webkit-inner-spin-button, 
 .f-radio-group__element .f-text-input__text-field::-webkit-outer-spin-button { 
   -webkit-appearance: none;
