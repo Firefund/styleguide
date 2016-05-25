@@ -47,20 +47,20 @@ BLOCK f-project-thumbnail
 						</p>
 					</div>
 					<div class="f-project-thumbnail__summary f-progress__data">
+						<p class="f-progress__data-element f-progress-thumbnail__data-element">
+							<span>38%</span> of $50,000 <span>22</span> days to go 
+						</p>
 						<p class="f-progress__data-element">
 							<span>38%</span> of $50,000
 						</p>
 						<p class="f-progress__data-element">
 							<span>$14,928</span> reached in total
 						</p>
-						<p class="f-progress__data-element">
-							<span>22</span> days to go
-						</p>
 					</div>
 				</div>
 				<div class="f-row__cell-4">
 					<figure class="f-project-thumbnail__image">
-						<img src="image/12.jpg"</img>
+						<img src="assets/image/12.jpg"</img>
 					</figure>
 				</div>
 			</div>
@@ -205,7 +205,7 @@ BLOCK f-project-thumbnail
   color: var(--color-grey-dark);
   line-height: 1.2;	
 }
-.f-progress__data-element {
+.f-progress-thumbnail__data-element {
 	 margin: 0;
 
   color: var(--color-grey-dark);

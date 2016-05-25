@@ -40,7 +40,7 @@ E.i. the image doesn't reach the top of the container and the black background i
 	padding-top: 4rem;
 
 	/*TODO: set background-image via js */
-	background-image: url(../../image/projecthero.png);
+	background-image: url(../../assets/image/projecthero.png);
 	background-repeat: no-repeat;
 	background-position: center bottom; /* cut sides until media query limit */
 }
