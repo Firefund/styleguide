@@ -10,7 +10,7 @@ BLOCK f-radio-group
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
-<form>
+
 	<fieldset class="f-radio-group">
 		<legend>Regarding</legend>
 		<div class="f-radio-group__element">
@@ -26,16 +26,19 @@ BLOCK f-radio-group
 			<label for="rb3">Other</label>
 		</div>
 	</fieldset>
-</form>
+
 
 </div> <!-- only here for the style guide - should not be used on the website -->
 ```
 
-## Default + a `f-text-input` field
+## Donation
+
+With a `f-text-input` field
+
 ```
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
-<form>
+
 	<fieldset class="f-radio-group">
 		<div class="f-radio-group__element">
 			<input id="rb4" radio-group="amount" type="radio" name="rb" value="500">
@@ -59,11 +62,12 @@ BLOCK f-radio-group
 		</div>
 		<div class="f-text-input f-radio-group__element">
 			<input id="rb9" radio-group="amount" type="radio" name="rb" value="20">
-			<input class="f-text-input__text-field" type="text">
-			<label for="rb9">$10</label>
+			<label for="rb9">
+			</label>
+				<input class="f-text-input__text-field" type="number" pattern="[0-9]+" placeholder="$10">
 		</div>
 	</fieldset>
-</form>
+
 
 </div> <!-- only here for the style guide - should not be used on the website -->
 ```
@@ -72,6 +76,8 @@ BLOCK f-radio-group
 
 @import "../variables";
 .f-radio-group {
+	margin: 0;
+	padding: 0;
 	border: none;
 }
 
@@ -83,18 +89,9 @@ BLOCK f-radio-group
 	position: relative;
 
 	margin: 0 0 .6rem 0;
-}
-
-.f-radio-group__element label {
-	display: inline-block;
-
-	font-size: 1.8rem;
+	
 	line-height: 2.6rem;
-	vertical-align: middle;
-
-	cursor: pointer;
 }
-
 .f-radio-group__element input[type="radio"] {
 	visibility: hidden;
 
@@ -108,8 +105,16 @@ BLOCK f-radio-group
 
 	cursor: pointer;
 }
+.f-radio-group__element label {
+	display: inline-block;
 
-.f-radio-group__element input[type="radio"] + label::after {
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+	vertical-align: middle;
+
+	cursor: pointer;
+}
+.f-radio-group__element input[type="radio"] ~ label::after {
 	position: absolute;
 	left: 0;
 
@@ -121,8 +126,7 @@ BLOCK f-radio-group
 
 	content: "";
 }
-
-.f-radio-group__element input[type="radio"]:checked + label::before {
+.f-radio-group__element input[type="radio"]:checked ~ label::before {
 	position: absolute;
 	top: .7rem;	/* height - outer ring height / 2 */
 	left: .7rem; /* width - outer ring width / 2 */
@@ -134,4 +138,26 @@ BLOCK f-radio-group
 	background-color: var(--color-red);
 
 	content: "";
+}
+.f-radio-group__element .f-text-input__text-field {
+	display: inline-block;
+	
+	width: calc(100% - 3rem); /* 3rem = radio width + border */
+	
+	line-height: normal;
+	
+	-moz-appearance: textfield; /*KLUDGE: remove number controls in firefox */
+}
+/* Remove controls from Safari and Chrome */
+.f-radio-group__element .f-text-input__text-field::-webkit-inner-spin-button, 
+.f-radio-group__element .f-text-input__text-field::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
+}
+.f-text-input.f-radio-group__element label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	padding-left: 3.4rem;
 }
