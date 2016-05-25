@@ -34,6 +34,7 @@ MODIFIER f-progress_vertical
 			<p class="f-progress__data-element">
 				<span>22</span> days to go
 			</p>
+			
 		</div>
 	</section>
 
@@ -82,7 +83,6 @@ MODIFIER f-progress_vertical
 
 /*TODO: this modifier is in affect on f-project-thumbnail */
 .f-progress_small {
-
 }
 
 .f-progress__bar, .f-progress__value {
@@ -107,7 +107,7 @@ MODIFIER f-progress_vertical
 .f-progress__data {
 	display: flex;
 	flex-direction: row;
-  	justify-content: space-between;
+	justify-content: space-between;
 	
 	font-size: 1.6rem;
 }

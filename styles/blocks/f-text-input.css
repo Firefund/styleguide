@@ -6,7 +6,7 @@ A text input field, with a label, that can be one line or multiple lines.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
-	
+
 	<div class="f-text-input">
 		<label class="f-text-input__label">Name
 			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
@@ -23,7 +23,7 @@ A text input field, with a label, that can be one line or multiple lines.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
-	
+
 	<div class="f-text-input f-text-input_multiline">
 		<label class="f-text-input__label">Message
 			<textarea class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
@@ -40,7 +40,7 @@ A text input field, with a label, that can be one line or multiple lines.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
-	
+
 	<div class="f-text-input f-text-input_disable">
 		<label class="f-text-input__label">Name
 			<input class="f-text-input__text-field" disabled type="text" placeholder="Name, organization, newspaper, etc.">
@@ -57,7 +57,7 @@ A text input field, with a label, that can be one line or multiple lines.
 <div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 	<!-- this should be used on the website -->
-	
+
 	<div class="f-text-input f-text-input_multiline f-text-input_disable">
 		<label class="f-text-input__label">Message
 			<textarea class="f-text-input__text-field" rows="6" disabled placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
@@ -73,7 +73,7 @@ A text input field, with a label, that can be one line or multiple lines.
 @import "../variables";
 
 .f-text-input {
-	
+
 	font-size: 1.4rem;
 	line-height: 2rem;
 }
@@ -81,7 +81,8 @@ A text input field, with a label, that can be one line or multiple lines.
 	position: relative;
 	display: block;
 	margin-left: -1px; /* align with text-field -  adjust to the border  */
-	
+
+	color: var(--color-grey-dark);
 	line-height: 1.8;
 }
 f-text-input_multiline, .f-text-input__text-field {
@@ -93,7 +94,7 @@ f-text-input_multiline, .f-text-input__text-field {
 }
 .f-text-input__text-field {
 	display: block;
-	
+
 }
 .f-text-input_multiline {	}
 .f-text-input_disable * {
