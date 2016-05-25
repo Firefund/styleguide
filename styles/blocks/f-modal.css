@@ -17,7 +17,7 @@
 
 <script>
 	// demo script
-	document.querySelector("f-button-basic").addEventListener("click", function(e) {
+	document.querySelector(".f-button-basic").addEventListener("click", function(e) {
 		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
 	})
 </script>
@@ -38,7 +38,7 @@
 	transition: opacity .3s ease;
 
 	opacity: 0;
-/*	pointer-events: none;*/
+	pointer-events: none;
 }
 
 .f-modal_visible {
@@ -54,6 +54,8 @@
 	width: 64.5rem;
 
 	transform: translate(-50%, -50%);
+	
+	pointer-events: auto;
 }
 
 .f-modal_autoclosable {}
