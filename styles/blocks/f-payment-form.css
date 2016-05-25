@@ -20,23 +20,25 @@ Noter
 	- Slider er ikke understøttet, ikke ramt på thumb DONE
 	- Slider og button position er nu skæv
 
-- Insæt korrecte tal DONE
-- Slim CSS DONE
-- Clean CSS DONE
-- Se om du kan få modal til at virke ordentligt igen DONE
+- [x] Insæt korrecte tal DONE
+- [x] Slim CSS DONE
+- [x] Clean CSS DONE
+- [x] Se om du kan få modal til at virke ordentligt igen DONE
 - Nice to have: centrer footer på mobile
 - When button is done, test if slimmer radiobuttons are cooler NOPE
-- Fix button bugs
-- Fix radio input option
+- [] Fix button bugs
+- []Fix radio input option
 - Fix radio red fill-out
 - Fix browser problems
+- Fix modifiers (change between the 3 different designs)
 
 In the modal window, the two different payment forms - one for mobile, one for desktop.
 
+
 <pre>
 BLOCK f-payment
-    MODIFIER f-payment_direct (OBSOLETE?)
-    MODIFIER f-payment_pledge (OBSOLETE?)
+MODIFIER f-payment_direct (OBSOLETE?)
+MODIFIER f-payment_pledge (OBSOLETE?)
     ELEMENT f-payment__heading
     ELEMENT f-payment__heading_mobile
     ELEMENT f-payment__text
@@ -55,8 +57,8 @@ BLOCK f-payment
 
 # Payment form
 
+<button class="f-button-basic">Toggle modal window</button>
 ```
-<button class="f-button">Toggle modal window</button>
 <div class="f-modal f-modal_visible">
 	<div class="f-modal__content">
 		<div class="f-content">
@@ -144,7 +146,7 @@ BLOCK f-payment
 ```
 <script>
 	// demo script
-	document.querySelector(".f-button").addEventListener("click", function(e) {
+	document.querySelector(".f-button-basic").addEventListener("click", function(e) {
 		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
 	})
 </script>
