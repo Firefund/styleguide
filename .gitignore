@@ -8,10 +8,10 @@ bower_components
 # generated css by postcss
 kalei/css/blocks/*.css
 kalei/css/base.css
-kalei/css/master.css
+kalei/css/styleguide.css
 kalei/css/grid.css
 kalei/assets/fonts*
 kalei/css/icons.css
 
 .DS_Store
-
+Thumbs.db
