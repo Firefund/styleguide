@@ -54,7 +54,6 @@ SECOND: size
 	height:
 	margin:;
 	padding;
-	border
 
 THIRD: font/text
 	color
@@ -77,7 +76,6 @@ SIXTH: weird stuff
 @import url("icons.css");
 
 /* ### BEM blocks ### */
-@import url("blocks/f-payment-form.css");
 @import url("blocks/f-branding.css");
 @import url("blocks/f-button-basic.css");
 @import url("blocks/f-button-donate.css");
@@ -100,9 +98,11 @@ SIXTH: weird stuff
 @import url("blocks/f-modal.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
+@import url("blocks/f-payment-form.css");
 @import url("blocks/f-postpay-heading.css");
 @import url("blocks/f-postpay-info.css");
 @import url("blocks/f-progress.css");
+@import url("blocks/f-radio-group.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-signup.css");
 @import url("blocks/f-sitemap.css");
