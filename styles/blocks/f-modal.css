@@ -55,7 +55,7 @@
 
 	transform: translate(-50%, -50%);
 	
-	pointer-events: auto;
+	pointer-events: all;
 }
 
 .f-modal_autoclosable {}
