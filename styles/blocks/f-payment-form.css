@@ -65,12 +65,12 @@ BLOCK f-payment
 					<div class="f-row__cell-7 f-row_not-mobile">
 						<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-						<button class="f-button-basic">Pledge</button>
+						<button class="f-payment__button">Pledge</button>
 					</div>
 					<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 						<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
 						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-						<button class="f-button-basic">Pledge</button>
+						<button class="f-payment__button">Pledge</button>
 					</div>
 					<div class="f-row__cell-1 f-row_not-mobile">
 						<div class="f-payment__arrow"></div>
@@ -187,6 +187,7 @@ BLOCK f-payment
 	margin: 0;
 	height: 11.4rem;
 }
+
 .f-payment__button {
 	position: relative;
 
