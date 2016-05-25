@@ -1,0 +1,137 @@
+/*
+# f-radio-group
+
+<pre>
+BLOCK f-radio-group
+	ELEMENT f-radio-group__element
+</pre>
+
+## Default
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<form>
+	<fieldset class="f-radio-group">
+		<legend>Regarding</legend>
+		<div class="f-radio-group__element">
+			<input id="rb1" radiogroup="regarding" type="radio" name="rb" value="Press">
+			<label for="rb1">Press</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb2" radiogroup="regarding" type="radio" name="rb" value="Political">
+			<label for="rb2">Political cooperation / mutial aid</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb3" radiogroup="regarding" type="radio" name="rb" value="Other">
+			<label for="rb3">Other</label>
+		</div>
+	</fieldset>
+</form>
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+
+## Default + a `f-text-input` field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+<form>
+	<fieldset class="f-radio-group">
+		<div class="f-radio-group__element">
+			<input id="rb4" radio-group="amount" type="radio" name="rb" value="500">
+			<label for="rb4">$500</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb5" radio-group="amount" type="radio" name="rb" value="250">
+			<label for="rb5">$250</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb6" radio-group="amount" type="radio" name="rb" value="100">
+			<label for="rb6">$100</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb7" radio-group="amount" type="radio" name="rb" value="50">
+			<label for="rb7">$50</label>
+		</div>
+		<div class="f-radio-group__element">
+			<input id="rb8" radio-group="amount" type="radio" name="rb" value="20">
+			<label for="rb8">$20</label>
+		</div>
+		<div class="f-text-input f-radio-group__element">
+			<input id="rb9" radio-group="amount" type="radio" name="rb" value="20">
+			<input class="f-text-input__text-field" type="text">
+			<label for="rb9">$10</label>
+		</div>
+	</fieldset>
+</form>
+
+</div> <!-- only here for the style guide - should not be used on the website -->
+```
+
+*/
+
+@import "../variables";
+.f-radio-group {
+	border: none;
+}
+
+.f-radio-group legend {
+	font-size: 1.8rem;
+}
+
+.f-radio-group__element {
+	position: relative;
+
+	margin: 0 0 .6rem 0;
+}
+
+.f-radio-group__element label {
+	display: inline-block;
+
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+	vertical-align: middle;
+
+	cursor: pointer;
+}
+
+.f-radio-group__element input[type="radio"] {
+	visibility: hidden;
+
+	height: 2.6rem;
+	width: 2.6rem;
+
+	margin: 0;
+
+	line-height: 2.6rem;
+	vertical-align: middle;
+
+	cursor: pointer;
+}
+
+.f-radio-group__element input[type="radio"] + label::after {
+	position: absolute;
+	left: 0;
+
+	height: 2.6rem;
+	width: 2.6rem;
+
+	border: solid 0.2rem var(--color-black);
+	border-radius: 50%;
+
+	content: "";
+}
+
+.f-radio-group__element input[type="radio"]:checked + label::before {
+	position: absolute;
+	top: .7rem;	/* height - outer ring height / 2 */
+	left: .7rem; /* width - outer ring width / 2 */
+
+	height: 1.2rem;
+	width: 1.2rem;
+
+	border-radius: 50%;
+	background-color: var(--color-red);
+
+	content: "";
+}
