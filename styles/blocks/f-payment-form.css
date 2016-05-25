@@ -8,6 +8,13 @@ Noter
 - Position buttons mobile (3-column) DONE
 - Position left-buttons again - maybe with a button div DONE
 - Allignment of radiobuttons DONE
+- Clean HTML DONE
+- Forsøg m. procent ved micropixelfejl
+- Position rightbuttons både på mobile og desktop
+- Insæt korrecte tal
+- Slim CSS
+- Clean CSS
+- Se om du kan få modal til at virke ordentligt igen
 - Fix button bug
 - Fix radio input option
 - Fix radio red fill-out
@@ -36,87 +43,82 @@ BLOCK f-payment
 
 ```
 <button class="f-button">Toggle modal window</button>
-
 <div class="f-modal f-modal_visible">
 	<div class="f-modal__content">
 		<div class="f-content">
-	<div class="f-payment">
-		<div class="f-row f-row_12">
-			<div class="f-row__cell-7 f-row_not-mobile">
-				<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
-				<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-payment__button">Pledge</button>
-			</div>
-			<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
-				<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
-				<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-				<button class="f-payment__button">Pledge</button>
-			</div>
-			<div class="f-row__cell-1 f-row_not-mobile">
-				<div class="f-payment__arrow"></div>
-			</div>
-			<div class="f-row_not-desktop f-row__cell-mobile_push_3 f-row__cell-mobile-8">
-				<div class="f-payment__arrow f-payment__arrow_mobile"></div>
-			</div>
-			<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
-				<div class="f-payment__radio">
-					<div class="f-column f-column_2 f-column_mobile_3">
-						<input type="radio" id="rb4" name="rb" value="">
-						<label for="rb5">$ON</label><br>
-						<input type="radio" id="rb6" name="rb"value="">
-						<label for="rb4">$TW</label><br>
-						<input type="radio" id="rb5" name="rb"value="">
-						<label for="rb5">$ON</label><br>
-						<input type="radio" id="rb1" name="rb" value="">
-						<label for="rb1">$TW</label><br>
-						<input type="radio" id="rb2" name="rb"value="">
-						<label for="rb2">$ON</label><br>
-						<input type="radio" id="rb3" name="rb" value="">
-						<label for="rb3">$TW</label><br>
-						<!-- TODO: This should be a text input, for the user to write it's own number -->
+			<div class="f-payment">
+				<div class="f-row f-row_12">
+					<div class="f-row__cell-7 f-row_not-mobile">
+						<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
+						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+						<button class="f-payment__button">Pledge</button>
 					</div>
-				</div>	
-				<div class="f-row__not-mobile f-row__cell-12">
-					<button class="f-payment__button">Bitcoin</button>
-					<button class="f-payment__button">Credit card</button>
-				</div>
-				<div class="f-payment__button-group">
-					<div class="f-row__not-desktop f-row__cell-mobile-12">
-						<button class="f-payment__button">Bitcoin</button><br>
-						<button class="f-payment__button">Credit card</button>
+					<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+						<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
+						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+						<button class="f-payment__button">Pledge</button>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="f-payment__footer">
-			<div class="f-row f-row_12">
-
-
-				<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
-					<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
-					</div><br>
-				</div>
-
-				<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
-					<div class="f-payment__footer-text f-text">FIREFUND</div>
-					<div class="f-payment__footer-text f-text">KOBANE</div>
-				</div>
-				<div class="f-row__cell-3">
-					<div class="f-payment__slider">
-						<div class="f-payment__slider_ends">
-							<input class="f-payment__slider_style" type="range" id="s1">
-							<label for="s1"></label>
+					<div class="f-row__cell-1 f-row_not-mobile">
+						<div class="f-payment__arrow"></div>
+					</div>
+					<div class="f-row_not-desktop f-row__cell-mobile_push_3 f-row__cell-mobile-8">
+						<div class="f-payment__arrow f-payment__arrow_mobile"></div>
+					</div>
+					<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+						<div class="f-payment__radio">
+							<div class="f-column f-column_2 f-column_mobile_3">
+								<input type="radio" id="rb4" name="rb" value="">
+								<label for="rb5">$ON</label><br>
+								<input type="radio" id="rb6" name="rb"value="">
+								<label for="rb4">$TW</label><br>
+								<input type="radio" id="rb5" name="rb"value="">
+								<label for="rb5">$ON</label><br>
+								<input type="radio" id="rb1" name="rb" value="">
+								<label for="rb1">$TW</label><br>
+								<input type="radio" id="rb2" name="rb"value="">
+								<label for="rb2">$ON</label><br>
+								<input type="radio" id="rb3" name="rb" value="">
+								<label for="rb3">$TW</label><br>
+								<!-- TODO: This should be a text input, for the user to write it's own number -->
+							</div>
 						</div>
-						<div class="f-payment__slider_ends">
-							<input class="f-payment__slider_style" type="range" id="s1">
-							<label for="s1"></label>
+						<div class="f-row__not-mobile f-row__cell-12">
+							<button class="f-payment__button">Bitcoin</button>
+							<button class="f-payment__button">Credit card</button>
+						</div>
+						<div class="f-payment__button-group">
+							<div class="f-row__not-desktop f-row__cell-mobile-12">
+								<button class="f-payment__button">Bitcoin</button><br>
+								<button class="f-payment__button">Credit card</button>
+							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="f-row__cell-2">
-					<div class="f-payment__footer-text f-text">$42.45</div>
-					<div class="f-payment__footer-text f-text">$8.55</div>
+				<div class="f-payment__footer">
+					<div class="f-row f-row_12">
+						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
+							<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
+							</div><br>
+						</div>
+						<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
+							<div class="f-payment__footer-text f-text">FIREFUND</div>
+							<div class="f-payment__footer-text f-text">KOBANE</div>
+						</div>
+						<div class="f-row__cell-3">
+							<div class="f-payment__slider">
+								<div class="f-payment__slider_ends">
+									<input class="f-payment__slider_style" type="range" id="s1">
+									<label for="s1"></label>
+								</div>
+								<div class="f-payment__slider_ends">
+									<input class="f-payment__slider_style" type="range" id="s1">
+									<label for="s1"></label>
+								</div>
+							</div>
+						</div>
+						<div class="f-row__cell-2">
+							<div class="f-payment__footer-text f-text">$42.45</div>
+							<div class="f-payment__footer-text f-text">$8.55</div>
 						</div>
 					</div>
 				</div>
@@ -124,10 +126,8 @@ BLOCK f-payment
 		</div>
 	</div>
 </div>
+
 ```
-
-
-
 <script>
 	// demo script
 	document.querySelector(".f-button").addEventListener("click", function(e) {
@@ -135,6 +135,7 @@ BLOCK f-payment
 	})
 </script>
 */
+
 @import "../variables";
 
 .f-payment {
