@@ -65,12 +65,12 @@ BLOCK f-payment
 					<div class="f-row__cell-7 f-row_not-mobile">
 						<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
 						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-						<button class="f-payment__button">Pledge</button>
+						<button class="f-button-basic f-payment__button">Pledge</button>
 					</div>
 					<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
 						<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
 						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
-						<button class="f-payment__button">Pledge</button>
+						<button class="f-button-basic f-payment__button">Pledge</button>
 					</div>
 					<div class="f-row__cell-1 f-row_not-mobile">
 						<div class="f-payment__arrow"></div>
@@ -97,13 +97,13 @@ BLOCK f-payment
 							</div>
 						</div>
 						<div class="f-row__not-mobile f-row__cell-12">
-							<button class="f-payment__button">Bitcoin</button>
-							<button class="f-payment__button">Credit card</button>
+							<button class="f-button-basic f-payment__button">Bitcoin</button>
+							<button class="f-button-basic f-payment__button">Credit card</button>
 						</div>
 						<div class="f-payment__button-group">
 							<div class="f-row__not-desktop f-row__cell-mobile-12">
-								<button class="f-payment__button">Bitcoin</button><br>
-								<button class="f-payment__button">Credit card</button>
+								<button class="f-button-basic f-payment__button">Bitcoin</button><br>
+								<button class="f-button-basic f-payment__button">Credit card</button>
 							</div>
 						</div>
 					</div>
@@ -185,40 +185,15 @@ BLOCK f-payment
 
 .f-payment__text {
 	margin: 0;
-	height: 11.4rem;
+	height: 10.8rem;
 }
 
-.f-payment__button {
-	position: relative;
-
+.f-payment .f-payment__button {
 	width: 100%;
 	margin-bottom: 1rem;
-	border: .2rem solid var(--color-black);
-	border-radius: 0.5rem;
-	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
 	
-	color: var(--color-black, black);
 	font-size: 2.0rem;
 	font-weight: lighter;
-	text-transform: capitalize;
-	text-align: center;
-	
-	background-color: var(--color-white);
-
-	cursor: pointer;
-	outline: 0 none;
-}
-
-.f-payment__button::-moz-focus-inner {
-	border: 0; /*KLUDGE: remove outline in Firefox */
-}
-
-.f-payment__button:hover {
-	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
-}
-.f-payment__button:active {
-	top: .3rem;
-	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
 }
 
 .f-payment__button-group {
