@@ -39,10 +39,10 @@ BLOCK f-miniproject-thumbnail
 <section ="f-content">
 	<section class="f-column f-column_3 f-column_mobile_1">
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/rick.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/rick.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
-					<h2 class="f-miniproject-thumbnail__heading f-left-heading">
+					<h2 class="f-miniproject-thumbnail__heading">
 					They keep changing things!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
@@ -69,10 +69,10 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
-					<h2 class="f-miniproject-thumbnail__heading f-left-heading">
+					<h2 class="f-miniproject-thumbnail__heading">
 					This one is just outta' control!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
@@ -99,10 +99,10 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/16t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/16t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
-					<h2 class="f-miniproject-thumbnail__heading f-left-heading">
+					<h2 class="f-miniproject-thumbnail__heading">
 					Kobane is rebuilding!
 					</h2>
 					<h4 class="f-miniproject-thumbnail__byline">Out of Africa</h4>
@@ -129,10 +129,10 @@ BLOCK f-miniproject-thumbnail
 			</div>
 		</div>
 		<div class="f-miniproject-thumbnail">
-			<img class="f-miniproject-thumbnail__image" src="image/12t.jpg">
+			<img class="f-miniproject-thumbnail__image" src="assets/image/12t.jpg">
 			<div class="f-miniproject-thumbnail__info">
 				<div class="f-miniproject-thumbnail__content">
-					<h2 class="f-miniproject-thumbnail__heading f-left-heading">
+					<h2 class="f-miniproject-thumbnail__heading">
 					This one is just outta' control!
 					</h2>
 					<h3 class="f-miniproject-thumbnail__byline">Out of Africa</h3>
@@ -242,8 +242,8 @@ BLOCK f-miniproject-thumbnail
 .f-miniproject-thumbnail__heading {
 	display: inline-flex;
 	margin-bottom: .4rem;
-	/*margin: 0 0 0.4rem -var(--gutter-width);
-	padding: .68rem 1.0rem .86rem calc(var(--gutter-width)*2);*/
+	margin: 0 0 0.4rem -var(--gutter-width);
+	padding: .68rem 1.0rem .86rem var(--gutter-width);
 	
 	color: var(--color-white);
 	font-size: 1.5rem;

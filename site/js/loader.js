@@ -48,6 +48,7 @@
 	function hideSplash() {
 		// TODO: add timer to remove splash if transitionend is not fired
 		var splash = document.querySelector(".f-splash_loading")
+		if(!splash) return // make sure we don't break loading if f-splash doesn't exist
 		splash
 			.addEventListener("transitionend", function() {
 				document.body.removeChild(splash)
