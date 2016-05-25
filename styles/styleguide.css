@@ -79,11 +79,11 @@ SIXTH: weird stuff
 /* ### BEM blocks ### */
 @import url("blocks/f-payment-form.css");
 @import url("blocks/f-branding.css");
+@import url("blocks/f-button-basic.css");
 @import url("blocks/f-button-donate.css");
 @import url("blocks/f-button-group.css");
 @import url("blocks/f-button-icon.css");
 @import url("blocks/f-button-organize.css");
-@import url("blocks/f-button-basic.css");
 @import url("blocks/f-content.css");
 @import url("blocks/f-cuff-text.css");
 @import url("blocks/f-donation-amount.css");
