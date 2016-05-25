@@ -9,24 +9,36 @@ Noter
 - Position left-buttons again - maybe with a button div DONE
 - Allignment of radiobuttons DONE
 - Clean HTML DONE
-- Forsøg m. procent ved micropixelfejl
-- Position rightbuttons både på mobile og desktop
-- Insæt korrecte tal
-- Slim CSS
-- Clean CSS
-- Se om du kan få modal til at virke ordentligt igen
-- Fix button bug
+- Forsøg m. procent ved micropixelfejl DONE (men stadig små fejl)
+- Position rightbuttons både på mobile og desktop DONE
+- Test browsers - DONE
+
+	SAFARI 
+	- Ingen slider-end i mindre versioner
+	- Slider track ustabil og glimser ud
+	FIREFOX
+	- Slider er ikke understøttet, ikke ramt på thumb DONE
+	- Slider og button position er nu skæv
+
+- Insæt korrecte tal DONE
+- Slim CSS DONE
+- Clean CSS DONE
+- Se om du kan få modal til at virke ordentligt igen DONE
+- Nice to have: centrer footer på mobile
+- When button is done, test if slimmer radiobuttons are cooler NOPE
+- Fix button bugs
 - Fix radio input option
 - Fix radio red fill-out
-
+- Fix browser problems
 
 In the modal window, the two different payment forms - one for mobile, one for desktop.
 
 <pre>
 BLOCK f-payment
-    MODIFIER f-payment_direct
-    MODIFIER f-payment_pledge
+    MODIFIER f-payment_direct (OBSOLETE?)
+    MODIFIER f-payment_pledge (OBSOLETE?)
     ELEMENT f-payment__heading
+    ELEMENT f-payment__heading_mobile
     ELEMENT f-payment__text
     ELEMENT f-payment__button
     ELEMENT f-payment__button-group
@@ -36,6 +48,8 @@ BLOCK f-payment
     ELEMENT f-payment__footer
     ELEMENT f-payment__footer-text
     ELEMENT f-payment__slider
+    ELEMENT f-payment__slider-style
+    ELEMENT f-payment__slider-ends
 </pre>
 
 
@@ -68,17 +82,17 @@ BLOCK f-payment
 						<div class="f-payment__radio">
 							<div class="f-column f-column_2 f-column_mobile_3">
 								<input type="radio" id="rb4" name="rb" value="">
-								<label for="rb5">$ON</label><br>
+								<label for="rb5">$500</label><br>
 								<input type="radio" id="rb6" name="rb"value="">
-								<label for="rb4">$TW</label><br>
+								<label for="rb4">$250</label><br>
 								<input type="radio" id="rb5" name="rb"value="">
-								<label for="rb5">$ON</label><br>
+								<label for="rb5">$100</label><br>
 								<input type="radio" id="rb1" name="rb" value="">
-								<label for="rb1">$TW</label><br>
+								<label for="rb1">$50</label><br>
 								<input type="radio" id="rb2" name="rb"value="">
-								<label for="rb2">$ON</label><br>
+								<label for="rb2">$20</label><br>
 								<input type="radio" id="rb3" name="rb" value="">
-								<label for="rb3">$TW</label><br>
+								<label for="rb3">$0</label><br>
 								<!-- TODO: This should be a text input, for the user to write it's own number -->
 							</div>
 						</div>
@@ -106,12 +120,12 @@ BLOCK f-payment
 						</div>
 						<div class="f-row__cell-3">
 							<div class="f-payment__slider">
-								<div class="f-payment__slider_ends">
-									<input class="f-payment__slider_style" type="range" id="s1">
+								<div class="f-payment__slider-ends">
+									<input class="f-payment__slider-style" type="range" id="s1">
 									<label for="s1"></label>
 								</div>
-								<div class="f-payment__slider_ends">
-									<input class="f-payment__slider_style" type="range" id="s1">
+								<div class="f-payment__slider-ends">
+									<input class="f-payment__slider-style" type="range" id="s1">
 									<label for="s1"></label>
 								</div>
 							</div>
@@ -139,10 +153,11 @@ BLOCK f-payment
 @import "../variables";
 
 .f-payment {
-	padding-top: 2.3rem;
-	width: 100%;
-	height: 100%;
 	float: bottom;
+
+	height: 100%;
+	width: 100%;
+	padding-top: 2.3rem;
 }
 
 .f-payment_direct {
@@ -152,13 +167,14 @@ BLOCK f-payment
 }
 
 .f-payment__heading {
-	display: inline-flex;
-	line-height: 2.7rem;
 	margin: 0 0 1.9rem -var(--gutter-width);
 	padding: .8rem 1.93rem .8rem var(--gutter-width);
 
+	line-height: 2.7rem;
+	
 	color: var(--color-white);
 	font-size: 2.6rem;
+	
 	background-color: var(--color-black);
 }
 
@@ -173,19 +189,21 @@ BLOCK f-payment
 }
 .f-payment__button {
 	position: relative;
-	bottom: 0;
-	right: 0;
+
 	width: 100%;
-	margin: 0 0 1rem 0;
+	margin-bottom: 1rem;
+	border: .2rem solid var(--color-black);
+	border-radius: 0.5rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
+	
 	color: var(--color-black, black);
 	font-size: 2.0rem;
 	font-weight: lighter;
 	text-transform: capitalize;
 	text-align: center;
+	
 	background-color: var(--color-white);
-	border: .2rem solid var(--color-black);
-	border-radius: 0.5rem;
-	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
+
 	cursor: pointer;
 	outline: 0 none;
 }
@@ -203,27 +221,33 @@ BLOCK f-payment
 }
 
 .f-payment__button-group {
-	margin: -5rem 0 0 0;
 	width: 15rem;
+	margin: -5rem 0 0 0;
 }
 
 .f-payment__arrow {
-	margin: 11rem 0 0 -1.5rem;
-	height: 3rem;
 	width: 3rem;
+	height: 3rem;
+	margin: 11rem 0 0 -1.5rem;
 	border-bottom: 5px solid var(--color-grey-light);
 	border-right: 5px solid var(--color-grey-light);
+
 	transform: rotate(-45deg);
 }
 
 .f-payment__arrow_mobile {
 	margin: 1rem 0 2rem 12rem;
+
 	transform: rotate(45deg);
 }
 
 .f-payment__radio {
 	position: relative;
+	
 	height: 13.7rem;
+	margin-bottom: 2rem;
+
+	font-weight: bold;
 }
 
 .f-payment__radio-input {
@@ -234,38 +258,40 @@ input[type=radio] {
 }
 
 input[type=radio] + label:before {
-	content: "";
 	display: inline-block;
-	width: 2.6rem;
-	height: 2.6rem;
+	content: "";
 	vertical-align: -1rem;
-	margin: 1.5rem 0.5rem 0.2rem 0rem;
-	border: solid 0.4rem var(--color-black);
+	
+	height: 2.6rem;
+	width: 2.6rem;
+	margin: 1.5rem 0.3rem 0.2rem 0rem;
+	border: solid 0.2rem var(--color-black);
+	
 	background-color: var(--color-white);
 	border-radius: 1.3rem;
 }
 
 .f-payment__footer {
-	background: var(--color-grey-light);
 	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
 	padding: 3.4rem 0 2rem 3.4rem;
+	
+	background: var(--color-grey-light);
 }
 
 .f-payment__footer-text {
+	color: var(--color-grey);
 	font-size: 1.2rem;
 	font-weight: 100;
-	color: var(--color-grey);
 	line-height: 1.8rem;
 }
 
 .f-payment__slider {
-	margin: 0.5rem 0 0 0.4rem;
-
+	margin: 4% 0 0 3%;
 }
 
-.f-payment__slider_ends {
+.f-payment__slider-ends {
 	display: inline-block;
-	align-self: center;
+	
 	height: 0.7rem;
 	width: 12.8rem;
 	margin: 0 1rem 0 1rem;
@@ -273,94 +299,106 @@ input[type=radio] + label:before {
 	border-right: 0.1rem solid var(--color-grey);
 }
 
-input[type=range].f-payment__slider_style {
-	-webkit-appearance: none;
+input[type=range].f-payment__slider-style {
 	width: 100%;
 	margin: -1rem 0;
+
+	-webkit-appearance: none;
 }
 
-input[type=range].f-payment__slider_style:focus {
+input[type=range].f-payment__slider-style:focus {
 	outline: none;
 }
 
-input[type=range].f-payment__slider_style::-webkit-slider-runnable-track {
-	margin: -2.7rem 0 0 0;
-	width: 100%;
+input[type=range].f-payment__slider-style::-webkit-slider-runnable-track {
 	height: 0.1rem;
-	cursor: pointer;
+	width: 100%;
+	margin: -21% 0 0 0;
+
 	background: #808080;
 	border-radius: 0px;
 	border: 0px solid rgba(1, 1, 1, 0);
+	
+	cursor: pointer;
 }
 
-input[type=range].f-payment__slider_style::-webkit-slider-thumb {
-	border: 1px solid #808080;
+input[type=range].f-payment__slider-style::-webkit-slider-thumb {
+	margin-top: -0.8rem;
 	height: 1.6rem;
 	width: 1.6rem;
+	border: 1px solid #808080;
 	border-radius: 10px;
+	
 	background: #d8d8d8;
+
 	cursor: pointer;
 	-webkit-appearance: none;
-	margin-top: -0.8rem;
 }
 
-input[type=range].f-payment__slider_style:focus::-webkit-slider-runnable-track {
+input[type=range].f-payment__slider-style:focus::-webkit-slider-runnable-track {
 	background: #979797;
 }
 
-input[type=range].f-payment__slider_style::-moz-range-track {
+input[type=range].f-payment__slider-style::-moz-range-track {
 	width: 100%;
 	height: 0.2rem;
-	cursor: pointer;
+	
 	background: #808080;
 	border-radius: 0px;
 	border: 0px solid rgba(1, 1, 1, 0);
-}
 
-input[type=range].f-payment__slider_style::-moz-range-thumb {
-	border: 1rem solid #808080;
-	height: 2rem;
-	width: 2rem;
-	border-radius: 10px;
-	background: #d8d8d8;
 	cursor: pointer;
 }
 
-input[type=range].f-payment__slider_style::-ms-track {
+input[type=range].f-payment__slider-style::-moz-range-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+
+	background: #d8d8d8;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style::-ms-track {
 	width: 100%;
 	height: 0.2rem;
-	cursor: pointer;
+
+	color: transparent;
+	
 	background: transparent;
 	border-color: transparent;
-	color: transparent;
+	cursor: pointer;
 }
 
-input[type=range].f-payment__slider_style::-ms-fill-lower {
+input[type=range].f-payment__slider-style::-ms-fill-lower {
 	background: #696969;
 	border: 0px solid rgba(1, 1, 1, 0);
 	border-radius: 0px;
 }
 
-input[type=range].f-payment__slider_style::-ms-fill-upper {
+input[type=range].f-payment__slider-style::-ms-fill-upper {
 	background: #808080;
 	border: 0px solid rgba(1, 1, 1, 0);
 	border-radius: 0px;
 }
 
-input[type=range].f-payment__slider_style::-ms-thumb {
+input[type=range].f-payment__slider-style::-ms-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+	
+	background: #D8D8D8;
 	border: 1px solid #808080;
-	height: 20px;
-	width: 20px;
 	border-radius: 10px;
-	background: #d8d8d8;
+	
 	cursor: pointer;
-	height: 2px;
 }
 
-input[type=range].f-payment__slider_style:focus::-ms-fill-lower {
+input[type=range].f-payment__slider-style:focus::-ms-fill-lower {
 	background: #808080;
 }
 
-input[type=range].f-payment__slider_style:focus::-ms-fill-upper {
+input[type=range].f-payment__slider-style:focus::-ms-fill-upper {
 	background: #979797;
 }
