@@ -1,0 +1,404 @@
+/*
+
+Noter
+
+- Sketch ny situation med nye fundingmodeller og indret dig derefter DONE
+- Slider i egen block og branch NOPE
+- Correct the arrow DONE
+- Position buttons mobile (3-column) DONE
+- Position left-buttons again - maybe with a button div DONE
+- Allignment of radiobuttons DONE
+- Clean HTML DONE
+- Forsøg m. procent ved micropixelfejl DONE (men stadig små fejl)
+- Position rightbuttons både på mobile og desktop DONE
+- Test browsers - DONE
+
+	SAFARI 
+	- Ingen slider-end i mindre versioner
+	- Slider track ustabil og glimser ud
+	FIREFOX
+	- Slider er ikke understøttet, ikke ramt på thumb DONE
+	- Slider og button position er nu skæv
+
+- Insæt korrecte tal DONE
+- Slim CSS DONE
+- Clean CSS DONE
+- Se om du kan få modal til at virke ordentligt igen DONE
+- Nice to have: centrer footer på mobile
+- When button is done, test if slimmer radiobuttons are cooler NOPE
+- Fix button bugs
+- Fix radio input option
+- Fix radio red fill-out
+- Fix browser problems
+
+In the modal window, the two different payment forms - one for mobile, one for desktop.
+
+<pre>
+BLOCK f-payment
+    MODIFIER f-payment_direct (OBSOLETE?)
+    MODIFIER f-payment_pledge (OBSOLETE?)
+    ELEMENT f-payment__heading
+    ELEMENT f-payment__heading_mobile
+    ELEMENT f-payment__text
+    ELEMENT f-payment__button
+    ELEMENT f-payment__button-group
+    ELEMENT f-payment__arrow
+    ELEMENT f-payment__radio
+    ELEMENT f-payment__radio-input
+    ELEMENT f-payment__footer
+    ELEMENT f-payment__footer-text
+    ELEMENT f-payment__slider
+    ELEMENT f-payment__slider-style
+    ELEMENT f-payment__slider-ends
+</pre>
+
+
+# Payment form
+
+```
+<button class="f-button">Toggle modal window</button>
+<div class="f-modal f-modal_visible">
+	<div class="f-modal__content">
+		<div class="f-content">
+			<div class="f-payment">
+				<div class="f-row f-row_12">
+					<div class="f-row__cell-7 f-row_not-mobile">
+						<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
+						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+						<button class="f-payment__button">Pledge</button>
+					</div>
+					<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+						<h2 class="f-payment__heading f-payment__heading_mobile"> Choose the amount and method of payment</h2>
+						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+						<button class="f-payment__button">Pledge</button>
+					</div>
+					<div class="f-row__cell-1 f-row_not-mobile">
+						<div class="f-payment__arrow"></div>
+					</div>
+					<div class="f-row_not-desktop f-row__cell-mobile_push_3 f-row__cell-mobile-8">
+						<div class="f-payment__arrow f-payment__arrow_mobile"></div>
+					</div>
+					<div class="f-row__cell-4 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+						<div class="f-payment__radio">
+							<div class="f-column f-column_2 f-column_mobile_3">
+								<input type="radio" id="rb4" name="rb" value="">
+								<label for="rb5">$500</label><br>
+								<input type="radio" id="rb6" name="rb"value="">
+								<label for="rb4">$250</label><br>
+								<input type="radio" id="rb5" name="rb"value="">
+								<label for="rb5">$100</label><br>
+								<input type="radio" id="rb1" name="rb" value="">
+								<label for="rb1">$50</label><br>
+								<input type="radio" id="rb2" name="rb"value="">
+								<label for="rb2">$20</label><br>
+								<input type="radio" id="rb3" name="rb" value="">
+								<label for="rb3">$0</label><br>
+								<!-- TODO: This should be a text input, for the user to write it's own number -->
+							</div>
+						</div>
+						<div class="f-row__not-mobile f-row__cell-12">
+							<button class="f-payment__button">Bitcoin</button>
+							<button class="f-payment__button">Credit card</button>
+						</div>
+						<div class="f-payment__button-group">
+							<div class="f-row__not-desktop f-row__cell-mobile-12">
+								<button class="f-payment__button">Bitcoin</button><br>
+								<button class="f-payment__button">Credit card</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="f-payment__footer">
+					<div class="f-row f-row_12">
+						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
+							<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
+							</div><br>
+						</div>
+						<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
+							<div class="f-payment__footer-text f-text">FIREFUND</div>
+							<div class="f-payment__footer-text f-text">KOBANE</div>
+						</div>
+						<div class="f-row__cell-3">
+							<div class="f-payment__slider">
+								<div class="f-payment__slider-ends">
+									<input class="f-payment__slider-style" type="range" id="s1">
+									<label for="s1"></label>
+								</div>
+								<div class="f-payment__slider-ends">
+									<input class="f-payment__slider-style" type="range" id="s1">
+									<label for="s1"></label>
+								</div>
+							</div>
+						</div>
+						<div class="f-row__cell-2">
+							<div class="f-payment__footer-text f-text">$42.45</div>
+							<div class="f-payment__footer-text f-text">$8.55</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```
+<script>
+	// demo script
+	document.querySelector(".f-button").addEventListener("click", function(e) {
+		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
+	})
+</script>
+*/
+
+@import "../variables";
+
+.f-payment {
+	float: bottom;
+
+	height: 100%;
+	width: 100%;
+	padding-top: 2.3rem;
+}
+
+.f-payment_direct {
+}
+
+.f-payment_pledge {
+}
+
+.f-payment__heading {
+	margin: 0 0 1.9rem -var(--gutter-width);
+	padding: .8rem 1.93rem .8rem var(--gutter-width);
+
+	line-height: 2.7rem;
+	
+	color: var(--color-white);
+	font-size: 2.6rem;
+	
+	background-color: var(--color-black);
+}
+
+.f-payment__heading_mobile {
+	margin: 0 0 1.9rem -13.6rem;
+	padding: .8rem 1.93rem .8rem 13.6rem;
+}
+
+.f-payment__text {
+	margin: 0;
+	height: 11.4rem;
+}
+.f-payment__button {
+	position: relative;
+
+	width: 100%;
+	margin-bottom: 1rem;
+	border: .2rem solid var(--color-black);
+	border-radius: 0.5rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
+	
+	color: var(--color-black, black);
+	font-size: 2.0rem;
+	font-weight: lighter;
+	text-transform: capitalize;
+	text-align: center;
+	
+	background-color: var(--color-white);
+
+	cursor: pointer;
+	outline: 0 none;
+}
+
+.f-payment__button::-moz-focus-inner {
+	border: 0; /*KLUDGE: remove outline in Firefox */
+}
+
+.f-payment__button:hover {
+	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+}
+.f-payment__button:active {
+	top: .3rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+}
+
+.f-payment__button-group {
+	width: 15rem;
+	margin: -5rem 0 0 0;
+}
+
+.f-payment__arrow {
+	width: 3rem;
+	height: 3rem;
+	margin: 11rem 0 0 -1.5rem;
+	border-bottom: 5px solid var(--color-grey-light);
+	border-right: 5px solid var(--color-grey-light);
+
+	transform: rotate(-45deg);
+}
+
+.f-payment__arrow_mobile {
+	margin: 1rem 0 2rem 12rem;
+
+	transform: rotate(45deg);
+}
+
+.f-payment__radio {
+	position: relative;
+	
+	height: 13.7rem;
+	margin-bottom: 2rem;
+
+	font-weight: bold;
+}
+
+.f-payment__radio-input {
+}
+
+input[type=radio] {
+	display:none;
+}
+
+input[type=radio] + label:before {
+	display: inline-block;
+	content: "";
+	vertical-align: -1rem;
+	
+	height: 2.6rem;
+	width: 2.6rem;
+	margin: 1.5rem 0.3rem 0.2rem 0rem;
+	border: solid 0.2rem var(--color-black);
+	
+	background-color: var(--color-white);
+	border-radius: 1.3rem;
+}
+
+.f-payment__footer {
+	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
+	padding: 3.4rem 0 2rem 3.4rem;
+	
+	background: var(--color-grey-light);
+}
+
+.f-payment__footer-text {
+	color: var(--color-grey);
+	font-size: 1.2rem;
+	font-weight: 100;
+	line-height: 1.8rem;
+}
+
+.f-payment__slider {
+	margin: 4% 0 0 3%;
+}
+
+.f-payment__slider-ends {
+	display: inline-block;
+	
+	height: 0.7rem;
+	width: 12.8rem;
+	margin: 0 1rem 0 1rem;
+	border-left: 0.1rem solid var(--color-grey);
+	border-right: 0.1rem solid var(--color-grey);
+}
+
+input[type=range].f-payment__slider-style {
+	width: 100%;
+	margin: -1rem 0;
+
+	-webkit-appearance: none;
+}
+
+input[type=range].f-payment__slider-style:focus {
+	outline: none;
+}
+
+input[type=range].f-payment__slider-style::-webkit-slider-runnable-track {
+	height: 0.1rem;
+	width: 100%;
+	margin: -21% 0 0 0;
+
+	background: #808080;
+	border-radius: 0px;
+	border: 0px solid rgba(1, 1, 1, 0);
+	
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style::-webkit-slider-thumb {
+	margin-top: -0.8rem;
+	height: 1.6rem;
+	width: 1.6rem;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	
+	background: #d8d8d8;
+
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+input[type=range].f-payment__slider-style:focus::-webkit-slider-runnable-track {
+	background: #979797;
+}
+
+input[type=range].f-payment__slider-style::-moz-range-track {
+	width: 100%;
+	height: 0.2rem;
+	
+	background: #808080;
+	border-radius: 0px;
+	border: 0px solid rgba(1, 1, 1, 0);
+
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style::-moz-range-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+
+	background: #d8d8d8;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style::-ms-track {
+	width: 100%;
+	height: 0.2rem;
+
+	color: transparent;
+	
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style::-ms-fill-lower {
+	background: #696969;
+	border: 0px solid rgba(1, 1, 1, 0);
+	border-radius: 0px;
+}
+
+input[type=range].f-payment__slider-style::-ms-fill-upper {
+	background: #808080;
+	border: 0px solid rgba(1, 1, 1, 0);
+	border-radius: 0px;
+}
+
+input[type=range].f-payment__slider-style::-ms-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+	
+	background: #D8D8D8;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	
+	cursor: pointer;
+}
+
+input[type=range].f-payment__slider-style:focus::-ms-fill-lower {
+	background: #808080;
+}
+
+input[type=range].f-payment__slider-style:focus::-ms-fill-upper {
+	background: #979797;
+}
