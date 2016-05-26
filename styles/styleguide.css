@@ -54,7 +54,6 @@ SECOND: size
 	height:
 	margin:;
 	padding;
-	border
 
 THIRD: font/text
 	color
@@ -96,12 +95,14 @@ SIXTH: weird stuff
 @import url("blocks/f-list.css");
 @import url("blocks/f-media.css");
 @import url("blocks/f-mini-thumbnail.css");
-@import url("blocks/f-modal-window.css");
+@import url("blocks/f-modal.css");
 @import url("blocks/f-navigation.css");
 @import url("blocks/f-one-liner.css");
+@import url("blocks/f-payment-form.css");
 @import url("blocks/f-postpay-heading.css");
 @import url("blocks/f-postpay-info.css");
 @import url("blocks/f-progress.css");
+@import url("blocks/f-radio-group.css");
 @import url("blocks/f-right-heading.css");
 @import url("blocks/f-signup.css");
 @import url("blocks/f-sitemap.css");
@@ -112,6 +113,11 @@ SIXTH: weird stuff
 @import url("blocks/f-thumbnail.css");
 @import url("blocks/f-white-card.css");
 
+
+/*
+### bugz
+@import url("bugz/99.99.css");
+*/
 
 /*
 @import url("blocks/f-horizontal-button-group.css");
