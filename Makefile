@@ -11,10 +11,15 @@ PROD_DEST_FONTS_DIR = site/assets/
 PROD_DEST_FONTS := $(patsubst assets/fonts/%,site/assets/fonts/%, $(wildcard assets/fonts/*) )
 
 all: $(KALEI_CSS) kalei/css/base.css kalei/css/styleguide.css kalei/css/grid.css kalei/css/icons.css $(KALEI_DEST_FONTS)
-.phony: clean prod debug
+.phony: clean prod debug bugz
 
 debug:
 	@echo $(KALEI_CSS)
+
+bugz: kalei/css/bugz/99.99.css
+
+kalei/css/bugz/%.css: styles/bugz/%.css
+	npm run postcss -- --output $@ $<
 
 clean:
 	rm -r $(KALEI_DIR); \
