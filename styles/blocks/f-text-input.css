@@ -153,7 +153,15 @@ f-text-input_multiline, .f-text-input__text-field {
 	padding-left: .2rem; /*TODO: only works in chrome */
 }
 
-.f-text-input_multiline {}
+.f-text-input__text-field::placeholder {
+	padding-left: .2rem; /*TODO: only works in chrome */
+}
+.f-text-input__text-field:read-only {
+	color: var(--color-grey);
+	
+	border-color: var(--color-grey-light);
+	background-color: var(--color-grey-light);
+}
 
 .f-text-input_disable * {
 	cursor: not-allowed;
