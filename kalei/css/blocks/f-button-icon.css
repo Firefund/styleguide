@@ -25,11 +25,11 @@ BLOCK f-button-icon
 
 <div class="f-spacer f-one-liner"> And with no icons:</div>
 
-<button class="f-button-icon f-button-icon_twitter">Tweet this</button>
-<button class="f-button-icon f-button-icon_facebook">facebook</button>
-<button class="f-button-icon f-button-icon_youtube">youtube</button>
-<button class="f-button-icon f-button-icon_reddit">reddit</button>
-<button class="f-button-icon f-button-icon_home">home</button>
+<button class="f-button-icon">Tweet this</button>
+<button class="f-button-icon">facebook</button>
+<button class="f-button-icon">youtube</button>
+<button class="f-button-icon">reddit</button>
+<button class="f-button-icon">home</button>
 <!-- this should be used on the website -->
 
 </div><!-- only here for the style guide - should not be used on the website -->

@@ -14,7 +14,7 @@ BLOCK f-media
 
 <!-- this should be used on the website -->
 <figure class="f-media">
-	<img class="f-media__media" src="image/04.jpg">
+	<img class="f-media__media" src="assets/image/04.jpg">
 	<figcaption class="f-media__caption">Caption text for da media</figcaption>
 </figure>
 <!-- this should be used on the website -->
@@ -60,7 +60,7 @@ BLOCK f-media
 
 			<!-- this should be used on the website -->
 			<figure class="f-media">
-				<img class="f-media__media" src="image/10.jpg">
+				<img class="f-media__media" src="assets/image/10.jpg">
 			</figure>
 			<!-- this should be used on the website -->
 
@@ -70,7 +70,7 @@ BLOCK f-media
 
 			<!-- this should be used on the website -->
 			<figure class="f-media">
-				<img class="f-media__media" src="image/17.jpg">
+				<img class="f-media__media" src="assets/image/17.jpg">
 				<figcaption class="f-media__caption">Fuck ISIS!</figcaption>
 			</figure>
 			<!-- this should be used on the website -->
