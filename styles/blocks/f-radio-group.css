@@ -13,18 +13,20 @@ BLOCK f-radio-group
 
 	<fieldset class="f-radio-group">
 		<legend>Regarding</legend>
-		<div class="f-radio-group__element">
-			<input id="rb1" radiogroup="regarding" type="radio" name="rb" value="Press">
-			<label for="rb1">Press</label>
-		</div>
-		<div class="f-radio-group__element">
-			<input id="rb2" radiogroup="regarding" type="radio" name="rb" value="Political">
-			<label for="rb2">Political cooperation / mutial aid</label>
-		</div>
-		<div class="f-radio-group__element">
-			<input id="rb3" radiogroup="regarding" type="radio" name="rb" value="Other">
-			<label for="rb3">Other</label>
-		</div>
+		<radiogroup>
+			<div class="f-radio-group__element">
+				<input id="rb1" type="radio" name="rb" value="Press">
+				<label for="rb1">Press</label>
+			</div>
+			<div class="f-radio-group__element">
+				<input id="rb2" type="radio" name="rb" value="Political">
+				<label for="rb2">Political cooperation / mutial aid</label>
+			</div>
+			<div class="f-radio-group__element">
+				<input id="rb3" type="radio" name="rb" value="Other">
+				<label for="rb3">Other</label>
+			</div>
+		</radiogroup>
 	</fieldset>
 
 
@@ -34,8 +36,11 @@ BLOCK f-radio-group
 
 @import "../variables";
 .f-radio-group {
+	display: block;
+
 	margin: 0;
 	padding: 0;
+
 	border: none;
 }
 
