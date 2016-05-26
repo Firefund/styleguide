@@ -111,14 +111,11 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 								</div>
 							</div><!-- /f-column -->
 						</div>
-						<div class="f-row__not-mobile f-row__cell-12">
-							<button class="f-button-basic f-payment__button">Bitcoin</button>
-							<button class="f-button-basic f-payment__button">Credit card</button>
-						</div>
-						<div class="f-payment__button-group">
-							<div class="f-row__not-desktop f-row__cell-mobile-12">
+						<div class="f-row__cell-12">
+							<div class="f-payment__button-group">
 								<button class="f-button-basic f-payment__button">Bitcoin</button>
 								<button class="f-button-basic f-payment__button">Credit card</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -126,38 +123,26 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 				<div class="f-payment__footer">
 					<div class="f-row f-row_12">
 						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
-							<p class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.</p>
+							<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
+							</div>
 						</div>
-						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
-						
-							<div class="f-row f-row_6">
-								<div class="f-row__cell-mobile-2">
-									<p class="f-payment__footer-text f-text">FIREFUND</p>
-								</div>
-								<div class="f-row__cell-mobile-4">
-									<div class="f-payment__slider">
-										<div class="f-payment__slider-ends">
-											<input class="f-payment__slider-style" type="range">
-										</div>
-									</div>
-								</div>								
-							</div><!-- /f-row_6 -->
-							
-							<div class="f-row f-row_6">
-								<div class="f-row__cell-mobile-2">
-									<p class="f-payment__footer-text f-text">KOBANE</p>
-								</div>
-								<div class="f-row__cell-mobile-4">
-									<div class="f-payment__slider">
-										<div class="f-payment__slider-ends">
-											<input class="f-payment__slider-style" type="range">
-										</div>
-									</div>
-								</div>								
-							</div><!-- /f-row_6 -->
-							
-						</div><!-- /f-row__cell-6 -->						
-					</div><!-- /f-row_12 -->
+						<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
+							<p class="f-payment__footer-text f-text f-payment__range-label">FIREFUND</p>
+							<p class="f-payment__footer-text f-text f-payment__range-label">KOBANE</p>
+						</div>
+						<div class="f-row__cell-3">
+							<div class="f-payment__slider">
+								<input class="f-payment__slider-style" type="range"/>
+							</div>
+							<div class="f-payment__slider">
+								<input class="f-payment__slider-style" type="range"/>
+							</div>
+						</div>
+						<div class="f-row__cell-2">
+							<div class="f-payment__footer-text f-text f-payment__range-label">$42.45</div>
+							<div class="f-payment__footer-text f-text f-payment__range-label">$8.55</div>
+						</div>
+					</div>
 				</div>
 			</div><!-- /f-payment -->
 		</div><!-- /f-content -->
@@ -175,8 +160,8 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 
 @import "../variables";
 .f-payment {
-	height: 100%;
-	width: 100%;
+	position: relative;
+	
 	padding-top: 2.3rem;
 }
 
@@ -187,9 +172,11 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 .f-payment__heading {
 	margin: 0 0 1.9rem -var(--gutter-width);
 	padding: .8rem 1.93rem .8rem var(--gutter-width);
-	line-height: 2.7rem;
+	
 	color: var(--color-white);
 	font-size: 2.6rem;
+	line-height: 2.7rem;
+	
 	background-color: var(--color-black);
 }
 
@@ -199,28 +186,39 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 }
 
 .f-payment__text {
-	margin: 0;
 	height: 10.8rem;
+	
+	margin: 0;
 }
 
 .f-payment .f-payment__button {
 	width: 100%;
+	
 	margin-bottom: 1rem;
+	
 	font-size: 2.0rem;
 	font-weight: lighter;
 }
 
 .f-payment__button-group {
-	width: 15rem;
-	margin: -5rem 0 0 0;
+	position: absolute;
+	bottom: 0;
+	
+	width: 15rem;	
+}
+@media screen and (--viewport-mobile) {
+	.f-payment__button-group { position: static; }
 }
 
 .f-payment__arrow {
 	width: 3rem;
 	height: 3rem;
+	
 	margin: 11rem 0 0 -1.5rem;
+	
 	border-bottom: 5px solid var(--color-grey-light);
 	border-right: 5px solid var(--color-grey-light);
+	
 	transform: rotate(-45deg);
 }
 
@@ -229,10 +227,9 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 	transform: rotate(45deg);
 }
 
-.f-payment__radio-group {
-	/*position: relative;*/
-	height: 13.7rem;
+.f-payment__radio-group.f-radio-group {
 	margin-bottom: 2rem;
+	
 	font-weight: bold;
 }
 .f-payment__radio-input .f-text-input__text-field {
@@ -262,6 +259,165 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 
 	padding-left: 3.4rem;
 }
+
+.f-payment__footer {
+	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
+	padding: 3.4rem 0 2rem 3.4rem;
+
+	background: var(--color-grey-light);
+}
+
+.f-payment__footer-text {
+	color: var(--color-grey);
+	font-size: 1.2rem;
+	font-weight: 100;
+	line-height: 1.8rem;
+}
+
+.f-payment__range-label {
+	margin: 0;
+	
+	line-height: 2.2rem;
+}
+
+.f-payment__slider { position: relative; }
+.f-payment__slider::before, .f-payment__slider::after {
+	/* slider ends */
+	position: absolute;
+	left: 1rem;
+	top: .7rem;
+	content: "";
+	height: .7rem;
+	width: 1px;
+	
+	border: none;
+	border-left: thin solid var(--color-grey);
+	border-right: thin solid var(--color-grey);	
+}
+.f-payment__slider::after {
+	right: -1rem;
+	left: unset;
+}
+
+/* NORMALIZE SLIDER */
+input[type="range"].f-payment__slider-style {
+	/*position: absolute;*/
+	width: 100%; /* Specific width is required for Firefox. */
+	height: 2rem;
+
+	margin: 0;
+
+	background: transparent; /* Otherwise white in Chrome */
+
+	-webkit-appearance: none;  /* Hides the slider so that custom slider can be made */
+}
+input[type="range"].f-payment__slider-style:focus {
+	outline: none; /* Removes the blue border. */
+}
+input[type="range"].f-payment__slider-style::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"].f-payment__slider-style::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Webkit styling - Chrome/Opera/Safari */
+input[type="range"].f-payment__slider-style::-webkit-slider-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+
+	margin-top: -0.8rem;
+
+	background: var(--color-grey-light);
+	border: 1px solid var(--color-grey);
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+input[type="range"].f-payment__slider-style::-webkit-slider-runnable-track {
+	height: 0.1rem;
+	min-height: 1px;
+	width: 100%;
+
+	/*margin: -21% 0 0 0;*/
+
+	background: var(--color-grey);
+	border: none;
+	
+	transform: translateX(1rem);
+
+	cursor: pointer;
+}
+
+/* Mozilla styling - Firefox */
+input[type="range"].f-payment__slider-style::-moz-range-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+
+	background-color: var(--color-grey-light);
+	border: 1px solid var(--color-grey);
+	border-radius: 50%;
+	
+	transform: translateX(0); /* HACK so the track doesn't shine through' */
+
+	cursor: pointer;
+
+}
+input[type="range"].f-payment__slider-style::-moz-range-track {
+	width: 100%;
+	height: 0.1rem;
+	min-height: 1px;
+
+	background: var(--color-grey);
+	border: none;
+	
+	transform: translateX(1rem);
+
+	cursor: pointer;
+}
+
+/* Microsoft styling - Edge, IE
+TODO: mouse doesn't follow thumb exactly */
+input[type="range"].f-payment__slider-style::-ms-thumb {
+	height: 1rem;
+	width: 1rem;
+
+	background: var(--color-grey-light);
+	border: 1px solid var(--color-grey);
+	border-radius: 50%;
+	
+	transform: translateY(.4rem);
+
+	cursor: pointer;
+}
+
+input[type="range"].f-payment__slider-style::-ms-track {
+	height: 0.1rem;
+	min-height: 1px;
+	
+	margin-left: 1rem;
+
+	cursor: pointer;
+}
+
+input[type="range"].f-payment__slider-style::-ms-fill-lower {
+	background: var(--color-grey);
+
+	border: none;
+}
+
+input[type="range"].f-payment__slider-style::-ms-fill-upper {
+	background: var(--color-grey);
+
+	border: none;
+}
+
 /*
 
 ## Donation
@@ -396,170 +552,4 @@ With a `f-text-input` field
 	background-color: var(--color-white);
 
 	content: "";
-}*/
-
-.f-payment__footer {
-	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
-	padding: 3.4rem 0 2rem 3.4rem;
-
-	background: var(--color-grey-light);
-}
-
-.f-payment__footer-text {
-	color: var(--color-grey);
-	font-size: 1.2rem;
-	font-weight: 100;
-	line-height: 1.8rem;
-}
-
-.f-payment__slider {
-	/*position: relative;*/
-
-	/*margin: 4% 0 0 3%;*/
-
-	/*transform: translate(3%, 4%);*/
-}
-
-/*.f-payment__slider-ends {
-	display: inline-block;
-
-	height: 0.7rem;
-	width: 100%;
-
-	border: none;
-	border-left: thin solid var(--color-grey);
-	border-right: thin solid var(--color-grey);*/
-	/*width: 12.8rem;*/
-	/*margin: 0 1rem 0 1rem;*/
-/*}*/
-
-/* NORMALIZE SLIDER */
-input[type=range].f-payment__slider-style {
-	/*position: absolute;*/
-	width: 100%; /* Specific width is required for Firefox. */
-
-	/*margin: -1rem 0;*/
-
-	background: transparent; /* Otherwise white in Chrome */
-
-	-webkit-appearance: none;  /* Hides the slider so that custom slider can be made */
-}
-input[type=range].f-payment__slider-style:focus {
-	outline: none; /* Removes the blue border. */
-}
-input[type=range].f-payment__slider-style::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-input[type=range].f-payment__slider-style::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-}
-
-/* Webkit styling - Chrome/Opera/Safari */
-input[type=range].f-payment__slider-style::-webkit-slider-thumb {
-	height: 1.6rem;
-	width: 1.6rem;
-
-	border: 1px solid #808080;
-	border-radius: 10px;
-	background: #d8d8d8;
-
-	cursor: pointer;
-}
-input[type=range].f-payment__slider-style::-webkit-slider-runnable-track {
-	height: 0.1rem;
-	min-height: 1px;
-	width: 100%;
-
-	/*margin: -21% 0 0 0;*/
-
-	background: #808080;
-	border-radius: 0px;
-	border: 0px solid rgba(1, 1, 1, 0);
-
-	cursor: pointer;
-}
-
-/*input[type=range].f-payment__slider-style::-webkit-slider-thumb {
-	height: 1.6rem;
-	width: 1.6rem;
-*/
-	/*margin-top: -0.8rem;*/
-/*
-	border: 1px solid #808080;
-	border-radius: 10px;
-	background: #d8d8d8;
-
-	cursor: pointer;
-}
-
-input[type=range].f-payment__slider-style:focus::-webkit-slider-runnable-track {
-	background: #979797;
-}
-
-input[type=range].f-payment__slider-style::-moz-range-track {
-	width: 100%;
-	height: 0.2rem;
-
-	background: #808080;
-	border-radius: 0px;
-	border: 0px solid rgba(1, 1, 1, 0);
-
-	cursor: pointer;
-}
-
-input[type=range].f-payment__slider-style::-moz-range-thumb {
-	height: 1.6rem;
-	width: 1.6rem;
-
-	background: #d8d8d8;
-	border: 1px solid #808080;
-	border-radius: 10px;
-
-	cursor: pointer;
-
-}
-
-input[type=range].f-payment__slider-style::-ms-track {
-	height: 0.2rem;
-
-	cursor: pointer;
-}
-
-input[type=range].f-payment__slider-style::-ms-fill-lower {
-	background: #696969;
-
-	border: 0px solid rgba(1, 1, 1, 0);
-	border-radius: 0px;
-}
-
-input[type=range].f-payment__slider-style::-ms-fill-upper {
-	background: #808080;
-
-	border: 0px solid rgba(1, 1, 1, 0);
-	border-radius: 0px;
-}
-
-input[type=range].f-payment__slider-style::-ms-thumb {
-	height: 1.6rem;
-	width: 1.6rem;
-
-	background: #D8D8D8;
-	border: 1px solid #808080;
-	border-radius: 10px;
-
-	cursor: pointer;
-}
-
-input[type=range].f-payment__slider-style:focus::-ms-fill-lower {
-	background: #808080;
-}
-
-input[type=range].f-payment__slider-style:focus::-ms-fill-upper {
-	background: #979797;
 }*/
