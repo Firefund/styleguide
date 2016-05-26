@@ -17,13 +17,11 @@
 
 <script>
 	// demo script
-	document.querySelector("f-button-basic").addEventListener("click", function(e) {
+	document.querySelector(".f-button-basic").addEventListener("click", function(e) {
 		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
 	})
 </script>
 */
-
-@import "../variables";
 
 .f-modal {
 	position: fixed;
@@ -33,7 +31,9 @@
 	width: 100%;
 	height: 100%;
 
-	background-color: var(--color-black-transparent);
+	background-color: hsla(0, 0%, 0%, 0.6);
+
+	-webkit-transition: opacity .3s ease;
 
 	transition: opacity .3s ease;
 
@@ -50,7 +50,17 @@
 	top: 50%;
 	left: 50%;
 
-	transform: translate(-50%, -50%);
+	height: 664px;
+	height: 41.5rem;
+	width: 1032px;
+	width: 64.5rem;
+
+	-webkit-transform: translate(-50%, -50%);
+
+	        transform: translate(-50%, -50%);
+	
+	pointer-events: all;
+	overflow: auto; /* make sure that the user can get to all of the content by scrolling */
 }
 
 .f-modal_autoclosable {}
