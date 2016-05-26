@@ -177,16 +177,16 @@ ${columnGrid_6}
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none; }
 	
-	${pushGrid_6}
-	${pushGrid_12}
 	${pushGrid_24}
+	${pushGrid_12}
+	${pushGrid_6}
 }
 
-${grid_6}
+${grid_24}
 
 ${grid_12}
 
-${grid_24}
+${grid_6}
 
 /*
  ## mobile
@@ -195,16 +195,16 @@ ${grid_24}
   .f-row_not-mobile, .f-row__not-mobile { display: none; }
 
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
+	
+	${gridMobile_24}
+	${pushGridMobile_24}
 
-	${columnMobileGrid_6}
+	${gridMobile_12}
+	${pushGridMobile_12}
 
 	${gridMobile_6}
 	${pushGridMobile_6}
 
-	${gridMobile_12}
-	${pushGridMobile_12}
-	
-	${gridMobile_24}
-	${pushGridMobile_24}
+	${columnMobileGrid_6}
 }
 `)

@@ -122,37 +122,47 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- /f-row_12 -->
 				<div class="f-payment__footer">
 					<div class="f-row f-row_12">
 						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-7">
-							<div class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.
-							</div><br>
+							<p class="f-payment__footer-text f-text">You decide the cut. Please, keep in mind that FIREFUND is non-profit and activist-driven.</p>
 						</div>
-						<div class="f-row__cell-1 f-row__cell-mobile_push_2 f-row__cell-mobile-1">
-							<div class="f-payment__footer-text f-text">FIREFUND</div>
-							<div class="f-payment__footer-text f-text">KOBANE</div>
-						</div>
-						<div class="f-row__cell-3">
-							<div class="f-payment__slider">
-								<div class="f-payment__slider-ends">
-									<input class="f-payment__slider-style" type="range">
+						<div class="f-row__cell-6 f-row__cell-mobile_push_2 f-row__cell-mobile-8">
+						
+							<div class="f-row f-row_6">
+								<div class="f-row__cell-mobile-2">
+									<p class="f-payment__footer-text f-text">FIREFUND</p>
 								</div>
-								<div class="f-payment__slider-ends">
-									<input class="f-payment__slider-style" type="range">
+								<div class="f-row__cell-mobile-3">
+									<div class="f-payment__slider">
+										<div class="f-payment__slider-ends">
+											<input class="f-payment__slider-style" type="range">
+										</div>
+									</div>
+								</div>								
+							</div><!-- /f-row_6 -->
+							
+							<div class="f-row f-row_6">
+								<div class="f-row__cell-mobile-2">
+									<p class="f-payment__footer-text f-text">KOBANE</p>
 								</div>
-							</div>
-						</div>
-						<div class="f-row__cell-2">
-							<div class="f-payment__footer-text f-text">$42.45</div>
-							<div class="f-payment__footer-text f-text">$8.55</div>
-						</div>
-					</div>
+								<div class="f-row__cell-mobile-3">
+									<div class="f-payment__slider">
+										<div class="f-payment__slider-ends">
+											<input class="f-payment__slider-style" type="range">
+										</div>
+									</div>
+								</div>								
+							</div><!-- /f-row_6 -->
+							
+						</div><!-- /f-row__cell-6 -->						
+					</div><!-- /f-row_12 -->
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
+			</div><!-- /f-payment -->
+		</div><!-- /f-content -->
+	</div><!-- /f-modal__content -->
+</div><!-- /f-modal -->
 
 ```
 <script>
