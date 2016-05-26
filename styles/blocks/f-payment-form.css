@@ -84,29 +84,29 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 						<div class="f-payment__radio-group f-radio-group">
 							<div class="f-column f-column_2 f-column_mobile_3">
 								<div class="f-radio-group__element">
-									<input id="rb10" radio-group="amount2" type="radio" name="rb" value="500">
+									<input id="rb10" type="radio" name="rb" value="500">
 									<label for="rb10">$500</label>
 								</div>
 								<div class="f-radio-group__element">
-									<input id="rb11" radio-group="amount2" type="radio" name="rb" value="250">
+									<input id="rb11" type="radio" name="rb" value="250">
 									<label for="rb11">$250</label>
 								</div>
 								<div class="f-radio-group__element">
-									<input id="rb12" radio-group="amount2" type="radio" name="rb" value="100">
+									<input id="rb12" type="radio" name="rb" value="100">
 									<label for="rb12">$100</label>
 								</div>
 								<div class="f-radio-group__element">
-									<input id="rb13" radio-group="amount2" type="radio" name="rb" value="50">
+									<input id="rb13" type="radio" name="rb" value="50">
 									<label for="rb13">$50</label>
 								</div>
 								<div class="f-radio-group__element">
-									<input id="rb14" radio-group="amount2" type="radio" name="rb" value="20">
+									<input id="rb14" type="radio" name="rb" value="20">
 									<label for="rb14">$20</label>
 								</div>
 								<div class="f-text-input f-radio-group__element f-payment__radio-input">
-									<input id="rb15" radio-group="amount2" type="radio" name="rb" value="20">
+									<input id="rb15" type="radio" name="rb" value="20">
 									<label for="rb15">
-										<input class="f-text-input__text-field" type="number" pattern="[0-9]+" placeholder="$10">
+										<input class="f-text-input__text-field" type="number" placeholder="$10">
 									</label>
 								</div>
 							</div><!-- /f-column -->
@@ -163,8 +163,8 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 		</div><!-- /f-content -->
 	</div><!-- /f-modal__content -->
 </div><!-- /f-modal -->
-
 ```
+
 <script>
 	// demo script to toggle the modal window
 	document.querySelector(".f-button-basic").addEventListener("click", function(e) {
@@ -296,7 +296,7 @@ With a `f-text-input` field
 		<div class="f-text-input f-radio-group__element">
 			<input id="rb9" radio-group="amount" type="radio" name="rb" value="20">
 			<label for="rb9">
-				<input class="f-text-input__text-field" type="number" pattern="[0-9]+" placeholder="$10">
+				<input class="f-text-input__text-field" type="number" placeholder="$10">
 			</label>
 		</div>
 	</fieldset>
@@ -341,7 +341,7 @@ With a `f-text-input` field
 				<div class="f-text-input f-radio-group__element">
 					<input id="rb15" radio-group="amount2" type="radio" name="rb" value="20">
 					<label for="rb15">
-						<input class="f-text-input__text-field" type="number" pattern="[0-9]+" placeholder="$10">
+						<input class="f-text-input__text-field" type="number" placeholder="$10">
 					</label>
 				</div>
 			</div><!-- /f-column -->
