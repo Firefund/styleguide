@@ -130,6 +130,17 @@ MODIFIER f-text-input_disable
 	line-height: 1.8;
 }
 
+.f-text-input__text-field {
+	display: block;
+}
+.f-text-input__text-field::placeholder {
+	padding-left: .2rem; /*TODO: only works in chrome */
+}
+
+.f-text-input_disable * {
+	cursor: not-allowed;
+}
+
 f-text-input_multiline, .f-text-input__text-field {
 	width: 100%;
 	margin-bottom: 2rem;
@@ -143,26 +154,4 @@ f-text-input_multiline, .f-text-input__text-field {
 	
 	border-color: var(--color-grey-light);
 	background-color: var(--color-grey-light);
-}
-
-.f-text-input__text-field {
-	display: block;
-}
-
-.f-text-input__text-field::placeholder {
-	padding-left: .2rem; /*TODO: only works in chrome */
-}
-
-.f-text-input__text-field::placeholder {
-	padding-left: .2rem; /*TODO: only works in chrome */
-}
-.f-text-input__text-field:read-only {
-	color: var(--color-grey);
-	
-	border-color: var(--color-grey-light);
-	background-color: var(--color-grey-light);
-}
-
-.f-text-input_disable * {
-	cursor: not-allowed;
 }
