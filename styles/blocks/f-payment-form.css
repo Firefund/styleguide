@@ -117,7 +117,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 						</div>
 						<div class="f-payment__button-group">
 							<div class="f-row__not-desktop f-row__cell-mobile-12">
-								<button class="f-button-basic f-payment__button">Bitcoin</button><br>
+								<button class="f-button-basic f-payment__button">Bitcoin</button>
 								<button class="f-button-basic f-payment__button">Credit card</button>
 							</div>
 						</div>
@@ -134,7 +134,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 								<div class="f-row__cell-mobile-2">
 									<p class="f-payment__footer-text f-text">FIREFUND</p>
 								</div>
-								<div class="f-row__cell-mobile-3">
+								<div class="f-row__cell-mobile-4">
 									<div class="f-payment__slider">
 										<div class="f-payment__slider-ends">
 											<input class="f-payment__slider-style" type="range">
@@ -147,7 +147,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 								<div class="f-row__cell-mobile-2">
 									<p class="f-payment__footer-text f-text">KOBANE</p>
 								</div>
-								<div class="f-row__cell-mobile-3">
+								<div class="f-row__cell-mobile-4">
 									<div class="f-payment__slider">
 										<div class="f-payment__slider-ends">
 											<input class="f-payment__slider-style" type="range">
@@ -166,7 +166,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 
 ```
 <script>
-	// demo script
+	// demo script to toggle the modal window
 	document.querySelector(".f-button-basic").addEventListener("click", function(e) {
 		document.querySelector(".f-modal").classList.toggle("f-modal_visible")
 	})
