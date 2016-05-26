@@ -66,7 +66,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 				<div class="f-row f-row_12">
 					<div class="f-row__cell-7 f-row_not-mobile">
 						<h2 class="f-payment__heading"> Choose the amount and method of payment</h2>
-						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <span>Read more.</span></p>
+						<p class="f-payment__text">A pledged donation will only transfer if the campaign reaches the goal within the timeframe. <a href="#">Read more.</a></p>
 						<button class="f-button-basic f-payment__button">Pledge</button>
 					</div>
 					<div class="f-row_not-desktop f-row__cell-mobile_push_2 f-row__cell-mobile-8">
@@ -136,12 +136,10 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 						<div class="f-row__cell-3">
 							<div class="f-payment__slider">
 								<div class="f-payment__slider-ends">
-									<input class="f-payment__slider-style" type="range" id="s1">
-									<label for="s1"></label>
+									<input class="f-payment__slider-style" type="range">
 								</div>
 								<div class="f-payment__slider-ends">
-									<input class="f-payment__slider-style" type="range" id="s1">
-									<label for="s1"></label>
+									<input class="f-payment__slider-style" type="range">
 								</div>
 							</div>
 						</div>
@@ -229,21 +227,21 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 }
 .f-payment__radio-input .f-text-input__text-field {
 	display: inline-block;
-	
+
 	width: calc(100% - .4rem); /* KLUDGE: .4rem = magic number */
 	height: 2.4rem;
-	
+
 	line-height: normal;
 	vertical-align: middle;
-	
+
 	-moz-appearance: textfield; /* KLUDGE: remove controls from Firefox */
 }
 /*
 	KLUDGE: remove controls from Safari and Chrome
 	by styling ::-webkit-inner-spin-button and ::-webkit-outer-spin-button
 */
-.f-payment__radio-input .f-text-input__text-field::-webkit-inner-spin-button, 
-.f-payment__radio-input .f-text-input__text-field::-webkit-outer-spin-button { 
+.f-payment__radio-input .f-text-input__text-field::-webkit-inner-spin-button,
+.f-payment__radio-input .f-text-input__text-field::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; /* Removes leftover margin */
 }
@@ -251,7 +249,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 	position: absolute;
 	top: 0;
 	left: 0;
-	
+
 	padding-left: 3.4rem;
 }
 /*
@@ -393,6 +391,7 @@ With a `f-text-input` field
 .f-payment__footer {
 	margin: 1rem -var(--gutter-width) 0 -var(--gutter-width);
 	padding: 3.4rem 0 2rem 3.4rem;
+
 	background: var(--color-grey-light);
 }
 
@@ -404,47 +403,89 @@ With a `f-text-input` field
 }
 
 .f-payment__slider {
-	margin: 4% 0 0 3%;
+	/*position: relative;*/
+
+	/*margin: 4% 0 0 3%;*/
+
+	/*transform: translate(3%, 4%);*/
 }
 
-.f-payment__slider-ends {
+/*.f-payment__slider-ends {
 	display: inline-block;
+
 	height: 0.7rem;
-	width: 12.8rem;
-	margin: 0 1rem 0 1rem;
-	border-left: 0.1rem solid var(--color-grey);
-	border-right: 0.1rem solid var(--color-grey);
-}
+	width: 100%;
 
+	border: none;
+	border-left: thin solid var(--color-grey);
+	border-right: thin solid var(--color-grey);*/
+	/*width: 12.8rem;*/
+	/*margin: 0 1rem 0 1rem;*/
+/*}*/
+
+/* NORMALIZE SLIDER */
 input[type=range].f-payment__slider-style {
-	width: 100%;
-	margin: -1rem 0;
-	-webkit-appearance: none;
-}
+	/*position: absolute;*/
+	width: 100%; /* Specific width is required for Firefox. */
 
+	/*margin: -1rem 0;*/
+
+	background: transparent; /* Otherwise white in Chrome */
+
+	-webkit-appearance: none;  /* Hides the slider so that custom slider can be made */
+}
 input[type=range].f-payment__slider-style:focus {
-	outline: none;
+	outline: none; /* Removes the blue border. */
 }
-
-input[type=range].f-payment__slider-style::-webkit-slider-runnable-track {
-	height: 0.1rem;
-	width: 100%;
-	margin: -21% 0 0 0;
-	background: #808080;
-	border-radius: 0px;
-	border: 0px solid rgba(1, 1, 1, 0);
-	cursor: pointer;
-}
-
 input[type=range].f-payment__slider-style::-webkit-slider-thumb {
-	margin-top: -0.8rem;
+  -webkit-appearance: none;
+}
+input[type=range].f-payment__slider-style::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Webkit styling - Chrome/Opera/Safari */
+input[type=range].f-payment__slider-style::-webkit-slider-thumb {
 	height: 1.6rem;
 	width: 1.6rem;
+
 	border: 1px solid #808080;
 	border-radius: 10px;
 	background: #d8d8d8;
+
 	cursor: pointer;
-	-webkit-appearance: none;
+}
+input[type=range].f-payment__slider-style::-webkit-slider-runnable-track {
+	height: 0.1rem;
+	min-height: 1px;
+	width: 100%;
+
+	/*margin: -21% 0 0 0;*/
+
+	background: #808080;
+	border-radius: 0px;
+	border: 0px solid rgba(1, 1, 1, 0);
+
+	cursor: pointer;
+}
+
+/*input[type=range].f-payment__slider-style::-webkit-slider-thumb {
+	height: 1.6rem;
+	width: 1.6rem;
+*/
+	/*margin-top: -0.8rem;*/
+/*
+	border: 1px solid #808080;
+	border-radius: 10px;
+	background: #d8d8d8;
+
+	cursor: pointer;
 }
 
 input[type=range].f-payment__slider-style:focus::-webkit-slider-runnable-track {
@@ -454,38 +495,42 @@ input[type=range].f-payment__slider-style:focus::-webkit-slider-runnable-track {
 input[type=range].f-payment__slider-style::-moz-range-track {
 	width: 100%;
 	height: 0.2rem;
+
 	background: #808080;
 	border-radius: 0px;
 	border: 0px solid rgba(1, 1, 1, 0);
+
 	cursor: pointer;
 }
 
 input[type=range].f-payment__slider-style::-moz-range-thumb {
 	height: 1.6rem;
 	width: 1.6rem;
+
 	background: #d8d8d8;
 	border: 1px solid #808080;
 	border-radius: 10px;
+
 	cursor: pointer;
+
 }
 
 input[type=range].f-payment__slider-style::-ms-track {
-	width: 100%;
 	height: 0.2rem;
-	color: transparent;
-	background: transparent;
-	border-color: transparent;
+
 	cursor: pointer;
 }
 
 input[type=range].f-payment__slider-style::-ms-fill-lower {
 	background: #696969;
+
 	border: 0px solid rgba(1, 1, 1, 0);
 	border-radius: 0px;
 }
 
 input[type=range].f-payment__slider-style::-ms-fill-upper {
 	background: #808080;
+
 	border: 0px solid rgba(1, 1, 1, 0);
 	border-radius: 0px;
 }
@@ -493,9 +538,11 @@ input[type=range].f-payment__slider-style::-ms-fill-upper {
 input[type=range].f-payment__slider-style::-ms-thumb {
 	height: 1.6rem;
 	width: 1.6rem;
+
 	background: #D8D8D8;
 	border: 1px solid #808080;
 	border-radius: 10px;
+
 	cursor: pointer;
 }
 
@@ -505,4 +552,4 @@ input[type=range].f-payment__slider-style:focus::-ms-fill-lower {
 
 input[type=range].f-payment__slider-style:focus::-ms-fill-upper {
 	background: #979797;
-}
+}*/
