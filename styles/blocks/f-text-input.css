@@ -99,7 +99,8 @@ f-text-input_multiline, .f-text-input__text-field {
 	padding-left: .2rem; /*TODO: only works in chrome */
 }
 
-.f-text-input_multiline,
+.f-text-input_multiline {}
+
 .f-text-input_disable * {
 	cursor: not-allowed;
 }
