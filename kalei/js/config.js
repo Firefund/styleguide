@@ -1,6 +1,6 @@
 define({
 	// This css path is used as a default by the Kalei project it self.
-	css_path: window.location.protocol + '//' + window.location.hostname + (window.location.port === '' ? '' : ':'+ window.location.port) + window.location.pathname +  'css/master.css',
+	css_path: window.location.protocol + '//' + window.location.hostname + (window.location.port === '' ? '' : ':'+ window.location.port) + window.location.pathname +  'css/styleguide.css',
 
 	// You can configure any path by just deleting the one above and uncommenting the one below to point at your css directory
 	// css_path: 'http://localhost/kaleistyleguide/css/styles.css',
@@ -21,7 +21,7 @@ define({
 
 	// Enter URLs of any external stylesheets you wish to include with this demo.
 	// These will not be parsed as part of the documentation and are simply loaded into the page header.
-	external_stylesheets: ['../css/theme.css', '../css/highlight/styles/googlecode.css']
+	//external_stylesheets: ['../css/theme.css', '../css/highlight/styles/googlecode.css']
 
 	//disqus_shortname: 'kaleistyleguide'
 });

@@ -1,0 +1,157 @@
+/*
+A text input field, with a label, that can be one line or multiple lines.
+
+<pre>
+BLOCK f-text-input
+MODIFIER f-text-input_readonly
+MODIFIER f-text-input_multiline
+MODIFIER f-text-input_disable
+	ELEMENT f-text-input__label
+	ELEMENT f-text-input__text-field
+</pre>
+
+## Input field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" type="text" placeholder="Name, organization, newspaper, etc.">
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Mutiple lines
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input f-text-input_multiline">
+		<label class="f-text-input__label">Message
+			<textarea class="f-text-input__text-field" rows="6" placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Readonly Input field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input f-text-input_readonly">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" readonly type="text" value="PGP stuff.">
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Readonly mutiple lines
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input f-text-input_readonly f-text-input_multiline">
+		<label class="f-text-input__label">Name
+			<textarea class="f-text-input__text-field" rows="6" readonly>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQRePV0p36s1wMSwNKNY7cXYppRLQ8errNeMmVYt5/9GP/gJjrSzHtoa+LCb1PYyGb8OWIbARL7ttwh4EUZ7JLbbAmDspYX1rY1Zaion1W+hPQ2kfg7gbfUM1TzVmaUZjHvFT7HjNpOpziq++7IOn81NAk9aO//okhePtusOTR10BDIY5zVobXHwbOZk6jYLYjEG7FZlBt84zP62BD/zmlrIetSNOM8k98Ksk/MAmxJ/b4rWaqMYT/0jHBrDJRV/8KTh5vjorRPPznECjiZcqnB0d4P0xmW5165yOcthZfXZfqsgWIMysmuMqWKj3WPt+pAqXOMSZnOv+ZZNWCQxf7 jon.ronnenberg@gmail.com
+			</textarea>
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Disabled input field
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input f-text-input_disable">
+		<label class="f-text-input__label">Name
+			<input class="f-text-input__text-field" disabled type="text" placeholder="Name, organization, newspaper, etc.">
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+
+## Disabled mutiple lines
+```
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
+
+	<!-- this should be used on the website -->
+
+	<div class="f-text-input f-text-input_multiline f-text-input_disable">
+		<label class="f-text-input__label">Message
+			<textarea class="f-text-input__text-field" rows="6" disabled placeholder="This is OpenPGP encrypted using the OpenPGP.js library"></textarea>
+		</label>
+	</div>
+
+	<!-- this should be used on the website -->
+
+</div>
+```
+*/
+
+@import "../variables";
+
+.f-text-input {
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+
+.f-text-input__label {
+	position: relative;
+	display: block;
+	margin-left: -1px; /* align with text-field -  adjust to the border  */
+
+	color: var(--color-grey-dark);
+	line-height: 1.8;
+}
+
+.f-text-input__text-field {
+	display: block;
+}
+.f-text-input__text-field::placeholder {
+	padding-left: .2rem; /*TODO: only works in chrome */
+}
+
+.f-text-input_disable * {
+	cursor: not-allowed;
+}
+
+f-text-input_multiline, .f-text-input__text-field {
+	width: 100%;
+	margin-bottom: 2rem;
+
+	border: 1px solid var(--color-black);
+	border-radius: .3rem;
+}
+
+.f-text-input_readonly .f-text-input__text-field {
+	color: var(--color-grey);
+	
+	border-color: var(--color-grey-light);
+	background-color: var(--color-grey-light);
+}
