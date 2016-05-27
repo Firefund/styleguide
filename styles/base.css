@@ -7,20 +7,20 @@ This is the base for all our styles. In here we define:
 4. site wide classes
 */
 
-/* Variables */
-@import url("variables.css");
+@import "./variables";
 
 
 html {
   box-sizing: border-box;
   /* Change 1 rem to mean 10px in a standard browser */
   font-size: 62.5%;
+  
+  lost-center: 192rem;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (--viewport-max-scale) {
   html {
-    font-size: 1vw;
-  /* OLD  font-size: .625vw;*/ /* 16/10 */
+    font-size: 1vw; /* no more scaling */
   }
 }
 @media screen and (--viewport-mobile) {
@@ -35,18 +35,24 @@ html {
 
 body {
   margin: 0;
+
+  font-size: 1.6rem;
+
   background-color: var(--color-black);
+
+  lost-center: 98.4rem;
 }
 
-/* =fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic);
 
-* {
-  font-family: "Roboto";
+* { font-family: "Roboto"; }
 
+a {
+  color: var(--color-red);
+  text-decoration: none;
 }
 
-/* =span */
 span {
   color: var(--color-red);
 }

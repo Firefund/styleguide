@@ -1,5 +1,18 @@
 node_modules
+npm-debug.log
 bower_components
 
 #VSCode
 .vscode  
+
+# generated css by postcss
+kalei/css/blocks/*.css
+kalei/css/base.css
+kalei/css/styleguide.css
+kalei/css/grid.css
+kalei/assets/fonts*
+kalei/css/icons.css
+kalei/css/bugz
+
+.DS_Store
+Thumbs.db
