@@ -2,7 +2,7 @@
 /*
 ## f-one-liner
 
-One line of text. Can contain link(s). If you want you can (ab)use this block as a multiple line text. 
+One line of text. Can contain link(s). If you want you can (ab)use this block as a multiple line text.
 Just wrap it in a small grid column. `Top` and bottom margin can be achieved by inserting  elements.
 
 <pre>
@@ -19,9 +19,9 @@ BLOCK f-one-liner
 	<!-- this should be used on the website -->
 
 
-	<h2 class="f-one-liner f-one-liner">This is actually a pretty long sentence, that is made just to see how they work, when there's more than one line. Pretty nifty, amarigt? Yes, amarigt. Amasorite.</h2>
-	<h2 class="f-one-liner f-one-liner">This is probably <a href="#">one more link</a> sentence.</h2>
-	<h2 class="f-one-liner f-one-liner">This is probably another link sentence.</h2>
+	<h2 class="f-one-liner">This is actually a pretty long sentence, that is made just to see how they work, when there's more than one line. Pretty nifty, amarigt? Yes, amarigt. Amasorite.</h2>
+	<h2 class="f-one-liner">This is probably <a href="#">one more link</a> sentence.</h2>
+	<h2 class="f-one-liner">This is probably another link sentence.</h2>
 
 
 	<!-- this should be used on the website -->
@@ -102,14 +102,13 @@ BLOCK f-one-liner
 
 </div>
 ```
-
 */
 
 @import "../variables";
 
 .f-one-liner {
-	margin: 0 0rem 1.4rem 0rem;
-	
+	margin: 0 0 1.4rem;
+
 	color: var(--color-grey-dark);
 	font-size: 1.8rem;
 	font-weight: normal;
@@ -126,20 +125,20 @@ BLOCK f-one-liner
 
 .f-one-liner_center {
 	text-align: center;
-} 
+}
 
 .f-one-liner_right {
 	text-align: right
-} 
+}
 
 .f-one-liner_size_medium {
 	font-size: 2.0rem;
-} 
+}
 
 .f-one-liner_size_big {
 	font-size: 2.3rem;
 	line-height: 2.4rem;
-} 
+}
 
 .f-one-liner_size_medium, .f-one-liner_size_big {
 	font-weight: bold;

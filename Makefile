@@ -9,6 +9,7 @@ KALEI_DEST_FONTS := $(patsubst assets/fonts/%,kalei/assets/fonts/%, $(wildcard a
 PROD_CSS_BLOCKS :=  $(patsubst styles/%,site/css/%, $(wildcard styles/blocks/*.css) )
 PROD_DEST_FONTS_DIR = site/assets/
 PROD_DEST_FONTS := $(patsubst assets/fonts/%,site/assets/fonts/%, $(wildcard assets/fonts/*) )
+PROD_CSS_BUNDLE := styles/bundle.css styles/base.css styles/grid.css styles/icons.css styles/blocks/f-content.css styles/blocks/f-left-heading.css styles/blocks/f-text.css styles/blocks/f-media.css styles/blocks/f-white-card.css styles/blocks/f-button-group.css styles/blocks/f-spacer.css styles/blocks/f-one-liner.css styles/blocks/f-list.css styles/blocks/f-footer.css styles/blocks/f-sitemap.css styles/blocks/f-signup.css styles/blocks/f-icon-list.css styles/blocks/f-footer-text.css
 
 all: $(KALEI_CSS) kalei/css/base.css kalei/css/styleguide.css kalei/css/grid.css kalei/css/icons.css $(KALEI_DEST_FONTS)
 .phony: clean prod debug bugz
@@ -34,7 +35,7 @@ prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY
 	@echo "Finish building our production CSS"
 
 # compile first bundle
-site/css/bundle.css: styles/bundle.css styles/base.css styles/grid.css $(CSS_DEPENDENCY)
+site/css/bundle.css: $(PROD_CSS_BUNDLE) $(CSS_DEPENDENCY)
 	@npm run postcss:prod -- --output $@ $<
 
 # compile blocks
