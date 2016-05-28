@@ -175,7 +175,7 @@ console.log(`
 ${columnGrid_6}
 
 @media screen and (--viewport-desktop) {
-	.f-row_not-desktop, .f-row__not-desktop { display: none; }
+	.f-row_not-desktop, .f-row__not-desktop { display: none !important; }
 	
 	${pushGrid_24}
 	${pushGrid_12}
@@ -192,7 +192,7 @@ ${grid_6}
  ## mobile
 */
 @media screen and (--viewport-mobile) {
-  .f-row_not-mobile, .f-row__not-mobile { display: none; }
+  .f-row_not-mobile, .f-row__not-mobile { display: none !important; }
 
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
 	

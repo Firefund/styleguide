@@ -353,7 +353,7 @@ to manipulate the css block while running in a loop.
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop,
 	.f-row__not-desktop {
-		display: none;
+		display: none !important;
 	}
 	.f-row_24 .f-row__cell_push_1 {
 		lost-offset: -1/24;
@@ -638,7 +638,7 @@ to manipulate the css block while running in a loop.
 @media screen and (--viewport-mobile) {
 	.f-row_not-mobile,
 	.f-row__not-mobile {
-		display: none;
+		display: none !important;
 	}
 	.f-row__cell-mobile {
 		lost-column: 1 flex!important;
