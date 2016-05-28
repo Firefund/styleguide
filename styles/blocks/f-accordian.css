@@ -180,11 +180,13 @@ MODIFIER f-accordian_open
 	transition: 250ms transform, 250ms color;
 }
 
-.f-accordian__text > * {
-	/*overflow: hidden;*/
-	transform: scaleY(0);
+.f-accordian__text {
+	max-height: 0;
+	transition: 250ms max-height linear;
+	overflow: hidden;
+	/*transform: scaleY(0);
 	transform-origin: top;
-	transition: transform 250ms ease, height 250ms ease;
+	transition: transform 250ms ease, height 250ms ease;*/
 }
 /*.f-accordian__text > * {
 	margin-top: calc(-100% - 14.3rem);
@@ -195,8 +197,9 @@ MODIFIER f-accordian_open
 /* ### .f-accordian_open
   .f-accordian_open is the modifier for an open accordian
 */
-.f-accordian_open .f-accordian__text > * {	
-	transform: scaleY(1);	
+.f-accordian_open .f-accordian__text {	
+	/*transform: scaleY(1);*/
+	max-height: 50rem;
 }
 
 .f-accordian_open, .f-accordian_open .f-accordian__arrow div {
