@@ -4,6 +4,23 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>the GRID</title>
+		<style>
+			html {
+		  	/* Change 1 rem to mean 10px in a standard browser */
+  		 	font-size: 62.5%;
+		  }
+
+		  @media screen and (max-width: 1000px) {
+  		  html {
+    		  font-size: 1vw; /* scaling */
+  		  }
+		  }
+		  @media screen and (max-width: 640px) {
+  		  html {
+    		  font-size: 1.625vw; /* 16/10 */
+  		  }
+		  }
+		</style>
 		<link rel="stylesheet" href="css/grid.css">
 		<style>
 			.demo {
@@ -132,8 +149,8 @@
 		</section>
 
 <hr>
-
-		<section class="f-row f-row_12">
+	<h3>12 column example</h3>
+		<section class="f-row f-row_12" onclick="console.log(getComputedStyle(this).getPropertyValue('width'));">
 			<div class="f-row__cell-2">
 				<div class="demo">2</div>
 			</div>
