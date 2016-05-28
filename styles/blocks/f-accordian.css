@@ -202,4 +202,7 @@ MODIFIER f-accordian_attention
 
 		transform: scale(.7) rotate(-135deg);
 	}
+	.f-accordian_attention .f-accordian__arrow div {
+		transform: scale(.7) rotate(45deg);
+	}
 }
