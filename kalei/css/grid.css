@@ -489,7 +489,7 @@ to manipulate the css block while running in a loop.
 @media screen and (min-width: 640px) {
 	.f-row_not-desktop,
 	.f-row__not-desktop {
-		display: none;
+		display: none !important;
 	}
 	.f-row_24 .f-row__cell_push_1 {
 		margin-left: calc(99.99% * 0.04167 - 3.25832rem + 3.4rem) !important;
@@ -1515,7 +1515,7 @@ to manipulate the css block while running in a loop.
 @media screen and (max-width: 640px) {
 	.f-row_not-mobile,
 	.f-row__not-mobile {
-		display: none;
+		display: none !important;
 	}
 	.f-row__cell-mobile {
 		-webkit-box-flex: 0!important;

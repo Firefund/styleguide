@@ -39,7 +39,7 @@ html:after {/* Change 1 rem to mean 10px in a standard browser */
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: 1vw; /* no more scaling */
+    font-size: 1vw; /* scaling */
   }
 }
 @media screen and (max-width: 640px) {
@@ -81,7 +81,7 @@ body:after {
   clear: both;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700); /* logo font */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic);
 
 * { font-family: "Roboto"; }
