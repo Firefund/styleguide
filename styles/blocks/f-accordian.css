@@ -114,7 +114,7 @@ MODIFIER f-accordian_attention
 	border-radius: .5rem;
 
 	overflow: hidden;
-	transition: 250ms height;
+	transition: 250ms height, 250ms border-color;
 }
 
 .f-accordian__heading {
@@ -124,6 +124,8 @@ MODIFIER f-accordian_attention
 	font-size: 3.6rem;
 	font-weight: normal;
 	line-height: 3.6rem;
+	
+	transition: 250ms color;
 }
 
 .f-accordian__cuff-wrapper {
@@ -140,6 +142,8 @@ MODIFIER f-accordian_attention
 	font-size: 1.8rem;
 	font-weight: light;
 	line-height: 2.4rem;
+	
+	transition: 250ms color;
 }
 
 .f-accordian__arrow {
@@ -167,7 +171,7 @@ MODIFIER f-accordian_attention
 	border-right: 5px solid var(--color-grey-light);
 
 	transform: rotate(-135deg);
-	transition: 250ms transform;
+	transition: 250ms transform, 250ms color;
 }
 
 .f-accordian_attention, .f-accordian_attention .f-accordian__arrow div {
@@ -176,6 +180,9 @@ MODIFIER f-accordian_attention
 .f-accordian_attention .f-accordian__heading,
 .f-accordian_attention .f-accordian__cuff-text {
 	color: var(--color-red);
+}
+.f-accordian_attention .f-accordian__cuff-text {
+	height: unset;
 }
 .f-accordian_attention .f-accordian__arrow div {
 	transform: rotate(45deg);
