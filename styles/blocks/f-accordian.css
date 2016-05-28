@@ -114,7 +114,7 @@ MODIFIER f-accordian_open
 
 	margin: 0 0 2rem 0;
 	padding: .5rem;
-	/*height: 12.2rem;*/
+	/*height: 12.2rem; NOT needed - we set the height of .f-accordian__cuff-text */
 
 	border: .3rem solid var(--color-grey-light);
 	border-radius: .5rem;
@@ -182,23 +182,15 @@ MODIFIER f-accordian_open
 
 .f-accordian__text {
 	max-height: 0;
+	
 	transition: 250ms max-height linear;
+	
 	overflow: hidden;
-	/*transform: scaleY(0);
-	transform-origin: top;
-	transition: transform 250ms ease, height 250ms ease;*/
 }
-/*.f-accordian__text > * {
-	margin-top: calc(-100% - 14.3rem);
-
-	transition: margin-top 250ms;
-}*/
-
 /* ### .f-accordian_open
   .f-accordian_open is the modifier for an open accordian
 */
 .f-accordian_open .f-accordian__text {	
-	/*transform: scaleY(1);*/
 	max-height: 50rem;
 }
 
@@ -214,15 +206,10 @@ MODIFIER f-accordian_open
 .f-accordian_open .f-accordian__cuff-text {
 	color: var(--color-red);
 }
-/*.f-accordian_open .f-accordian__cuff-text {
-	height: unset;
-}*/
+
 .f-accordian_open .f-accordian__arrow div {
 	transform: rotate(45deg);
 }
-/*.f-accordian_open {
-	height: 100%;
-}*/
 
 @media screen and (--viewport-mobile) {
 	.f-accordian__heading {
@@ -230,11 +217,11 @@ MODIFIER f-accordian_open
 	}
 
 	.f-accordian__cuff-text {
-		height: unset;/*TODO*/
+		height: unset;
 	}
 
 	.f-accordian__arrow {
-		height: 6rem;
+		height: 6rem!important;
 	}
 
 	.f-accordian__arrow div,
