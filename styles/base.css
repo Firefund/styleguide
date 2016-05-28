@@ -20,7 +20,7 @@ html {
 
 @media screen and (--viewport-max-scale) {
   html {
-    font-size: 1vw; /* no more scaling */
+    font-size: 1vw; /* scaling */
   }
 }
 @media screen and (--viewport-mobile) {
@@ -43,7 +43,7 @@ body {
   lost-center: 98.4rem;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700); /* logo font */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic);
 
 * { font-family: "Roboto"; }
