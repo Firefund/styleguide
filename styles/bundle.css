@@ -4,8 +4,10 @@
 @import url("icons.css");
 
 
+@import url("blocks/f-accordian.css");
 @import url("blocks/f-button-group.css");
 @import url("blocks/f-content.css");
+@import url("blocks/f-footer-text.css");
 @import url("blocks/f-footer.css");
 @import url("blocks/f-icon-list.css");
 @import url("blocks/f-left-heading.css");
@@ -17,4 +19,3 @@
 @import url("blocks/f-spacer.css");
 @import url("blocks/f-text.css");
 @import url("blocks/f-white-card.css");
-@import url("blocks/f-footer-text.css");
