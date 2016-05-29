@@ -13,6 +13,7 @@ kalei/css/grid.css
 kalei/assets/fonts*
 kalei/css/icons.css
 kalei/css/bugz
+site/css/blocks/*.css
 
 .DS_Store
 Thumbs.db

@@ -54,3 +54,7 @@ a {
 span {
   color: var(--color-red);
 }
+
+.f-page-wrapper {
+  lost-center: var(--page-max-width);
+}

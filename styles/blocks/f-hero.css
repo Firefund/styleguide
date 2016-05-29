@@ -22,7 +22,7 @@ BLOCK f-hero
 	<img src="foo/bar.png">
 	<div class="f-hero__wrapper">
 		<div class="f-row f-row_6">
-			<div class="f-row__cell">				
+			<div class="f-row__cell">
 				<div class="f-hero__heading">
 					<h1><span>Project:</span></h1><br>
 					<h1>Rebuild Kobanê</h1>
@@ -60,7 +60,7 @@ BLOCK f-hero
 .f-hero img { display: none; }
 
 .f-hero__wrapper {
-	lost-center: 98.4rem;
+	lost-center: var(--page-max-width);
 }
 
 .f-hero__heading {
