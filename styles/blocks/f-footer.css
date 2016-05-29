@@ -1,7 +1,7 @@
 /*
 ##EXAMPLE 1
 ```
-<section class="f-footer">
+<footer class="f-footer">
 	<div class="f-row f-row_12">
 		<div class="f-row__cell-4">
 		 <div class="f-footer-sitemap">
@@ -53,12 +53,11 @@
 			</ul>
 		</div>
 	</div><!-- /f-row -->
-</section>
+</footer>
 ```
 */
 
 @import "../variables";
-
 .f-footer {}
 
 .f-footer-sitemap {}
@@ -73,12 +72,12 @@
 
 .f-footer-icons.f-icon-list {
 	margin-top: 4.1rem;
-
 	color: var(--color-white);
 	text-align: center;
 }
+
 @media screen and (--viewport-mobile) {
- .f-footer-icons.f-icon-list {
+	.f-footer-icons.f-icon-list {
 		text-align: left;
-	}   
+	}
 }

@@ -44,6 +44,20 @@
 		// })
 	}
 
+
+	function hideSplash() {
+		// TODO: add timer to remove splash if transitionend is not fired
+		var splash = document.querySelector(".f-splash_loading")
+		if(!splash) return // make sure we don't break loading if f-splash doesn't exist
+		splash
+			.addEventListener("transitionend", function() {
+				document.body.removeChild(splash)
+			})
+		splash
+			.classList
+			.remove("f-splash_loading")
+	}
+	
 	function downloads(list, doFunction, predicate) {
 		// var urlParser = document.createElement('a')
 		var urls = list.map(function(link) { return link.href })
