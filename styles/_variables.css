@@ -11,6 +11,7 @@
 
   --gutter-width: 3.4rem;
   --margin-text: 3.3rem;
+  --site-max-width: 192rem;
 }
 
 @custom-media --viewport-mobile (max-width: 640px);
