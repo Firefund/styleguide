@@ -169,6 +169,8 @@ f-text-input_multiline, .f-text-input__text-field {
 
 	border: 1px solid var(--color-black);
 	border-radius: .3rem;
+	
+	resize: vertical;
 }
 
 .f-text-input_readonly .f-text-input__text-field {
