@@ -25,7 +25,8 @@ I think it would look awesome!
 
 ## Default
 ```
-<div class="kalei-background-white">
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
 
 <!-- this should be used on the website -->
 	<section class="f-button-group">
@@ -39,7 +40,9 @@ I think it would look awesome!
 		</div>
 	</section>
 <!-- this should be used on the website -->
-</div>
+
+
+</div><!-- only here for the style guide - should not be used on the website -->
 ```
 
 
