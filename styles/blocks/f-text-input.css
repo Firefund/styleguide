@@ -1,4 +1,6 @@
 /*
+# f-text-input
+
 A text input field, with a label, that can be one line or multiple lines.
 
 <pre>
@@ -151,7 +153,7 @@ f-text-input_multiline, .f-text-input__text-field {
 
 .f-text-input_readonly .f-text-input__text-field {
 	color: var(--color-grey);
-	
+
 	border-color: var(--color-grey-light);
 	background-color: var(--color-grey-light);
 }
