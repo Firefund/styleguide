@@ -59,7 +59,7 @@
 
 @import "../variables";
 .f-footer {
-	lost-center: 98.4rem;
+	lost-center: var(--page-max-width);
 }
 
 .f-footer-sitemap {}

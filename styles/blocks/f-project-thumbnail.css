@@ -1,4 +1,5 @@
 /*
+# f-project-thumbnail
 
 Big thumbnails!
 
@@ -26,54 +27,54 @@ BLOCK f-project-thumbnail
 
 # First edition, cloned from mini and not done yet
 ```
-		<div class="f-project-thumbnail">
-			<div class="f-row f-row_6">
-				<div class="f-row__cell-2">
-					<div class="f-project-thumbnail__content">
-						<h2 class="f-left-heading f-project-thumbnail__heading"><span>Project</span><br>Rebuild Kobanê</h2>
-						<h3 class="f-project-thumbnail__byline">Out of Africa!</h3>
-						<p class="f-project-thumbnail__text">
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
-						</p>
-					</div>
-					<div class="f-project-thumbnail__summary f-progress__data">
-						<p class="f-progress__data-element f-progress-thumbnail__data-element">
-							<span>38%</span> of $50,000 <span>22</span> days to go 
-						</p>
-						<p class="f-progress__data-element">
-							<span>38%</span> of $50,000
-						</p>
-						<p class="f-progress__data-element">
-							<span>$14,928</span> reached in total
-						</p>
-					</div>
-				</div>
-				<div class="f-row__cell-4">
-					<figure class="f-project-thumbnail__image">
-						<img src="assets/image/12.jpg"</img>
-					</figure>
-				</div>
+<div class="f-project-thumbnail">
+	<div class="f-row f-row_6">
+		<div class="f-row__cell-2">
+			<div class="f-project-thumbnail__content">
+				<h2 class="f-left-heading f-project-thumbnail__heading"><span>Project</span><br>Rebuild Kobanê</h2>
+				<h3 class="f-project-thumbnail__byline">Out of Africa!</h3>
+				<p class="f-project-thumbnail__text">
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				We are back with another crowdfundingcampain - this one is going to succed! We wish to finish the rebuild-process, and you can help us.
+				</p>
 			</div>
-			<div class="f-row f-row_6">
-				<section class="f-row__cell">
-					<div class="f-progress" data-value="38">
-						<div class="f-project-thumbnail__progress f-progress__bar">
-							<div style="width: 38%;" class="f-progress__value"></div>
-						</div>
-					</div>
-				</section>
+			<div class="f-project-thumbnail__summary f-progress__data">
+				<p class="f-progress__data-element f-progress-thumbnail__data-element">
+					<span>22</span> days to go
+				</p>
+				<p class="f-progress__data-element f-progress-thumbnail__data-element">
+					<span>38%</span> of $50,000
+				</p>
+				<p class="f-progress__data-element f-progress-thumbnail__data-element">
+					<span>$14,928</span> reached in total
+				</p>
 			</div>
 		</div>
+		<div class="f-row__cell-4">
+			<figure class="f-project-thumbnail__image">
+				<img src="assets/image/12.jpg"</img>
+			</figure>
+		</div>
+	</div>
+	<div class="f-row f-row_6">
+		<section class="f-row__cell">
+			<div class="f-progress" data-value="38">
+				<div class="f-project-thumbnail__progress f-progress__bar">
+					<div style="width: 38%;" class="f-progress__value"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
 ```
 */
 
@@ -155,6 +156,8 @@ BLOCK f-project-thumbnail
 	padding-top: 1.8rem;
 
 	background-color: var(--color-white);
+	
+	lost-center: var(--page-max-width);
 }
 
 .f-project-thumbnail__content {
@@ -170,6 +173,7 @@ BLOCK f-project-thumbnail
 
 .f-project-thumbnail__heading {
 	display: block;
+	margin-top: 0;
 	margin-bottom: 0.6rem;
 	width: calc(100% + var(--gutter-width));
 }
@@ -203,14 +207,14 @@ BLOCK f-project-thumbnail
 	margin-left: var(--gutter-width);
 
   color: var(--color-grey-dark);
-  line-height: 1.2;	
+  line-height: 1.2;
 }
 .f-progress-thumbnail__data-element {
 	 margin: 0;
 
   color: var(--color-grey-dark);
   line-height: 1.2;
-	
+
   will-change: transform;
   animation-duration: 8s;
   animation-name: odometer;
@@ -250,7 +254,7 @@ BLOCK f-project-thumbnail
 	.f-project-thumbnail__image-filter {
 	position: relative;
 	height: 16rem;
-	
+
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 
@@ -267,6 +271,6 @@ BLOCK f-project-thumbnail
 
 .f-project-thumbnail__progress {
 	margin-left: var(--gutter-width);
-	
+
 	background-color: var(--color-grey-light);
 }

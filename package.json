@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepoly": "assets site/lib",
+    "prepoly": "assets site/lib & make --jobs=4 prod",
     "poly": "server site site/**/* --port 10420",
     "kalei": "npm-run-all --parallel guide watch",
     "guide": "server kalei/ kalei/css/**/*.css",

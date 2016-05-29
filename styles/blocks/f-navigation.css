@@ -32,7 +32,7 @@ Site navigation links.
 
 	margin: 3rem 0 2rem 0;
 
-	lost-center: 98.4rem;
+	lost-center: var(--page-max-width);
 }
 .f-navigation__link {
 	color: var(--color-grey-light, hsla(0, 0%, 84.7%, 1));
