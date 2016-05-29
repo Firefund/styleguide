@@ -63,7 +63,7 @@ If the container isn't `f-content`', then the heading will *leak* out.
 .f-left-heading {
 	display: inline-flex;
 
-	margin: 0 0 2.8rem -var(--gutter-width);
+	margin: 4rem 0 2.8rem -var(--gutter-width);
 	padding: .8rem 1.93rem .8rem var(--gutter-width); 
 	
 	color: var(--color-white);
@@ -75,7 +75,6 @@ If the container isn't `f-content`', then the heading will *leak* out.
 .f-left-heading_big {
 	display: inline-flex;
 
-	margin: 0 0 2.8rem -var(--gutter-width);
 	padding: .6rem 1.93rem 1.2rem var(--gutter-width); 
 	
 	color: var(--color-white);

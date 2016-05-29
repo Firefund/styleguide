@@ -1,39 +1,33 @@
 /*
-## Buttons!
+Basic button.
 
-Right now we're exploring different options.
-So it's very much a work in proces.
+TODO: we should change the animation to use background with linear-gradient as in `f-button-group.css`
+to aleviate a color issue in Chrome.
 
-I now exactly what it's supposed to look like, but I can't make it work.
+This is pr. 2.0 only used as 'Encrypt' and 'Reset' on contact-pages, but more is to come. 
+Remember the BEM-structure: All buttons are it's own block. This is not a block, where the other buttons are it's elements. 
+This is stand-alone. 
 
 <pre>
 BLOCK f-button-basic
-		MODIFIER f-button-basic_default
-		MODIFIER f-button-basic_submit
-		ELEMENT f-button-basic__donate
-		MODIFIER f-button-basic__donate_A
-		MODIFIER f-button-basic__donate_B
-		ELEMENT f-button-basic__organize
-		~MODIFIER f-button-basic__organize_now~
-		ELEMENT f-button-basic__share
 </pre>
 
 ## f-button-basic
 ```
-<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
 	<button class="f-button-basic">encrypt</button>
 	<button class="f-button-basic">reset</button>
 <!-- this should be used on the website -->
 
-</div><!-- only here for the style guide - should not be used on the website -->
+</div>
 ```
 */
 
 @import "../variables";
 
-f-button-basic {
+.f-button-basic {
 	position: relative;
 	top: 0;
 	min-width: 16.4rem;
@@ -47,7 +41,7 @@ f-button-basic {
 	text-align: center;
 
 	background-color: var(--color-white);
-	border: .3rem solid var(--color-black);
+	border: .2rem solid var(--color-black); /*To do: can't choose between 0.2 og 0.3 ...*/
 	border-radius: 0.5rem;
 	box-shadow: 0 0rem 0 var(--color-black), inset 0 0rem 0 var(--color-black);
 
@@ -58,59 +52,17 @@ f-button-basic {
 	cursor: pointer;
 	outline: 0 none;
 }
-f-button-basic::-moz-focus-inner {
+
+.f-button-basic::-moz-focus-inner {
 	border: 0; /*KLUDGE: remove outline in Firefox */
 }
 
-f-button-basic:hover {
-	box-shadow: 0 .3rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
-}
-f-button-basic:active {
-	top: .3rem;
-	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.4rem 0 var(--color-black);
+.f-button-basic:hover {
+	box-shadow: 0 .2rem 0 var(--color-black), inset 0 -.2rem 0 var(--color-black);
+	border-color: var(--color-black);
 }
 
-/*
-## Button with icon
-```
-<div class="kalei-background-white"> <!-- only here for the style guide - should not be used on the website -->
-
-<!-- this should be used on the website -->
-<button class="f-button-basic f-button-basic_icon f-icon-twitter">twitter</button>
-<button class="f-button-basic f-button-basic_icon f-icon-facebook">facebook</button>
-<button class="f-button-basic f-button-basic_icon f-icon-youtube">youtube</button>
-<button class="f-button-basic f-button-basic_icon f-icon-reddit">reddit</button>
-<button class="f-button-basic f-button-basic_icon f-icon-home">home</button>
-<button class="f-button-basic f-button-basic_icon f-icon-twitter">twitter</button>
-<button class="f-button-basic f-button-basic_icon f-icon-facebook">facebook</button>
-<button class="f-button-basic f-button-basic_icon f-icon-youtube">youtube</button>
-<button class="f-button-basic f-button-basic_icon f-icon-reddit">reddit</button>
-<button class="f-button-basic f-button-basic_icon f-icon-home">home</button>
-<button class="f-button-basic">No icon</button>
-<!-- this should be used on the website -->
-
-</div>
-```
-*/
-f-button-basic_icon {
-	padding: 0 2.4rem 0 4rem;
-}
-f-button-basic_icon::before {
-	position: absolute;
-
-	transform: translateX(-3.1rem);
-}
-f-button-basic_icon.f-icon-youtube::before {
-	transform: translate(-3.1rem, 0.3rem);
-}
-f-button-basic_icon.f-icon-facebook::before {
-	font-size: 2rem;
-
-	transform: translate(-2.6rem, 0.4rem);
-}
-f-button-basic_icon.f-icon-reddit::before {
-	transform: translate(-3.6rem, 0.1rem);
-}
-f-button-basic_icon.f-icon-home::before {
-	transform: translate(-3.7rem, 0.2rem);
+.f-button-basic:active {
+	top: .2rem;
+	box-shadow: 0 0rem 0 var(--color-black), inset 0 -.2rem 0 var(--color-black);
 }

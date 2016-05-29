@@ -1,4 +1,7 @@
 # Firefund - Style guide
+
+## We're migrating to [frontend](https://github.com/Firefund/frontend) - which only has signed commits in the master branch
+
 ## Generates live CSS documentation for use on the firefund website
 
 [![Stories in Ready](https://badge.waffle.io/Firefund/styleguide.png?label=ready&title=Ready)](https://waffle.io/Firefund/styleguide)
@@ -36,9 +39,8 @@ to ensure that your styles work in all browsers)
 
 1. Find or create a card in [Waffle - our kanban tool](https://waffle.io/Firefund/styleguide)
 2. Create a css file in `styles/blocks/` - name it after your BEM block
-3. add the file name to the beginning of the Makefile (currently second line)
-4. add the file path to `styles/master.css`. `@import "blocks/YourFileName.css";`
-5. if you need to use any of the variables defined in `styles/_variables.css`, you need to import it with: `@import "@import "../variables";"` <- **no url**
+3. add the file path to `styles/styleguide.css`. `@import "blocks/YourFileName.css";`
+4. if you need to use any of the variables defined in `styles/_variables.css`, you need to import it with: `@import "../variables";` <- **no url**
 
 
 ## Clean CSS
