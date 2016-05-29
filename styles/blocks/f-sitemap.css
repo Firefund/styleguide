@@ -3,12 +3,9 @@ This is the sitemap to be shown in the left of the footer
 `f-sitemap__branding` is a [BEM mix of f-branding](https://en.bem.info/forum/4/)
 
 <pre>
-Block f-sitemap
-	Element f-sitemap__branding <- mix of f-branding
-	Element f-sitemap__links
-	Element f-sitemap__links a
-	BLOCK f-branding
-	MODIFIER f-branding_sitemap
+BLOCK f-sitemap
+	ELEMENT f-sitemap__branding <- mix of f-branding
+	ELEMENT f-sitemap__links
 </pre>
 
 ## EXAMPLE 1
@@ -35,7 +32,7 @@ Block f-sitemap
 	margin: 0;
 }
 
-.f-sitemap__branding {
+.f-branding.f-sitemap__branding {
 	margin-top: 0rem;
 	margin-bottom: 0rem;
 
