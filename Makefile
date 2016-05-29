@@ -31,7 +31,7 @@ clean:
 	rm kalei/css/icons.css
 
 # production build
-prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY)
+prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
 	@echo "Finish building our production CSS"
 
 # compile first bundle

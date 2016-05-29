@@ -15,7 +15,7 @@ html {
   /* Change 1 rem to mean 10px in a standard browser */
   font-size: 62.5%;
   
-  lost-center: 192rem;
+  lost-center: var(--site-max-width);
 }
 
 @media screen and (--viewport-max-scale) {
