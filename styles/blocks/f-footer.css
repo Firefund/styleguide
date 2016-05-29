@@ -58,7 +58,9 @@
 */
 
 @import "../variables";
-.f-footer {}
+.f-footer {
+	lost-center: 98.4rem;
+}
 
 .f-footer-sitemap {}
 

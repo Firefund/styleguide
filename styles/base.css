@@ -39,8 +39,6 @@ body {
   font-size: 1.6rem;
 
   background-color: var(--color-black);
-
-  lost-center: 98.4rem;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:700); /* logo font */
