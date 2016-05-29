@@ -43,20 +43,6 @@
 		// 	document.head.appendChild(elImport)
 		// })
 	}
-
-
-	function hideSplash() {
-		// TODO: add timer to remove splash if transitionend is not fired
-		var splash = document.querySelector(".f-splash_loading")
-		if(!splash) return // make sure we don't break loading if f-splash doesn't exist
-		splash
-			.addEventListener("transitionend", function() {
-				document.body.removeChild(splash)
-			})
-		splash
-			.classList
-			.remove("f-splash_loading")
-	}
 	
 	function downloads(list, doFunction, predicate) {
 		// var urlParser = document.createElement('a')
@@ -66,23 +52,27 @@
 		return function loaded(url) {
 			// urlParser.href = url
 			// urlParser.pathname
-			console.log(url)
+			// console.log(url)
 			if( predicate(url, urls, downloads) )
 				doFunction()
 		}
 	}
 
 	function hideSplash() {
-		// TODO: add timer to remove splash if transitionend is not fired
 		var splash = document.querySelector(".f-splash_loading")
 		if(!splash) return
 		splash
-			.addEventListener("transitionend", function() {
-				document.body.removeChild(splash)
-			})
+			.addEventListener("transitionend", removeSpash)
 		splash
 			.classList
 			.remove("f-splash_loading")
+
+		// add timer to remove splash if transitionend is not fired
+		setTimeout(removeSpash, 2000)
+		
+		function removeSpash() {
+			document.body.removeChild(splash)
+		}
 	}
 
 }())
