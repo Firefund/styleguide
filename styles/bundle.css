@@ -4,6 +4,8 @@
 @import url("icons.css");
 
 
+@import url("blocks/f-postpay-info.css");
+@import url("blocks/f-postpay-heading.css");
 @import url("blocks/f-accordian.css");
 @import url("blocks/f-button-basic.css");
 @import url("blocks/f-button-donate.css");
