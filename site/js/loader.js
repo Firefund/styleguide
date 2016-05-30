@@ -62,15 +62,15 @@
 		var splash = document.querySelector(".f-splash_loading")
 		if(!splash) return
 		splash
-			.addEventListener("transitionend", removeSpash)
+			.addEventListener("transitionend", removeSplash)
 		splash
 			.classList
 			.remove("f-splash_loading")
 
 		// add timer to remove splash if transitionend is not fired
-		setTimeout(removeSpash, 2000)
+		setTimeout(removeSplash, 2000)
 		
-		function removeSpash() {
+		function removeSplash() {
 			document.body.removeChild(splash)
 		}
 	}

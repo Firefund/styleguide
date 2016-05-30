@@ -1,11 +1,24 @@
 /*
+# f-team-cards
+
+<pre>
+BLOCK f-team-cards
+    BLOCK f-team-member
+        ELEMENT f-team-member__image
+        ELEMENT f-team-member__card
+        ELEMENT f-team-member__heading
+        ELEMENT f-team-member__subheading
+        ELEMENT f-team-member__byline
+        ELEMENT f-team-member__text
+</pre>
+
 ## Example 1
 ```
 <div class="f-content"> <!-- only here for the style guide - should not be used on the website -->
 
 
 <section class="f-team-cards">
-    <div class="f-cloumn f-column_3 f-column_mobile_2">
+    <div class="f-column f-column_3 f-column_mobile_2">
             <div class="f-team-member">
                 <img class="f-team-member__image" src="assets/image/team1.jpg">
                 <div class="f-team-member__card">
@@ -98,7 +111,6 @@
 
 </div> <!-- only here for the style guide - should not be used on the website -->
 ```
-
 */
 
 @import "../variables";
