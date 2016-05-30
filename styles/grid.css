@@ -373,9 +373,9 @@ to manipulate the css block while running in a loop.
 	justify-content: space-between;
 }
 
-/*[class^="f-column_"] > *,
+/*FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 
+[class^="f-column_"] > *,
 [class*=" f-column_"] > * {
-	 FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 
 	margin-right: 0!important;
 	margin-left: 0!important;
 }*/
