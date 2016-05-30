@@ -89,10 +89,18 @@
 	<f-header></f-header>
 
 	<article class="f-content">
-
 		<div class="f-spacer"></div>
-		
-		<h1 class="f-huge-heading">How does it work?</h1>
+		<div class="scrollme">
+        	<div class="animateme" 
+	            data-when="enter" 
+	            data-from="0" 
+	            data-to="1" 
+	            data-opacity="0" 
+	            data-easing="easeinout" 
+	            data-translatey="100">
+            <h1 class="f-huge-heading">How does it work?</h4>
+          </div>
+        </div>
 
 		<div class="f-info-card">
 			<section class="f-row f-row_6">
@@ -255,7 +263,6 @@
 		</div>
 		
 		<div class="f-spacer"></div>
-
 	</article>
 
 	<div class="f-spacer"></div>
@@ -327,6 +334,12 @@
 		< script > // TODO: Why is this needed?!?
 			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':10421/livereload.js?snipver=1"></' + 'script>')
 	</script>
+
+	<script src="lib/jquery.js" charset="utf-8"></script>
+    <script src="lib/scrollme.js" charset="utf-8"></script>
+
+
+
 </body>
 
 </html>
