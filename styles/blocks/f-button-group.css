@@ -44,7 +44,8 @@ I think it would look awesome!
 
 </div><!-- only here for the style guide - should not be used on the website -->
 ```
-
+All the reverse and vertical stuff won't work without changing `lost` core.
+I'm keeping these examples as a reminder but **DON'T USE THEM!**
 
 ## Reverse
 ```
@@ -66,7 +67,7 @@ I think it would look awesome!
 </div>
 ```
 
-## Vertical
+## Vertical **DON'T USE!**
 ```
 <div class="kalei-background-white">
 
@@ -86,7 +87,7 @@ I think it would look awesome!
 </div>
 ```
 
-## Vertical Reverse
+## Vertical Reverse **DON'T USE!**
 ```
 <div class="kalei-background-white">
 
