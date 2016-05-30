@@ -304,6 +304,10 @@ to manipulate the css block while running in a loop.
 	width: 100%;
 }
 
+.f-row_reverse {
+	flex-direction: row-reverse;
+}
+
 .f-row::after {
 	lost-utility: clearfix;
 }
@@ -323,13 +327,13 @@ to manipulate the css block while running in a loop.
 	justify-content: space-between;
 }
 
-[class^="f-column_"] > *,
+/*[class^="f-column_"] > *,
 [class*=" f-column_"] > * {
-	/* FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 */
+	 FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 
 	margin-right: 0!important;
 	margin-left: 0!important;
 }
-
+*/
 .f-column_2 > * {
 	lost-column: 1/2 2 flex;
 }
