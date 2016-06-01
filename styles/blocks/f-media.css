@@ -218,20 +218,20 @@ BLOCK f-media
 
 .f-media {
 	display: block;
-  margin: 0 0 0.65rem;
+	margin: 0 0 0.65rem;
 }
 
 
 .f-media__media {
-  width:100%;
+	width:100%;
 	max-height: 100%;
 }
 
 .f-media__caption {
 	margin: .55rem 0;
 
-  color: var(--color-grey);
+	color: var(--color-grey);
 	font-size: 1.2rem;
-  font-style: italic;
-  font-weight: lighter;
+	font-style: italic;
+	font-weight: lighter;
 }
