@@ -112,6 +112,22 @@ As seen on "How does it work".
 	line-height: 2.4rem;
 }
 
-.f-info-card_image {
-	/*TODO f-info-card_image */
+.f-info-card_image { /*TODO: This could be useful? Not sure where, tho*/
+	position: absolute;
+	top: 0;
+	right: -20%;
+}
+
+
+/*from scrollme - TODO: maybe it should be moved? Sorry Jon!*/
+
+.wrapper {
+	position: relative;
+}
+
+.scrollme {
+
+}
+
+.animateme {
 }

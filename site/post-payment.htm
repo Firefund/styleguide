@@ -4,30 +4,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>about:manifesto</title>
+	<title>index</title>
 	<style>
 		/* Style splash screen here	*/
-
+		
 		* {
 			font-family: "Roboto";
 		}
-
+		
 		body {
 			background-color: black;
 		}
-
+		
 		@keyframes light-white {
 			to {
 				color: hsla(0, 0%, 85%, 1);
 			}
 		}
-
+		
 		@keyframes light-red {
 			to {
 				color: hsla(1, 73.7%, 31%, 1);
 			}
 		}
-
+		
 		.f-splash {
 			position: fixed;
 			z-index: 100;
@@ -40,11 +40,11 @@
 			transition: opacity 300ms ease 1s;
 			opacity: 0;
 		}
-
+		
 		.f-splash_loading {
 			opacity: 1;
 		}
-
+		
 		.f-splash__content {
 			position: absolute;
 			top: 50%;
@@ -52,7 +52,7 @@
 			-webkit-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 		}
-
+		
 		.f-splash__branding {
 			margin: 0;
 			color: hsla(0, 0%, 100%, 1);
@@ -62,12 +62,12 @@
 			text-transform: uppercase;
 			animation: light-white 1s ease-in-out alternate infinite;
 		}
-
+		
 		.f-splash__branding span {
 			color: hsla(1, 73.7%, 38.8%, 1);
 			animation: light-red 1s ease-in-out alternate infinite 250ms;
 		}
-
+		
 		#splash {
 			transform: scale(3);
 		}
@@ -88,95 +88,26 @@
 
 	<f-header></f-header>
 
-	<article class="f-content">
+	<section class="f-page-wrapper">
+		<h2 class="f-postpay-heading">thank you</h2>
+		<h3 class="f-postpay-heading f-postpay-heading__sub">We have raised <span>$50022</span> so far!</h3>
+		<div class="f-postpay-info">
+		    <ul class="f-postpay-info__text">
+		        <li>You donated <span>$15.00</span> directly</li>
+		        <li>You chose a platform cut on <span>$1.50<span></li>
+		    </ul>
+		    <ul class="f-postpay-info__text">
+		        <li>If we reach <span>$70.000</span> in <span>13 days</span>,</li>
+		        <li>all pledged donations will also be transferred</li>
+		    </ul>
+		    <ul class="f-postpay-info__text">
+		        <li>If the campaign do not reach <span>$70.000</span>,</li>
+		        <li>then only direct donations wil be transferred.</li>
+		    </ul>
+		</div>
 
-		<h1 class="f-left-heading f-left-heading_big">About us</h1>
-
-		<div class="f-spacer"></div>
-
-		<section class="f-button-group">
-			<div class="f-column f-column_3 f-column_mobile_2">
-				<button class="f-button-group__button">Terms</button>
-				<button class="f-button-group__button">Blog</button>
-				<button class="f-button-group__button">Manifesto</button>
-				<button class="f-button-group__button">Contact</button>
-				<button class="f-button-group__button">Who we are</button>
-				<button class="f-button-group__button">Dank memes</button>
-			</div>
-		</section>
-
-		<section class="f-row f-row_6">
-			<div class="f-row__cell-3 f-row__cell-mobile">
-				<div class="f-text f-text_attention">
-					<h2 class="f-text__heading">Why</h2>
-
-					<p class="f-text__text">
-					Our society is created and developed by popular movements and their struggles.
-					Throughout history, progressive steps for humanity has been led by a critical mass of people creating movements.
-					When the political system fails to reform, change, and solve the issues of humanity, it is not an error or a failure. 
-					The political system is not designed to innovate, change or even represent.
-					It is designed to preserve current power structures, and in that sense it is doing a really good job.
-					In order to seize rights, power and influence, we need to organise solidarity and start supporting, not the people 
-					in power, but the movements who actually have the ability to create real change. 
-					
-					Rights and liberties are not given to us. They are fought for and taken. 		
-					</p>
-				</div><!-- /f-text -->
-				
-				<div class="f-text f-text_attention">
-					<h2 class="f-text__heading">How</h2>
-
-					<p class="f-text__text">
-							In order to create and sustain progressive change, 
-							we should shift our focus away from the people in power and instead support
-						 	the movements with revolutionary potential.  
-							We need mutual aid, -support and realised solidarity.  
-							We need to fund each other directly, not through handouts and charity from third party actors.  
-							
-							The structure is already in place: Through the internet we become part of each others’ struggles 
-							by sharing and showing support, now we need to take advantage of this infrastructure and use it
-							to its full potential.
-					</p>
-				</div><!-- /f-text -->					
-			</div><!-- /f-row__cell-3 -->
-			
-			<div class="f-row__cell-3 f-row__cell-mobile">
-				<div class="f-text">
-					<h2 class="f-text__heading">Who</h2>
-
-					<p class="f-text__text">
-							
-							This site is meant to be a useful tool for progressive movements.
- 							A tool for the full variety of groups, networks, tactics and ways of organizing, across geographical locations.  
-  
-							Everyone seeking progressive change will approach the tactics and solutions to accomplish this differently.
-							All struggles vary in methods, input and output depending on where it takes place and the people carrying it out.
-							We need a platform that uses this factor as a strength.
-					</p>
-				</div><!-- /f-text -->
-				
-				<div class="f-text">
-					<h2 class="f-text__heading">What</h2>
-
-					<p class="f-text__text">
-							FIREFUND is a platform that seeks to encourage cooperation within this diversity.
-							We want to encourage, inspire, empower, support, include, exchange and work together with the movements, 
-							fighting for a world beyond oppression and unequally distributed rights and power.
-							We want to facilitate and escalate the work of the social movements by connecting people and struggles 
-							through financing and strengthening.  
-							
-							<p>In other words, we want to exchange symbolic solidarity into direct action.</p>
-					</p>
-				</div><!-- /f-text -->
-			
-			</div><!-- /f-row__cell-3 -->
-		</section>		
-
-		<div class="f-spacer"></div>
-
-	</article>
-
-	<div class="f-spacer"></div>
+		<hr class="f-info-card__line">
+	</section>
 
 	<footer class="f-footer">
 		<div class="f-row f-row_12">
