@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~1.4.0",
-    "openpgp": "^2.3.0"
+    "openpgp": "^2.3.0",
+    "scrollme": "^1.1.0",
+    "jquery": "^2.2.4"
   }
 }
