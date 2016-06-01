@@ -71,7 +71,8 @@
 		setTimeout(removeSplash, 2000)
 		
 		function removeSplash() {
-			document.body.removeChild(splash)
+			if(splash)
+				document.body.removeChild(splash)
 		}
 	}
 
