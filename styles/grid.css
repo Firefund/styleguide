@@ -329,8 +329,8 @@ to manipulate the css block while running in a loop.
 
 /* --gutter-width variable doesn't work probably due to @lost gutter not being a proper css declaration block
 @lost gutter var(--gutter-width, 3.4rem); */
-
 @lost gutter 3.4rem;
+
 .f-row {
 	lost-flex-container: row;
 	width: 100%;
