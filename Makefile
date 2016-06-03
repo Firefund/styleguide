@@ -32,13 +32,13 @@ kalei/css/bugz/%.css: styles/bugz/%.css
 	npm run postcss -- --output $@ $<
 
 clean:
+	rm -r site/assets; \
 	rm -r $(KALEI_DIR); \
-	rm -r $(KALEI_DEST_FONTS_DIR); \
+	rm -r kalei/assets; \
 	rm kalei/css/base.css; \
 	rm kalei/css/styleguide.css; \
 	rm kalei/css/grid.css; \
 	rm kalei/css/icons.css; \
-	rm -r $(PROD_DEST_FONTS_DIR)
 
 # production build
 prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
