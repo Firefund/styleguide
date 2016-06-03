@@ -10,9 +10,12 @@ kalei/css/blocks/*.css
 kalei/css/base.css
 kalei/css/styleguide.css
 kalei/css/grid.css
-kalei/assets/fonts*
+kalei/assets/fonts
 kalei/css/icons.css
 kalei/css/bugz
+
+site/assets/fonts
+site/assets/image
 site/css/blocks/*.css
 site/css/bundle.css
 
