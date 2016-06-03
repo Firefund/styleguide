@@ -1,5 +1,6 @@
 ﻿/* This is the first css we will send to our client */
 @import url("base.css");
+@import url("font.css");
 @import url("grid.css");
 @import url("icons.css");
 
