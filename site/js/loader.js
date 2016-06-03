@@ -25,6 +25,9 @@
 			list.splice( list.indexOf(url), 1 )
 			return list.length < startListLength / 2 // true when half is loaded
 		})
+		
+		if(imports.length === 0)
+			hideSplash() // hide splash now if there is zero web components
 
 		imports.forEach(function(link) {
 			if(link.import && link.import.readyState === "complete") loaded(link.href)
@@ -71,7 +74,7 @@
 		setTimeout(removeSplash, 2000)
 		
 		function removeSplash() {
-			if(splash)
+			if(splash.parentElement == document.body)
 				document.body.removeChild(splash)
 		}
 	}
