@@ -59,12 +59,11 @@ If the container isn't `f-content`', then the heading will *leak* out.
 
 .f-left-heading {
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 
-	margin: 0 0 44.8px -54.4px;
-	margin: 0 0 2.8rem -3.4rem;
+	margin: 64px 0 44.8px -54.4px;
+	margin: 4rem 0 2.8rem -3.4rem;
 	padding: 12.8px 30.88px 12.8px 54.4px;
 	padding: .8rem 1.93rem .8rem 3.4rem; 
 	
@@ -77,12 +76,9 @@ If the container isn't `f-content`', then the heading will *leak* out.
 
 .f-left-heading_big {
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 
-	margin: 0 0 44.8px -54.4px;
-	margin: 0 0 2.8rem -3.4rem;
 	padding: 9.6px 30.88px 19.2px 54.4px;
 	padding: .6rem 1.93rem 1.2rem 3.4rem; 
 	

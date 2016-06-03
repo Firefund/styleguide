@@ -110,16 +110,13 @@ MODIFIER f-progress_vertical
 
 .f-progress__data {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	
@@ -130,7 +127,6 @@ MODIFIER f-progress_vertical
 .f-progress_vertical .f-progress__data {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }

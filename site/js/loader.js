@@ -18,14 +18,16 @@
 		// shadow dom can NOT be used because we load external css to style our web components
 		// window.Polymer.dom = 'shadow'
 
-		var imports = []
-		imports.push.apply(imports, document.querySelectorAll(".f-import"))
+		var imports = Array.prototype.slice.call(document.querySelectorAll(".f-import"), 0)
 
 		var loaded = downloads(imports, hideSplash, function predicate(url, list, startListLength) {
 			if(list.indexOf(url) === -1) throw new Error("Unknown url: " + url)
 			list.splice( list.indexOf(url), 1 )
 			return list.length < startListLength / 2 // true when half is loaded
 		})
+		
+		if(imports.length === 0)
+			hideSplash() // hide splash now if there is zero web components
 
 		imports.forEach(function(link) {
 			if(link.import && link.import.readyState === "complete") loaded(link.href)
@@ -44,19 +46,7 @@
 		// 	document.head.appendChild(elImport)
 		// })
 	}
-
-	function hideSplash() {
-		// TODO: add timer to remove splash if transitionend is not fired
-		var splash = document.querySelector(".f-splash_loading")
-		if(!splash) return // make sure we don't break loading if f-splash doesn't exist
-		splash
-			.addEventListener("transitionend", function() {
-				document.body.removeChild(splash)
-			})
-		splash
-			.classList
-			.remove("f-splash_loading")
-	}
+	
 	function downloads(list, doFunction, predicate) {
 		// var urlParser = document.createElement('a')
 		var urls = list.map(function(link) { return link.href })
@@ -65,8 +55,27 @@
 		return function loaded(url) {
 			// urlParser.href = url
 			// urlParser.pathname
+			// console.log(url)
 			if( predicate(url, urls, downloads) )
 				doFunction()
+		}
+	}
+
+	function hideSplash() {
+		var splash = document.querySelector(".f-splash_loading")
+		if(!splash) return
+		splash
+			.addEventListener("transitionend", removeSplash)
+		splash
+			.classList
+			.remove("f-splash_loading")
+
+		// add timer to remove splash if transitionend is not fired
+		setTimeout(removeSplash, 2000)
+		
+		function removeSplash() {
+			if(splash.parentElement == document.body)
+				document.body.removeChild(splash)
 		}
 	}
 

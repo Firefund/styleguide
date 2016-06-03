@@ -108,4 +108,24 @@ BLOCK f-content
 
     background-color: hsla(0, 0%, 100%, 1);
     border-radius: 0.3rem;
+
+    *zoom: 1;
+
+    max-width: 1574.4px;
+    max-width: 98.4rem;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.f-content:before {
+    content: '';
+    display: table;
+}
+
+.f-content:after {
+    content: '';
+    display: table;
+    clear: both;
 }

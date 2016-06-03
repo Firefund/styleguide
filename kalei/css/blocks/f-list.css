@@ -38,7 +38,7 @@ A number list. (About Who-01, Project-01)
 	display: table;
 	margin: 0;
 	padding: 0;
-	
+
 	list-style: none;
 	counter-reset: f-list;
 }

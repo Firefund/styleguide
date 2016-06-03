@@ -59,26 +59,6 @@ body {
   font-size: 1.6rem;
 
   background-color: hsla(0, 0%, 0%, 1);
-
-  *zoom: 1;
-
-  max-width: 984px;
-  max-width: 98.4rem;
-
-  margin-left: auto;
-
-  margin-right: auto;
-}
-
-body:before {
-  content: '';
-  display: table;
-}
-
-body:after {
-  content: '';
-  display: table;
-  clear: both;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:700); /* logo font */
@@ -93,4 +73,23 @@ a {
 
 span {
   color: hsla(1, 73.7%, 38.8%, 1);
+}
+
+.f-page-wrapper {
+  *zoom: 1;
+  max-width: 984px;
+  max-width: 98.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.f-page-wrapper:before {
+  content: '';
+  display: table;
+}
+
+.f-page-wrapper:after {
+  content: '';
+  display: table;
+  clear: both;
 }

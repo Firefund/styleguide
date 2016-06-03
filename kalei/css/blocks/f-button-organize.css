@@ -1,5 +1,6 @@
 /*
-Organize buttion
+# f-button-ornanize
+
 pr. 2.0 placed on index (in f.whitecard) and on HowItWork (in f.content).
 
 <pre>
@@ -7,35 +8,54 @@ BLOCK f-button-organize
 	ELEMENT f-button-organize_now (hopefully not needed)
 </pre>
 
-
+## As a button
 ```
-<div class="f-white-card">
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
 
-<!-- only here for the style guide - should not be used on the website -->
 
 <!-- this should be used on the website -->
 <button class="f-button-organize">I'm definitely going to press this huge button!</button>
 <!-- this should be used on the website -->
 
-<h2 class="f-one-liner_center"> I know. That button is more tasty than a Big Tasty fresh out of old McDonald. That's why you are going to click it. Bitch.</h2>
-</div> <!-- only here for the style guide - should not be used on the website -->
+
+<!-- only here for the style guide - should not be used on the website -->
+<h2 class="f-one-liner_center">I know. That button is more tasty than a Big Tasty fresh out of old McDonald. That's why you are going to click it. Bitch.</h2>
+</div>
+```
+
+## As a link
+```
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
+
+<!-- this should be used on the website -->
+<a class="f-button-organize" href="#/style/blocks/f-button-organize.css">I'm definitely going to press this huge button!</a>
+<!-- this should be used on the website -->
+
+
+<!-- only here for the style guide - should not be used on the website -->
+<h2 class="f-one-liner_center">I know. That button is more tasty than a Big Tasty fresh out of old McDonald. That's why you are going to click it. Bitch.</h2>
+</div>
 ```
 */
 
 .f-button-organize {
-	position: relative;
+	display: block;
 	width: 100%;
-	top: 0;
+
+	margin: 0 0 22.4px;
+	margin: 0 0 1.4rem;
 	padding: 35.2px 0 36.8px 0;
 	padding: 2.2rem 0 2.3rem 0;
 
 	color: hsla(0, 0%, 0%, 1);
 	font-size: 38.4px;
 	font-size: 2.4rem;
+	text-align: center;
 
 	border: 3px solid hsla(0, 0%, 0%, 1);
 	border-radius: 0.8rem;
-    background-color: hsla(0, 0%, 100%, 1);
+  background-color: hsla(0, 0%, 100%, 1);
 	box-shadow: 0 0rem 0 hsla(0, 0%, 0%, 1), inset 0 0rem 0 hsla(0, 0%, 0%, 1);
 
 	-webkit-transition-property: box-shadow, top;
@@ -46,7 +66,7 @@ BLOCK f-button-organize
 	-webkit-transition-timing-function: linear;
 	        transition-timing-function: linear;
 
-    outline: 0 none;
+	outline: 0 none;
 }
 
 .f-button-organize::-moz-focus-inner {

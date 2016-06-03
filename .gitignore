@@ -8,5 +8,13 @@ bower_components
 # jekyll
 _site
 
+site/assets/fonts
+site/assets/image
+site/css/blocks/*.css
+site/css/bundle.css
+
+# front end dependencies
+site/lib
+
 .DS_Store
 Thumbs.db

@@ -9,23 +9,18 @@ BLOCK f-button-group
     MODIFIER f-button-group__button_selected
 </pre>
 
-## Where we are now:
-
-The code is very messy, but I've not cleaned it with the proper style from master.css, because right now it shows clearly what I've been writing myself, and what I've importet from hover.css.
-It might still be very much easier to start over - you'll be the judge.
-
-The effects from the Hover.css file is called: 'Underline Reveal' and 'Sweep to top'.
-
 ## What I would like:
 
 In the following example, we have two hover effects. One on the bottom line of buttons (Contact, Who we are, Dank memes), and another on the top line (Terms, Blog, Manifesto).
 Can we mix them? Could we use the bottom effect as a hovereffect, and then 'on click' use the top 'sweep' effect?
 
 I think it would look awesome!
+The effects from the Hover.css file is called: 'Underline Reveal' and 'Sweep to top'.
 
 ## Default
 ```
-<div class="kalei-background-white">
+<div class="kalei-background-white"><!-- only here for the style guide - should not be used on the website -->
+
 
 <!-- this should be used on the website -->
 	<section class="f-button-group">
@@ -39,11 +34,15 @@ I think it would look awesome!
 		</div>
 	</section>
 <!-- this should be used on the website -->
-</div>
+
+
+</div><!-- only here for the style guide - should not be used on the website -->
 ```
 
+## Reverse **DON'T USE!**
+All the reverse and vertical stuff won't work without changing `lost` core.
+I'm keeping these examples as a reminder but **DON'T USE THEM!**
 
-## Reverse
 ```
 <div class="kalei-background-white">
 
@@ -63,7 +62,7 @@ I think it would look awesome!
 </div>
 ```
 
-## Vertical
+## Vertical **DON'T USE!**
 ```
 <div class="kalei-background-white">
 
@@ -83,7 +82,7 @@ I think it would look awesome!
 </div>
 ```
 
-## Vertical Reverse
+## Vertical Reverse **DON'T USE!**
 ```
 <div class="kalei-background-white">
 

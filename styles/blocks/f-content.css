@@ -109,4 +109,6 @@ BLOCK f-content
 
     background-color: var(--color-white);
     border-radius: 0.3rem;
+
+    lost-center: var(--page-max-width);
 }

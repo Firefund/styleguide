@@ -1,4 +1,6 @@
 /*
+# f-text-input
+
 A text input field, with a label, that can be one line or multiple lines.
 
 <pre>
@@ -69,7 +71,26 @@ MODIFIER f-text-input_disable
 
 	<div class="f-text-input f-text-input_readonly f-text-input_multiline">
 		<label class="f-text-input__label">Name
-			<textarea class="f-text-input__text-field" rows="6" readonly>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQRePV0p36s1wMSwNKNY7cXYppRLQ8errNeMmVYt5/9GP/gJjrSzHtoa+LCb1PYyGb8OWIbARL7ttwh4EUZ7JLbbAmDspYX1rY1Zaion1W+hPQ2kfg7gbfUM1TzVmaUZjHvFT7HjNpOpziq++7IOn81NAk9aO//okhePtusOTR10BDIY5zVobXHwbOZk6jYLYjEG7FZlBt84zP62BD/zmlrIetSNOM8k98Ksk/MAmxJ/b4rWaqMYT/0jHBrDJRV/8KTh5vjorRPPznECjiZcqnB0d4P0xmW5165yOcthZfXZfqsgWIMysmuMqWKj3WPt+pAqXOMSZnOv+ZZNWCQxf7 jon.ronnenberg@gmail.com
+			<textarea class="f-text-input__text-field" rows="6" readonly>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.13 (MingW32)
+
+mI0EVzpzJAEEAOczHUF98HyisH1XDN2i3amY2Q7V3hjfhKi4VC5FevgkFH//tPUh
+1zDld92b1zmC2aBj4tJ7B57g7ohBQO/5KOTf6GVQLuuqAXLNyUdbMa1xtOIP8byb
+HgyFDyhol5GRBeCxvbL8EHJEY/WEa2XIS6NcDjDJYrg8ERFnF7PladTxABEBAAG0
+CVRlc3QgTWFuZIi+BBMBAgAoBQJXOnMkAhsDBQkAJ40ABgsJCAcDAgYVCAIJCgsE
+FgIDAQIeAQIXgAAKCRCfcYCk0/uwS2kcBACCebL1e02SG/No1gH6/1A1ifQhj9d7
+J5d8o69lQEI6niegT27jKRI+D5Bo8tQfX3i4eftTAJBUlWxcEk1eCE7mf18aiowM
+GZ8aizTtf3CIIKq8lhPdHLsAUcPgZOARBAJEpjC/kvwFAJesmPx08l+CmfLOcOxz
+KSnWsAxpPwrUnbiNBFc6cyQBBADJoYbvUqmyWQlPc/vo6ugppQiuHGURSIyAXXH9
+sQ+36n8yzTED/8s2jmj2WEbFP47K1NVIBgov6V/C8eCMjScoIxqmOnlh7prJ2rg7
+5EwwPj2As5ciIwow+t30skJRvwAxh0qa8+oicwsY4KTjAEiFzbqLIv8/GTjGmbH6
+5+LNAwARAQABiKUEGAECAA8FAlc6cyQCGwwFCQAnjQAACgkQn3GApNP7sEvPnAP/
+YRPMk0RdBSXCKBkt94Pukr6lPulBt+SzhTGarjYP0cnIcaqGeJOgH8dLlbpBvmx6
+snBsJAo3cIjqDmw/E7+VOpdk0jFrcI4fKUXcT2E7ywAzszQ7ayc8QLimUQJyba+/
+LjSacZsYqWRmM+9k6w3XZren33fIXweEguZ7raQapV8=
+=q3KY
+-----END PGP PUBLIC KEY BLOCK-----
 			</textarea>
 		</label>
 	</div>
@@ -124,6 +145,7 @@ MODIFIER f-text-input_disable
 .f-text-input__label {
 	position: relative;
 	display: block;
+
 	margin-left: -1px; /* align with text-field -  adjust to the border  */
 
 	color: hsla(0, 0%, 20%, 1);
@@ -161,11 +183,13 @@ f-text-input_multiline, .f-text-input__text-field {
 
 	border: 1px solid hsla(0, 0%, 0%, 1);
 	border-radius: .3rem;
+	
+	resize: vertical;
 }
 
 .f-text-input_readonly .f-text-input__text-field {
 	color: hsla(0, 0%, 40%, 1);
-	
+
 	border-color: hsla(0, 0%, 84.7%, 1);
 	background-color: hsla(0, 0%, 84.7%, 1);
 }

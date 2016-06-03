@@ -49,16 +49,13 @@ MODIFIER f-signup_error
 
 .f-signup {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
 	-webkit-box-align: end;
-	-webkit-align-items: flex-end;
 	    -ms-flex-align: end;
 	        align-items: flex-end;
 	margin-bottom: 32px;
@@ -74,12 +71,10 @@ MODIFIER f-signup_error
 
 .f-signup__label {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }
