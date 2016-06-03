@@ -114,7 +114,7 @@ As seen on "How does it work".
 
 .f-info-card_image { /*TODO: This could be useful? Not sure where, tho*/
 	position: absolute;
-	top: 0;
+	top: -20rem;
 	right: -20%;
 }
 
