@@ -64,6 +64,7 @@
 	function hideSplash() {
 		var splash = document.querySelector(".f-splash_loading")
 		if(!splash) return
+		if(splash.classList.contains('f-splash_dont-hide')) return
 		splash
 			.addEventListener("transitionend", removeSplash)
 		splash
