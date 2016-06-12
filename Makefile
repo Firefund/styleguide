@@ -19,7 +19,7 @@ PROD_CSS_BUNDLE := styles/bundle.css styles/base.css styles/font.css styles/grid
 
 all: $(KALEI_CSS) kalei/css/base.css kalei/css/styleguide.css \
 kalei/css/grid.css kalei/css/icons.css $(KALEI_DEST_FONTS) \
-$(KALEI_DEST_IMAGES) $(PROD_DEST_IMAGES)
+$(KALEI_DEST_IMAGES)
 
 .phony: clean prod debug bugz
 
@@ -41,8 +41,8 @@ clean:
 	rm kalei/css/icons.css; \
 
 # production build
-prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
-	@echo "Finish building our production CSS"
+prod: $(PROD_DEST_IMAGES) site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
+	@echo "Finish moving images and building our production CSS"
 
 # compile first bundle
 site/css/bundle.css: $(PROD_CSS_BUNDLE) $(CSS_DEPENDENCY)
