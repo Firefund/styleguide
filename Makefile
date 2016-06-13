@@ -14,12 +14,12 @@ PROD_CSS_BLOCKS :=  $(patsubst styles/%,site/css/%, $(wildcard styles/blocks/*.c
 PROD_DEST_FONTS_DIR = site/assets/fonts
 PROD_DEST_FONTS := $(patsubst assets/fonts/%,site/assets/fonts/%, $(ASSETS_FONTS) )
 PROD_DEST_IMAGES := $(patsubst assets/image/%,site/assets/image/%, $(ASSETS_IMAGES) )
-PROD_CSS_BUNDLE := styles/bundle.css styles/base.css styles/grid.css styles/icons.css styles/blocks/f-content.css styles/blocks/f-left-heading.css styles/blocks/f-text.css styles/blocks/f-media.css styles/blocks/f-white-card.css styles/blocks/f-button-group.css styles/blocks/f-spacer.css styles/blocks/f-one-liner.css styles/blocks/f-list.css styles/blocks/f-footer.css styles/blocks/f-sitemap.css styles/blocks/f-signup.css styles/blocks/f-icon-list.css styles/blocks/f-footer-text.css styles/blocks/f-accordian.css styles/blocks/f-radio-group.css styles/blocks/f-text-input.css styles/blocks/f-button-basic.css styles/blocks/f-team-cards.css styles/blocks/f-huge-heading.css styles/blocks/f-info-card.css styles/blocks/f-button-organize.css styles/blocks/f-hero.css styles/blocks/f-progress.css styles/blocks/f-project-thumbnail.css styles/blocks/f-miniproject-thumbnail.css styles/blocks/f-button-donate.css styles/blocks/f-button-icon.css styles/blocks/f-right-heading.css styles/blocks/f-modal.css styles/blocks/f-payment-form.css styles/blocks/f-postpay-heading.css styles/blocks/f-postpay-info.css
+PROD_CSS_BUNDLE := styles/bundle.css styles/base.css styles/font.css styles/grid.css styles/icons.css styles/blocks/f-content.css styles/blocks/f-left-heading.css styles/blocks/f-text.css styles/blocks/f-media.css styles/blocks/f-white-card.css styles/blocks/f-button-group.css styles/blocks/f-spacer.css styles/blocks/f-one-liner.css styles/blocks/f-list.css styles/blocks/f-footer.css styles/blocks/f-sitemap.css styles/blocks/f-signup.css styles/blocks/f-icon-list.css styles/blocks/f-footer-text.css styles/blocks/f-accordian.css styles/blocks/f-radio-group.css styles/blocks/f-text-input.css styles/blocks/f-button-basic.css styles/blocks/f-team-cards.css styles/blocks/f-huge-heading.css styles/blocks/f-info-card.css styles/blocks/f-button-organize.css styles/blocks/f-hero.css styles/blocks/f-progress.css styles/blocks/f-project-thumbnail.css styles/blocks/f-miniproject-thumbnail.css styles/blocks/f-button-donate.css styles/blocks/f-button-icon.css styles/blocks/f-right-heading.css styles/blocks/f-modal.css styles/blocks/f-payment-form.css styles/blocks/f-postpay-heading.css styles/blocks/f-postpay-info.css
 
 
 all: $(KALEI_CSS) kalei/css/base.css kalei/css/styleguide.css \
 kalei/css/grid.css kalei/css/icons.css $(KALEI_DEST_FONTS) \
-$(KALEI_DEST_IMAGES) $(PROD_DEST_IMAGES)
+$(KALEI_DEST_IMAGES)
 
 .phony: clean prod debug bugz
 
@@ -41,8 +41,8 @@ clean:
 	rm kalei/css/icons.css; \
 
 # production build
-prod: site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
-	@echo "Finish building our production CSS"
+prod: $(PROD_DEST_IMAGES) site/css/bundle.css $(PROD_CSS_BLOCKS) $(PROD_DEST_FONTS) $(CSS_DEPENDENCY) site/css/blocks/f-navigation.css
+	@echo "Finish moving images and building our production CSS"
 
 # compile first bundle
 site/css/bundle.css: $(PROD_CSS_BUNDLE) $(CSS_DEPENDENCY)
