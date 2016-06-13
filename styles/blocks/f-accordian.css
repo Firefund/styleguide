@@ -7,6 +7,7 @@ Media queries are at the bottom of `f-accordian.css`.
 BLOCK f-accordian
 MODIFIER f-accordian_open
 MODIFIER f-accordian_link
+	ELEMENT f-accordian__heading
 	ELEMENT f-accordian__cuff-wrapper
 		ELEMENT f-accordian__cuff-text
 		ELEMENT f-accordian__arrow
