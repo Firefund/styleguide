@@ -163,6 +163,7 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 	position: relative;
 	
 	padding-top: 2.3rem;
+	height: 41.4rem;
 }
 
 .f-payment_direct {}
@@ -202,9 +203,9 @@ MODIFIER f-payment_pledge (OBSOLETE?)
 
 .f-payment__button-group {
 	position: absolute;
-	bottom: 0;
+	bottom: 7.4rem;
 	
-	width: 15rem;	
+	width: 18rem;	
 }
 @media screen and (--viewport-mobile) {
 	.f-payment__button-group { position: static; }
