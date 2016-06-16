@@ -41,8 +41,6 @@ body {
   background-color: var(--color-black);
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:700); /* logo font */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic);
 
 * { font-family: "Roboto"; }
 
