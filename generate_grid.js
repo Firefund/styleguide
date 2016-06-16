@@ -12,9 +12,6 @@
 	.f-row_12 .f-row__cell_6 {
 		lost-cell: 6/12 flex;
 	}
-	.f-row_24 .f-row__cell_12 {
-		lost-cell: 12/24 flex;
-	}
 	```
  */
 
@@ -130,11 +127,6 @@ const pushGrid_12 = generator(pushSelector, pushDeclaration, 12)
 const gridMobile_12 = generator(mobileCellSelector, widthDeclaration, 12)
 const pushGridMobile_12 = generator(mobilePushSelector, pushDeclaration, 12)
 
-const grid_24 = generator(cellSelector, widthDeclaration, 24)
-const pushGrid_24 = generator(pushSelector, pushDeclaration, 24)
-const gridMobile_24 = generator(mobileCellSelector, widthDeclaration, 24)
-const pushGridMobile_24 = generator(mobilePushSelector, pushDeclaration, 24)
-
 const columnGridNth = (css, n) =>
 		css.map(a => a === placeholders.cellNumber ? n+1 : a).join("")
 const columnGrid_6 = generator(columnSelector, columnDeclaration,	6, columnGridNth)
@@ -146,6 +138,24 @@ console.log(`
 .f-row {
 	lost-flex-container: row;
 	width: 100%;
+}
+
+/* f-row_reverse is implemented extremely hacky to override *lost* margins */
+.f-row_reverse {
+	flex-direction: row-reverse;
+}
+.f-row_reverse [class^="f-row__cell"],
+.f-row_reverse [class*="f-row__cell"] {
+	margin-left: var(--gutter-width, 3.4rem)!important;
+	margin-right: 0!important;
+}
+.f-row_reverse [class^="f-row__cell"]:last-child,
+.f-row_reverse [class*="f-row__cell"]:last-child {
+	margin-left: 0!important;
+}
+.f-row_reverse [class^="f-row__cell"]:first-child,
+.f-row_reverse [class*="f-row__cell"]:first-child {
+	margin-right: 0!important;
 }
 
 .f-row::after {
@@ -166,23 +176,21 @@ console.log(`
 	justify-content: space-between;
 }
 
-[class^="f-column_"] > *, [class*=" f-column_"] > * {
-		/* FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 */
+/*FIXME: serious hack to get flexbox working with lost - investigate 13-05-2016 
+[class^="f-column_"] > *,
+[class*=" f-column_"] > * {
 	margin-right: 0!important;
 	margin-left: 0!important;
-}
+}*/
 
 ${columnGrid_6}
 
 @media screen and (--viewport-desktop) {
 	.f-row_not-desktop, .f-row__not-desktop { display: none !important; }
 	
-	${pushGrid_24}
 	${pushGrid_12}
 	${pushGrid_6}
 }
-
-${grid_24}
 
 ${grid_12}
 
@@ -195,9 +203,6 @@ ${grid_6}
   .f-row_not-mobile, .f-row__not-mobile { display: none !important; }
 
 	.f-row__cell-mobile { lost-column: 1 flex!important; }
-	
-	${gridMobile_24}
-	${pushGridMobile_24}
 
 	${gridMobile_12}
 	${pushGridMobile_12}
